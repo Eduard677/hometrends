@@ -599,14 +599,37 @@
   object-fit: cover;
 }
 
-/* ——— 2.11 One spacing scale, not varying with content length ——— */
+/* ——— 2.11 One spacing scale, not varying with content length ———
+ *
+ * --section-block is the HALF band. Adjacent sections each contribute it, so
+ * the empty band between two sections is 2x this value. That is what went
+ * wrong: at clamp(6rem, 12vw, 10rem) every neighbouring pair summed to 320px
+ * at 1440 and 192px at 390, while joins with a non-.ed-sec neighbour landed at
+ * 160/212/224/256 — a 2x spread, which reads as inconsistency rather than
+ * generosity.
+ *
+ * Halved so the band itself is the rhythm unit: 224px at 1440, 128px at 390.
+ * Still a showroom's worth of air, but one value everywhere.
+ */
 :root {
-  --section-block: clamp(6rem, 12vw, 10rem);
+  --section-block: clamp(4rem, 8vw, 7rem);
 }
 main > section,
 main > .ed-sec,
 main > .ed-band {
   padding-block: var(--section-block);
+}
+/* Two sections opted out of the token and so broke the rhythm. showroom.css
+   sets `main .room-tiles` from --space-section (0,1,1, which beats
+   `main > section` at 0,0,2), and styles.css pads .spread with its own clamp.
+   Both now take the token, so every join is one band. .spread keeps its
+   padding-top: 0 — the image is meant to sit tight under the founders — which
+   leaves that one join at a deliberate half band. */
+main .room-tiles {
+  padding-block: var(--section-block);
+}
+main > .spread {
+  padding-bottom: var(--section-block);
 }
 
 /* ——— 2.12 Sentence case everywhere except the menu column headings ——— */
