@@ -48,61 +48,49 @@ npm run build
 
 Live production: Vercel project `hometrends-deploy` (themedforge).
 
-## Deploying — read this before debugging a failed build
+## Deploying
 
-**Pushing to `main` does not deploy. The GitHub build always fails, and it is
-not your diff.** Every git-triggered production build errors with:
+**Pushing to `main` deploys.** Vercel builds the commit and moves
+`hometrends-deploy.vercel.app` itself. Confirm with the deployment's `alias`
+list and `aliasError: null`; after a `vercel rollback` the alias stays pinned
+and needs `npx vercel promote <url> --scope themedforge --yes`.
 
-```
-Error: ENOENT: no such file or directory, scandir '.vercel/output/static/media'
-  at scripts/prepare-deployment-media.mjs:9
-```
+This only started working once the media was committed. Before that, every
+git build died in `scripts/prepare-deployment-media.mjs` with ENOENT on
+`.vercel/output/static/media`, because `public/media/` was gitignored wholesale
+and never reached GitHub — so production could only be updated by a CLI deploy
+from a machine that happened to hold the photo pack.
 
-`scripts/finalize-vercel.mjs:9` imports `prepare-deployment-media.mjs`, which
-walks `.vercel/output/static/media`. That exists only when `public/media/` is
-present at build time — and `public/media/` is gitignored (~590 MB), so it never
-reaches GitHub. This fails identically for every commit, including a one-line
-formatting change.
+### The media rules that keep it working
 
-Do **not** make that script tolerate a missing directory. The build would then
-pass and ship a site with no product photography, which is worse than failing
-loudly. Giving the media a real home (Vercel Blob, Git LFS, or committing it) is
-an open decision — ask, don't pick one unilaterally.
+`.gitignore` is an **allowlist**: only assets the site actually references are
+tracked (~3090 files, ~154 MB). If you add an image, check it is not silently
+ignored — `git status` should show it, and `git check-ignore -v <path>` tells
+you which rule caught it.
 
-So GitHub will show a red production check on `main` after every push, and
-`hometrends-deploy-git-main-themedforge.vercel.app` points at the failed build.
-Production itself is unaffected.
+- **The catalogue is WebP only.** Product entries in `src/data/ht-shop.json`
+  have no `fallback` key; `ProductMedia` then renders `<img src={src}>` with no
+  `<source>`. Do not reintroduce `.jpg` fallbacks — it doubles the pack.
+- Catalogue images are 800px wide at WebP q72. Keep new ones in that range;
+  `prepare-deployment-media.mjs` throws on any deployed image ≥200 KB.
+- The raw `shopify` pack, the unreferenced `hero`/`nav`/`detail`/`fabric`/
+  `gallery`/`showroom`/`maps` stopgaps and the per-image `.json` sidecars are
+  deliberately untracked. The full original pack lives in
+  `~/Downloads/hometrends-grok/public/media` — asset donor only, its git
+  history is unrelated to `origin/main`, so never commit or push from there.
 
-### Ship from the CLI, from a clone that has the media
+Do not make `prepare-deployment-media.mjs` tolerate a missing media directory.
+That would let a build pass and ship a site with no product photography.
+
+### Deploying by CLI instead
 
 ```bash
-# once per clone, if .vercel/project.json is missing
-npx vercel link --yes --project hometrends-deploy --scope themedforge
-
-npm run build                        # emits .vercel/output, prunes unused media
+npx vercel link --yes --project hometrends-deploy --scope themedforge  # once
+npm run build
 npx vercel deploy --prebuilt --prod --yes
 ```
 
 `.vercel/` and `.env.local` are gitignored, so linking never dirties the repo.
-The output is ~524 MB but is content-addressed and deduplicated — a routine
-deploy uploads only a few MB.
-
-Afterwards confirm the alias actually moved: the deployment should list
-`hometrends-deploy.vercel.app` in `alias` with `aliasError: null`. After a
-`vercel rollback` the alias stays pinned and needs an explicit
-`npx vercel promote <url> --scope themedforge --yes`.
-
-### A fresh clone has no images
-
-```bash
-cp -Rc ~/Downloads/hometrends-grok/public/media public/media
-```
-
-`cp -Rc` clones on APFS — instant, no extra disk. The files stay untracked;
-`git ls-files public/media | wc -l` must stay `0`.
-
-`~/Downloads/hometrends-grok` is an asset donor **only**. Its git history is
-unrelated to `origin/main` (no merge base), so never commit or push from there.
 
 ### Verify against the build, not just dev
 
