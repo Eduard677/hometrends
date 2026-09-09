@@ -9,3 +9,6 @@ dist/
 *.log
 .DS_Store
 .cache/
+
+# never commit the photo packs
+public/media/
