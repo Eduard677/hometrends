@@ -1493,3 +1493,61 @@ main .price s,
     overflow-wrap: anywhere;
   }
 }
+
+/* ——— Mobile pass §2: iOS Safari ———
+   None of this existed before: no dvh anywhere, no env(safe-area-inset-*) on
+   any of the 25 fixed/sticky elements, and the default blue tap highlight. */
+
+/* Address-bar collapse must not resize layout. The page wrapper takes dvh so
+   it always fills the *current* viewport, while the hero takes svh — the
+   small-viewport height — so it is sized for the bar-visible case and does not
+   grow and reflow the fold when the bar retracts. */
+@supports (height: 100dvh) {
+  .theme-light,
+  .theme-dark {
+    min-height: 100dvh;
+  }
+  .ed-page .ed-hero,
+  .ed-hero {
+    height: min(760px, 82svh);
+    min-height: min(760px, 82svh);
+  }
+}
+
+/* Anything pinned to the bottom must clear the home indicator. Applied as
+   extra padding on top of whatever each element already had, so no existing
+   spacing is lost. */
+.bag-drawer,
+.filter-sheet,
+.menu-panel,
+.search-panel,
+.reserve-modal,
+.bag-confirm,
+.orior-bar {
+  padding-bottom: calc(var(--sheet-pad, 1.25rem) + env(safe-area-inset-bottom, 0px));
+}
+.product-zoom {
+  padding-bottom: calc(clamp(1rem, 4vw, 3rem) + env(safe-area-inset-bottom, 0px));
+}
+/* Landscape on a notched phone puts the cutout beside the header. */
+.site-header {
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+
+/* 16px floor on every text control. Below 16, iOS zooms the page on focus and
+   never zooms back out. */
+/* !important on this one property only: earlier layers set control font sizes
+   from several selectors of higher specificity, and one field still computed
+   to 14px, which is enough for iOS to zoom on focus and never return. */
+input,
+select,
+textarea {
+  font-size: max(16px, 1rem) !important;
+}
+
+/* Deliberate, rather than the default translucent blue block. Taps are
+   acknowledged by the :active states in §3 instead. */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
