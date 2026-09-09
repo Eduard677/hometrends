@@ -1,0 +1,240 @@
+[
+  {
+    "source": "/media/category/flooring.jpg",
+    "originalBytes": 205558,
+    "webpBytes": 124542,
+    "jpegBytes": 181979,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/collection-bedroom.webp",
+    "originalBytes": 50950,
+    "webpBytes": 47754,
+    "jpegBytes": 84030,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/collection-dining.webp",
+    "originalBytes": 45594,
+    "webpBytes": 43278,
+    "jpegBytes": 83005,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/collection-living.webp",
+    "originalBytes": 36714,
+    "webpBytes": 35000,
+    "jpegBytes": 70617,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-bedroom.jpg",
+    "originalBytes": 455470,
+    "webpBytes": 84032,
+    "jpegBytes": 151338,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-dining.jpg",
+    "originalBytes": 616076,
+    "webpBytes": 168892,
+    "jpegBytes": 182652,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-garden.jpg",
+    "originalBytes": 808571,
+    "webpBytes": 179926,
+    "jpegBytes": 180329,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-hero.jpg",
+    "originalBytes": 537945,
+    "webpBytes": 131892,
+    "jpegBytes": 156686,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-kids.jpg",
+    "originalBytes": 596328,
+    "webpBytes": 158922,
+    "jpegBytes": 181020,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-living.jpg",
+    "originalBytes": 461312,
+    "webpBytes": 98984,
+    "jpegBytes": 164378,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-mattress.jpg",
+    "originalBytes": 597060,
+    "webpBytes": 173888,
+    "jpegBytes": 186735,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-mink.jpg",
+    "originalBytes": 423230,
+    "webpBytes": 92520,
+    "jpegBytes": 163153,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/from-shop-rugs.jpg",
+    "originalBytes": 716007,
+    "webpBytes": 162076,
+    "jpegBytes": 163173,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/furniture-gallery-editorial.webp",
+    "originalBytes": 123320,
+    "webpBytes": 119468,
+    "jpegBytes": 193245,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/garden.webp",
+    "originalBytes": 288264,
+    "webpBytes": 176362,
+    "jpegBytes": 179813,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/menu-sconce.jpg",
+    "originalBytes": 388609,
+    "webpBytes": 71466,
+    "jpegBytes": 156021,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/room-bedroom-new.jpg",
+    "originalBytes": 641043,
+    "webpBytes": 144638,
+    "jpegBytes": 179787,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/room-living-new.jpg",
+    "originalBytes": 588689,
+    "webpBytes": 157884,
+    "jpegBytes": 170414,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/rooms-sofa.jpg",
+    "originalBytes": 608192,
+    "webpBytes": 195282,
+    "jpegBytes": 161383,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/rooms-vase.jpg",
+    "originalBytes": 607255,
+    "webpBytes": 173864,
+    "jpegBytes": 156942,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/search-lamp.jpg",
+    "originalBytes": 500837,
+    "webpBytes": 141712,
+    "jpegBytes": 160251,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/search-seating.jpg",
+    "originalBytes": 842488,
+    "webpBytes": 186304,
+    "jpegBytes": 192647,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/search-sofa.jpg",
+    "originalBytes": 677126,
+    "webpBytes": 185428,
+    "jpegBytes": 181598,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/search-tables.jpg",
+    "originalBytes": 603627,
+    "webpBytes": 193276,
+    "jpegBytes": 177240,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/shop-room-bedroom.webp",
+    "originalBytes": 45024,
+    "webpBytes": 42624,
+    "jpegBytes": 81395,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/shop-room-dining.webp",
+    "originalBytes": 62644,
+    "webpBytes": 60542,
+    "jpegBytes": 108632,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/shop-room-living.webp",
+    "originalBytes": 59844,
+    "webpBytes": 57034,
+    "jpegBytes": 100966,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/living.webp",
+    "originalBytes": 48736,
+    "webpBytes": 45776,
+    "jpegBytes": 87210,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/shopify/accrarug-cream-red.jpg",
+    "originalBytes": 325809,
+    "webpBytes": 173660,
+    "jpegBytes": 165736,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/shopify/accrarug-grey-gold.jpg",
+    "originalBytes": 318239,
+    "webpBytes": 178736,
+    "jpegBytes": 182226,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/shopify/alisarug-beige-brown.jpg",
+    "originalBytes": 244548,
+    "webpBytes": 147310,
+    "jpegBytes": 187423,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/shopify/asherrug-grey-beige.jpg",
+    "originalBytes": 196099,
+    "webpBytes": 170086,
+    "jpegBytes": 185268,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/shopify/oak-writing-desk.jpg",
+    "originalBytes": 92342,
+    "webpBytes": 55466,
+    "jpegBytes": 83212,
+    "status": "optimized"
+  },
+  {
+    "source": "/media/story/shopfront-parnell-street.jpg",
+    "originalBytes": 661939,
+    "webpBytes": 176770,
+    "jpegBytes": 166810,
+    "status": "optimized"
+  }
+]

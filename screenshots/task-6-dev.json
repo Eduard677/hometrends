@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare",
+      "hasCanvas": false,
+      "bodyTextLen": 3033,
+      "bodyTextHash": "b22d76908aba1a348595654fbcc37e5e8ff6bbe79fa406cf3c44b4f2c12f2ce3",
+      "bodyTextPrefix": "Skip to content Menu Search the range 0 Furniture for real rooms",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-dev.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare",
+      "hasCanvas": false,
+      "bodyTextLen": 3028,
+      "bodyTextHash": "8b90ff9d9a39b3c7f0bf893a94596e8f666ca5012e4f5c1163bb94e48df46210",
+      "bodyTextPrefix": "Skip to content Search the range 0 Furniture for real rooms Expl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-dev-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-dev.json"
+}

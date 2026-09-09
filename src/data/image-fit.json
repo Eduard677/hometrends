@@ -1,0 +1,2507 @@
+{
+  "troy-cabinet": {
+    "fit": "cover"
+  },
+  "tucker-sofa-bed": {
+    "fit": "cover"
+  },
+  "horizontal-wall-beds": {
+    "fit": "contain",
+    "fill": 0.265
+  },
+  "scottsboro-full-foam-sofa-bed": {
+    "fit": "cover"
+  },
+  "arga-sofa-bed": {
+    "fit": "cover"
+  },
+  "viera-bedframe": {
+    "fit": "cover"
+  },
+  "antrim-bedframe": {
+    "fit": "cover"
+  },
+  "waterford-bedframe": {
+    "fit": "cover"
+  },
+  "donegal-ottoman-storage-bed": {
+    "fit": "cover"
+  },
+  "clifften-ottoman-storage-bed": {
+    "fit": "cover"
+  },
+  "new-york-storage-bed": {
+    "fit": "cover"
+  },
+  "aspire-rug-coral": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "kilkenny-grey-locker": {
+    "fit": "cover"
+  },
+  "kilkenny-mink-locker": {
+    "fit": "cover"
+  },
+  "r60-m": {
+    "fit": "contain",
+    "fill": 0.243
+  },
+  "roisin-2-seater-sofa-bed": {
+    "fit": "contain",
+    "fill": 0.258
+  },
+  "malta-suite": {
+    "fit": "cover"
+  },
+  "natural-sleep-origin-hibernate-mattress": {
+    "fit": "cover"
+  },
+  "fredrik-bar-stools-pu": {
+    "fit": "contain",
+    "fill": 0.483,
+    "trappedWhite": 0.085
+  },
+  "frida-storage-bed-hb": {
+    "fit": "contain",
+    "fill": 0.317
+  },
+  "cedar-wood-2-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.598
+  },
+  "concept-vertical-wall-bed": {
+    "fit": "contain",
+    "fill": 0.513
+  },
+  "vertical-wall-beds": {
+    "fit": "cover"
+  },
+  "aspen-corner-garden-furniture-set": {
+    "fit": "cover"
+  },
+  "elizabeth-ivory-metal-bed-46": {
+    "fit": "cover"
+  },
+  "shannon-mattress": {
+    "fit": "cover"
+  },
+  "isra-console-table-marble": {
+    "fit": "contain",
+    "fill": 0.51
+  },
+  "isra-lamp-table-marble": {
+    "fit": "contain",
+    "fill": 0.51
+  },
+  "limerick-storage-bed": {
+    "fit": "cover"
+  },
+  "wicklow-storage-bed": {
+    "fit": "cover"
+  },
+  "sheraton-recliner-sofa-range": {
+    "fit": "cover"
+  },
+  "kerry-recliner-sofa-range": {
+    "fit": "cover"
+  },
+  "taylor-patchwork-chair-original": {
+    "fit": "cover"
+  },
+  "melissa-nest-table": {
+    "fit": "cover"
+  },
+  "sligo-gas-lift-bed": {
+    "fit": "cover"
+  },
+  "carlow-beige-bed": {
+    "fit": "cover"
+  },
+  "kilkenny-mink-bed": {
+    "fit": "cover"
+  },
+  "metro-sofa-bed": {
+    "fit": "contain",
+    "fill": 0.473
+  },
+  "turner-leisure-chair-w-footstool": {
+    "fit": "cover"
+  },
+  "malvern-2-door-bedroom-range": {
+    "fit": "cover"
+  },
+  "chelsea-dining-set-with-bench": {
+    "fit": "cover"
+  },
+  "ryder-reclining-chair-ash": {
+    "fit": "cover"
+  },
+  "sienna-reclining-chair-w-phone-holder": {
+    "fit": "cover"
+  },
+  "zara-nest-of-tables-hb": {
+    "fit": "cover"
+  },
+  "nantes-accent-chair": {
+    "fit": "cover"
+  },
+  "talia-accent-chair": {
+    "fit": "cover"
+  },
+  "pearl-lounger-bean-bag-moss": {
+    "fit": "cover"
+  },
+  "oakley-loveseat": {
+    "fit": "cover"
+  },
+  "isla-swivel-recliner-with-footstool": {
+    "fit": "cover"
+  },
+  "halton-lift-and-rise-massage-sofas": {
+    "fit": "cover"
+  },
+  "ebro-sofa-bed": {
+    "fit": "cover"
+  },
+  "bremen-sofas": {
+    "fit": "cover"
+  },
+  "capri-bar-stool": {
+    "fit": "contain",
+    "fill": 0.091
+  },
+  "opera-dining-chair": {
+    "fit": "contain",
+    "fill": 0.213
+  },
+  "james-dining-chair": {
+    "fit": "contain",
+    "fill": 0.32
+  },
+  "tyrone-recliner-sofa": {
+    "fit": "cover"
+  },
+  "waterloo-fabric-recliner-sofa": {
+    "fit": "cover"
+  },
+  "new-york-mattress": {
+    "fit": "cover"
+  },
+  "portland-3-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.554
+  },
+  "portland-2-drawer-bedside": {
+    "fit": "contain",
+    "fill": 0.431
+  },
+  "portland-3-2-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.606
+  },
+  "boston-corner-sofa-bed-bren": {
+    "fit": "cover"
+  },
+  "gd001-mirror": {
+    "fit": "contain",
+    "fill": 0.705,
+    "trappedWhite": 0.027
+  },
+  "gd008-mirror": {
+    "fit": "contain",
+    "fill": 0.699,
+    "trappedWhite": 0.008
+  },
+  "gd007-mirror": {
+    "fit": "contain",
+    "fill": 0.716,
+    "trappedWhite": 0.261
+  },
+  "gd006-mirror": {
+    "fit": "cover"
+  },
+  "gd005-mirror": {
+    "fit": "contain",
+    "fill": 0.713,
+    "trappedWhite": 0.066
+  },
+  "gd004-mirror": {
+    "fit": "contain",
+    "fill": 0.689,
+    "trappedWhite": 0.01
+  },
+  "gd003-mirror": {
+    "fit": "cover"
+  },
+  "stratford-3-door-wardrobe": {
+    "fit": "cover"
+  },
+  "stratford-2-door-wardrobe": {
+    "fit": "cover"
+  },
+  "stratford-3-2-drawer-chest": {
+    "fit": "cover"
+  },
+  "stratford-3-drawer-chest": {
+    "fit": "cover"
+  },
+  "stratford-3-drawer-bedside": {
+    "fit": "cover"
+  },
+  "stratford-2-drawer-console-table": {
+    "fit": "cover"
+  },
+  "stratford-2-drawer-coffee-table": {
+    "fit": "cover"
+  },
+  "stratford-2-door-tv-unit": {
+    "fit": "cover"
+  },
+  "stratford-2-door-2-drawer-sideboard": {
+    "fit": "cover"
+  },
+  "stratford-1-drawer-locker": {
+    "fit": "cover"
+  },
+  "modena-led-cheval-arch-tl": {
+    "fit": "cover"
+  },
+  "raphael-sofa-bed": {
+    "fit": "cover"
+  },
+  "corso-sofa-bed": {
+    "fit": "cover"
+  },
+  "cashel-mattress": {
+    "fit": "cover"
+  },
+  "ottawa-1-door-3-drawear-side-table-wh": {
+    "fit": "contain",
+    "fill": 0.541
+  },
+  "nadia-vanity-dressing-table-with-drawers-ta": {
+    "fit": "contain",
+    "fill": 0.569
+  },
+  "hamilton-dining-table": {
+    "fit": "contain",
+    "fill": 0.347
+  },
+  "orson-recliner-chair-and-ottoman": {
+    "fit": "cover"
+  },
+  "nevada-vanity-table-set-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.694
+  },
+  "malvern-6-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.504
+  },
+  "perth-recliner": {
+    "fit": "cover"
+  },
+  "quebec-wave-edge-coffee-table-medium-oak-effect-black-wh": {
+    "fit": "cover"
+  },
+  "oscar-small-bench": {
+    "fit": "contain",
+    "fill": 0.156
+  },
+  "jack-lamp-table": {
+    "fit": "contain",
+    "fill": 0.234
+  },
+  "jack-coffee-table": {
+    "fit": "contain",
+    "fill": 0.2
+  },
+  "jack-tv-unit": {
+    "fit": "contain",
+    "fill": 0.283
+  },
+  "roma-27-headboard-and-base-2-drawers-aj": {
+    "fit": "cover"
+  },
+  "roma-27-headboard-and-base-aj": {
+    "fit": "cover"
+  },
+  "ventura-3ft-metal-bunk-beds": {
+    "fit": "cover"
+  },
+  "brandon-3ft-metal-frame-bunk-bed": {
+    "fit": "cover"
+  },
+  "tandi-triple-sleeper-bunk-bed": {
+    "fit": "cover"
+  },
+  "neptune-triple-sleeper-bunk-bed-dark-grey-oak-effect": {
+    "fit": "cover"
+  },
+  "neptune-triple-sleeper-bunk-bed-white": {
+    "fit": "cover"
+  },
+  "neptune-3ft-bunk-bed-dark-grey-oak-effect": {
+    "fit": "cover"
+  },
+  "neptune-3ft-bunk-bed-white": {
+    "fit": "cover"
+  },
+  "prime-bed-range-hb": {
+    "fit": "contain",
+    "fill": 0.529
+  },
+  "rosa-grey-bedframe-hb": {
+    "fit": "contain",
+    "fill": 0.611
+  },
+  "zoey-4-door-2-mirrored-wardrobe": {
+    "fit": "cover"
+  },
+  "voyager-3-door-2-drawer-wardrobe": {
+    "fit": "cover"
+  },
+  "sliderobe-2-door-1-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "stuttgart-sliding-2-door-1-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "stuttgart-3-door-central-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "skyla-4-door-2-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "sevilla-2-door-1-mirror-2-drawer-sliding-wardrobe-alpine-white": {
+    "fit": "cover"
+  },
+  "oakland-5-door-3-mirror-2-drawer-wardrobe-2-26m": {
+    "fit": "cover"
+  },
+  "monza-2-door-1-half-mirror-sliding-wardrobe-2-18": {
+    "fit": "cover"
+  },
+  "monza-4-door-2-split-mirror-wardrobe-2-18m": {
+    "fit": "cover"
+  },
+  "mainz-4-door-2-mirror-2-drawer-wardrobe-alpine-white-1-8m": {
+    "fit": "cover"
+  },
+  "kronach-two-sliding-door-mirrored-wardrobe-2-25m": {
+    "fit": "cover"
+  },
+  "joel-2-door-2-mirror-2-drawer-wardrobe-alpine-white": {
+    "fit": "cover"
+  },
+  "imperial-3-door-sliding-wardrobe-with-central-mirror-3m": {
+    "fit": "cover"
+  },
+  "imperial-3-door-sliding-wardrobe-with-central-mirror-2-5m": {
+    "fit": "cover"
+  },
+  "fellbach-sliding-2-door-2-1-2-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "ellesse-4-door-2-mirror-2-drawer-wardrobe": {
+    "fit": "cover"
+  },
+  "cadiz-2-door-1-mirror-sliding-wardrobe": {
+    "fit": "cover"
+  },
+  "belluno-2-door-1-mirror-sliding-wardrobe-artisan-oak": {
+    "fit": "cover"
+  },
+  "arnstein-3-door-2-drawer-1-central-mirror-wardrobe": {
+    "fit": "cover"
+  },
+  "arnstein-2-door-1-mirror-2-drawer": {
+    "fit": "cover"
+  },
+  "colton-46-white-bed": {
+    "fit": "cover"
+  },
+  "aalen-3-door-1-mirror-6-drawer-wardrobe-1-36m": {
+    "fit": "cover"
+  },
+  "imperial-sliding-wardrobe": {
+    "fit": "cover"
+  },
+  "nevada-mirrored-2-door-1-drawer-wardrobe-white-gloss": {
+    "fit": "contain",
+    "fill": 0.497
+  },
+  "nevada-mirrored-2-door-1-drawer-wardrobe-grey-gloss-light-oak-effect": {
+    "fit": "cover"
+  },
+  "nevada-3-2-drawer-chest-white-gloss-wh": {
+    "fit": "cover"
+  },
+  "malvern-8-drawer-chest": {
+    "fit": "cover"
+  },
+  "malvern-3-door-wardrobe": {
+    "fit": "cover"
+  },
+  "malvern-2-door-wardrobe": {
+    "fit": "cover"
+  },
+  "malvern-3-door-bedroom-range": {
+    "fit": "cover"
+  },
+  "monaco-bedframe-white": {
+    "fit": "contain",
+    "fill": 0.445
+  },
+  "monaco-bedframe-grey-oak": {
+    "fit": "cover"
+  },
+  "quebec-dining-chairs-wh": {
+    "fit": "cover"
+  },
+  "madison-ottoman-bed": {
+    "fit": "cover"
+  },
+  "amalfi-2-seater-sofa": {
+    "fit": "cover"
+  },
+  "amalfi-1-seater-sofa": {
+    "fit": "cover"
+  },
+  "nevada-6-door-2-drawer-mirrored-wardrobe-grey-gloss-light-oak-effect-veneer": {
+    "fit": "cover"
+  },
+  "nevada-2-door-corner-wardrobe-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.519
+  },
+  "chrissie-dining-set": {
+    "fit": "cover"
+  },
+  "chrissie-2m-dining-table-set-w-bench": {
+    "fit": "cover"
+  },
+  "chrissie-coffee-table": {
+    "fit": "cover"
+  },
+  "chrissie-console-table": {
+    "fit": "cover"
+  },
+  "rukas-0516-rug": {
+    "fit": "cover"
+  },
+  "alisa-rug-beige-brown": {
+    "fit": "cover"
+  },
+  "aintree-3-3-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.433
+  },
+  "oscar-2-drawer-coffee-table": {
+    "fit": "contain",
+    "fill": 0.368
+  },
+  "erik-round-table": {
+    "fit": "cover"
+  },
+  "dallas-office-chair": {
+    "fit": "contain",
+    "fill": 0.45
+  },
+  "york-office-chair": {
+    "fit": "contain",
+    "fill": 0.456
+  },
+  "dario-round-table-with-black-legs": {
+    "fit": "cover"
+  },
+  "matrix-lamp-table-marble": {
+    "fit": "contain",
+    "fill": 0.51
+  },
+  "matrix-coffee-table-light-marble": {
+    "fit": "contain",
+    "fill": 0.51
+  },
+  "fredrik-tall-bookcase": {
+    "fit": "contain",
+    "fill": 0.445,
+    "trappedWhite": 0.195
+  },
+  "sam-bedframe": {
+    "fit": "contain",
+    "fill": 0.396
+  },
+  "wendy-velvet-tub-chair": {
+    "fit": "cover"
+  },
+  "roxy-chaise-lounge": {
+    "fit": "cover"
+  },
+  "roxy-3-seater-sofa": {
+    "fit": "cover"
+  },
+  "vienna-locker": {
+    "fit": "contain",
+    "fill": 0.191
+  },
+  "vienna-dressing-table": {
+    "fit": "contain",
+    "fill": 0.266
+  },
+  "vienna-5-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.24
+  },
+  "emma-gas-lift-headboard": {
+    "fit": "cover"
+  },
+  "orthopedic-chair": {
+    "fit": "cover"
+  },
+  "carlow-grey-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-nore-oak-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-boyne-ivory-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-naturalstone-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-greystones-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-trufflestone-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-indigo-oak-blue-bed": {
+    "fit": "cover"
+  },
+  "cedarwood-sage-oak-green-bed": {
+    "fit": "cover"
+  },
+  "annalee-ivory-carcass-bed-cw": {
+    "fit": "cover"
+  },
+  "francesca-bedside-locker": {
+    "fit": "contain",
+    "fill": 0.304
+  },
+  "daniella-3-4-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.225
+  },
+  "vienna-bed": {
+    "fit": "cover"
+  },
+  "anderson-sofa-bed": {
+    "fit": "cover"
+  },
+  "l17b66-80x80-cm": {
+    "fit": "cover"
+  },
+  "s18b68-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-2465-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-2434-60x90-cm": {
+    "fit": "contain",
+    "fill": 0.656
+  },
+  "fam-1533-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-1626-90x60-cm": {
+    "fit": "contain",
+    "fill": 0.383
+  },
+  "fam-0637-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-0669-90x60-cm": {
+    "fit": "cover"
+  },
+  "l19t18-80x80-cm": {
+    "fit": "cover"
+  },
+  "l18b111-80x80-cm": {
+    "fit": "contain",
+    "fill": 0.491
+  },
+  "fam-2471-1-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-2527-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-1375-80x80-cm": {
+    "fit": "cover"
+  },
+  "zh6068-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-2523-90x60-cm": {
+    "fit": "cover"
+  },
+  "fam-0328-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-0117-80x80-cm": {
+    "fit": "cover"
+  },
+  "fam-2520-80x80-cm": {
+    "fit": "contain",
+    "fill": 0.676
+  },
+  "donegal-cream-ottoman": {
+    "fit": "cover"
+  },
+  "donegal-cream-bed": {
+    "fit": "cover"
+  },
+  "donegal-grey-ottoman": {
+    "fit": "cover"
+  },
+  "donegal-grey-bed": {
+    "fit": "cover"
+  },
+  "roscommon-locker": {
+    "fit": "contain",
+    "fill": 0.363
+  },
+  "roscommon-bed": {
+    "fit": "cover"
+  },
+  "nevada-6-drawer-chest-black-gloss-wh": {
+    "fit": "cover"
+  },
+  "nevada-6-drawer-chest-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-6-drawer-chest-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.533
+  },
+  "nevada-5-drawer-narrow-chest-white-gloss-wh": {
+    "fit": "cover"
+  },
+  "nevada-5-drawer-narrow-chest-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-5-drawer-low-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-5-drawer-low-wardrobe-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.699
+  },
+  "nevada-4-drawer-dressing-table-set-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.764
+  },
+  "nevada-4-drawer-dressing-table-set-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-4-door-2-drawer-mirrored-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-4-door-2-drawer-mirrored-wardrobe-white-gloss-wh": {
+    "fit": "cover"
+  },
+  "nevada-3-2-drawer-chest-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-3-drawer-chest-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-3-drawer-bedside-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "grace-gas-lift-headboard": {
+    "fit": "cover"
+  },
+  "waterford-blanket-box": {
+    "fit": "contain",
+    "fill": 0.43
+  },
+  "waterford-locker": {
+    "fit": "contain",
+    "fill": 0.516
+  },
+  "waterford-bed-grey": {
+    "fit": "cover"
+  },
+  "waterford-bed-green": {
+    "fit": "cover"
+  },
+  "evan-1-seater-lift-and-rise-sultry": {
+    "fit": "contain",
+    "fill": 0.24
+  },
+  "nevada-3-door-2-drawer-mirrored-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-3-door-2-drawer-mirrored-wardrobe-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.569
+  },
+  "nevada-2-door-corner-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-2-door-1-drawer-wardrobe-bedroom-set-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-2-door-all-hanging-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-2-door-1-drawer-wardrobe-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.508
+  },
+  "nevada-1-door-1-drawer-wardrobe-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "durham-coffee-table-wh": {
+    "fit": "cover"
+  },
+  "london-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.142
+  },
+  "oscar-nest-of-3-tables": {
+    "fit": "contain",
+    "fill": 0.135
+  },
+  "oscar-lamp-table": {
+    "fit": "contain",
+    "fill": 0.283
+  },
+  "oscar-large-extension-table": {
+    "fit": "contain",
+    "fill": 0.115
+  },
+  "oscar-butterfly-extension-table-1-4-metre": {
+    "fit": "contain",
+    "fill": 0.134
+  },
+  "oscar-low-dining-chair": {
+    "fit": "contain",
+    "fill": 0.17
+  },
+  "bella-3-4-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.225
+  },
+  "parker-headboard": {
+    "fit": "cover"
+  },
+  "oasis-base": {
+    "fit": "contain",
+    "fill": 0.333
+  },
+  "oscar-1-drawer-mini-console-table": {
+    "fit": "contain",
+    "fill": 0.223
+  },
+  "mattia-lift-and-rise-chair": {
+    "fit": "cover"
+  },
+  "oasis-base-wilson-headboard": {
+    "fit": "contain",
+    "fill": 0.459
+  },
+  "ember-fireside-fabric-chair": {
+    "fit": "cover"
+  },
+  "blaze-fireside-fabric-chair": {
+    "fit": "cover"
+  },
+  "brandon-armchair": {
+    "fit": "cover"
+  },
+  "wendy-boucle-chair": {
+    "fit": "cover"
+  },
+  "reese-accent-chair": {
+    "fit": "cover"
+  },
+  "bray-accent-chair": {
+    "fit": "cover"
+  },
+  "sophie-static-sofa": {
+    "fit": "cover"
+  },
+  "charlotte-armchair": {
+    "fit": "cover"
+  },
+  "ricardo-motion-sofa": {
+    "fit": "cover"
+  },
+  "salou-double-wardrobe-with-drawers": {
+    "fit": "contain",
+    "fill": 0.112
+  },
+  "whitney-double-wardrobe-white": {
+    "fit": "contain",
+    "fill": 0.367
+  },
+  "capri-dining-chair": {
+    "fit": "contain",
+    "fill": 0.123
+  },
+  "gabriel-dining-chair": {
+    "fit": "contain",
+    "fill": 0.169
+  },
+  "kendra-accent-chair-grey-fabric": {
+    "fit": "cover"
+  },
+  "t108019s-lamp": {
+    "fit": "contain",
+    "fill": 0.377
+  },
+  "t209023-lamp": {
+    "fit": "contain",
+    "fill": 0.414
+  },
+  "t209026-lamp": {
+    "fit": "contain",
+    "fill": 0.383
+  },
+  "t209027-lamp": {
+    "fit": "contain",
+    "fill": 0.42
+  },
+  "t209024-lamp": {
+    "fit": "contain",
+    "fill": 0.319
+  },
+  "t108015b-lamp": {
+    "fit": "contain",
+    "fill": 0.354
+  },
+  "t108040a-lamp": {
+    "fit": "contain",
+    "fill": 0.352
+  },
+  "t108020b-lamp": {
+    "fit": "contain",
+    "fill": 0.349
+  },
+  "t209022-lamp": {
+    "fit": "contain",
+    "fill": 0.372
+  },
+  "t2314-lamp": {
+    "fit": "contain",
+    "fill": 0.376
+  },
+  "t108011-lamp": {
+    "fit": "contain",
+    "fill": 0.453
+  },
+  "t108002-lamp": {
+    "fit": "contain",
+    "fill": 0.428
+  },
+  "t209018w-lamp": {
+    "fit": "contain",
+    "fill": 0.436
+  },
+  "t2312-lamp": {
+    "fit": "contain",
+    "fill": 0.322
+  },
+  "t2311-lamp": {
+    "fit": "cover"
+  },
+  "t2313-lamp": {
+    "fit": "contain",
+    "fill": 0.339
+  },
+  "t2315-lamp": {
+    "fit": "contain",
+    "fill": 0.337
+  },
+  "f209029-lamp": {
+    "fit": "cover"
+  },
+  "f209028-lamp": {
+    "fit": "cover"
+  },
+  "giada-recliner-chair": {
+    "fit": "cover"
+  },
+  "conrad-steel-blue-recliner": {
+    "fit": "cover"
+  },
+  "roma-dining-set": {
+    "fit": "cover"
+  },
+  "leroy-electric-recliner": {
+    "fit": "cover"
+  },
+  "herbert-electric-motion-chair": {
+    "fit": "cover"
+  },
+  "glenwood-electric-motion-sofa": {
+    "fit": "cover"
+  },
+  "ebba-recliner-chair": {
+    "fit": "cover"
+  },
+  "casey-recliner": {
+    "fit": "cover"
+  },
+  "aurora-italian-leather-sofa-tan": {
+    "fit": "cover"
+  },
+  "snug-milano-bean-chair": {
+    "fit": "cover"
+  },
+  "aintree-double-robe": {
+    "fit": "contain",
+    "fill": 0.151
+  },
+  "quebec-wave-edge-console-table-wh": {
+    "fit": "cover"
+  },
+  "eddie-coffee-table-grey-sonoma-effect-wh": {
+    "fit": "cover"
+  },
+  "athens-rectangular-coffee-table-concrete-effect-black-wh": {
+    "fit": "cover"
+  },
+  "athens-oval-coffee-table-concrete-effect-black-wh": {
+    "fit": "cover"
+  },
+  "aspen-coffee-table-white-oak-stone-effect-wh": {
+    "fit": "cover"
+  },
+  "vicenza-coffee-table-light-grey": {
+    "fit": "cover"
+  },
+  "dario-round-table-with-chrome-legs": {
+    "fit": "cover"
+  },
+  "oscar-large-dining-chair-pu-seat": {
+    "fit": "contain",
+    "fill": 0.186
+  },
+  "oscar-large-chair-wooden-seat": {
+    "fit": "contain",
+    "fill": 0.191
+  },
+  "delta-oak-2-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.276
+  },
+  "kylie-5-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.288
+  },
+  "salou-4-2-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.098
+  },
+  "bella-two-drawer-bedside-locker": {
+    "fit": "contain",
+    "fill": 0.201
+  },
+  "bella-3-4-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.179
+  },
+  "daniella-double-wardrobe-with-drawer": {
+    "fit": "contain",
+    "fill": 0.182
+  },
+  "daniella-two-drawer-bedside-locker": {
+    "fit": "contain",
+    "fill": 0.196
+  },
+  "blaine-sectional-2r-c-2r": {
+    "fit": "cover"
+  },
+  "snug-milano-bean-chair-boucle": {
+    "fit": "contain",
+    "fill": 0.219
+  },
+  "waterville-swivel-and-glide-chair": {
+    "fit": "cover"
+  },
+  "treviso-dining-table-wh": {
+    "fit": "cover"
+  },
+  "felicia-swivel-chair": {
+    "fit": "cover"
+  },
+  "montreal-stool": {
+    "fit": "cover"
+  },
+  "montreal-dining-set": {
+    "fit": "cover"
+  },
+  "kimberley-robe": {
+    "fit": "cover"
+  },
+  "chrissie-stool": {
+    "fit": "cover"
+  },
+  "angela-dining-chair": {
+    "fit": "contain",
+    "fill": 0.167
+  },
+  "anya-dining-chair": {
+    "fit": "contain",
+    "fill": 0.173
+  },
+  "fredrik-2-drawer-console-table": {
+    "fit": "contain",
+    "fill": 0.308,
+    "trappedWhite": 0.059
+  },
+  "aintree-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.152
+  },
+  "london-4-2-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.191
+  },
+  "silvia-chair-chrome-legs": {
+    "fit": "contain",
+    "fill": 0.151
+  },
+  "silvia-chair-black-legs": {
+    "fit": "contain",
+    "fill": 0.168
+  },
+  "fredrik-chair": {
+    "fit": "contain",
+    "fill": 0.181
+  },
+  "lucy-hanging-mirror": {
+    "fit": "contain",
+    "fill": 0.507,
+    "trappedWhite": 0.079
+  },
+  "lucy-one-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.38
+  },
+  "kendra-rocking-chair-grey-fabric-wh": {
+    "fit": "cover"
+  },
+  "hugo-2-1-metre-table-with-pedestal-leg": {
+    "fit": "cover"
+  },
+  "tapas-round-table": {
+    "fit": "cover"
+  },
+  "tapas-square-table": {
+    "fit": "cover"
+  },
+  "vetro-lamp-table": {
+    "fit": "contain",
+    "fill": 0.151
+  },
+  "vetro-console-table": {
+    "fit": "contain",
+    "fill": 0.218
+  },
+  "vetro-coffee-table": {
+    "fit": "contain",
+    "fill": 0.2,
+    "trappedWhite": 0.044
+  },
+  "george-lamp-table": {
+    "fit": "contain",
+    "fill": 0.356
+  },
+  "george-coffee-table": {
+    "fit": "contain",
+    "fill": 0.211
+  },
+  "francesca-wide-chest": {
+    "fit": "contain",
+    "fill": 0.272
+  },
+  "francesca-tall-chest": {
+    "fit": "contain",
+    "fill": 0.226
+  },
+  "newark-dining-set": {
+    "fit": "cover"
+  },
+  "farrell-chests": {
+    "fit": "cover"
+  },
+  "farrell-locker": {
+    "fit": "cover"
+  },
+  "napoli-dining-set": {
+    "fit": "cover"
+  },
+  "blox-wide-chest": {
+    "fit": "contain",
+    "fill": 0.267
+  },
+  "blox-chest-of-drawers": {
+    "fit": "contain",
+    "fill": 0.298
+  },
+  "doda-tall-bookcase": {
+    "fit": "contain",
+    "fill": 0.205,
+    "trappedWhite": 0.077
+  },
+  "doda-dining-table": {
+    "fit": "cover"
+  },
+  "doda-coffee-table": {
+    "fit": "contain",
+    "fill": 0.264
+  },
+  "erik-table-1-6-metre": {
+    "fit": "cover"
+  },
+  "canyon-lamp-table": {
+    "fit": "contain",
+    "fill": 0.429
+  },
+  "canyon-coffee-table": {
+    "fit": "cover"
+  },
+  "francesca-bed": {
+    "fit": "contain",
+    "fill": 0.277
+  },
+  "rukas-0024a-rug": {
+    "fit": "cover"
+  },
+  "quebec-dining-table-wh": {
+    "fit": "cover"
+  },
+  "chelsea-bed": {
+    "fit": "cover"
+  },
+  "silver-tv-unit-s32m-sv": {
+    "fit": "contain",
+    "fill": 0.319
+  },
+  "oscar-2-3-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.308
+  },
+  "ohio-bunk-bed": {
+    "fit": "cover"
+  },
+  "fredrik-1-2-metre-table-walnut": {
+    "fit": "contain",
+    "fill": 0.15
+  },
+  "fredrik-coffee-table": {
+    "fit": "contain",
+    "fill": 0.158
+  },
+  "fredrik-round-table": {
+    "fit": "contain",
+    "fill": 0.12
+  },
+  "fredrik-dining-table-1-6-metre": {
+    "fit": "contain",
+    "fill": 0.158
+  },
+  "fredrik-1-2-metre-table-oak": {
+    "fit": "contain",
+    "fill": 0.158
+  },
+  "daniella-3-4-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.198
+  },
+  "harriet-tilt-and-rise-chair": {
+    "fit": "cover"
+  },
+  "fredrik-bench": {
+    "fit": "contain",
+    "fill": 0.267
+  },
+  "fredrik-1800-table-x-leg": {
+    "fit": "cover"
+  },
+  "rebecca-leather-dining-chair": {
+    "fit": "contain",
+    "fill": 0.27
+  },
+  "katie-armchair": {
+    "fit": "cover"
+  },
+  "writing-desk-grey": {
+    "fit": "cover"
+  },
+  "archie-armchair": {
+    "fit": "cover"
+  },
+  "alicante-round-set": {
+    "fit": "cover"
+  },
+  "columbia-console-table": {
+    "fit": "cover"
+  },
+  "chantelle-console-table": {
+    "fit": "cover"
+  },
+  "royal-coil-regency-mattress": {
+    "fit": "contain",
+    "fill": 0.446
+  },
+  "skye-rug-242": {
+    "fit": "cover"
+  },
+  "union-fabric-bean-chair-brown-kaki": {
+    "fit": "contain",
+    "fill": 0.446
+  },
+  "aspen-sofa-bed": {
+    "fit": "contain",
+    "fill": 0.285
+  },
+  "juliet-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.235
+  },
+  "beverly-set": {
+    "fit": "cover"
+  },
+  "arizona-triple-sleeper-white-4-base": {
+    "fit": "contain",
+    "fill": 0.485
+  },
+  "silvia-bar-stool-with-chrome-legs": {
+    "fit": "contain",
+    "fill": 0.504,
+    "trappedWhite": 0.085
+  },
+  "silvia-bar-stool-with-black-legs": {
+    "fit": "contain",
+    "fill": 0.471
+  },
+  "verona-dining-set": {
+    "fit": "cover"
+  },
+  "edel-console-table": {
+    "fit": "cover"
+  },
+  "solteira-bunk-bed": {
+    "fit": "cover"
+  },
+  "colton-bunk-bed": {
+    "fit": "cover"
+  },
+  "como-folding-bed": {
+    "fit": "contain",
+    "fill": 0.483
+  },
+  "holly-bed": {
+    "fit": "cover"
+  },
+  "colton-3-bed": {
+    "fit": "cover"
+  },
+  "detroit-coffee-table": {
+    "fit": "cover"
+  },
+  "raffa-dining-set": {
+    "fit": "cover"
+  },
+  "juliet-curved-bed": {
+    "fit": "contain",
+    "fill": 0.176
+  },
+  "verona-lamp-table": {
+    "fit": "contain",
+    "fill": 0.423
+  },
+  "jay-be-revolution-folding-bed-with-rebound-e-fibre-mattress-single": {
+    "fit": "cover"
+  },
+  "argyle-triple-sleeper-rustic-pine-4-base": {
+    "fit": "contain",
+    "fill": 0.473
+  },
+  "argyle-bunk-bed-light-antique": {
+    "fit": "contain",
+    "fill": 0.557
+  },
+  "denmark-large-sliderobe-1-5m": {
+    "fit": "cover"
+  },
+  "nova-6-drawer-chest-oak": {
+    "fit": "contain",
+    "fill": 0.297
+  },
+  "nova-5-drawer-wide-chest-white": {
+    "fit": "contain",
+    "fill": 0.255
+  },
+  "nova-5-drawer-wide-chest-oak": {
+    "fit": "contain",
+    "fill": 0.26
+  },
+  "nova-5-drawer-narrow-chest-oak": {
+    "fit": "contain",
+    "fill": 0.163
+  },
+  "nova-3-drawer-chest-white": {
+    "fit": "contain",
+    "fill": 0.219
+  },
+  "nova-3-drawer-chest-oak": {
+    "fit": "contain",
+    "fill": 0.209
+  },
+  "nelly-2-door-mirrored-wardrobe-105cm-graphite-lamela-artisan": {
+    "fit": "contain",
+    "fill": 0.439,
+    "trappedWhite": 0.025
+  },
+  "argyle-bed": {
+    "fit": "cover"
+  },
+  "function-plus-desk-white": {
+    "fit": "contain",
+    "fill": 0.194
+  },
+  "function-plus-corner-desk-white-oak": {
+    "fit": "contain",
+    "fill": 0.285
+  },
+  "nevada-2-drawer-bedside-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.686
+  },
+  "nevada-2-drawer-bedside-grey-gloss-light-oak-effect-veneer-wh": {
+    "fit": "cover"
+  },
+  "nevada-3-drawer-bedside-white-gloss-wh": {
+    "fit": "contain",
+    "fill": 0.738
+  },
+  "fredrik-chair-pu": {
+    "fit": "contain",
+    "fill": 0.163
+  },
+  "quebec-round-coffee-table-set-medium-oak-effect-black-wh": {
+    "fit": "cover"
+  },
+  "ottawa-1-drawer-coffee-table-medium-oak-effect-black-wh": {
+    "fit": "cover"
+  },
+  "athens-round-coffee-table-set-concrete-effect-black-wh": {
+    "fit": "cover"
+  },
+  "kilkenny-side-gas-lift-bed": {
+    "fit": "contain",
+    "fill": 0.506
+  },
+  "ashley-sky-blue-bed": {
+    "fit": "cover"
+  },
+  "charlotte-bed": {
+    "fit": "contain",
+    "fill": 0.309
+  },
+  "quebec-wave-edge-nest-of-tables-wh": {
+    "fit": "cover"
+  },
+  "quebec-straight-edge-nest-of-tables-wh": {
+    "fit": "cover"
+  },
+  "ottawa-3-drawer-console-table-wh": {
+    "fit": "contain",
+    "fill": 0.313
+  },
+  "toronto-sliding-wardrobe-2-5-br": {
+    "fit": "contain",
+    "fill": 0.727
+  },
+  "memphis-high-sleeper-bunk": {
+    "fit": "cover"
+  },
+  "natural-sleep-florence-mattress": {
+    "fit": "contain",
+    "fill": 0.214
+  },
+  "chantelle-dining-chair": {
+    "fit": "cover"
+  },
+  "courtney-dining-set": {
+    "fit": "cover"
+  },
+  "harry-stool": {
+    "fit": "contain",
+    "fill": 0.415
+  },
+  "jack-fireside-chair": {
+    "fit": "cover"
+  },
+  "lisbon-pu-chair": {
+    "fit": "contain",
+    "fill": 0.368
+  },
+  "manhattan-tv-unit": {
+    "fit": "cover"
+  },
+  "marriot-bed": {
+    "fit": "cover"
+  },
+  "oak-writing-desk": {
+    "fit": "cover"
+  },
+  "olive-cream-and-oak-stool": {
+    "fit": "contain",
+    "fill": 0.288
+  },
+  "rochester-cream-and-oak-chair": {
+    "fit": "cover"
+  },
+  "thames-cream-and-oak-chair": {
+    "fit": "cover"
+  },
+  "vera-fireside-chair": {
+    "fit": "contain",
+    "fill": 0.577
+  },
+  "washington-5-oak-set": {
+    "fit": "cover"
+  },
+  "columbia-coffee-table": {
+    "fit": "cover"
+  },
+  "columbia-chair": {
+    "fit": "cover"
+  },
+  "chantelle-coffee-table": {
+    "fit": "cover"
+  },
+  "chantelle-compact-set": {
+    "fit": "cover"
+  },
+  "chantelle-4-grey-fixed-top-dining-set": {
+    "fit": "cover"
+  },
+  "platinum-mattress": {
+    "fit": "cover"
+  },
+  "rukas-0549-rug": {
+    "fit": "cover"
+  },
+  "rukas-0557-rug": {
+    "fit": "cover"
+  },
+  "rukas-0565-rug": {
+    "fit": "cover"
+  },
+  "twist-10620-rug": {
+    "fit": "cover"
+  },
+  "twist-10629-rug": {
+    "fit": "cover"
+  },
+  "twist-10638-rug": {
+    "fit": "contain",
+    "fill": 0.501
+  },
+  "twist-1752-rug": {
+    "fit": "cover"
+  },
+  "rukas-0509-rug": {
+    "fit": "cover"
+  },
+  "rukas-0254-rug": {
+    "fit": "cover"
+  },
+  "twist-1991-rug": {
+    "fit": "cover"
+  },
+  "twist-2098-rug": {
+    "fit": "contain",
+    "fill": 0.523
+  },
+  "twist-terracotta-t1009-rug": {
+    "fit": "cover"
+  },
+  "twist-t1739-rug": {
+    "fit": "cover"
+  },
+  "twist-t1009-green-rug": {
+    "fit": "cover"
+  },
+  "twist-grey-t1009-rug": {
+    "fit": "cover"
+  },
+  "twist-brown-t1009-rug": {
+    "fit": "cover"
+  },
+  "rukas-0241-rug": {
+    "fit": "cover"
+  },
+  "rukas-0204a-rug": {
+    "fit": "cover"
+  },
+  "rukas-0032-rug": {
+    "fit": "cover"
+  },
+  "maple-1027-rug": {
+    "fit": "cover"
+  },
+  "maple-0927a-rug": {
+    "fit": "cover"
+  },
+  "bodrum-bd0278-rug": {
+    "fit": "contain",
+    "fill": 0.501
+  },
+  "bodrum-0511-rug": {
+    "fit": "cover"
+  },
+  "bodrum-bd238a-rug": {
+    "fit": "cover"
+  },
+  "lucy-double-wardrobe": {
+    "fit": "contain",
+    "fill": 0.423
+  },
+  "lucy-3-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.451
+  },
+  "lucy-3ft-bed": {
+    "fit": "cover"
+  },
+  "whitney-3-2-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.178
+  },
+  "whitney-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.091
+  },
+  "whitney-white-bed": {
+    "fit": "contain",
+    "fill": 0.342
+  },
+  "jack-6-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.254
+  },
+  "jack-5-drawer-tall-chest": {
+    "fit": "contain",
+    "fill": 0.196
+  },
+  "jack-2-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.158
+  },
+  "jack-bed": {
+    "fit": "cover"
+  },
+  "dario-1-4-metre-dining-table-with-chrome-legs": {
+    "fit": "cover"
+  },
+  "dario-1-4-metre-dining-table-with-black-legs": {
+    "fit": "cover"
+  },
+  "branca-dining-chair": {
+    "fit": "cover"
+  },
+  "vicenza-dining-chair-tuape": {
+    "fit": "contain",
+    "fill": 0.597
+  },
+  "infinity-lamp-table": {
+    "fit": "contain",
+    "fill": 0.364
+  },
+  "liana-chair-with-black-legs": {
+    "fit": "contain",
+    "fill": 0.288
+  },
+  "liana-chair-chrome-legs": {
+    "fit": "contain",
+    "fill": 0.581
+  },
+  "retro-dining-chair": {
+    "fit": "contain",
+    "fill": 0.104
+  },
+  "retro-bar-stool": {
+    "fit": "contain",
+    "fill": 0.53,
+    "trappedWhite": 0.101
+  },
+  "talia-bar-stool": {
+    "fit": "contain",
+    "fill": 0.522,
+    "trappedWhite": 0.085
+  },
+  "branca-bench-pu": {
+    "fit": "contain",
+    "fill": 0.418
+  },
+  "callie-accent-chair": {
+    "fit": "contain",
+    "fill": 0.174
+  },
+  "boston-sofa-bed": {
+    "fit": "contain",
+    "fill": 0.285
+  },
+  "bodrum-0496-rug": {
+    "fit": "cover"
+  },
+  "tower-gas-lift-5ft": {
+    "fit": "contain",
+    "fill": 0.334
+  },
+  "taylor-bed": {
+    "fit": "contain",
+    "fill": 0.327
+  },
+  "tv-unit-t32-s": {
+    "fit": "contain",
+    "fill": 0.303
+  },
+  "soho-locker": {
+    "fit": "cover"
+  },
+  "soho-footstool": {
+    "fit": "contain",
+    "fill": 0.236
+  },
+  "silver-tv-unit-s36m": {
+    "fit": "contain",
+    "fill": 0.379
+  },
+  "oasis-base-hogan-headboard": {
+    "fit": "contain",
+    "fill": 0.469
+  },
+  "mayo-bed-grey": {
+    "fit": "cover"
+  },
+  "mayo-bed-beige": {
+    "fit": "cover"
+  },
+  "kingston-standard-bed": {
+    "fit": "contain",
+    "fill": 0.375
+  },
+  "kilkenny-silver-locker": {
+    "fit": "cover"
+  },
+  "kilkenny-silver-bed": {
+    "fit": "cover"
+  },
+  "kilkenny-grey-bed": {
+    "fit": "contain",
+    "fill": 0.405
+  },
+  "hogan-headboard": {
+    "fit": "cover"
+  },
+  "galway-silver-bed": {
+    "fit": "contain",
+    "fill": 0.398
+  },
+  "galway-grey-bed": {
+    "fit": "cover"
+  },
+  "dp48-sv-tv-stand": {
+    "fit": "contain",
+    "fill": 0.273
+  },
+  "chair-and-footstool-1986": {
+    "fit": "cover"
+  },
+  "carlow-beige-side-gas-lift-bed": {
+    "fit": "cover"
+  },
+  "brazil-bed": {
+    "fit": "cover"
+  },
+  "arizona-bed-de": {
+    "fit": "contain",
+    "fill": 0.324
+  },
+  "a60-u": {
+    "fit": "contain",
+    "fill": 0.272
+  },
+  "5280-tv-unit": {
+    "fit": "contain",
+    "fill": 0.252
+  },
+  "venus-rug-grey-red": {
+    "fit": "cover"
+  },
+  "venus-rug-grey-gold": {
+    "fit": "cover"
+  },
+  "venus-rug-black-grey": {
+    "fit": "cover"
+  },
+  "venus-rug-beige-brown": {
+    "fit": "cover"
+  },
+  "venice-rug-white-2941": {
+    "fit": "cover"
+  },
+  "venice-rug-grey-2941": {
+    "fit": "cover"
+  },
+  "venice-rug-grey-1721": {
+    "fit": "cover"
+  },
+  "venice-rug-grey-1696": {
+    "fit": "cover"
+  },
+  "venice-rug-blue-2941": {
+    "fit": "cover"
+  },
+  "venice-rug-blue-1794": {
+    "fit": "cover"
+  },
+  "venice-rug-blue-1696": {
+    "fit": "cover"
+  },
+  "storm-rug-972": {
+    "fit": "cover"
+  },
+  "storm-rug-752": {
+    "fit": "cover"
+  },
+  "saturn-rug-grey-red": {
+    "fit": "cover"
+  },
+  "saturn-rug-grey-gold": {
+    "fit": "cover"
+  },
+  "saturn-rug-black-grey": {
+    "fit": "cover"
+  },
+  "saturn-rug-beige-brown": {
+    "fit": "cover"
+  },
+  "primrose-rug-choc-red": {
+    "fit": "cover"
+  },
+  "primrose-rug-beige-brown": {
+    "fit": "cover"
+  },
+  "prada-silver-rug": {
+    "fit": "cover"
+  },
+  "prada-red-rug": {
+    "fit": "cover"
+  },
+  "prada-mink-rug": {
+    "fit": "cover"
+  },
+  "prada-grey-rug": {
+    "fit": "cover"
+  },
+  "prada-cream-rug": {
+    "fit": "cover"
+  },
+  "prada-coral-rug": {
+    "fit": "cover"
+  },
+  "prada-aquamarine-rug": {
+    "fit": "cover"
+  },
+  "pluton-rug-grey-red": {
+    "fit": "cover"
+  },
+  "pluton-rug-grey-gold": {
+    "fit": "cover"
+  },
+  "pluton-rug-beige-brown": {
+    "fit": "cover"
+  },
+  "pluton-rug-black-grey": {
+    "fit": "cover"
+  },
+  "ottova-rug-red": {
+    "fit": "cover"
+  },
+  "milo-rug-salmon-02": {
+    "fit": "contain",
+    "fill": 0.36
+  },
+  "milo-rug-navy-03": {
+    "fit": "cover"
+  },
+  "milo-rug-mustard-05": {
+    "fit": "contain",
+    "fill": 0.383
+  },
+  "milo-rug-grey-01": {
+    "fit": "contain",
+    "fill": 0.369
+  },
+  "milo-rug-black-04": {
+    "fit": "contain",
+    "fill": 0.383
+  },
+  "milo-rug-beige-06": {
+    "fit": "cover"
+  },
+  "max-rug-791": {
+    "fit": "cover"
+  },
+  "max-rug-671": {
+    "fit": "cover"
+  },
+  "mason-rug-110-grey-mustard": {
+    "fit": "contain",
+    "fill": 0.374
+  },
+  "mason-rug-109-grey-orange": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "mason-rug-108-grey-blue": {
+    "fit": "contain",
+    "fill": 0.365
+  },
+  "mason-rug-105-grey-blue": {
+    "fit": "contain",
+    "fill": 0.374
+  },
+  "mason-rug-103-navy-grey": {
+    "fit": "contain",
+    "fill": 0.347
+  },
+  "kiss-800-rug": {
+    "fit": "cover"
+  },
+  "kiss-070-rug": {
+    "fit": "cover"
+  },
+  "jasper-rug-beige": {
+    "fit": "cover"
+  },
+  "ivy-rug-092": {
+    "fit": "cover"
+  },
+  "ivy-rug-022": {
+    "fit": "cover"
+  },
+  "harper-rug-652": {
+    "fit": "contain",
+    "fill": 0.836
+  },
+  "harper-rug-592": {
+    "fit": "cover"
+  },
+  "harper-rug-522": {
+    "fit": "cover"
+  },
+  "empire-rug-silver": {
+    "fit": "cover"
+  },
+  "empire-rug-ochre": {
+    "fit": "cover"
+  },
+  "empire-rug-grey": {
+    "fit": "cover"
+  },
+  "empire-rug-charcoal": {
+    "fit": "cover"
+  },
+  "elise-rug-silver": {
+    "fit": "cover"
+  },
+  "elise-rug-cream-red": {
+    "fit": "cover"
+  },
+  "darcy-rug-navy": {
+    "fit": "cover"
+  },
+  "darcy-rug-beige": {
+    "fit": "cover"
+  },
+  "dakar-rug-gold": {
+    "fit": "cover"
+  },
+  "cruz-rug-taupe-04": {
+    "fit": "contain",
+    "fill": 0.351
+  },
+  "cruz-rug-red-02": {
+    "fit": "contain",
+    "fill": 0.392
+  },
+  "cruz-rug-navy-03": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "cruz-rug-mustard-06": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "cruz-rug-green-05": {
+    "fit": "contain",
+    "fill": 0.365
+  },
+  "cruz-rug-black-01": {
+    "fit": "contain",
+    "fill": 0.387
+  },
+  "chad-rug-592": {
+    "fit": "cover"
+  },
+  "chad-rug-572": {
+    "fit": "cover"
+  },
+  "broadway-rug-5296a": {
+    "fit": "cover"
+  },
+  "broadway-rug-5293a": {
+    "fit": "cover"
+  },
+  "broadway-rug-5185a": {
+    "fit": "cover"
+  },
+  "broadway-rug-5182a": {
+    "fit": "cover"
+  },
+  "broadway-rug-5008a": {
+    "fit": "cover"
+  },
+  "broadway-rug-4950a": {
+    "fit": "cover"
+  },
+  "broadway-rug-4945a": {
+    "fit": "cover"
+  },
+  "blaze-rug-toupe-beige-03": {
+    "fit": "contain",
+    "fill": 0.374
+  },
+  "blaze-rug-navy-blue-02": {
+    "fit": "contain",
+    "fill": 0.374
+  },
+  "blaze-rug-ivory-orange-01": {
+    "fit": "contain",
+    "fill": 0.36
+  },
+  "blaze-rug-grey-04": {
+    "fit": "contain",
+    "fill": 0.281
+  },
+  "aspire-rug-108": {
+    "fit": "contain",
+    "fill": 0.356
+  },
+  "aspire-rug-107": {
+    "fit": "contain",
+    "fill": 0.36
+  },
+  "aspire-rug-106": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "aspire-rug-104": {
+    "fit": "contain",
+    "fill": 0.36
+  },
+  "aspire-rug-gold": {
+    "fit": "contain",
+    "fill": 0.334
+  },
+  "aspire-rug-silver": {
+    "fit": "contain",
+    "fill": 0.339
+  },
+  "aspire-rug-blue": {
+    "fit": "contain",
+    "fill": 0.378
+  },
+  "ashton-rug-toupe-beige-02": {
+    "fit": "contain",
+    "fill": 0.387
+  },
+  "ashton-rug-mustard-cream-04": {
+    "fit": "contain",
+    "fill": 0.387
+  },
+  "ashton-rug-ivory-orange-01": {
+    "fit": "cover"
+  },
+  "ashton-rug-grey-05": {
+    "fit": "cover"
+  },
+  "ashton-rug-blue-navy-03": {
+    "fit": "cover"
+  },
+  "asher-rug-grey-red": {
+    "fit": "cover"
+  },
+  "asher-rug-grey-mustard": {
+    "fit": "cover"
+  },
+  "asher-rug-grey-beige": {
+    "fit": "cover"
+  },
+  "alisa-rug-grey-black": {
+    "fit": "cover"
+  },
+  "alisa-rug-dark-grey-black": {
+    "fit": "cover"
+  },
+  "alaska-rug-5-104-white": {
+    "fit": "cover"
+  },
+  "alaska-rug-4-108": {
+    "fit": "cover"
+  },
+  "alaska-rug-3-123a": {
+    "fit": "cover"
+  },
+  "alaska-rug-2-104-blue": {
+    "fit": "cover"
+  },
+  "alaska-rug-1-115a": {
+    "fit": "cover"
+  },
+  "accra-rug-grey-lilac": {
+    "fit": "cover"
+  },
+  "accra-rug-grey-gold": {
+    "fit": "cover"
+  },
+  "accra-rug-grey-black": {
+    "fit": "cover"
+  },
+  "accra-rug-cream-red": {
+    "fit": "cover"
+  },
+  "ortho-guest-bed-with-trundle-2-mattresses-fe": {
+    "fit": "cover"
+  },
+  "toronto-sliding-wardrobe-br": {
+    "fit": "cover"
+  },
+  "max-sofa-bed": {
+    "fit": "cover"
+  },
+  "paradise-mattress-g05": {
+    "fit": "contain",
+    "fill": 0.155
+  },
+  "aloe-vera-g02": {
+    "fit": "cover"
+  },
+  "kensington-bed-frame": {
+    "fit": "cover"
+  },
+  "columbia-table-and-chairs": {
+    "fit": "cover"
+  },
+  "chantelle-cappuccino-set": {
+    "fit": "cover"
+  },
+  "denmark-sliding-wardrobe": {
+    "fit": "contain",
+    "fill": 0.445
+  },
+  "lagan-5-drawer-chest-hb": {
+    "fit": "cover"
+  },
+  "lagan-bed-frame-hb": {
+    "fit": "cover"
+  },
+  "troy-study-writing-desk": {
+    "fit": "cover"
+  },
+  "staten-tv-unit": {
+    "fit": "cover"
+  },
+  "troy-bookcase": {
+    "fit": "cover"
+  },
+  "home-trends-furniture-gift-voucher": {
+    "fit": "cover"
+  },
+  "polly-storage-bed-frame-di": {
+    "fit": "cover"
+  },
+  "lola-storage-bed-frame-di": {
+    "fit": "cover"
+  },
+  "mayfair-wingback-storage-bed-frame-dd": {
+    "fit": "cover"
+  },
+  "chiswick-storage-bed-frame-dd": {
+    "fit": "cover"
+  },
+  "roma-27-headboard-aj": {
+    "fit": "cover"
+  },
+  "panel-27-headboard-aj": {
+    "fit": "cover"
+  },
+  "button-top-27-headboard": {
+    "fit": "contain",
+    "fill": 0.295
+  },
+  "button-top-27-headboard-and-base": {
+    "fit": "cover"
+  },
+  "deep-panel-27-headboard-and-base-aj": {
+    "fit": "cover"
+  },
+  "button-top-27-headboard-and-base-4-drawer-or-jumbo-drawer": {
+    "fit": "cover"
+  },
+  "clara-headboard-and-base": {
+    "fit": "cover"
+  },
+  "band-27-headboard-and-base-with-drawer-aj": {
+    "fit": "cover"
+  },
+  "band-27-headboard-and-base-aj": {
+    "fit": "cover"
+  },
+  "boston-sliding-wardrobe": {
+    "fit": "cover"
+  },
+  "cuba-sliding-wardrobe": {
+    "fit": "cover"
+  },
+  "opal-6ft-mattress": {
+    "fit": "cover"
+  },
+  "opal-5ft-mattress": {
+    "fit": "cover"
+  },
+  "opal-4ft6-mattress": {
+    "fit": "cover"
+  },
+  "opal-4ft-mattress": {
+    "fit": "cover"
+  },
+  "opal-3ft-mattress": {
+    "fit": "cover"
+  },
+  "madrid-mattress": {
+    "fit": "cover"
+  },
+  "royal-coil-luxury-opulence-mattress": {
+    "fit": "cover"
+  },
+  "royal-coil-superb-mattress": {
+    "fit": "cover"
+  },
+  "royal-coil-supreme-mattress": {
+    "fit": "cover"
+  },
+  "oscar-slatted-bed": {
+    "fit": "contain",
+    "fill": 0.179
+  },
+  "vicenza-lamp-table": {
+    "fit": "cover"
+  },
+  "vicenza-console-table": {
+    "fit": "cover"
+  },
+  "vicenza-1-6-metre-fixed-table-light-grey": {
+    "fit": "cover"
+  },
+  "vicenza-1-6-metre-extension-table": {
+    "fit": "cover"
+  },
+  "verona-coffee-table": {
+    "fit": "contain",
+    "fill": 0.16
+  },
+  "talia-velvet-chair": {
+    "fit": "contain",
+    "fill": 0.2
+  },
+  "salou-curved-bed": {
+    "fit": "contain",
+    "fill": 0.238
+  },
+  "salou-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.104
+  },
+  "rimini-chair-pu": {
+    "fit": "contain",
+    "fill": 0.154
+  },
+  "oscar-small-bookcase": {
+    "fit": "contain",
+    "fill": 0.314
+  },
+  "oscar-coffee-table-700155": {
+    "fit": "contain",
+    "fill": 0.134
+  },
+  "oscar-coffee-table-with-drawer": {
+    "fit": "contain",
+    "fill": 0.156
+  },
+  "oscar-double-display-cabinet": {
+    "fit": "contain",
+    "fill": 0.179
+  },
+  "oscar-corner-tv-unit": {
+    "fit": "contain",
+    "fill": 0.252
+  },
+  "oscar-coffee-table": {
+    "fit": "contain",
+    "fill": 0.186
+  },
+  "oscar-3-door-3-drawer-sideboard": {
+    "fit": "contain",
+    "fill": 0.212
+  },
+  "oscar-2-drawer-console-table": {
+    "fit": "contain",
+    "fill": 0.28,
+    "trappedWhite": 0.064
+  },
+  "oscar-2-door-2-drawer-sideboard": {
+    "fit": "contain",
+    "fill": 0.254
+  },
+  "oscar-double-wardrobe-with-drawers": {
+    "fit": "contain",
+    "fill": 0.207
+  },
+  "oscar-6-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.199
+  },
+  "oscar-curved-bed": {
+    "fit": "contain",
+    "fill": 0.188
+  },
+  "oscar-3-drawer-locker": {
+    "fit": "contain",
+    "fill": 0.25
+  },
+  "munich-round-nest-of-tables": {
+    "fit": "contain",
+    "fill": 0.233
+  },
+  "munich-lamp-table": {
+    "fit": "contain",
+    "fill": 0.191
+  },
+  "munich-coffee-table": {
+    "fit": "contain",
+    "fill": 0.161
+  },
+  "milan-lamp-table": {
+    "fit": "contain",
+    "fill": 0.202
+  },
+  "milan-console-table": {
+    "fit": "contain",
+    "fill": 0.22
+  },
+  "milan-coffee-table": {
+    "fit": "contain",
+    "fill": 0.182
+  },
+  "london-bed-frame": {
+    "fit": "contain",
+    "fill": 0.208
+  },
+  "kylie-bed-frame": {
+    "fit": "contain",
+    "fill": 0.32
+  },
+  "kylie-double-wardrobe": {
+    "fit": "contain",
+    "fill": 0.221
+  },
+  "kylie-bedside-locker": {
+    "fit": "contain",
+    "fill": 0.25
+  },
+  "infinity-coffee-table": {
+    "fit": "contain",
+    "fill": 0.128
+  },
+  "hanna-slatted-bed": {
+    "fit": "contain",
+    "fill": 0.167
+  },
+  "fredrik-lamp-table": {
+    "fit": "contain",
+    "fill": 0.232
+  },
+  "fredrik-desk-flatpack": {
+    "fit": "contain",
+    "fill": 0.229
+  },
+  "delta-oak-bed": {
+    "fit": "contain",
+    "fill": 0.185
+  },
+  "delta-oak-3-4-drawer-wide-chest": {
+    "fit": "contain",
+    "fill": 0.189
+  },
+  "delta-oak-3-4-drawer-tall-chest": {
+    "fit": "contain",
+    "fill": 0.276
+  },
+  "daniella-bed": {
+    "fit": "contain",
+    "fill": 0.205
+  },
+  "bella-double-wardrobe-with-drawer": {
+    "fit": "contain",
+    "fill": 0.163
+  },
+  "bella-bed": {
+    "fit": "contain",
+    "fill": 0.161
+  },
+  "bamberg-chair-dark-grey": {
+    "fit": "contain",
+    "fill": 0.194
+  },
+  "alana-slatted-bed": {
+    "fit": "contain",
+    "fill": 0.25
+  },
+  "aintree-bed": {
+    "fit": "contain",
+    "fill": 0.309
+  },
+  "aintree-3-2-drawer-chest": {
+    "fit": "contain",
+    "fill": 0.111
+  },
+  "frankfurt-lamp-table": {
+    "fit": "cover"
+  },
+  "hollie-triple-bunk-bed": {
+    "fit": "cover"
+  },
+  "eric-corner-bunk": {
+    "fit": "cover"
+  },
+  "cassie-bunk-bed": {
+    "fit": "cover"
+  },
+  "robson-bed-frame": {
+    "fit": "cover"
+  },
+  "columbia-oak-dining-set": {
+    "fit": "cover"
+  },
+  "alicante-dining-set": {
+    "fit": "cover"
+  },
+  "roxy-2-seater-sofa": {
+    "fit": "cover"
+  },
+  "sarah-black-pu-office-chair": {
+    "fit": "contain",
+    "fill": 0.175
+  },
+  "oak-writing-desk-with-drawers": {
+    "fit": "cover"
+  },
+  "gina-writing-desk": {
+    "fit": "cover"
+  },
+  "staten-console-table": {
+    "fit": "cover"
+  },
+  "staten-coffee-table": {
+    "fit": "cover"
+  },
+  "manhattan-coffee-table": {
+    "fit": "contain",
+    "fill": 0.336
+  },
+  "manhattan-lamp-table": {
+    "fit": "contain",
+    "fill": 0.322
+  },
+  "manhattan-console-table": {
+    "fit": "cover"
+  },
+  "boston-coffee-table": {
+    "fit": "cover"
+  },
+  "thames-extending-dining-set": {
+    "fit": "cover"
+  },
+  "rochester-dining-set": {
+    "fit": "cover"
+  },
+  "nappa-grey-and-oak-dining-set-with-bench": {
+    "fit": "cover"
+  },
+  "hampshire-grey-dining-set": {
+    "fit": "cover"
+  },
+  "galina-dining-set": {
+    "fit": "cover"
+  },
+  "dropleaf-dining-set": {
+    "fit": "cover"
+  },
+  "bolton-dining-set": {
+    "fit": "cover"
+  },
+  "cassie-bed-frame": {
+    "fit": "cover"
+  },
+  "quilted-bean-bag": {
+    "fit": "contain",
+    "fill": 0.363
+  },
+  "kids-recliner-with-cupholder": {
+    "fit": "cover"
+  },
+  "lynn-accent-chair": {
+    "fit": "cover"
+  },
+  "kenmare-chair-and-footstool": {
+    "fit": "cover"
+  },
+  "kirkby-sofa-bed": {
+    "fit": "cover"
+  },
+  "emily-patchwork-cube": {
+    "fit": "contain",
+    "fill": 0.314
+  },
+  "annah-linen-patchwork-chair-multicolour": {
+    "fit": "contain",
+    "fill": 0.311
+  }
+}

@@ -1,0 +1,821 @@
+/* Stage 6 — targeted visual refinements. Loaded last. */
+
+:root {
+  --logo-w: 152px;
+  --header-h: 78px;
+  --header-h-solid: 78px;
+}
+
+@media (width <= 768px) {
+  :root {
+    --logo-w: 128px;
+    --header-h: 64px;
+    --header-h-solid: 64px;
+  }
+}
+
+/* Header logo */
+
+.site-header {
+  height: var(--header-h);
+}
+
+.site-header .brand,
+.site-header .brand img.brand__logo,
+.theme-light .site-header .brand img.brand__logo,
+.theme-dark .site-header.is-solid .brand img.brand__logo,
+.theme-dark .site-header.is-over-hero .brand img.brand__logo,
+.theme-dark .site-header.is-over-hero:not(.is-solid) .brand img.brand__logo,
+.site-header.is-compact .brand img.brand__logo {
+  width: var(--logo-w) !important;
+  max-width: var(--logo-w) !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Hero copy */
+
+.ed-hero__copy {
+  bottom: 6.2rem;
+}
+
+.ed-hero__cue {
+  margin-top: 1.1rem;
+  opacity: 0.72;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.ed-hero__visit {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (width <= 768px) {
+  .ed-hero__copy {
+    bottom: 4.6rem;
+  }
+}
+
+/* Search */
+
+/* Task 1 replaced this 380px popover with the full-width panel defined lower
+   down in this file. .search-popover is no longer rendered. */
+
+.search-popover__head {
+  margin-bottom: 12px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  outline: none;
+  box-shadow: none;
+}
+
+.search-popover__head:focus-within {
+  border-color: var(--ink);
+  outline: none;
+  box-shadow: none;
+}
+
+.search-popover__head input {
+  padding: 0;
+}
+
+.search-popover__results {
+  max-height: min(48vh, 20rem);
+  overflow: auto;
+}
+
+@media (width <= 1024px) {
+  .search-panel,
+  .search-popover {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px var(--gutter) 24px;
+    box-shadow: none;
+  }
+}
+
+/* Menu */
+
+.menu-panel__inner {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(11rem, 0.82fr);
+  gap: 28px 40px;
+  padding: 40px var(--gutter) 32px;
+}
+
+.menu-panel__image {
+  max-width: 100%;
+}
+
+.menu-panel__image img {
+  min-height: 180px;
+  max-height: 240px;
+}
+
+.menu-panel__image figcaption {
+  margin: 0.7rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  color: var(--ink-80);
+}
+
+/* Family */
+
+section.intro-bar {
+  padding: 80px var(--gutter) 0;
+}
+
+section.intro-bar .intro-bar__copy {
+  margin: 0 0 32px;
+}
+
+section.intro-bar .intro-bar__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+section.intro-bar .intro-bar__copy h2,
+section.intro-bar h2 {
+  font-size: 44px;
+  line-height: 1.08;
+}
+
+section.intro-bar .intro-bar__facts {
+  align-items: start;
+  padding-top: 1.1rem;
+}
+
+section.intro-bar .intro-bar__facts > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section.intro-bar .intro-bar__facts dt {
+  letter-spacing: 0.08em;
+}
+
+section.intro-bar .intro-bar__facts dd {
+  margin-top: 0.4rem;
+  font-size: 1.125rem;
+}
+
+@media (width <= 768px) {
+  section.intro-bar {
+    padding: 56px var(--gutter) 0;
+  }
+  section.intro-bar .intro-bar__copy h2,
+  section.intro-bar h2 {
+    font-size: 32px;
+  }
+}
+
+/* Category rail */
+
+.room-tiles {
+  padding-top: 72px;
+  overflow-x: clip;
+}
+
+.room-tiles__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.room-tiles__next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  flex: none;
+}
+
+.room-tiles__next:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.room-tiles__scroller {
+  position: relative;
+}
+
+.room-tiles__scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1.6rem;
+  width: 3.2rem;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--paper));
+}
+
+.room-tiles__rail {
+  grid-auto-columns: calc((min(100vw, var(--page-max)) - (2 * var(--gutter)) - (2 * 18px)) / 3);
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.room-tiles__card {
+  scroll-snap-align: start;
+}
+
+@media (width <= 1024px) {
+  .room-tiles {
+    padding-top: 56px;
+  }
+  .room-tiles__rail {
+    grid-auto-columns: min(62vw, 20rem);
+  }
+}
+
+@media (width <= 768px) {
+  .room-tiles {
+    padding-top: 48px;
+  }
+  .room-tiles__rail {
+    grid-auto-columns: 78%;
+    scroll-padding-inline: var(--gutter);
+  }
+  .room-tiles__head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+/* Product cards */
+
+.product-card,
+.product-card:hover {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent;
+  padding: 0;
+}
+
+.product-card figure,
+.product-grid--look .product-card figure {
+  position: relative;
+  aspect-ratio: 4 / 5 !important;
+  margin: 0;
+  border: 0 !important;
+  background: #f4f1ea;
+  overflow: hidden;
+}
+
+.product-card figure img,
+.product-card .product-media,
+.product-card .product-media.is-packshot {
+  position: absolute;
+  inset: 7%;
+  width: 86%;
+  height: 86%;
+  object-fit: contain !important;
+  object-position: center;
+  background: transparent;
+}
+
+.product-card .product-media.is-lifestyle {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+.product-card h3,
+.product-card .price,
+.product-card__body {
+  border: 0 !important;
+  box-shadow: none;
+}
+
+.product-card__cta {
+  width: auto;
+  padding: 0 0 2px;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 32%, transparent);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.product-card__cta:hover,
+.product-card__cta.is-added {
+  background: transparent;
+  text-decoration: none;
+  border-bottom-color: var(--ink);
+}
+
+/* Errigel */
+
+.lumina.lumina--errigel .lumina__panel {
+  min-height: 19rem;
+  background-color: color-mix(in srgb, var(--errigel-swatch) 48%, #d8d0c4);
+  background-image:
+    linear-gradient(
+      148deg,
+      rgba(255, 250, 242, 0.3) 0%,
+      transparent 42%,
+      rgba(24, 20, 16, 0.16) 100%
+    );
+}
+
+.lumina.lumina--errigel .lumina__panel::before,
+.lumina.lumina--errigel .lumina__panel::after,
+.lumina.lumina--errigel .lumina__cloth {
+  background-image: none;
+  opacity: 0;
+}
+
+.lumina.lumina--errigel .lumina__panel::after {
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: radial-gradient(
+    120% 90% at 20% 12%,
+    rgba(255, 252, 246, 0.18),
+    transparent 52%
+  );
+}
+
+.lumina.lumina--errigel {
+  --swatch-inactive: 56px;
+  --swatch-active: 128px;
+  --swatch-h: 96px;
+}
+
+@media (width <= 768px) {
+  .lumina.lumina--errigel .lumina__panel {
+    min-height: 12.5rem;
+  }
+}
+
+/* Reviews */
+
+.review-sec {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.review-sec__title {
+  margin-bottom: 1.15rem;
+}
+
+.ed-review {
+  max-width: 720px;
+}
+
+.ed-review blockquote {
+  max-width: 46rem;
+}
+
+.ed-review__nav {
+  margin-top: 1.1rem;
+}
+
+.ed-review__person {
+  margin-bottom: 0.85rem;
+}
+
+@media (width <= 768px) {
+  .review-sec {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* Image book */
+
+.insta-select {
+  background: #20201e;
+}
+
+.insta-select__card,
+.insta-select__card.is-mid,
+.insta-select__card.is-edge {
+  min-width: 11.5%;
+  max-width: 13%;
+}
+
+.insta-select__card.is-on {
+  min-width: 40%;
+  max-width: 44%;
+}
+
+@media (width <= 768px) {
+  .insta-select__card,
+  .insta-select__card.is-on,
+  .insta-select__card.is-near,
+  .insta-select__card.is-mid,
+  .insta-select__card.is-edge {
+    flex: 0 0 82%;
+    min-width: 82%;
+    max-width: 82%;
+  }
+}
+
+/* Showroom / footer */
+
+.visit-grid figure,
+.visit-grid figure:hover {
+  box-shadow: none !important;
+}
+
+.footer-stamp {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.site-footer h3 {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.orior-bar {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .room-tiles__rail,
+  .lumina.lumina--errigel .lumina__swatch,
+  .lumina.lumina--errigel .lumina__panel,
+  .insta-select__card,
+  .search-panel,
+  .menu-panel {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
+}
+
+/* ── Task 0 — one container width, one left margin ─────────────────────
+   Six container widths were in play: --page-max (1360), 1600 (.intro-bar,
+   .spread__cap), 1440 (the Errigel stage), 1180 (the gallery row), plus
+   1320 and 1680 left dead by later overrides. Nothing shared a left edge
+   with the header.
+
+   The header was the one that had it right: border box capped at
+   --page-max, --gutter padded inside. That column is now canonical and
+   every band matches it. Bands stay full-bleed and only their content is
+   constrained, expressed as padding, so no markup changes. --gutter
+   already steps 56 → 40 → 32 → 20px across the stage2 breakpoints, so
+   the single margin stays responsive.
+
+   .site-header__bar is deliberately not restated here: it already
+   resolves to this column, and repeating it would clobber its 430px and
+   390px padding overrides. */
+
+:root {
+  --page-pad: max(var(--gutter), calc((100% - var(--page-max)) / 2 + var(--gutter)));
+}
+
+.ed-sec,
+section.intro-bar,
+.insta-select,
+.news-band,
+.site-footer,
+.room-tiles__head,
+.spread__cap,
+.lumina.lumina--errigel .lumina__stage {
+  padding-inline: var(--page-pad);
+}
+
+/* Each of these also centred itself on a width of its own. Left in place
+   they would centre inside the padding above and indent a second time. */
+section.intro-bar,
+.intro-bar,
+.spread__cap,
+.room-tiles__head,
+.insta-select__row,
+.footer-grid,
+.footer-legal,
+.news-band__inner,
+.from-floor__head,
+.visit-grid,
+.lumina.lumina--errigel .lumina__stage {
+  max-width: none;
+  margin-inline: 0;
+}
+
+section.intro-bar .intro-bar__inner {
+  width: 100%;
+}
+
+/* The rail scrolls past the right edge by design; its first card still
+   starts on the container's left edge, as does the heading above it. */
+.room-tiles {
+  padding-inline: 0;
+}
+.room-tiles__rail {
+  padding-inline: var(--page-pad);
+  scroll-padding-inline: var(--page-pad);
+}
+
+/* ── Task 1 — header search field, full-width panel, full-screen menu ──────
+   The field replaces the icon toggle. Three earlier passes hid it: stage2
+   unconditionally (removed there), styles.css below 720px and styles.apple.css
+   below 1023px. Visibility is settled here, once.
+
+   Below 768px the text input collapses and .header-search__glyph is the whole
+   control — it opens the panel, which carries its own full-width field. */
+
+.site-header .header-search {
+  display: flex;
+  align-items: center;
+}
+
+@media (width <= 767px) {
+  .site-header .header-search {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    flex: 0 0 auto;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+  .site-header .header-search__input,
+  .site-header .header-search__clear {
+    display: none;
+  }
+}
+
+@media (width >= 768px) {
+  .site-header .header-search {
+    flex: 0 1 var(--search-min, 17.5rem);
+    width: var(--search-min, 17.5rem);
+    min-width: 0;
+    max-width: 17.5rem;
+  }
+}
+
+.header-search__glyph,
+.header-search__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  flex: none;
+}
+
+.header-search__glyph {
+  padding-inline: 0.55rem 0.35rem;
+}
+
+/* The panel is full-width under the header, not a popover hanging off the
+   field. Its inner column uses the one container from Task 0. */
+.search-panel {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  max-height: calc(100dvh - var(--header-h));
+  overflow-y: auto;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  z-index: 90;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: transform 0.42s var(--ease), opacity 0.42s var(--ease);
+}
+
+.search-panel.is-on {
+  transform: none;
+  opacity: 1;
+}
+
+.search-panel__inner {
+  padding-inline: var(--page-pad);
+  padding-block: clamp(1.6rem, 3vw, 2.6rem) clamp(2rem, 4vw, 3rem);
+}
+
+/* Specificity has to clear .menu-split__foot a in styles.css, which sets the
+   footer links to uppercase micro type. The phone is the point of the footer. */
+.menu-panel .menu-split__foot .menu-split__phone {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--ink);
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-panel {
+    transition: none;
+  }
+}
+
+/* Full-screen menu: editorial image on the left ~40%, tabs and five columns on
+   the right, phone at the bottom. stage2 had reshaped this into a dropdown and
+   hidden the image, tabs, footer and columns; those rules are removed there. */
+
+.menu-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
+  width: 100%;
+  height: 100dvh;
+  max-height: none;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-1.5rem);
+  transition: transform 0.45s var(--ease), opacity 0.45s var(--ease);
+}
+
+.menu-panel.is-on {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.menu-panel .menu-split__image {
+  display: block;
+  min-height: 0;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--paper-sunk);
+}
+
+.menu-panel .menu-split__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-panel .menu-split__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100dvh;
+  overflow-y: auto;
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 3rem) clamp(1.5rem, 4vw, 4.5rem) 1.5rem;
+}
+
+.menu-panel .menu-split__close {
+  position: absolute;
+  top: 1.1rem;
+  right: clamp(1.25rem, 3vw, 3rem);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-panel .menu-split__tabs {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-panel .menu-split__tabs button {
+  min-height: 50px;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--ink-55);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.menu-panel .menu-split__tabs button.is-on {
+  border-bottom-color: var(--brass);
+  color: var(--ink);
+}
+
+.menu-panel .menu-cols {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-content: start;
+  gap: 2rem 1.25rem;
+  padding: clamp(1.75rem, 4vh, 3.5rem) 0 2rem;
+}
+
+.menu-panel .menu-cols p {
+  margin: 0 0 0.75rem;
+  color: var(--brass);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.menu-panel .menu-cols ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-panel .menu-cols a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  color: var(--ink-80);
+  font-size: 0.9rem;
+}
+
+.menu-panel .menu-cols a:hover {
+  color: var(--brass);
+}
+
+.menu-panel .menu-split__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.5rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-55);
+  font-size: 0.82rem;
+}
+
+@media (width <= 1024px) {
+  .menu-panel {
+    grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+  }
+  .menu-panel .menu-cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 860px) {
+  .menu-panel {
+    grid-template-columns: 1fr;
+  }
+  .menu-panel .menu-split__image {
+    display: none;
+  }
+  .menu-panel .menu-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel {
+    transition: none;
+  }
+}
+
+/* Focus on the field has to be visible. The input's own outline is suppressed
+   by an earlier `:focus { outline: none }`, and the only thing left was a 1px
+   18%-opacity shadow that also shows at rest. The wrapper takes the ring. */
+.site-header .header-search:focus-within {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.theme-dark .site-header.is-over-hero:not(.is-solid) .header-search:focus-within {
+  outline-color: var(--paper);
+}

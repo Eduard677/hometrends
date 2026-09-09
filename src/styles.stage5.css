@@ -1,0 +1,186 @@
+/* Stage 5 — shopping feedback, restrained motion. Loaded last. */
+
+html {
+  scroll-behavior: auto;
+}
+
+.qty {
+  display: inline-grid;
+  grid-template-columns: 48px minmax(48px, 1fr) 48px;
+  align-items: stretch;
+  width: 144px;
+  height: 48px;
+  border: var(--border-w) solid var(--line-strong);
+  background: var(--paper);
+}
+
+.qty button,
+.qty .qty__btn {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qty .qty__btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.qty__num {
+  display: grid;
+  place-items: center;
+  min-width: 48px;
+  border-inline: var(--border-w) solid var(--line);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bag-drawer .cart__remove,
+.cart__line .cart__remove {
+  display: block;
+  margin-top: 0.45rem;
+}
+
+.bag-count.is-bump {
+  animation: bag-bump 0.2s ease;
+}
+
+@keyframes bag-bump {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bag-confirm {
+  position: fixed;
+  z-index: 70;
+  top: calc(var(--header-h) + 12px);
+  right: var(--gutter);
+  bottom: auto;
+  left: auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  max-width: min(24rem, calc(100vw - 2 * var(--gutter)));
+  padding: 0.7rem 0.85rem;
+  border: var(--border-w) solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 10px 28px #151a2214;
+  animation: bag-confirm-in 0.2s ease;
+}
+
+@keyframes bag-confirm-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bag-confirm p {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.bag-confirm__view {
+  min-height: var(--tap);
+  padding: 0 0.15rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.bag-confirm__view:focus-visible,
+.bag-confirm__close:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.overlay {
+  transition: opacity 0.22s ease;
+}
+
+.bag-drawer,
+.menu-split,
+.menu-panel,
+.search-panel {
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.site-header {
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    height 0.22s ease;
+}
+
+.product-card__cta,
+.button.is-added,
+.product-card__cta.is-added {
+  transition: color 0.2s ease, background-color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+@media (width <= 768px) {
+  .bag-confirm {
+    right: var(--gutter);
+    left: var(--gutter);
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .bag-count.is-bump,
+  .bag-confirm,
+  .overlay,
+  .bag-drawer,
+  .menu-split,
+  .menu-panel,
+  .search-panel,
+  .site-header,
+  .product-card__cta,
+  .button.is-added,
+  .product-card__cta.is-added,
+  .insta-select__card,
+  .lumina.lumina--errigel,
+  .lumina.lumina--errigel .lumina__swatch,
+  .lumina.lumina--errigel .lumina__panel {
+    animation: none !important;
+    transition: none !important;
+  }
+}

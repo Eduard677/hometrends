@@ -1,0 +1,45 @@
+1440 add: drawer=0 confirm=true stayedHome=true
+1440 confirm overlaps bag button: false
+1440 view bag opens drawer: 1
+1440 qty h=48 minus w/h=48/48
+1440 decrement to 0 emptied: true
+1440 escape bag focus=header-bag
+1440 wishlist populated unique: true
+1440 after move-to-bag empty-ish: true
+1024 add: drawer=0 confirm=true stayedHome=true
+1024 confirm overlaps bag button: false
+1024 view bag opens drawer: 1
+1024 qty h=48 minus w/h=48/48
+1024 decrement to 0 emptied: true
+1024 escape bag focus=header-bag
+1024 wishlist populated unique: true
+1024 after move-to-bag empty-ish: true
+768 add: drawer=0 confirm=true stayedHome=true
+768 confirm overlaps bag button: false
+768 view bag opens drawer: 1
+768 qty h=48 minus w/h=48/48
+768 decrement to 0 emptied: true
+768 escape bag focus=header-bag
+768 wishlist populated unique: true
+768 after move-to-bag empty-ish: true
+390 add: drawer=0 confirm=true stayedHome=true
+390 confirm overlaps bag button: false
+390 view bag opens drawer: 1
+390 qty h=48 minus w/h=48/48
+390 decrement to 0 emptied: true
+390 escape bag focus=header-bag
+390 wishlist populated unique: true
+390 after move-to-bag empty-ish: true
+pdp stayed: true
+pdp confirm: true
+bag page no shopify checkout: true
+bag page truthful: true
+persist bag lines: [{"slug":"kilkenny-mink-bed-4ft6","quantity":1}]
+persist after refresh cart lines visible: 1
+tel link: tel:+353656797853
+maps link: https://maps.app.goo.gl/gvfKib6Bakh1eito8
+shop overflow 1440: false
+bag page overflow 390: false
+pdp overflow 390: false
+CONSOLE
+IMGFAIL

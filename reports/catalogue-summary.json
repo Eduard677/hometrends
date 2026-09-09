@@ -1,0 +1,30 @@
+{
+  "live": 742,
+  "previous": 733,
+  "added": 9,
+  "removed": [],
+  "emptyLiveType": 306,
+  "unclassified": 6,
+  "skuNames": 48,
+  "missingDimensions": 262,
+  "withDimensions": 480,
+  "redirects": 383,
+  "collisions": 1,
+  "collections": {
+    "sofas-chairs": 78,
+    "chairs-footstools": 40,
+    "beds": 112,
+    "mattresses": 25,
+    "bedroom-furniture": 147,
+    "dining": 85,
+    "living-room": 70,
+    "home-office": 12,
+    "rugs": 136,
+    "lighting": 37,
+    "accessories": 28,
+    "flooring": 0,
+    "garden-furniture": 1,
+    "kids-furniture": 21,
+    "gift-vouchers": 1
+  }
+}

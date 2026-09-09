@@ -1,0 +1,683 @@
+/* Stage 2 — global tokens, header, search, menu. Loaded last. */
+
+:root {
+  --page-max: 1360px;
+  --gutter: 56px;
+  --space-section: 96px;
+  --header-h: 80px;
+  --header-h-solid: 80px;
+  --logo-w: 168px;
+  --tap: 44px;
+  --button-h: 46px;
+  --button-pad-x: 18px;
+  --icon-size: 18px;
+  --control-gap: 18px;
+  --border-w: 1px;
+  --heading-1: 64px;
+  --heading-2: 44px;
+  --heading-3: 26px;
+  --t-h1: 64px;
+  --t-h1-lh: 1.02;
+  --t-h2: 44px;
+  --t-h2-lh: 1.08;
+  --t-h3: 26px;
+  --t-h3-lh: 1.15;
+  --t-body: 17px;
+  --t-body-lh: 1.5;
+  --t-nav: 14px;
+  --t-label: 12px;
+  --t-hero: 64px;
+  --t-display: 44px;
+  --t-title: 26px;
+  --t-lead: 17px;
+  --hero-ivory: #f3eee6;
+  --header-ease: 220ms ease;
+}
+
+@media (width <= 1024px) {
+  :root {
+    --gutter: 40px;
+    --space-section: 72px;
+    --header-h: 72px;
+    --header-h-solid: 72px;
+    --logo-w: 150px;
+    --heading-1: 50px;
+    --heading-2: 36px;
+    --heading-3: 23px;
+    --t-h1: 50px;
+    --t-h2: 36px;
+    --t-h3: 23px;
+    --t-hero: 50px;
+    --t-display: 36px;
+    --t-title: 23px;
+    --button-h: 44px;
+  }
+}
+
+@media (width <= 768px) {
+  :root {
+    --gutter: 32px;
+    --space-section: 56px;
+    --header-h: 64px;
+    --header-h-solid: 64px;
+    --logo-w: 132px;
+    --heading-1: 40px;
+    --heading-2: 30px;
+    --heading-3: 21px;
+    --t-h1: 40px;
+    --t-h2: 30px;
+    --t-h3: 21px;
+    --t-body: 16px;
+    --t-lead: 16px;
+    --t-hero: 40px;
+    --t-display: 30px;
+    --t-title: 21px;
+  }
+}
+
+@media (width <= 480px) {
+  :root {
+    --gutter: 20px;
+    --logo-w: 84px;
+    --control-gap: 4px;
+  }
+}
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 0.85rem);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--t-body-lh);
+  font-style: normal;
+}
+
+h1,
+.ed-hero h1,
+.ed-page .ed-hero h1,
+.page-head h1,
+.issue__head h1,
+.cart__head h1,
+.cart__empty-copy h1,
+.pdp h1 {
+  font-family: var(--font-display);
+  font-size: var(--heading-1);
+  font-weight: 500;
+  font-style: normal;
+  line-height: var(--t-h1-lh);
+  letter-spacing: -0.03em;
+}
+
+h2,
+.from-floor__head h2,
+.visit-grid h2,
+.intro-bar__copy h2,
+section.intro-bar .intro-bar__copy h2,
+.insta-select__head h2,
+.coverflow__head h2,
+.catalog-reel__head h2,
+.homes-reel__head h2,
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--heading-2);
+  font-weight: 500;
+  font-style: normal;
+  line-height: var(--t-h2-lh);
+}
+
+.product-card h3,
+.prose h3,
+.site-footer h3 {
+  font-family: var(--font-sans);
+  font-size: var(--heading-3);
+  font-weight: 500;
+  font-style: normal;
+  line-height: var(--t-h3-lh);
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--t-label);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.folio {
+  display: none;
+}
+
+.button,
+a.button {
+  min-height: var(--button-h);
+  height: var(--button-h);
+  padding: 0 var(--button-pad-x);
+  font-family: var(--font-sans);
+  font-size: var(--t-nav);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  border-width: var(--border-w);
+  box-shadow: none;
+}
+
+.ed-sec,
+.intro-bar,
+section.intro-bar,
+.from-floor,
+.review-sec,
+.visit-sec,
+.insta-select,
+.coverflow,
+.catalog-reel,
+.room-tiles {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+.page-shell,
+.issue,
+.footer-grid,
+.footer-legal,
+.from-floor__head,
+.ed-grid,
+.site-header__bar,
+.menu-panel__inner {
+  max-width: var(--page-max);
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  display: block !important;
+  height: var(--header-h);
+  padding: 0;
+  border-bottom: var(--border-w) solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  transition:
+    background-color var(--header-ease),
+    color var(--header-ease),
+    border-color var(--header-ease),
+    height var(--header-ease);
+}
+
+.theme-dark .site-header.is-over-hero {
+  position: fixed;
+  width: 100%;
+}
+
+.theme-dark .site-header.is-over-hero:not(.is-solid) {
+  background: linear-gradient(180deg, rgba(22, 23, 20, 0.46) 0%, rgba(22, 23, 20, 0.12) 70%, transparent 100%);
+  border-bottom-color: transparent;
+  color: var(--hero-ivory);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.theme-light .site-header,
+.theme-dark .site-header.is-solid,
+.theme-dark .site-header.is-over-hero.is-solid {
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom-color: var(--line);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.site-header__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, var(--page-max));
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  gap: 12px;
+}
+
+.site-header .header-start,
+.site-header .header-actions {
+  z-index: 2;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.site-header .header-actions {
+  gap: var(--control-gap);
+  margin-left: auto;
+}
+
+.site-header .brand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+}
+
+.site-header .brand,
+.site-header .brand img.brand__logo,
+.theme-light .site-header .brand img.brand__logo,
+.theme-dark .site-header.is-solid .brand img.brand__logo,
+.theme-dark .site-header.is-over-hero .brand img.brand__logo,
+.site-header.is-compact .brand img.brand__logo {
+  width: var(--logo-w) !important;
+  max-width: var(--logo-w) !important;
+  height: auto !important;
+  max-height: calc(var(--header-h) - 24px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  filter: none !important;
+}
+
+.theme-dark .site-header.is-over-hero:not(.is-solid) .brand__logo--gold {
+  opacity: 1;
+  filter: none !important;
+}
+.theme-dark .site-header.is-over-hero:not(.is-solid) .brand__logo--ink {
+  opacity: 0;
+}
+.theme-light .site-header .brand__logo--ink,
+.theme-dark .site-header.is-solid .brand__logo--ink {
+  opacity: 1;
+}
+.theme-light .site-header .brand__logo--gold,
+.theme-dark .site-header.is-solid .brand__logo--gold {
+  opacity: 0;
+}
+
+.site-header .icon-btn,
+.site-header .header-search-toggle {
+  position: relative;
+  width: var(--tap);
+  min-width: var(--tap);
+  min-height: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  gap: 8px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.site-header .header-start .icon-btn {
+  width: auto;
+  padding-right: 4px;
+}
+
+.site-header .icon-btn svg,
+.site-header .header-search-toggle svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.site-header .icon-btn__label {
+  font-family: var(--font-sans);
+  font-size: var(--t-nav);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Removed in Task 1: this pass hid the search field outright and promoted an
+   icon toggle in its place. The brief asks for the field itself to be visible
+   in the header, and the toggle no longer exists in the markup. Visibility is
+   now set once, in stage6. */
+
+.site-header .bag-count {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: center;
+}
+
+.theme-dark .site-header.is-over-hero:not(.is-solid) .bag-count {
+  background: transparent;
+  color: var(--hero-ivory);
+}
+
+.site-header .icon-btn:focus,
+.site-header .header-search-toggle:focus,
+.site-header .brand:focus,
+.site-header .header-search:focus-within {
+  outline: none;
+}
+
+.site-header .icon-btn:focus-visible,
+.site-header .header-search-toggle:focus-visible,
+.site-header .brand:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (width <= 1024px) {
+  .site-header .header-start .icon-btn__label {
+    display: none;
+  }
+  .site-header .header-start .icon-btn {
+    width: var(--tap);
+    padding: 0;
+  }
+  .site-header .header-actions {
+    gap: 16px;
+  }
+}
+
+@media (width <= 390px) {
+  .site-header .header-actions {
+    gap: var(--control-gap);
+  }
+  .site-header .brand {
+    overflow: visible !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+}
+
+/* Search popover */
+
+.overlay--search {
+  top: var(--header-h);
+  z-index: 84;
+  background: rgba(22, 23, 20, 0.28);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+@media (width > 1024px) {
+  .overlay--search {
+    background: transparent;
+  }
+}
+
+.search-panel,
+.search-popover {
+  position: fixed;
+  inset: auto;
+  top: var(--header-h);
+  right: max(var(--gutter), calc((100vw - var(--page-max)) / 2 + var(--gutter)));
+  left: auto;
+  z-index: 86;
+  width: min(420px, calc(100vw - 2 * var(--gutter)));
+  max-height: min(70dvh, 32rem);
+  padding: 16px 18px 18px;
+  overflow: auto;
+  background: var(--paper);
+  color: var(--ink);
+  border: var(--border-w) solid var(--line);
+  border-top: 0;
+  box-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: none;
+}
+
+.search-panel.is-on,
+.search-popover.is-on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-popover__head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  border: var(--border-w) solid var(--line-strong);
+  background: var(--paper);
+  outline: none;
+  box-shadow: none;
+}
+
+.search-popover__head:focus-within {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--ink);
+}
+
+.search-popover__head input {
+  min-height: var(--tap);
+  width: 100%;
+  padding: 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.search-popover__head input:focus {
+  outline: none;
+}
+
+.search-popover__head button {
+  width: var(--tap);
+  min-width: var(--tap);
+  min-height: var(--tap);
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.search-popover__hint,
+.search-popover__empty {
+  margin: 4px 0 0;
+  color: var(--ink-80);
+  font-size: var(--t-body);
+  line-height: var(--t-body-lh);
+}
+
+.search-popover__results {
+  display: grid;
+  gap: 0;
+}
+
+.search-panel__hit {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 72px;
+  padding: 8px 0;
+  border-bottom: var(--border-w) solid var(--line);
+}
+
+.search-panel__hit img,
+.search-panel__hit .product-media {
+  width: 56px;
+  height: 70px;
+  object-fit: cover;
+  position: relative;
+  inset: auto;
+}
+
+.search-panel__hit strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.search-panel__hit em {
+  display: none;
+}
+
+.search-panel__hit span span {
+  color: var(--ink-55);
+  font-size: 13px;
+}
+
+.search-drop__all {
+  min-height: var(--tap);
+  margin-top: 8px;
+  font-size: var(--t-nav);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Removed in Task 1: this pass hid the search panel's contents so it could
+   render as a narrow popover of results only. The brief asks for the
+   full-width panel - popular searches, "Can we help?" and category cards. */
+
+@media (width <= 1024px) {
+  .search-panel,
+  .search-popover {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: min(80dvh, 36rem);
+    padding: 16px var(--gutter) 24px;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+/* Menu */
+
+.overlay--menu {
+  top: var(--header-h);
+  z-index: 88;
+  background: rgba(22, 23, 20, 0.32);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Removed in Task 1: reshaped the full-screen menu into a dropdown under the
+   header. Geometry is set in stage6 now. */
+
+.menu-panel.is-on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-panel__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr) minmax(14rem, 0.95fr);
+  gap: 32px 48px;
+  width: min(100%, var(--page-max));
+  margin: 0 auto;
+  padding: 52px var(--gutter) 36px;
+}
+
+.menu-panel__close {
+  position: absolute;
+  top: 8px;
+  right: max(8px, calc((100vw - var(--page-max)) / 2 + var(--gutter) - 8px));
+  z-index: 2;
+  width: var(--tap);
+  min-width: var(--tap);
+  min-height: var(--tap);
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.menu-panel__zone h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-sans);
+  font-size: var(--t-label);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-55);
+}
+
+.menu-panel__zone ul {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-panel__shop a,
+.menu-panel__visit a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.menu-panel__visit a {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.menu-panel__image {
+  margin: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--paper-sunk);
+}
+
+.menu-panel__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* Removed in Task 1: this pass hid the full-screen menu's image, tabs, footer
+   and columns so the menu could render as a small dropdown. The brief asks for
+   the full-screen overlay back, and .menu-cols is the column layout it uses. */
+
+@media (width <= 1024px) {
+  .menu-panel {
+    max-height: calc(100dvh - var(--header-h));
+  }
+  .menu-panel__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px var(--gutter) 40px;
+  }
+  .menu-panel__image {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .search-panel,
+  .search-popover,
+  .menu-panel,
+  .overlay {
+    transition: none !important;
+  }
+}

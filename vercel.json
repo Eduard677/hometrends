@@ -1,0 +1,1950 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/find",
+      "destination": "/showroom",
+      "statusCode": 301
+    },
+    {
+      "source": "/come-in",
+      "destination": "/showroom",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/modular-sofa",
+      "destination": "/collections/sofas-chairs",
+      "permanent": true
+    },
+    {
+      "source": "/products/corner-sofa",
+      "destination": "/collections/sofas-chairs",
+      "permanent": true
+    },
+    {
+      "source": "/products/troy-bookcase-hj-copy",
+      "destination": "/products/troy-cabinet",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/tucker-sofa-bed-im-copy",
+      "destination": "/products/tucker-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/horizontal-wall-beds-2",
+      "destination": "/products/horizontal-wall-beds",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/scottsboro-full-foam-sofa-bed-im",
+      "destination": "/products/scottsboro-full-foam-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/arga-sofa-bed-im",
+      "destination": "/products/arga-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/valeria-bedframe",
+      "destination": "/products/viera-bedframe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/waterford-bedframe-copy",
+      "destination": "/products/antrim-bedframe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/donegal-ottoman-storage-bed-copy",
+      "destination": "/products/waterford-bedframe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/clifften-ottoman-storage-bed-copy",
+      "destination": "/products/donegal-ottoman-storage-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/new-york-storage-bed-copy",
+      "destination": "/products/clifften-ottoman-storage-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/frida-storage-bed-hb-copy",
+      "destination": "/products/new-york-storage-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-100-coral",
+      "destination": "/products/aspire-rug-coral",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malta-suite-gie",
+      "destination": "/products/malta-suite",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-rest",
+      "destination": "/products/natural-sleep-origin-restore-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-hibernate",
+      "destination": "/products/natural-sleep-origin-hibernate-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-platinum-latex",
+      "destination": "/products/natural-sleep-platinum-comfort-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/freda-storage-bed-hb",
+      "destination": "/products/frida-storage-bed-hb",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ella-3-drawer-locker-light-grey-oak-hb-copy",
+      "destination": "/products/cedar-wood-2-drawer-locker",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vertical-wall-bed",
+      "destination": "/products/concept-vertical-wall-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cashel-mattress-copy",
+      "destination": "/products/shannon-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/wicklow-storage-bed-copy",
+      "destination": "/products/limerick-storage-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kingsley-recliner-sofa-range-copy",
+      "destination": "/products/sheraton-recliner-sofa-range",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kingsley-recliner-sofa-range",
+      "destination": "/products/kerry-recliner-sofa-range",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sligo-gas-lift-bed-sligo-gas-lift-4-6-bed-w-x-170",
+      "destination": "/products/sligo-gas-lift-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/carlow-beige-bed-gi",
+      "destination": "/products/carlow-beige-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kilkenny-mink-bed-4ft6",
+      "destination": "/products/kilkenny-mink-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/metro-sofa-bed-jb",
+      "destination": "/products/metro-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sienna-reclining-chair-w-phone-holder-copy",
+      "destination": "/products/ryder-reclining-chair-ash",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pearl-lounger-bean-bag",
+      "destination": "/products/pearl-lounger-bean-bag-moss",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bremen-sofas-im-copy-1",
+      "destination": "/products/halton-lift-and-rise-massage-sofas",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bremen-sofas-im-copy",
+      "destination": "/products/ebro-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bremen-sofas-im",
+      "destination": "/products/bremen-sofas",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/capri-bar-stool-ga",
+      "destination": "/products/capri-bar-stool",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/tansey-recliner-sofa",
+      "destination": "/products/tyrone-recliner-sofa",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/washington-fabric-recliner-sofa",
+      "destination": "/products/waterloo-fabric-recliner-sofa",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd003-mirror-gie-copy-1",
+      "destination": "/products/gd001-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd007-mirror-gie-copy",
+      "destination": "/products/gd008-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd006-mirror-gie-copy",
+      "destination": "/products/gd007-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd005-mirror-gie-copy",
+      "destination": "/products/gd006-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd004-mirror-gie-copy",
+      "destination": "/products/gd005-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd003-mirror-gie-copy",
+      "destination": "/products/gd004-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gd003-mirror-gie",
+      "destination": "/products/gd003-mirror",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/stratford-3-drawer-bedside-copy",
+      "destination": "/products/stratford-3-drawer-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/stratford-2-door-tv-unit-ws",
+      "destination": "/products/stratford-2-door-tv-unit",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/stratford-1-drawer-locker-ws",
+      "destination": "/products/stratford-1-drawer-locker",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/corso-sofa-bed-im-copy",
+      "destination": "/products/raphael-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/corso-sofa-bed-im",
+      "destination": "/products/corso-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-deep-sleep-mattress",
+      "destination": "/products/natural-sleep-deep-comfort-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nadia-vanity-dressing-table-ta",
+      "destination": "/products/nadia-vanity-dressing-table-with-drawers-ta",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/hamilton-dining-table-ws",
+      "destination": "/products/hamilton-dining-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/orson-recliner-chair-ottoman-im",
+      "destination": "/products/orson-recliner-chair-and-ottoman",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malvern-6-drawer-chest-ws",
+      "destination": "/products/malvern-6-drawer-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/quebec-wave-edge-coffee-table-medium-oak-effect-black",
+      "destination": "/products/quebec-wave-edge-coffee-table-medium-oak-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/roma-27-headboard-base-1-or-2-drawer",
+      "destination": "/products/roma-27-headboard-and-base-2-drawers-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/roma-27-headboard-base",
+      "destination": "/products/roma-27-headboard-and-base-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/brandon-3ft-metal-frame-bunk-bed-ws-copy",
+      "destination": "/products/ventura-3ft-metal-bunk-beds",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/albany-3ft-bunk-bed-antique-pine-ws-copy",
+      "destination": "/products/brandon-3ft-metal-frame-bunk-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/neptune-triple-sleeper-bunk-bed-ws-copy",
+      "destination": "/products/neptune-triple-sleeper-bunk-bed-dark-grey-oak-effect",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/neptune-3ft-bunk-bed-dark-grey-oak-effect-ws-copy",
+      "destination": "/products/neptune-triple-sleeper-bunk-bed-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/neptune-3ft-bunk-bed-white-ws-copy",
+      "destination": "/products/neptune-3ft-bunk-bed-dark-grey-oak-effect",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/neptune-3ft-bunk-bed-white-ws",
+      "destination": "/products/neptune-3ft-bunk-bed-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/voyager-3-door-2-drawer-wardrobe-jb-copy",
+      "destination": "/products/zoey-4-door-2-mirrored-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sliderobe-2-door-1-mirror-wardrobe-jb-copy",
+      "destination": "/products/voyager-3-door-2-drawer-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/stuttgart-sliding-2-door-1-mirror-wardrobe-jb-copy",
+      "destination": "/products/sliderobe-2-door-1-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/stuttgart-3-door-central-mirror-wardrobe-jb-copy",
+      "destination": "/products/stuttgart-sliding-2-door-1-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/skyla-4-door-2-mirror-wardrobe-jb-copy",
+      "destination": "/products/stuttgart-3-door-central-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sevilla-2-door-1-mirror-2-drawer-sliding-wardrobe-alpine-white-jb-copy",
+      "destination": "/products/skyla-4-door-2-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sevilla-2-door-1-mirror-2-drawer-sliding-wardrobe-alpine-white-jb",
+      "destination": "/products/sevilla-2-door-1-mirror-2-drawer-sliding-wardrobe-alpine-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/monza-2-door-1-half-mirror-sliding-wardrobe-2-18-jb-copy",
+      "destination": "/products/oakland-5-door-3-mirror-2-drawer-wardrobe-2-26m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/monza-4-door-2-split-mirror-wardrobe-2-18m-jb-copy",
+      "destination": "/products/monza-2-door-1-half-mirror-sliding-wardrobe-2-18",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/mainz-4-door-2-mirror-2-drawer-wardrobe-alpine-white-1-8m-jb-copy",
+      "destination": "/products/monza-4-door-2-split-mirror-wardrobe-2-18m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kronach-two-sliding-door-mirrored-wardrobe-2-25m-jb-copy",
+      "destination": "/products/mainz-4-door-2-mirror-2-drawer-wardrobe-alpine-white-1-8m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/joel-2-door-2-mirror-2-drawer-wardrobe-alpine-white-jb-copy",
+      "destination": "/products/kronach-two-sliding-door-mirrored-wardrobe-2-25m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/imperial-3-door-sliding-wardrobe-with-central-mirror-3m-jb-copy",
+      "destination": "/products/joel-2-door-2-mirror-2-drawer-wardrobe-alpine-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/imperial-3-door-sliding-wardrobe-with-central-mirror-2-5m-jb-copy",
+      "destination": "/products/imperial-3-door-sliding-wardrobe-with-central-mirror-3m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/imperial-3-door-sliding-wardrobe-with-central-mirror-2-5m-jb",
+      "destination": "/products/imperial-3-door-sliding-wardrobe-with-central-mirror-2-5m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fellbach-sliding-2-door-2-1-2-mirror-wardrobe-jb",
+      "destination": "/products/fellbach-sliding-2-door-2-1-2-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ellesse-4-door-2-mirror-2-drawer-wardrobe-jb",
+      "destination": "/products/ellesse-4-door-2-mirror-2-drawer-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cadiz-2-door-1-mirror-sliding-wardrobe-jb",
+      "destination": "/products/cadiz-2-door-1-mirror-sliding-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/belluno-2-door-1-mirror-sliding-wardrobe-artisan-oak-jb",
+      "destination": "/products/belluno-2-door-1-mirror-sliding-wardrobe-artisan-oak",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/arnstein-3-door-2-drawer-1-central-mirror-wardrobe-jb",
+      "destination": "/products/arnstein-3-door-2-drawer-1-central-mirror-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/arnstein-2-door-1-mirror-2-drawer-jb",
+      "destination": "/products/arnstein-2-door-1-mirror-2-drawer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/colton-4-6-white-bed",
+      "destination": "/products/colton-46-white-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aalen-3-door-1-mirror-6-drawer-wardrobe-1-36m-jb",
+      "destination": "/products/aalen-3-door-1-mirror-6-drawer-wardrobe-1-36m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/imperial-sliding-wardrobe-jb",
+      "destination": "/products/imperial-sliding-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-mirrored-2-door-1-drawer-wardrobe-white-gloss-ws",
+      "destination": "/products/nevada-mirrored-2-door-1-drawer-wardrobe-white-gloss",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-mirrored-2-door-1-drawer-wardrobe-grey-gloss-light-oak-effect-ws",
+      "destination": "/products/nevada-mirrored-2-door-1-drawer-wardrobe-grey-gloss-light-oak-effect",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malvern-8-drawer-chest-ws",
+      "destination": "/products/malvern-8-drawer-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malvern-3-door-wardrobe-ws",
+      "destination": "/products/malvern-3-door-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malvern-3-door-bedroom-set-ws",
+      "destination": "/products/malvern-3-door-bedroom-range",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/monaco-bedframe-white-ws",
+      "destination": "/products/monaco-bedframe-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/monoco",
+      "destination": "/products/monaco-bedframe-grey-oak",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/treviso-dining-set-with-quebec-chairs-light-oak-effect-black-grey-velvet",
+      "destination": "/products/quebec-dining-chairs-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/amalfi-1-seater-sofa-ws-copy",
+      "destination": "/products/amalfi-2-seater-sofa",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/amalfi-1-seater-sofa-ws",
+      "destination": "/products/amalfi-1-seater-sofa",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-6-door-2-drawer-mirrored-wardrobe-ws",
+      "destination": "/products/nevada-6-door-2-drawer-mirrored-wardrobe-grey-gloss-light-oak-effect-veneer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chrissie-dining-set-1",
+      "destination": "/products/chrissie-dining-set",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0516-rug-rukas-0516-120-x-170-rug",
+      "destination": "/products/rukas-0516-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alisarug-beige-brown",
+      "destination": "/products/alisa-rug-beige-brown",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aintree-3-3-drawer-wide-chest-ga",
+      "destination": "/products/aintree-3-3-drawer-wide-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oscar-2-drawer-coffee-table-ga",
+      "destination": "/products/oscar-2-drawer-coffee-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/erik-round-table-ga",
+      "destination": "/products/erik-round-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/dallas-office-chair-ga",
+      "destination": "/products/dallas-office-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/york-office-chair-ga",
+      "destination": "/products/york-office-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vienna-chest",
+      "destination": "/products/vienna-5-drawer-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/carlow-grey-bed-carlow-4-6-bed-233l-x-150w-x-130h",
+      "destination": "/products/carlow-grey-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nore-oak-bed",
+      "destination": "/products/cedarwood-nore-oak-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/boyne-ivory-bed",
+      "destination": "/products/cedarwood-boyne-ivory-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/naturalstone-bed",
+      "destination": "/products/cedarwood-naturalstone-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/greystones-bed",
+      "destination": "/products/cedarwood-greystones-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/trufflestone-bed",
+      "destination": "/products/cedarwood-trufflestone-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/indigo-oak-blue",
+      "destination": "/products/cedarwood-indigo-oak-blue-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sage-oak-green",
+      "destination": "/products/cedarwood-sage-oak-green-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/annalee-ivory-carcass",
+      "destination": "/products/annalee-ivory-carcass-bed-cw",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/anderson-static-suite",
+      "destination": "/products/anderson-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/l17b66-80x80-cm-gi",
+      "destination": "/products/l17b66-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/s18b68-80x80-cm-gi",
+      "destination": "/products/s18b68-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2465-80x80-cm-gi",
+      "destination": "/products/fam-2465-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2434-60x90-cm-gi",
+      "destination": "/products/fam-2434-60x90-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-1533-80x80-cm-gi",
+      "destination": "/products/fam-1533-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-1626-90x60-cm-gi",
+      "destination": "/products/fam-1626-90x60-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-0637-80x80-cm-gi",
+      "destination": "/products/fam-0637-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-0669-90x60-cm-gi",
+      "destination": "/products/fam-0669-90x60-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/l19t18-80x80-cm-gi",
+      "destination": "/products/l19t18-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/l18b111-80x80-cm-gi",
+      "destination": "/products/l18b111-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2471-1-80x80-cm-gi",
+      "destination": "/products/fam-2471-1-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2527-80x80-cm-gi",
+      "destination": "/products/fam-2527-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-1375-80x80-cm-gi",
+      "destination": "/products/fam-1375-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/zh6068-80x80-cm-gi",
+      "destination": "/products/zh6068-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2523-90x60-cm-gi",
+      "destination": "/products/fam-2523-90x60-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-0328-80x80-cm-gi",
+      "destination": "/products/fam-0328-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-0117-80x80-cm-gi",
+      "destination": "/products/fam-0117-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fam-2520-80x80-cm-gi",
+      "destination": "/products/fam-2520-80x80-cm",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/donegal-cream-ottoman-gi",
+      "destination": "/products/donegal-cream-ottoman",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/donegal-cream-bed-gi",
+      "destination": "/products/donegal-cream-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/donegal-grey-ottoman-gi",
+      "destination": "/products/donegal-grey-ottoman",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/donegal-grey-bed-gi",
+      "destination": "/products/donegal-grey-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/roscommon-locker-gi",
+      "destination": "/products/roscommon-locker",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/roscommon-bed-gi",
+      "destination": "/products/roscommon-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/grace-gas-lift-bed-1",
+      "destination": "/products/grace-gas-lift-headboard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/evan-1-seater-lift-rise-sultry",
+      "destination": "/products/evan-1-seater-lift-and-rise-sultry",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/durham-coffee-table",
+      "destination": "/products/durham-coffee-table-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/parker-headboard-4ft6",
+      "destination": "/products/parker-headboard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oasis-base-4ft6",
+      "destination": "/products/oasis-base",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/mattia-lift-rise-chair",
+      "destination": "/products/mattia-lift-and-rise-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oasis-base-wilson-headboard-4ft6",
+      "destination": "/products/oasis-base-wilson-headboard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/brandon-arm-chair",
+      "destination": "/products/brandon-armchair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/whitney-double-warerobe-white",
+      "destination": "/products/whitney-double-wardrobe-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/leroy-electric-recliner-1",
+      "destination": "/products/leroy-electric-recliner",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/glenwood-motion-sofa",
+      "destination": "/products/glenwood-electric-motion-sofa",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/quebec-wave-edge-console-table-medium-oak-effect-black",
+      "destination": "/products/quebec-wave-edge-console-table-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/eddie-coffee-table-grey-sonoma-effect",
+      "destination": "/products/eddie-coffee-table-grey-sonoma-effect-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/athens-rectangular-coffee-table-concrete-effect-black",
+      "destination": "/products/athens-rectangular-coffee-table-concrete-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/athens-oval-coffee-table-concrete-effect-black",
+      "destination": "/products/athens-oval-coffee-table-concrete-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspen-coffee-table-white-oak-stone-effect",
+      "destination": "/products/aspen-coffee-table-white-oak-stone-effect-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vicenza-coffee-table",
+      "destination": "/products/vicenza-coffee-table-light-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oscar-large-dining-chair",
+      "destination": "/products/oscar-large-dining-chair-pu-seat",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/blaine-sectional",
+      "destination": "/products/blaine-sectional-2r-c-2r",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/waterville-swivel-glide-chair",
+      "destination": "/products/waterville-swivel-and-glide-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/treviso-dining-table",
+      "destination": "/products/treviso-dining-table-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/copy-of-kenmare-chair-footstool-im",
+      "destination": "/products/felicia-swivel-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kendra-rocking-chair-grey-fabric",
+      "destination": "/products/kendra-rocking-chair-grey-fabric-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/copy-of-treviso-dining-table-wh",
+      "destination": "/products/quebec-dining-table-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/s32m-sv",
+      "destination": "/products/silver-tv-unit-s32m-sv",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/harriet-tilt-rise-chair",
+      "destination": "/products/harriet-tilt-and-rise-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fredrik-oak-1800-table-x-leg",
+      "destination": "/products/fredrik-1800-table-x-leg",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/katie-armchair-mink",
+      "destination": "/products/katie-armchair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/columbia-console-table-charcoal-oak",
+      "destination": "/products/columbia-console-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chantelle-occasional-set",
+      "destination": "/products/chantelle-console-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/arizona-triple-sleeper-white",
+      "destination": "/products/arizona-triple-sleeper-white-4-base",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/argyle-triple-sleeper-rustic-pine",
+      "destination": "/products/argyle-triple-sleeper-rustic-pine-4-base",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/argyle-30-low-end-bed-rustic-pine",
+      "destination": "/products/argyle-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-2-drawer-bedside-white-gloss",
+      "destination": "/products/nevada-2-drawer-bedside-white-gloss-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-2-drawer-bedside-grey-gloss-light-oak-effect-veneer",
+      "destination": "/products/nevada-2-drawer-bedside-grey-gloss-light-oak-effect-veneer-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nevada-3-drawer-bedside-white-gloss",
+      "destination": "/products/nevada-3-drawer-bedside-white-gloss-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/fredrik-chair-1",
+      "destination": "/products/fredrik-chair-pu",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/quebec-round-coffee-table-set-medium-oak-effect-black",
+      "destination": "/products/quebec-round-coffee-table-set-medium-oak-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ottawa-1-drawer-coffee-table-medium-oak-effect-black",
+      "destination": "/products/ottawa-1-drawer-coffee-table-medium-oak-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/athens-round-coffee-table-set-concrete-effect-black",
+      "destination": "/products/athens-round-coffee-table-set-concrete-effect-black-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/copy-of-vienna-bed",
+      "destination": "/products/charlotte-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-natures-finest",
+      "destination": "/products/natural-sleep-natures-finest-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/quebec-wave-edge-nest-of-tables",
+      "destination": "/products/quebec-wave-edge-nest-of-tables-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/quebec-straight-edge-nest-of-tables",
+      "destination": "/products/quebec-straight-edge-nest-of-tables-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ottawa-3-drawer-console-table",
+      "destination": "/products/ottawa-3-drawer-console-table-wh",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/toronto-sliding-wardrobe-2-5",
+      "destination": "/products/toronto-sliding-wardrobe-2-5-br",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/memphis-mid-sleep-bunk",
+      "destination": "/products/memphis-high-sleeper-bunk",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/florence-mattress",
+      "destination": "/products/natural-sleep-florence-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep-ultimate-floation-mattress-1",
+      "destination": "/products/natural-sleep-flotation-comfort-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/natural-sleep",
+      "destination": "/products/natural-sleep-origin-support-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/olive-cream-oak-stool",
+      "destination": "/products/olive-cream-and-oak-stool",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rochester-cream-oak-chair",
+      "destination": "/products/rochester-cream-and-oak-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/thames-cream-oak-chair",
+      "destination": "/products/thames-cream-and-oak-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/columbia-chair-pu-seat",
+      "destination": "/products/columbia-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/platinium-mattress",
+      "destination": "/products/platinum-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0549-rug-rukas-0549-120-x-170-rug",
+      "destination": "/products/rukas-0549-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0557-rug-rukas-0557-120-x-170-rug",
+      "destination": "/products/rukas-0557-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0565-rug-rukas-0565-160-x-220-rug",
+      "destination": "/products/rukas-0565-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-10620-rug-twist-10620-160-x-220-rug",
+      "destination": "/products/twist-10620-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-10629-rug-twist-10629-rug-80-x-150",
+      "destination": "/products/twist-10629-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-10638-rug-twist-10638-80-x-150",
+      "destination": "/products/twist-10638-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-1752-rug-twist-1752-80-x-150",
+      "destination": "/products/twist-1752-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0509-rug-rukas-0509-120-x-170-rug",
+      "destination": "/products/rukas-0509-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0254-rug-rukas-0254-120-x-170-rug",
+      "destination": "/products/rukas-0254-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-1991-rug-twist-1991-rug-80-x-150",
+      "destination": "/products/twist-1991-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-2098-rug-twist-2098-rug-80-x-150",
+      "destination": "/products/twist-2098-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-terracotta-t1009-rug-twist-terracotta-t1009-rug-80-x-150",
+      "destination": "/products/twist-terracotta-t1009-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-t1739-rug-twist-t1739-80-x-150-rug",
+      "destination": "/products/twist-t1739-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-t1009-green-rug-twist-t1009-green-80-x-150-rug",
+      "destination": "/products/twist-t1009-green-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-grey-t1009-rug-twist-grey-t1009-80-x-150-rug",
+      "destination": "/products/twist-grey-t1009-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/twist-brown-t1009-rug-twist-brown-t1009-80-x-150-rug",
+      "destination": "/products/twist-brown-t1009-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0241-rug-rukas-0241-120-x-170-rug",
+      "destination": "/products/rukas-0241-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0204a-rug-rukas-0204a-120-x-170-rug",
+      "destination": "/products/rukas-0204a-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/rukas-0032-rug-rukas-0032-120-x-170-rug",
+      "destination": "/products/rukas-0032-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/maple-1027-rug-maple-1027-rug-120-x-170",
+      "destination": "/products/maple-1027-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/maple-0927a-rug-maple-0927a-120-x-170",
+      "destination": "/products/maple-0927a-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bodrum-bd0278-rug-bodrum-bd0278-120-x-170-rug",
+      "destination": "/products/bodrum-bd0278-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bodrum-0511-rug-bodrum-0511-120-x-170-rug",
+      "destination": "/products/bodrum-0511-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bodrum-bd238a-rug-bodrum-bd238a-120-x-170",
+      "destination": "/products/bodrum-bd238a-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/jack-6-drawer-wide-chesst",
+      "destination": "/products/jack-6-drawer-wide-chest",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/jack-drawer-locker",
+      "destination": "/products/jack-2-drawer-locker",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/branca-dining-chair-black-pu",
+      "destination": "/products/branca-dining-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vicenza-dining-chair",
+      "destination": "/products/vicenza-dining-chair-tuape",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/liana-chair",
+      "destination": "/products/liana-chair-with-black-legs",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/boston-sofa-bed-1",
+      "destination": "/products/boston-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bodrum-0496-rug-bodrum-0496-120-x-170-rug",
+      "destination": "/products/bodrum-0496-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/taylor-bed-4ft6",
+      "destination": "/products/taylor-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/t32-s",
+      "destination": "/products/tv-unit-t32-s",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/s36m",
+      "destination": "/products/silver-tv-unit-s36m",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oasis-base-hogan-headboard-4ft6",
+      "destination": "/products/oasis-base-hogan-headboard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/mayo-bed-grey-mayo-grey-bed-4ft-6",
+      "destination": "/products/mayo-bed-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/mayo-bed-beige-mayo-beige-bed-4ft-6",
+      "destination": "/products/mayo-bed-beige",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kingston-standard-bed-4ft6",
+      "destination": "/products/kingston-standard-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kilkenny-silver-bed-4ft6",
+      "destination": "/products/kilkenny-silver-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kilkenny-grey-bed-4ft6",
+      "destination": "/products/kilkenny-grey-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/hogan-headboard-4ft6",
+      "destination": "/products/hogan-headboard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/galway-silver-bed-4ft",
+      "destination": "/products/galway-silver-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/galway-grey-bed-4ft",
+      "destination": "/products/galway-grey-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/dp48-sv",
+      "destination": "/products/dp48-sv-tv-stand",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chair-footstool-1986-light-grey",
+      "destination": "/products/chair-and-footstool-1986",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/carlow-beige-bed-carlow-4-6-beige-side-gas-lift-bed",
+      "destination": "/products/carlow-beige-side-gas-lift-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/brazil-bed-4ft",
+      "destination": "/products/brazil-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/arizona-bed-4ft6",
+      "destination": "/products/arizona-bed-de",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venusrug-grey-red",
+      "destination": "/products/venus-rug-grey-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venusrug-grey-gold",
+      "destination": "/products/venus-rug-grey-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venusrug-black-grey",
+      "destination": "/products/venus-rug-black-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venusrug-beige-brown",
+      "destination": "/products/venus-rug-beige-brown",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-white-2941",
+      "destination": "/products/venice-rug-white-2941",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-grey-2941",
+      "destination": "/products/venice-rug-grey-2941",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-grey-1721",
+      "destination": "/products/venice-rug-grey-1721",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-grey-1696",
+      "destination": "/products/venice-rug-grey-1696",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-blue-2941",
+      "destination": "/products/venice-rug-blue-2941",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-blue-1794",
+      "destination": "/products/venice-rug-blue-1794",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/venice-blue-1696",
+      "destination": "/products/venice-rug-blue-1696",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/saturnrug-grey-red",
+      "destination": "/products/saturn-rug-grey-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/saturnrug-grey-gold",
+      "destination": "/products/saturn-rug-grey-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/saturnrug-black-grey",
+      "destination": "/products/saturn-rug-black-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/saturnrug-beige-brown",
+      "destination": "/products/saturn-rug-beige-brown",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/primsroserugchoc-red",
+      "destination": "/products/primrose-rug-choc-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/primsroserugbeige-brown",
+      "destination": "/products/primrose-rug-beige-brown",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugsilver",
+      "destination": "/products/prada-silver-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugred",
+      "destination": "/products/prada-red-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugmink",
+      "destination": "/products/prada-mink-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradaruggrey",
+      "destination": "/products/prada-grey-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugcream",
+      "destination": "/products/prada-cream-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugcoral",
+      "destination": "/products/prada-coral-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/pradarugaquamarine",
+      "destination": "/products/prada-aquamarine-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/plutonrug-grey-red",
+      "destination": "/products/pluton-rug-grey-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/plutonrug-grey-gold",
+      "destination": "/products/pluton-rug-grey-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/plutonrug-brown-beige",
+      "destination": "/products/pluton-rug-beige-brown",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/plutonrug-black-grey",
+      "destination": "/products/pluton-rug-black-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ottovarugred",
+      "destination": "/products/ottova-rug-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-salmon",
+      "destination": "/products/milo-rug-salmon-02",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-navy",
+      "destination": "/products/milo-rug-navy-03",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-mustard",
+      "destination": "/products/milo-rug-mustard-05",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-grey",
+      "destination": "/products/milo-rug-grey-01",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-black",
+      "destination": "/products/milo-rug-black-04",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/milorug-beige",
+      "destination": "/products/milo-rug-beige-06",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/masonrug-110-grey-mustard",
+      "destination": "/products/mason-rug-110-grey-mustard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/masonrug-109-grey-orange",
+      "destination": "/products/mason-rug-109-grey-orange",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/masonrug-108-grey-blue",
+      "destination": "/products/mason-rug-108-grey-blue",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/masonrug-105-grey-blue",
+      "destination": "/products/mason-rug-105-grey-blue",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/masonrug-103-navy-grey",
+      "destination": "/products/mason-rug-103-navy-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kiss800",
+      "destination": "/products/kiss-800-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kiss070",
+      "destination": "/products/kiss-070-rug",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/jasperrugbeige",
+      "destination": "/products/jasper-rug-beige",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ivy-rug-092-l",
+      "destination": "/products/ivy-rug-092",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ivy-rug-022-l",
+      "destination": "/products/ivy-rug-022",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/harper-rug-592-l",
+      "destination": "/products/harper-rug-592",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/empirerugsilver",
+      "destination": "/products/empire-rug-silver",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/empirerugochre",
+      "destination": "/products/empire-rug-ochre",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/empireruggrey",
+      "destination": "/products/empire-rug-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/empirerugcharcoal",
+      "destination": "/products/empire-rug-charcoal",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/eliserugsilver",
+      "destination": "/products/elise-rug-silver",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/eliserugcream-red-l",
+      "destination": "/products/elise-rug-cream-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/darcyrug-navy",
+      "destination": "/products/darcy-rug-navy",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/darcyrug-beige",
+      "destination": "/products/darcy-rug-beige",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/dakarrug-gold",
+      "destination": "/products/dakar-rug-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-taupe",
+      "destination": "/products/cruz-rug-taupe-04",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-red",
+      "destination": "/products/cruz-rug-red-02",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-navy",
+      "destination": "/products/cruz-rug-navy-03",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-mustard",
+      "destination": "/products/cruz-rug-mustard-06",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-green",
+      "destination": "/products/cruz-rug-green-05",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cruzrug-black",
+      "destination": "/products/cruz-rug-black-01",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chad-rug-592-l",
+      "destination": "/products/chad-rug-592",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-5296a",
+      "destination": "/products/broadway-rug-5296a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-5293a",
+      "destination": "/products/broadway-rug-5293a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-5185a",
+      "destination": "/products/broadway-rug-5185a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-5182a",
+      "destination": "/products/broadway-rug-5182a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-5008a",
+      "destination": "/products/broadway-rug-5008a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-4950a",
+      "destination": "/products/broadway-rug-4950a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/broadwayrug-4945a",
+      "destination": "/products/broadway-rug-4945a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/blazerug-toupe-beige",
+      "destination": "/products/blaze-rug-toupe-beige-03",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/blazerug-navy-blue",
+      "destination": "/products/blaze-rug-navy-blue-02",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/blazerug-ivory-orange",
+      "destination": "/products/blaze-rug-ivory-orange-01",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/blazerug-grey",
+      "destination": "/products/blaze-rug-grey-04",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-108",
+      "destination": "/products/aspire-rug-108",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-107",
+      "destination": "/products/aspire-rug-107",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-106",
+      "destination": "/products/aspire-rug-106",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-104",
+      "destination": "/products/aspire-rug-104",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-103-gold",
+      "destination": "/products/aspire-rug-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-102-silver",
+      "destination": "/products/aspire-rug-silver",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/aspirerug-101-blue",
+      "destination": "/products/aspire-rug-blue",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ashtonrug-toupe-beige",
+      "destination": "/products/ashton-rug-toupe-beige-02",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ashtonrug-mustard-cream",
+      "destination": "/products/ashton-rug-mustard-cream-04",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ashtonrug-ivory-orange",
+      "destination": "/products/ashton-rug-ivory-orange-01",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ashtonrug-grey",
+      "destination": "/products/ashton-rug-grey-05",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/ashtonrug-blue-navy",
+      "destination": "/products/ashton-rug-blue-navy-03",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/asherrug-grey-red",
+      "destination": "/products/asher-rug-grey-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/asherrug-grey-mustard",
+      "destination": "/products/asher-rug-grey-mustard",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/asherrug-grey-beige",
+      "destination": "/products/asher-rug-grey-beige",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alisarug-grey-black",
+      "destination": "/products/alisa-rug-grey-black",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alisarug-dark-grey-black",
+      "destination": "/products/alisa-rug-dark-grey-black",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alaska-5",
+      "destination": "/products/alaska-rug-5-104-white",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alaska-4",
+      "destination": "/products/alaska-rug-4-108",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alaska-3",
+      "destination": "/products/alaska-rug-3-123a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alaska-2",
+      "destination": "/products/alaska-rug-2-104-blue",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/alaska-1",
+      "destination": "/products/alaska-rug-1-115a",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/accrarug-grey-lilac",
+      "destination": "/products/accra-rug-grey-lilac",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/accrarug-grey-gold",
+      "destination": "/products/accra-rug-grey-gold",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/accrarug-grey-black",
+      "destination": "/products/accra-rug-grey-black",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/accrarug-cream-red",
+      "destination": "/products/accra-rug-cream-red",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/president-bed-with-trundle",
+      "destination": "/products/ortho-guest-bed-with-trundle-2-mattresses-fe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/toronto-sliding-wardrobe-2-03",
+      "destination": "/products/toronto-sliding-wardrobe-br",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chelsea-bedframe",
+      "destination": "/products/kensington-bed-frame",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/columbia-charcoal-set",
+      "destination": "/products/columbia-table-and-chairs",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chantelle-modern-dining-set-extendable-table",
+      "destination": "/products/chantelle-cappuccino-set",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/lagan-7-drawer-chest",
+      "destination": "/products/lagan-5-drawer-chest-hb",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/lagan-bedframe",
+      "destination": "/products/lagan-bed-frame-hb",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/troy-writing-desk",
+      "destination": "/products/troy-study-writing-desk",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/poly-bedframe",
+      "destination": "/products/polly-storage-bed-frame-di",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/lola-bedframe",
+      "destination": "/products/lola-storage-bed-frame-di",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/mayfair-wingback",
+      "destination": "/products/mayfair-wingback-storage-bed-frame-dd",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/chiswick-bedframe",
+      "destination": "/products/chiswick-storage-bed-frame-dd",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/roma-27-headboard",
+      "destination": "/products/roma-27-headboard-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/deep-panel-27-headboard",
+      "destination": "/products/panel-27-headboard-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/button-top-27-headboard-base",
+      "destination": "/products/button-top-27-headboard-and-base",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/deep-panel-27-headboard-base",
+      "destination": "/products/deep-panel-27-headboard-and-base-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/button-top-27-headboard-base-4-drawer-or-jumbo-drawer",
+      "destination": "/products/button-top-27-headboard-and-base-4-drawer-or-jumbo-drawer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/malaga-27-headboard-base",
+      "destination": "/products/clara-headboard-and-base",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/band-style-headboard-base-1-or-2-drawer",
+      "destination": "/products/band-27-headboard-and-base-with-drawer-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/band-style-headboard-base",
+      "destination": "/products/band-27-headboard-and-base-aj",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cuba-sliding-wardrobe-1",
+      "destination": "/products/cuba-sliding-wardrobe",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/madrid-3ft-mattress",
+      "destination": "/products/madrid-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/royal-coil-high-end-superb-mattress",
+      "destination": "/products/royal-coil-superb-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/royal-coil-high-end-supreme-6ftft-mattress",
+      "destination": "/products/royal-coil-supreme-mattress",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/vicenza-1-6-metre-fixed-table",
+      "destination": "/products/vicenza-1-6-metre-fixed-table-light-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oscar-large-coffee-table",
+      "destination": "/products/oscar-coffee-table-700155",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oscar-large-1-drawer-coffee-table",
+      "destination": "/products/oscar-coffee-table-with-drawer",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/oscar-3ft-curved-bed",
+      "destination": "/products/oscar-curved-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/london-bedframe",
+      "destination": "/products/london-bed-frame",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kylie-light-bed",
+      "destination": "/products/kylie-bed-frame",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/bamberg-dark-grey-dining-chair",
+      "destination": "/products/bamberg-chair-dark-grey",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/triple-bunk-bed",
+      "destination": "/products/hollie-triple-bunk-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/robson-bedframe-1",
+      "destination": "/products/robson-bed-frame",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/sarah-office-chair",
+      "destination": "/products/sarah-black-pu-office-chair",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/gine-writing-desk",
+      "destination": "/products/gina-writing-desk",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/staten-coffee-table-1",
+      "destination": "/products/staten-console-table",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/nappa-grey-oak-dining-set-with-bench",
+      "destination": "/products/nappa-grey-and-oak-dining-set-with-bench",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/cassie-bed",
+      "destination": "/products/cassie-bed-frame",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kids-recliner-w-cupholder",
+      "destination": "/products/kids-recliner-with-cupholder",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kenmare-chair-footstool",
+      "destination": "/products/kenmare-chair-and-footstool",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/kirkby-sofa-bed-curved-arm",
+      "destination": "/products/kirkby-sofa-bed",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/annah-linen-patchwork-chair",
+      "destination": "/products/annah-linen-patchwork-chair-multicolour",
+      "statusCode": 301
+    }
+  ]
+}

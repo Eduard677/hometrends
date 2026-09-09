@@ -1,0 +1,68 @@
+{
+  "products": 742,
+  "galleryEntries": 2929,
+  "largestOptimizedImageBytes": 199990,
+  "redirectsVerified": [
+    [
+      "/come-in",
+      "/showroom"
+    ],
+    [
+      "/find",
+      "/showroom"
+    ],
+    [
+      "/find?q=troy",
+      "/shop?q=troy"
+    ],
+    [
+      "/products/kingsley-recliner-sofa-range",
+      "/products/kerry-recliner-sofa-range"
+    ],
+    [
+      "/products/waterford-bedframe-copy",
+      "/products/antrim-bedframe"
+    ],
+    [
+      "/products/washington-fabric-recliner-sofa",
+      "/products/waterloo-fabric-recliner-sofa"
+    ]
+  ],
+  "replacementPhotosNeeded": [
+    {
+      "id": "8699020738883",
+      "name": "Natural Sleep Origin Restore Mattress",
+      "slug": "natural-sleep-origin-restore-mattress"
+    },
+    {
+      "id": "8704020152643",
+      "name": "Natural Sleep Platinum Comfort Mattress",
+      "slug": "natural-sleep-platinum-comfort-mattress"
+    },
+    {
+      "id": "8698292175171",
+      "name": "Natural Sleep Nature's Touch Mattress",
+      "slug": "natural-sleep-natures-touch-mattress"
+    },
+    {
+      "id": "14951953727811",
+      "name": "Natural Sleep Deep Comfort Mattress",
+      "slug": "natural-sleep-deep-comfort-mattress"
+    },
+    {
+      "id": "8698308690243",
+      "name": "Natural Sleep Nature's Finest Mattress",
+      "slug": "natural-sleep-natures-finest-mattress"
+    },
+    {
+      "id": "8656624877891",
+      "name": "Natural Sleep Flotation Comfort Mattress",
+      "slug": "natural-sleep-flotation-comfort-mattress"
+    },
+    {
+      "id": "8656619798851",
+      "name": "Natural Sleep Origin Support Mattress",
+      "slug": "natural-sleep-origin-support-mattress"
+    }
+  ]
+}

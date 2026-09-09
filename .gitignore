@@ -1,0 +1,11 @@
+.vercel
+.env*
+
+# added for local version control of this working copy
+node_modules/
+dist/
+.output/
+.tanstack/
+*.log
+.DS_Store
+.cache/

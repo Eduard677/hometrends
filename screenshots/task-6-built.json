@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare",
+      "hasCanvas": false,
+      "bodyTextLen": 2953,
+      "bodyTextHash": "2e12615a572967ec652cf2ca74367dd9fa8c29e373ff859434524761304a0728",
+      "bodyTextPrefix": "Skip to content Menu Search the range 0 Furniture for real rooms",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare",
+      "hasCanvas": false,
+      "bodyTextLen": 2948,
+      "bodyTextHash": "05ff828fbc2406593dbd29b42aec2135cc13f081d97dee0c901ace0b0809f300",
+      "bodyTextPrefix": "Skip to content Search the range 0 Furniture for real rooms Expl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/Users/Eduard/Downloads/hometrends-grok/screenshots/task-6-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

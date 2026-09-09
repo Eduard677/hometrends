@@ -1,0 +1,958 @@
+/* Stage 7 — BRIEF.md Parts 1–5. Loads last, so everything here wins.
+   No new palette, no new type scale, no new motion. */
+
+/* ——— 1.2 Shop all, below the category grid rather than inside MORE ——— */
+.menu-cols__all {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+/* ——— 1.3 Price divider rule, unconditional ———
+   The hairline above the price appeared on some cards and not others. It is now
+   attached to the price block itself so it cannot depend on whether the title
+   wraps. stage6 clears card borders with `border: 0 !important`, so this needs
+   !important to land; it is scoped to the price block only. */
+.product-card__body .price {
+  border-top: 1px solid var(--line) !important;
+  padding-top: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+/* ——— 1.4 Review baselines ———
+   Testimonials differ in length, so the name and the Google link sat at three
+   heights. Equal-height columns with the attribution pushed to the bottom as a
+   group, so the cite and the link keep their own spacing. */
+.reviews-section__grid > article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.reviews-section__grid > article > p:has(cite) {
+  margin-top: auto;
+}
+
+/* ——— 1.5 Cart badge ———
+   Was a bare numeral floating above and right of the icon with no container,
+   reading as a stray character. The button is the positioning context; the
+   count is a filled pill tucked against the icon. */
+.icon-btn:has(.bag-count) {
+  position: relative;
+  overflow: visible;
+}
+.bag-count {
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  /* currentColor tracks the header, which inverts over the hero photograph, so
+     the pill stays legible on cream and on the image alike. */
+  background: currentColor;
+  color: var(--paper);
+  font-size: 10px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.theme-dark .site-header.is-over-hero:not(.is-solid) .bag-count {
+  color: var(--ink);
+}
+.bag-count[hidden] {
+  display: none;
+}
+
+/* ——— 1.6 Sticky header no longer clips anchored headings ——— */
+:target,
+[id]:is(section, article, h1, h2, h3) {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+/* ——— 3.2 Variant selector ———
+   Generic over option names; unavailable values stay visible and disabled. */
+.variant-picker {
+  display: grid;
+  gap: 1.1rem;
+  margin: 1.4rem 0;
+}
+.variant-picker__group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.variant-picker__group legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  color: var(--ink-55);
+  font-size: var(--t-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.variant-picker__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.variant-picker__value {
+  min-height: var(--tap, 44px);
+  padding: 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.variant-picker__value.is-on {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.variant-picker__value.is-unavailable {
+  color: var(--ink-55);
+  border-style: dashed;
+  cursor: not-allowed;
+  /* Struck through as well as dimmed, so it does not rely on colour alone. */
+  text-decoration: line-through;
+}
+
+/* ——— 2.5 / 3.2 Stock and blocked states ——— */
+.pdp-blocked,
+.pdp-stock,
+.product-card__stock {
+  color: var(--ink-55);
+  font-size: 0.9rem;
+}
+.pdp-blocked {
+  margin: 0.5rem 0 0;
+}
+.product-card__stock {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 0.25rem 0.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: var(--t-micro);
+}
+.product-card.is-sold-out figure {
+  opacity: 0.72;
+}
+.pdp-delivery {
+  margin: 1rem 0 1.25rem;
+  color: var(--ink-80);
+  font-size: 0.92rem;
+}
+
+/* ——— 4.4 / 4.5 Drawer detail ——— */
+.bag-drawer__variant {
+  color: var(--ink-55);
+  font-size: 0.88rem;
+  margin: 0.1rem 0 0.3rem;
+}
+.bag-drawer__total,
+.bag-drawer__summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.bag-drawer__summary {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.bag-drawer__checkout,
+.cart__interstitial {
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* ——— 4.6 Reserve modal ——— */
+.reserve-modal {
+  position: fixed;
+  z-index: 90;
+  inset: auto 0 0;
+  margin: 0 auto;
+  width: min(30rem, 100%);
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px 2px 0 0;
+  transform: translateY(100%);
+  transition: transform 0.24s var(--ease, ease);
+}
+.reserve-modal.is-on {
+  transform: translateY(0);
+}
+@media (min-width: 700px) {
+  .reserve-modal {
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -46%);
+    border-radius: 2px;
+  }
+  .reserve-modal.is-on {
+    transform: translate(-50%, -50%);
+  }
+}
+.reserve-modal header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.reserve-modal form {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+.reserve-modal label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+.reserve-modal__piece {
+  color: var(--ink-55);
+}
+.reserve-modal__demo {
+  font-weight: 600;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reserve-modal {
+    transition: none;
+  }
+}
+
+/* ——— §3 Listing controls: chips on desktop, a sheet on mobile ———
+   Replaces the sidebar facet panel. Both render the same URL-backed state; only
+   which one is visible is a media query, so there is no second source of truth. */
+.listing__results {
+  min-width: 0;
+}
+.listing__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.filters__open {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: var(--tap, 44px);
+  padding: 0 1rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.93rem;
+  cursor: pointer;
+}
+.filters__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+}
+.filters__group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.filters__group legend {
+  padding: 0;
+  color: var(--ink-55);
+  font-size: var(--t-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.filters__group--chips > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+.filters__opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.filters__group--chips .filters__opt {
+  min-height: 34px;
+  padding: 0 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.filters__group--chips .filters__opt.is-on {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+/* The native control still drives it; the chip is its label. */
+.filters__group--chips .filters__opt input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.filters__opt em {
+  font-style: normal;
+  color: currentColor;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+.filters__opt:focus-within {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+.filters__clear {
+  align-self: end;
+}
+
+/* Mobile: one bar, one sheet. */
+@media (max-width: 759px) {
+  .filters__open {
+    display: inline-flex;
+  }
+  .filters__chips {
+    display: none;
+  }
+}
+
+.filter-sheet {
+  position: fixed;
+  z-index: 90;
+  inset: auto 0 0 0;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  transform: translateY(100%);
+  transition: transform 0.24s var(--ease, ease);
+}
+.filter-sheet.is-on {
+  transform: translateY(0);
+}
+.filter-sheet header,
+.filter-sheet footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+.filter-sheet footer {
+  border-bottom: 0;
+  border-top: 1px solid var(--line);
+}
+.filter-sheet h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.filter-sheet__body {
+  overflow-y: auto;
+  padding: 0.5rem var(--gutter) 1rem;
+}
+.filters__group--rows {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.filters__group--rows > div {
+  display: grid;
+  margin-top: 0.5rem;
+}
+.filters__group--rows .filters__opt {
+  min-height: var(--tap, 44px);
+  justify-content: start;
+}
+.filters__group--rows .filters__opt input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ink);
+}
+.filters__group--rows .filters__opt em {
+  margin-left: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .filter-sheet {
+    transition: none;
+  }
+}
+
+/* ——— §3 Editorial cells in the grid ——— */
+.editorial-cell {
+  margin: 0;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+}
+.editorial-cell img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.editorial-cell figcaption {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+/* ——— §3 More rooms ——— */
+.more-rooms {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+.more-rooms h2 {
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+.more-rooms ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.more-rooms figure {
+  margin: 0 0 0.6rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.more-rooms img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-rooms a {
+  color: var(--ink);
+  display: block;
+  min-height: var(--tap, 44px);
+}
+
+/* ——— 2.9 Sort control: native, restyled closed state only ———
+   The open list stays native; no custom ARIA listbox. */
+.toolbar select {
+  appearance: none;
+  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+  min-height: var(--tap, 44px);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231e2530' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.93rem;
+}
+
+/* ——— 2.2 Product image scale ———
+   One aspect-ratio for every product media wrapper (set in stage3/stage6), then
+   split by asset type. Lifestyle fills the frame; cutouts are never cropped. */
+.product-media--cover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.product-media--contain img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* Flagged stopgap, see product-media.tsx: `contain` cannot recover margin baked
+   into the source file. The assets in reports/cutout-frame-fill.md want
+   re-exporting; until then the worst offenders are scaled up a little. */
+.product-media--contain[data-fill="low"] img {
+  transform: scale(var(--fit-scale, 1));
+}
+
+/* ——— 2.1 Carousel images fill their cards ——— */
+.room-tiles__card figure {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.room-tiles__card figure img,
+.room-tiles__card figure picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ——— Room rail (structural pass §1) ———
+   Snap, hidden scrollbar and real prev/next controls were added earlier. This
+   completes it: the first card aligned to the container gutter, one full card
+   plus a hint of the next on mobile, and labels that do not wrap. Five rooms
+   unchanged; no second rail. */
+.room-tiles__rail {
+  scroll-snap-type: x mandatory;
+  /* Without this the snap lands the first card flush to the viewport edge and
+     it never reads as framed. */
+  scroll-padding-inline-start: var(--gutter);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.room-tiles__rail::-webkit-scrollbar {
+  display: none;
+}
+.room-tiles__card {
+  scroll-snap-align: start;
+}
+.room-tiles__controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.room-tiles__controls button {
+  width: var(--tap, 44px);
+  height: var(--tap, 44px);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.room-tiles__controls button[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 759px) {
+  /* One full card, framed inside the gutter, with the next just showing so the
+     rail reads as scrollable. Previously 58vw, which left every card cut on
+     both edges and none ever whole. */
+  .room-tiles__rail {
+    grid-auto-columns: calc(100vw - (2 * var(--gutter)) - 2.25rem);
+  }
+  .room-tiles__card span {
+    display: flex;
+    align-items: center;
+    min-height: var(--tap, 44px);
+    white-space: nowrap;
+  }
+}
+
+/* ——— 2.8 Gallery tiles are uniform ———
+   "In homes and in store" sized each tile by its distance from the active one,
+   giving four widths, with a single caption naming whichever was active. The
+   band classes are capped with max-width in stage4 and stage6, so neutralising
+   them needs more than a width override. Tiles are now one size and each
+   carries its own label, so the row is uniform and nothing is orphaned.
+   Selection, keyboard and swipe still work. */
+.insta-select__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  gap: 1rem;
+  height: auto !important;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.insta-select__row::-webkit-scrollbar {
+  display: none;
+}
+.insta-select__card,
+.insta-select__card.is-on,
+.insta-select__card.is-near,
+.insta-select__card.is-mid,
+.insta-select__card.is-edge {
+  flex: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  scroll-snap-align: start;
+  overflow: hidden;
+  position: relative;
+}
+.insta-select__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ——— 2.11 One spacing scale, not varying with content length ——— */
+:root {
+  --section-block: clamp(6rem, 12vw, 10rem);
+}
+main > section,
+main > .ed-sec,
+main > .ed-band {
+  padding-block: var(--section-block);
+}
+
+/* ——— 2.12 Sentence case everywhere except the menu column headings ——— */
+.eyebrow,
+.spread__cap span,
+.from-floor__head .text-link,
+.stay-in-touch a,
+.insta-select__follow a,
+.menu-split__tabs button {
+  text-transform: none;
+  letter-spacing: normal;
+}
+/* Kept, per 2.12. */
+.menu-cols p {
+  text-transform: uppercase;
+}
+
+/* ——— 2.14 Header search collapses to an icon at every width ———
+   The 450px bordered field carried the same visual weight as the logo. The
+   glyph button was already the whole control below 768px; that behaviour now
+   applies throughout. The overlay it opens is unchanged. */
+.site-header .header-search {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+.site-header .header-search__input,
+.site-header .header-search__clear {
+  display: none !important;
+}
+.site-header .header-search__glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap, 44px);
+  min-height: var(--tap, 44px);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ——— Page heading count ———
+   Rendered as " [84]" inside the h1 with no styling of its own, so it inherited
+   the display serif and collided with the last letter. The filters make it
+   change per query, which made the collision constant rather than incidental.
+   Set in the sans face, spaced, and aligned so it reads as a count. */
+.page-frame h1 .count,
+h1 .count {
+  font-family: var(--font-sans, inherit);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink-55);
+  vertical-align: 0.7em;
+  margin-left: 0.15em;
+  white-space: nowrap;
+}
+
+/* ——— 2.8 Per-tile labels ———
+   Replaces the single caption that named only the active tile. Sits over the
+   existing shade, so no new visual language and no new motion. */
+.insta-select__card {
+  position: relative;
+}
+.insta-select__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  color: var(--paper);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
+}
+.insta-select__label strong {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.insta-select__label span {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+/* ——— §2 Variant count under the title ——— */
+.product-card__variants {
+  margin: 0.2rem 0 0;
+  color: var(--ink-55);
+  font-size: 0.85rem;
+}
+
+/* ——— §4 Founder portrait ———
+   The supplied crop is already 4:5, so the frame matches the file and the image
+   is never letterboxed or cropped into. No filter: the grade is correct. */
+.owners-section__portrait {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+.owners-section__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ——— Layout pass ——————————————————————————————————————————————— */
+
+/* §1 Hero: two actions side by side at every width. */
+.ed-hero__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+.ed-hero__actions > * {
+  min-height: var(--tap, 44px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 759px) {
+  /* The pair fills the content gutter and stays one row, per §1. Labels are
+     kept on a single line: at 375 the default padding wrapped both of them. */
+  .ed-hero__actions {
+    gap: 0.9rem;
+  }
+  .ed-hero__actions > * {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    white-space: nowrap;
+    padding-inline: 0.6rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* §5 / §8 Product rows: three across on mobile, six per row block.
+   The sitewide grid drops to two columns then one; the homepage rows keep
+   three so six products read as two rows of three, per the sketch. */
+@media (max-width: 759px) {
+  .from-floor .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem 0.6rem;
+  }
+  /* At three across the card text has to stay legible. */
+  .from-floor .product-card h3 {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+  .from-floor .product-card .price,
+  .from-floor .product-card__variants,
+  .from-floor .product-card__cta {
+    font-size: 0.78rem;
+  }
+}
+
+/* §8 Second row: eyebrow and View all only, no second h2. */
+.from-floor--second .from-floor__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* §6 One existing sentence, set as a single text block. */
+.ed-note p {
+  max-width: 46ch;
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--ink-80);
+}
+
+/* §7 Instagram reads as a profile, not a captioned gallery. */
+.social__accounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.social__account {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: var(--tap, 44px);
+  color: var(--ink);
+}
+.social__handle {
+  display: grid;
+  line-height: 1.25;
+}
+.social__handle strong {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.social__handle span {
+  color: var(--ink-55);
+  font-size: 0.85rem;
+}
+.social__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+.social__grid li,
+.social__grid a {
+  display: block;
+}
+.social__grid a {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--paper);
+}
+.social__grid img {
+  width: 100%;
+  height: 100%;
+  /* Square crop; no story rings, no hover zoom cropping the subject off. */
+  object-fit: cover;
+  display: block;
+}
+
+/* §PDP Gallery left, buy column right; one stacked column at 375 and 768. */
+.pdp {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+@media (min-width: 1000px) {
+  .pdp {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+}
+.pdp__buy {
+  min-width: 0;
+}
+/* Two quiet lines under Add: dimensions, then delivery. */
+.pdp-lines {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.pdp-lines > div {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+.pdp-lines dt {
+  flex: 0 0 6.5rem;
+  color: var(--ink-55);
+}
+.pdp-lines dd {
+  margin: 0;
+  color: var(--ink-80);
+}
+/* Secondary actions sit under the lines and never compete with Add. */
+.pdp-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.1rem;
+}
+.pdp-actions {
+  margin-top: 1.25rem;
+}
+.pdp-actions .button--solid {
+  width: 100%;
+  max-width: 22rem;
+  min-height: var(--tap, 44px);
+}
+
+/* §PDP Complete the room: up to three cards plus one room photograph. */
+.complete {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+}
+.complete h2 {
+  font-family: var(--font-display);
+  font-size: var(--t-title);
+  margin: 0 0 1.25rem;
+}
+.complete__row {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.complete__room {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.complete__room img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.complete__room figcaption {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+@media (max-width: 899px) {
+  /* Mobile: a horizontal row, one full card plus a hint of the next. */
+  .complete__row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% - 4.5rem);
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline-start: 0;
+    scrollbar-width: none;
+    gap: 0.85rem;
+  }
+  .complete__row::-webkit-scrollbar {
+    display: none;
+  }
+  .complete__row > * {
+    scroll-snap-align: start;
+  }
+}
+
+/* Reserve must read quieter than Add. As a .text-link it inherited the tracked
+   caps used for buttons and competed with the solid action. */
+.pdp-secondary .text-link {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.92rem;
+  color: var(--ink-55);
+}
+.pdp-secondary .text-link:hover {
+  color: var(--ink);
+}
