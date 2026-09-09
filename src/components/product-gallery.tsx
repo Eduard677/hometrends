@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/catalog";
 import { ProductMedia } from "./product-media";
 
@@ -15,6 +15,7 @@ import { ProductMedia } from "./product-media";
  */
 export function ProductGallery({ product }: { product: Product }) {
   const [active, setActive] = useState(0);
+  const [zoomed, setZoomed] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const images = product.images ?? [];
 
@@ -28,6 +29,29 @@ export function ProductGallery({ product }: { product: Product }) {
     const index = Math.min(Math.round(track.scrollLeft / width), images.length - 1);
     setActive((current) => (current === index ? current : index));
   }, [images.length]);
+
+  /* Medium-style: once open, a real scroll or Escape closes it. Listening on
+     the window rather than the overlay so a trackpad flick anywhere closes.
+     Focusing the trigger makes the browser nudge it into view, which fires a
+     scroll event in the same tick as opening — so close only once the page has
+     actually moved a meaningful distance from where it opened. */
+  useEffect(() => {
+    if (!zoomed) return;
+    const openedAt = window.scrollY;
+    const close = () => setZoomed(false);
+    const onScroll = () => {
+      if (Math.abs(window.scrollY - openedAt) > 24) close();
+    };
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") close();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [zoomed]);
 
   const goTo = useCallback((index: number) => {
     setActive(index);
@@ -45,11 +69,21 @@ export function ProductGallery({ product }: { product: Product }) {
             key={image.src + index}
             className={`product-gallery__slide${active === index ? " is-active" : ""}`}
           >
-            <ProductMedia
-              product={product}
-              image={image}
-              loading={index === 0 ? "eager" : "lazy"}
-            />
+            <button
+              type="button"
+              className="product-gallery__zoom"
+              aria-label={`Enlarge photograph ${index + 1} of ${product.name}`}
+              onClick={() => {
+                setActive(index);
+                setZoomed(true);
+              }}
+            >
+              <ProductMedia
+                product={product}
+                image={image}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </button>
           </div>
         ))}
       </div>
@@ -83,6 +117,19 @@ export function ProductGallery({ product }: { product: Product }) {
               <ProductMedia product={product} image={image} />
             </button>
           ))}
+        </div>
+      ) : null}
+      {/* One frame, the image the gallery is already showing. Click anywhere,
+          scroll, or press Escape to close. */}
+      {zoomed && images[active] ? (
+        <div
+          className="product-zoom"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${product.name}, enlarged`}
+          onClick={() => setZoomed(false)}
+        >
+          <ProductMedia product={product} image={images[active]} loading="eager" />
         </div>
       ) : null}
     </div>
