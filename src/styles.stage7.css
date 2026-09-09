@@ -1011,3 +1011,110 @@ h1 .count {
 .pdp-secondary .text-link:hover {
   color: var(--ink);
 }
+
+/* §PDP Gallery, per the two sketches. One track of slides serves both: the
+   desktop sketch shows one large frame under a thumb row, the mobile sketch a
+   horizontal snap carousel with dots. The breakpoint decides which, so the
+   markup stays single and no photograph is fetched twice. */
+main .product-gallery__track {
+  aspect-ratio: 4 / 5;
+  padding: 0;
+  overflow: hidden;
+}
+.product-gallery__slide {
+  width: 100%;
+  height: 100%;
+}
+/* Desktop: the thumb row is the control, so only the active slide shows. */
+@media (min-width: 900px) {
+  .product-gallery__slide {
+    display: none;
+  }
+  .product-gallery__slide.is-active {
+    display: block;
+  }
+  .product-gallery__dots {
+    display: none;
+  }
+}
+/* Mobile: every slide laid out in a row that snaps, dots instead of thumbs. */
+@media (max-width: 899px) {
+  main .product-gallery__track {
+    /* styles.css makes .pdp__media sticky with top: calc(var(--header-h) + 1rem)
+       and cancels it here with `position: static`, but styles.apple.css loads
+       later and re-declares `position: relative`, so the 80px offset survived
+       and the frame rendered 80px below its own flow box — over whatever came
+       after it. Reset both, qualified so it outranks the bare .pdp__media. */
+    position: static;
+    top: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    /* Pin the single row to the aspect-ratio box. Without it the row sizes to
+       the image instead, the track outgrows its 4:5 frame and the photograph
+       paints over the dots below it. */
+    grid-template-rows: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  main .product-gallery__track::-webkit-scrollbar {
+    display: none;
+  }
+  .product-gallery__slide {
+    display: block;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 0;
+    overflow: hidden;
+  }
+  /* `main` qualified: styles.showroom.css sets `main .product-gallery__thumbs`
+     to grid, which out-specifies a bare class even from this later file. */
+  main .product-gallery__thumbs {
+    display: none;
+  }
+  .product-gallery__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+  }
+  /* The visible dot is small; the tap target is not. */
+  .product-gallery__dots button {
+    width: 22px;
+    min-height: var(--tap, 44px);
+    padding: 0;
+    border: 0;
+    background: none;
+    display: grid;
+    place-items: center;
+  }
+  .product-gallery__dots button::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid var(--ink);
+  }
+  .product-gallery__dots button.is-active::after {
+    background: var(--ink);
+  }
+}
+
+/* §PDP Complete the room: the room photograph is the large tile, the related
+   pieces the smaller ones, per the desktop sketch. Five tracks rather than
+   four so the wide cell can span two without crushing the cards. */
+@media (min-width: 900px) {
+  .complete__row {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .complete__room {
+    grid-column: span 2;
+  }
+  /* Roughly two tracks wide at the height of a 4:5 card, so the row sits level. */
+  .complete__room img {
+    aspect-ratio: 16 / 10;
+  }
+}
