@@ -37,29 +37,54 @@ export function ProductGallery({ product }: { product: Product }) {
     track?.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
   }, []);
 
-  return <div className="product-gallery">
-    <div className="pdp__media product-gallery__track" ref={trackRef} onScroll={onScroll}>
-      {images.map((image, index) => (
+  return (
+    <div className="product-gallery">
+      <div className="pdp__media product-gallery__track" ref={trackRef} onScroll={onScroll}>
+        {images.map((image, index) => (
+          <div
+            key={image.src + index}
+            className={`product-gallery__slide${active === index ? " is-active" : ""}`}
+          >
+            <ProductMedia
+              product={product}
+              image={image}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </div>
+        ))}
+      </div>
+      {images.length > 1 ? (
         <div
-          key={image.src + index}
-          className={`product-gallery__slide${active === index ? " is-active" : ""}`}
+          className="product-gallery__dots"
+          aria-label={`Photograph ${active + 1} of ${images.length}`}
         >
-          <ProductMedia product={product} image={image} loading={index === 0 ? "eager" : "lazy"} />
+          {images.map((image, index) => (
+            <button
+              key={image.src + index}
+              type="button"
+              aria-label={`View photograph ${index + 1} of ${product.name}`}
+              aria-current={active === index}
+              className={active === index ? "is-active" : undefined}
+              onClick={() => goTo(index)}
+            />
+          ))}
         </div>
-      ))}
+      ) : null}
+      {images.length > 1 ? (
+        <div className="product-gallery__thumbs" aria-label={`Photographs of ${product.name}`}>
+          {images.map((image, index) => (
+            <button
+              key={image.src + index}
+              type="button"
+              aria-label={`View photograph ${index + 1} of ${product.name}`}
+              aria-pressed={active === index}
+              onClick={() => goTo(index)}
+            >
+              <ProductMedia product={product} image={image} />
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
-    {images.length > 1 ? <div className="product-gallery__dots" aria-label={`Photograph ${active + 1} of ${images.length}`}>
-      {images.map((image, index) => <button
-        key={image.src + index}
-        type="button"
-        aria-label={`View photograph ${index + 1} of ${product.name}`}
-        aria-current={active === index}
-        className={active === index ? "is-active" : undefined}
-        onClick={() => goTo(index)}
-      />)}
-    </div> : null}
-    {images.length > 1 ? <div className="product-gallery__thumbs" aria-label={`Photographs of ${product.name}`}>
-      {images.map((image, index) => <button key={image.src + index} type="button" aria-label={`View photograph ${index + 1} of ${product.name}`} aria-pressed={active === index} onClick={() => goTo(index)}><ProductMedia product={product} image={image} /></button>)}
-    </div> : null}
-  </div>;
+  );
 }
