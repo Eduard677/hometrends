@@ -4,7 +4,11 @@ import { STORE } from "./store";
 export const SITE_ORIGIN = "https://hometrends-deploy.vercel.app";
 export const SITE_NAME = "Home Trends Furniture";
 const TITLE_SUFFIX = ` | ${SITE_NAME}`;
-const ENQUIRY_SUFFIX = " Enquire at Home Trends Furniture, Ennis.";
+/* Phase 2, cart model. The suffix used to say "Enquire at…", which contradicted
+   the "Add to bag" button on the same page. It does not say "buy online"
+   either: this build's checkout is an interstitial that takes no payment, so
+   that would overstate what the site can currently do. */
+const ENQUIRY_SUFFIX = " Order from Home Trends Furniture, Ennis.";
 const META_MAX = 155;
 /* The share card shipped with the site. 1200x630, confirmed on disk. */
 export const DEFAULT_OG_IMAGE: OgImage = { src: "/og.jpg", width: 1200, height: 630 };

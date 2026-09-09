@@ -13,7 +13,13 @@ export type Room = {
 };
 
 export const ROOMS: readonly Room[] = [
-  { slug: "sofas-chairs", label: "Living room", image: "/media/editorial/collection-living.webp", position: "50% 48%" },
+  /* Phase 2. Was labelled "Living room" while linking to sofas-chairs, so the
+     tile promised one collection and delivered another, and the homepage
+     disagreed with the footer and mega menu. The two collections are disjoint
+     — living-room is 70 tables/storage pieces, sofas-chairs is 78 seating
+     pieces, zero products in both — so nothing is merged or redirected; the
+     label now names where the tile actually goes. */
+  { slug: "sofas-chairs", label: "Sofas & chairs", image: "/media/editorial/collection-living.webp", position: "50% 48%" },
   { slug: "dining", label: "Dining room", image: "/media/editorial/collection-dining.webp", position: "72% 50%" },
   { slug: "beds-mattresses", label: "Bedroom", image: "/media/editorial/collection-bedroom.webp", position: "50% 40%" },
   { slug: "flooring", label: "Flooring", image: "/media/category/flooring.jpg", position: "50% 55%" },
@@ -23,10 +29,10 @@ export const ROOMS: readonly Room[] = [
 /**
  * The rooms other than the one being viewed.
  *
- * Matched on label as well as slug: /collections/living-room and the rail's
- * "Living room" (which points at sofas-chairs) are different collections about
- * the same room, and offering someone the room they are already in reads as a
- * bug. On a collection that is not one of the five, all five are "other".
+ * Matched on label as well as slug. The label case mattered while the rail's
+ * "Living room" pointed at sofas-chairs; the label now matches its slug, so
+ * this is belt and braces rather than a live special case. On a collection
+ * that is not one of the five, all five are "other".
  */
 export function otherRooms(currentSlug?: string, currentLabel?: string) {
   const label = currentLabel?.trim().toLowerCase();
