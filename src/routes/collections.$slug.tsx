@@ -1,4 +1,4 @@
-import { Link, createFileRoute, useNavigate } from "@tanstack/react-router";
+import { Link, createFileRoute, useNavigate, redirect } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ListingToolbar, sortProducts } from "@/components/chrome";
 import { PageFrame } from "@/components/page-frame";
@@ -17,6 +17,15 @@ type CollectionSearch = { page?: number; category?: string; colour?: string; pri
 const list = (value: unknown) => (typeof value === "string" && value ? value.split(",").filter(Boolean) : []);
 
 export const Route = createFileRoute("/collections/$slug")({
+  /* Decided: /collections/living-room is canonical and sofas-chairs 301s to
+     it. Recorded in CHANGES.md — the two collections are disjoint (70 vs 78
+     products, zero overlap), so this sends 78 seating pieces to a collection
+     of tables and storage. Client decision, implemented as specified. */
+  beforeLoad: ({ params }) => {
+    if (params.slug === "sofas-chairs") {
+      throw redirect({ to: "/collections/$slug", params: { slug: "living-room" }, statusCode: 301 });
+    }
+  },
   validateSearch: (search: Record<string, unknown>): CollectionSearch => ({
     page: Number(search.page) > 1 ? Number(search.page) : undefined,
     category: typeof search.category === "string" && search.category ? search.category : undefined,

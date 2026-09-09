@@ -180,7 +180,7 @@ export function SiteFooter() {
         <div>
           <h3>Shop</h3>
           <Link to="/shop">All furniture</Link>
-          <Link to="/collections/$slug" params={{ slug: "sofas-chairs" }}>
+          <Link to="/collections/$slug" params={{ slug: "living-room" }}>
             Sofas & chairs
           </Link>
           <Link to="/collections/$slug" params={{ slug: "beds-mattresses" }}>
@@ -233,7 +233,7 @@ const MENU_COLUMNS: { heading: string; items: MenuLink[] }[] = [
   {
     heading: "Living",
     items: [
-      { label: "Sofas", slug: "sofas-chairs" },
+      { label: "Sofas", slug: "living-room" },
       { label: "Chairs & footstools", slug: "chairs-footstools" },
       { label: "Living room", slug: "living-room" },
       { label: "Objects", slug: "objects" },
@@ -434,7 +434,7 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
 }
 
 const SEARCH_POPULAR = [
-  { label: "sofas", slug: "sofas-chairs" },
+  { label: "sofas", slug: "living-room" },
   { label: "chairs", slug: "chairs-footstools" },
   { label: "beds", slug: "beds" },
   { label: "dining tables", slug: "dining" },
@@ -457,7 +457,7 @@ const SEARCH_TILES = [
   { label: "Dining", slug: "dining", image: "/media/editorial/search-tables.jpg", alt: "A dining table laid in afternoon light in the Home Trends showroom, Ennis" },
   { label: "Seating", slug: "chairs-footstools", image: "/media/editorial/search-seating.jpg", alt: "An upholstered fireside chair on the Home Trends floor, Ennis" },
   { label: "Lighting", slug: "lighting", image: "/media/editorial/search-lamp.jpg", alt: "A table lamp lit against a quiet wall in the Home Trends showroom, Ennis" },
-  { label: "Sofas", slug: "sofas-chairs", image: "/media/editorial/search-sofa.jpg", alt: "An oatmeal linen sofa in the Home Trends showroom, Ennis" },
+  { label: "Sofas", slug: "living-room", image: "/media/editorial/search-sofa.jpg", alt: "An oatmeal linen sofa in the Home Trends showroom, Ennis" },
 ];
 
 function SearchDrawer({

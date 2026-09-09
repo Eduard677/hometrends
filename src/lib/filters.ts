@@ -117,6 +117,8 @@ export function blockingFacet(products: Product[], facets: Facets) {
   return undefined;
 }
 
+const HIDDEN_CATEGORY = "Sofas & Chairs";
+
 export function facetCounts(products: Product[]) {
   const category = new Map<string, number>();
   const colour = new Map<string, number>();
@@ -126,7 +128,11 @@ export function facetCounts(products: Product[]) {
   }
   const bySize = (a: [string, number], b: [string, number]) => b[1] - a[1];
   return {
-    category: [...category.entries()].sort(bySize),
+    /* Decided: "Sofas & Chairs" is no longer offered as a top-level category,
+       since /collections/sofas-chairs now 301s to living-room. The facet is
+       hidden, not deleted — product data is untouched, so the 38 pieces still
+       appear in unfiltered listings and in search. Recorded in CHANGES.md. */
+    category: [...category.entries()].filter(([name]) => name !== HIDDEN_CATEGORY).sort(bySize),
     colour: [...colour.entries()].sort(bySize),
   };
 }

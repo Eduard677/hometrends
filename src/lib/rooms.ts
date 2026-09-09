@@ -19,7 +19,7 @@ export const ROOMS: readonly Room[] = [
      — living-room is 70 tables/storage pieces, sofas-chairs is 78 seating
      pieces, zero products in both — so nothing is merged or redirected; the
      label now names where the tile actually goes. */
-  { slug: "sofas-chairs", label: "Sofas & chairs", image: "/media/editorial/collection-living.webp", position: "50% 48%" },
+  { slug: "living-room", label: "Living room", image: "/media/editorial/collection-living.webp", position: "50% 48%" },
   { slug: "dining", label: "Dining room", image: "/media/editorial/collection-dining.webp", position: "72% 50%" },
   { slug: "beds-mattresses", label: "Bedroom", image: "/media/editorial/collection-bedroom.webp", position: "50% 40%" },
   { slug: "flooring", label: "Flooring", image: "/media/category/flooring.jpg", position: "50% 55%" },

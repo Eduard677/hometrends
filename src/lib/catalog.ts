@@ -267,7 +267,7 @@ export const MENU = [
   {
     label: "Sofas & chairs",
     items: [
-      { label: "Sofas", slug: "sofas-chairs" },
+      { label: "Sofas", slug: "living-room" },
       { label: "Chairs & footstools", slug: "chairs-footstools" },
       { label: "Living room", slug: "living-room" },
     ],
@@ -396,7 +396,8 @@ export const HOME_MOSAIC: {
 /** Owner-confirmed non-stock. Kept so old URLs, bags and sitemaps can reject them. */
 export const RETIRED_PRODUCT_SLUGS = ["modular-sofa", "corner-sofa"] as const;
 export const RETIRED_PRODUCT_IDS = ["ERR-001", "ERR-002"] as const;
-export const RETIRED_PRODUCT_REDIRECT = "/collections/sofas-chairs" as const;
+/* living-room is canonical; pointing at sofas-chairs would chain 301->301. */
+export const RETIRED_PRODUCT_REDIRECT = "/collections/living-room" as const;
 
 const RETIRED_SLUG_SET = new Set<string>(RETIRED_PRODUCT_SLUGS);
 const RETIRED_ID_SET = new Set<string>(RETIRED_PRODUCT_IDS);

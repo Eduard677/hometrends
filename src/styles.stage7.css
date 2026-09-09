@@ -1436,3 +1436,17 @@ main .product-gallery__track {
     transition: none;
   }
 }
+
+/* ——— Pricing presentation (decided) ———
+   The prior price was drawn in a separate grey (--ink-35 / --ink-55 / #6B6660
+   depending on which of three layers won). It is now the body ink at reduced
+   opacity, so a markdown reads as the same text set back rather than as a
+   second colour. No red, and no badge treatment anywhere — there was none to
+   remove. Product data and the prices themselves are untouched. */
+main .price s,
+.price s {
+  color: var(--ink);
+  opacity: 0.45;
+  font-weight: inherit;
+  text-decoration-thickness: 1px;
+}
