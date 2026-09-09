@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import type { Product } from "@/lib/catalog";
 import { priceLabel, variantSummary } from "@/lib/catalog";
+import { Price } from "./price";
 import { bagLineFrom } from "@/lib/bag";
-import { euro } from "@/lib/store";
 import { useChromeActions } from "./chrome-actions";
 import { ProductMedia } from "./product-media";
 
@@ -53,12 +53,7 @@ export function ProductCard({
         </h3>
         {/* §2 - plain text, never colour dots; the catalogue holds no hex values. */}
         {variantSummary(product) ? <p className="product-card__variants">{variantSummary(product)}</p> : null}
-        <p className="price">
-          {priceLabel(product)}
-          {/* Only where the markdown is real - `compareAt` is absent wherever the
-              scrape's 123 invalid ones were dropped. */}
-          {showWas && product.compareAt ? <s>{euro(product.compareAt)}</s> : null}
-        </p>
+        <Price label={priceLabel(product)} was={product.compareAt} showWas={showWas} />
         {product.availability && product.availability !== "On the floor now" && !soldOut ? (
           <p className="product-availability">{product.availability}</p>
         ) : null}

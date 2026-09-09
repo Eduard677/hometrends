@@ -230,8 +230,17 @@ correct and should stay that way.
 Measured on `/products/kilkenny-mink-bed`: **12 `<img>`, 6 unique sources** —
 6 in the slide track, 6 in the thumbnail strip. Not a CSS clone. No `srcset` on
 any of them, and a thumbnail renders at **122px while loading the full
-800×1000 file**. The brief's concern is real: mobile pulls twelve full-size
-images for one bed.
+800×1000 file**. **But the download cost is not what the brief assumes.** Measured at 390px on
+the dev build: 12 `<img>` tags, **6 unique URLs, 6 gallery fetches** (9
+catalogue responses in total, the other 3 being the "Complete the room"
+cards). Slides and thumbnails point at the *same* URL, so the browser fetches
+each photograph once and reuses it — the thumbnail strip costs zero extra
+bytes. Thumbnails are also `display: none` below 900px.
+
+So giving thumbnails "their own small srcset" would save no bandwidth as
+things stand: it would require generating ~2900 new derivative files (the
+catalogue has one 800px webp per photograph and nothing smaller) for a decode
+saving only. Not done, deliberately.
 
 ## Corrections to the brief
 

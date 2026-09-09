@@ -2,6 +2,7 @@ import { Link, createFileRoute, redirect } from "@tanstack/react-router";
 import { useState } from "react";
 import { getProduct, isRetiredProductSlug, priceLabel, productDimensions, productRedirect, relatedProducts } from "@/lib/catalog";
 import { ProductGallery } from "@/components/product-gallery";
+import { Price } from "@/components/price";
 import { CompleteTheRoom } from "@/components/complete-the-room";
 import { SavePiece } from "@/components/save-piece";
 import { VariantPicker, useVariantSelection } from "@/components/variant-picker";
@@ -106,7 +107,7 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
         <p className="eyebrow">{product.category}</p>
         {/* Sketch: the name and the heart share a line. */}
         <div className="pdp__title"><h1>{product.name}</h1><SavePiece slug={product.slug} variant="icon" /></div>
-        <p className="price">{price}{was ? <s>{euro(was)}</s> : null}</p>
+        <Price label={price} was={was} />
         {soldOut ? <p className="pdp-stock">Not currently available. Call the showroom to ask when it is next in.</p> : null}
         <VariantPicker selection={selection} />
         <div className="pdp-actions">
