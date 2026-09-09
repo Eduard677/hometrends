@@ -10,5 +10,30 @@ dist/
 .DS_Store
 .cache/
 
-# never commit the photo packs
-public/media/
+# Media: track only what the site actually references, so a clone can build.
+# Everything else in public/media (the raw shopify pack, unreferenced hero/nav/
+# detail/fabric/gallery/showroom/maps stopgaps, the per-image .json sidecars,
+# and the .jpg fallbacks the catalogue no longer serves) stays local-only.
+# The full original pack lives in ~/Downloads/hometrends-grok/public/media.
+public/media/*
+!public/media/brand/
+!public/media/category/
+!public/media/editorial/
+!public/media/instagram/
+!public/media/optimized/
+!public/media/story/
+!public/media/living.webp
+
+# Catalogue ships webp only; the .jpg fallbacks and .json sidecars are not used.
+!public/media/catalogue/
+public/media/catalogue/*
+!public/media/catalogue/*.webp
+
+# Only these five shopify files are referenced; the rest of the pack is ~136 MB.
+!public/media/shopify/
+public/media/shopify/*
+!public/media/shopify/accrarug-cream-red.jpg
+!public/media/shopify/accrarug-grey-gold.jpg
+!public/media/shopify/alisarug-beige-brown.jpg
+!public/media/shopify/asherrug-grey-beige.jpg
+!public/media/shopify/oak-writing-desk.jpg
