@@ -3062,7 +3062,10 @@
     "/media/hero/04-from-shop-hero.jpg",
     "/media/hero/05-living-cdn.jpg",
     "/media/hero/06-dining-cdn.jpg",
+    "/media/instagram/c1-65573527.jpg",
+    "/media/instagram/desk.jpg",
     "/media/instagram/manifest.json",
+    "/media/instagram/queen-ann.jpg",
     "/media/maps/clare-delivery.svg",
     "/media/nav/nav-beds.jpg",
     "/media/nav/nav-dining.jpg",
@@ -3908,11 +3911,6 @@
     },
     {
       "url": "/media/instagram/1-DWPTopHDCc2.jpg",
-      "before": 248559,
-      "after": 122477
-    },
-    {
-      "url": "/media/instagram/c1-65573527.jpg",
       "before": 248559,
       "after": 122477
     },

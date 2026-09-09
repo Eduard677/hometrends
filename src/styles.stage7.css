@@ -804,6 +804,16 @@ h1 .count {
   min-height: var(--tap, 44px);
   color: var(--ink);
 }
+/* The glyph sits in a ring so the row reads as an account, not a link. */
+.social__badge {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
 .social__handle {
   display: grid;
   line-height: 1.25;
@@ -816,14 +826,38 @@ h1 .count {
   color: var(--ink-55);
   font-size: 0.85rem;
 }
+/* Follow is an affordance, not a promise: it opens the profile. No follower
+   count sits beside it because that number is not known. */
+.social__follow {
+  margin-left: auto;
+  align-self: center;
+  padding: 0.5rem 1.15rem;
+  min-height: var(--tap, 44px);
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.social__account:hover .social__follow {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Three columns on mobile, six on desktop; tight gutter. */
 .social__grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
+  gap: 4px;
+}
+@media (min-width: 900px) {
+  .social__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 }
 .social__grid li,
 .social__grid a {
@@ -840,6 +874,27 @@ h1 .count {
   /* Square crop; no story rings, no hover zoom cropping the subject off. */
   object-fit: cover;
   display: block;
+}
+/* Hover lift on desktop only: a pointer-driven affordance has no meaning on a
+   touch screen, where it would only stick after a tap. */
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .social__grid a {
+    transition:
+      transform 0.28s var(--ease-sheet, ease),
+      box-shadow 0.28s var(--ease-sheet, ease);
+  }
+  .social__grid a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--ink) 18%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social__grid a {
+    transition: none;
+  }
+  .social__grid a:hover {
+    transform: none;
+  }
 }
 
 /* §PDP Gallery left, buy column right; one stacked column at 375 and 768. */
