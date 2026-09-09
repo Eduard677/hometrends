@@ -19,6 +19,8 @@ function BagPage() {
   const count = bagCount(lines);
   const subtotal = bagSubtotal(lines);
   const [checkout, setCheckout] = useState(false);
+  const [promo, setPromo] = useState("");
+  const [promoNote, setPromoNote] = useState(false);
 
   if (!items.length) {
     return (
@@ -98,6 +100,41 @@ function BagPage() {
               <dd>{euro(subtotal)}</dd>
             </div>
           </dl>
+          {/* Sketch sheet 1's promo field. There is no discount system, so the
+              field validates nothing and stores nothing — submitting it says
+              where codes are actually redeemed, which is the same thing the
+              checkout interstitial below already says. No code is invented, no
+              total is altered, and nothing is silently swallowed. */}
+          <form
+            className="cart__promo"
+            onSubmit={(event) => {
+              event.preventDefault();
+              setPromoNote(true);
+            }}
+          >
+            <label htmlFor="promo-code">Promotion code</label>
+            <div className="cart__promo-row">
+              <input
+                id="promo-code"
+                name="promo-code"
+                type="text"
+                autoComplete="off"
+                value={promo}
+                onChange={(event) => {
+                  setPromo(event.target.value);
+                  setPromoNote(false);
+                }}
+              />
+              <button type="submit" className="button" disabled={!promo.trim()}>
+                Apply
+              </button>
+            </div>
+            {promoNote ? (
+              <p className="cart__promo-note" role="status">
+                Promotion codes are applied at Shopify’s secure checkout, not here.
+              </p>
+            ) : null}
+          </form>
           {/* 4.5 - an interstitial, not a checkout, and no payment form. */}
           {checkout ? (
             <div className="cart__interstitial">
