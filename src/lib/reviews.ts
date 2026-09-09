@@ -1,7 +1,20 @@
 export const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place//data=!4m4!3m3!1s0x485b12d2ce9f2f77:0xcf6c3c48c9b00201!9m1!1b1";
 
+/* Phase 2. Gemma Casey's review leads: it is the only one that names a
+   concrete saving against a named alternative and ends on "shop local". The
+   three shown on the homepage are REVIEWS.slice(0, 3); order is the only thing
+   changed here, no wording and no ratings. */
 export const REVIEWS = [
+  {
+    name: "Gemma Casey",
+    initials: "GC",
+    source: "Google",
+    sourceUrl: GOOGLE_REVIEWS_URL,
+    stars: 5,
+    when: "5 months ago",
+    text: "I bought a storage bed & linen from here. Fantastic & efficient service. Quality was superb & the delivery men assembled it for me & took away all the packaging. Id been let down badly with damaged goods from a big chain store in Limerick. The bed i have now is better quality & €400 cheaper. It was definitely a lesson learned. Shop local !!",
+  },
   {
     name: "Tomasz Kotowski",
     initials: "TK",
@@ -19,15 +32,6 @@ export const REVIEWS = [
     stars: 5,
     when: "4 months ago",
     text: "Delighted with their service. Beds ordered and delivered within a week. Great selection and great value. A friend recommended Home Trends and am delighted to highly recommend them to all",
-  },
-  {
-    name: "Gemma Casey",
-    initials: "GC",
-    source: "Google",
-    sourceUrl: GOOGLE_REVIEWS_URL,
-    stars: 5,
-    when: "5 months ago",
-    text: "I bought a storage bed & linen from here. Fantastic & efficient service. Quality was superb & the delivery men assembled it for me & took away all the packaging. Id been let down badly with damaged goods from a big chain store in Limerick. The bed i have now is better quality & €400 cheaper. It was definitely a lesson learned. Shop local !!",
   },
   {
     name: "Caroline O'Brien",

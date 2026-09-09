@@ -43,11 +43,21 @@ export function PageFrame({
       ) : null}
       <header className="issue__head">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1>
-          {title}
-          {typeof count === "number" ? <span className="count"> [{count}]</span> : null}
-        </h1>
-        {lead ? <p>{lead}</p> : null}
+        {/* Phase 2. The count used to sit inside the <h1> as " [742]", which
+            read as a leaked template variable and put a number in the page's
+            main heading. It now travels with the lead line instead. */}
+        <h1>{title}</h1>
+        {lead || typeof count === "number" ? (
+          <p>
+            {lead}
+            {typeof count === "number" ? (
+              <span className="count">
+                {lead ? " " : ""}
+                {count} pieces
+              </span>
+            ) : null}
+          </p>
+        ) : null}
       </header>
       {plate ? (
         <figure className="issue__plate">

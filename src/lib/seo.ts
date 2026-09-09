@@ -1,6 +1,5 @@
 import type { Product, Collection } from "./catalog";
 import { STORE } from "./store";
-import { PRODUCTS } from "./catalog";
 
 export const SITE_ORIGIN = "https://hometrends-deploy.vercel.app";
 export const SITE_NAME = "Home Trends Furniture";

@@ -82,9 +82,13 @@ export function RoomTiles({
               params={{ slug: item.slug }}
             >
               <figure>
+                {/* The link already announces the room, so the image is
+                    decorative — otherwise a screen reader reads "Living room
+                    furniture and finishes at Home Trends Furniture, Ennis
+                    Living room". */}
                 <SiteImage
                   src={item.image}
-                  alt={`${item.label} furniture and finishes at Home Trends Furniture, Ennis`}
+                  alt=""
                   width={800}
                   height={600}
                   style={{ objectPosition: item.position ?? "50% 50%" }}

@@ -43,9 +43,12 @@ function Home() {
       <p>Visit us in the centre of Ennis to explore furniture, fabrics and flooring in person.</p>
     </section>
     <SocialStrip />
-    {/* §8: no new heading. The existing "Featured furniture" eyebrow and the
-        existing View all link only — the h2 belongs to the first row. */}
-    <section className="ed-sec ed-band from-floor from-floor--second"><div className="from-floor__head"><p className="eyebrow">Featured furniture</p><Link to="/shop" className="text-link">View all furniture</Link></div><ProductGrid products={homepageFeaturedSecond()} showWas={false} /></section>
+    {/* Phase 2. This row carried the eyebrow but no <h2>, so the heading
+        outline skipped it and the page appeared to show "Featured furniture"
+        twice. It already renders a different product set
+        (homepageFeaturedSecond), so it gets its own heading rather than being
+        removed. */}
+    <section className="ed-sec ed-band from-floor from-floor--second"><div className="from-floor__head"><div><p className="eyebrow">More from the range</p><h2>Also on the floor</h2></div><Link to="/shop" className="text-link">View all furniture</Link></div><ProductGrid products={homepageFeaturedSecond()} showWas={false} /></section>
     <Reviews />
     <VisitSection />
   </main>;

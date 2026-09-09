@@ -18,7 +18,9 @@ export function VisitSection() {
       <p className="visit-section__status" role="status">{status ?? "Mon–Sat 09:30–18:00 · Sunday closed"}</p>
       <div className="visit-section__actions"><a className="button visit-section__phone" href={STORE.phoneHref}>Call {STORE.phone}</a><a className="visit-section__directions" href={STORE.maps} target="_blank" rel="noreferrer">Get directions →</a></div>
       <address>{STORE.address}</address>
-      <p className="visit-section__hours">Mon–Sat 09:30–18:00 · Sunday closed</p>
+      {/* Phase 2. The hours were printed twice in this one block — once by the
+          live status line above (which falls back to this exact string) and
+          again here. The footer carries the third. Status line and footer kept. */}
       <p>Public parking on Parnell Street and a short walk from Friary &amp; Cornmarket car parks.</p>
       <p className="visit-section__family">Family-owned since 2013</p>
     </div>
