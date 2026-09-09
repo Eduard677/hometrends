@@ -1118,3 +1118,84 @@ main .product-gallery__track {
     aspect-ratio: 16 / 10;
   }
 }
+
+/* §Sketch: the product name and the heart share a line. */
+.pdp__title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.pdp__title h1 {
+  margin: 0;
+  min-width: 0;
+}
+.save-heart {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap, 44px);
+  height: var(--tap, 44px);
+  margin: -0.35rem -0.5rem 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-55);
+  cursor: pointer;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.save-heart:hover,
+.save-heart.is-saved {
+  color: var(--ink);
+}
+.save-heart:active {
+  transform: scale(0.92);
+}
+
+/*
+ * §Header: the icon cluster ran across the wordmark on narrow viewports.
+ *
+ * .site-header__bar is `display:flex; justify-content:space-between`, but
+ * .site-header .brand is pulled OUT of flow — `position:absolute; left:50%;
+ * transform:translate(-50%,-50%)` with `z-index:1`, while .header-start and
+ * .header-actions keep `z-index:2`.
+ *
+ * The flex layout therefore measures only the two side groups; nothing reserves
+ * the centre. Below about 480px the icon cluster reaches the centred wordmark
+ * and overlaps it, and the higher z-index draws it on top. Measured against the
+ * unpatched build: 8px of overlap at 480, 37px at 375, 64px at 320. Desktop was
+ * never affected — .header-search is a 44px icon button at every width, not a
+ * wide field, so the side groups never grow far enough there.
+ *
+ * A three-column grid gives the wordmark a real centre column the side columns
+ * cannot reach into. Markup, search behaviour and the mega menu are untouched.
+ */
+.site-header__bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+.site-header .header-start {
+  grid-column: 1;
+  justify-self: start;
+  min-width: 0;
+}
+.site-header .brand {
+  position: static;
+  inset: auto;
+  transform: none;
+  grid-column: 2;
+  justify-self: center;
+}
+.site-header .header-actions {
+  grid-column: 3;
+  justify-self: end;
+  margin-left: 0;
+  min-width: 0;
+}
+.site-header .header-search {
+  min-width: 0;
+  max-width: 100%;
+}

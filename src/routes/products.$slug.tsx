@@ -72,7 +72,8 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
       <ProductGallery key={product.id} product={product} />
       <div className="pdp__buy">
         <p className="eyebrow">{product.category}</p>
-        <h1>{product.name}</h1>
+        {/* Sketch: the name and the heart share a line. */}
+        <div className="pdp__title"><h1>{product.name}</h1><SavePiece slug={product.slug} variant="icon" /></div>
         <p className="price">{price}{was ? <s>{euro(was)}</s> : null}</p>
         {soldOut ? <p className="pdp-stock">Not currently available. Call the showroom to ask when it is next in.</p> : null}
         <VariantPicker selection={selection} />
@@ -104,7 +105,6 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
           <button type="button" className="text-link" onClick={() => setReserving(true)}>
             Reserve to view in Ennis
           </button>
-          <SavePiece slug={product.slug} />
         </div>
         <p className="lead">{product.description}</p>
         {product.material && !/confirm|in the showroom \/ to order/i.test(product.material) ? (
