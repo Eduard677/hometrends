@@ -1551,3 +1551,69 @@ textarea {
 html {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* ——— Mobile pass §3: touch ———
+   Audited at 390: 23 unclassed anchors under 44px on every template — the
+   footer link columns, which render sitewide — plus the filter chips at 34px
+   and the pagination controls. Inline links inside body copy are deliberately
+   left alone: WCAG exempts a link sitting inside a sentence, and padding them
+   to 44px would tear prose apart. */
+@media (max-width: 900px) {
+  .site-footer a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    /* 8px between adjacent targets without changing the visual rhythm. */
+    padding-block: 4px;
+  }
+  .footer-grid > div {
+    display: grid;
+    row-gap: 4px;
+  }
+  .filters__group--chips .filters__opt {
+    min-height: 44px;
+    padding-inline: 0.85rem;
+  }
+  .pagination a,
+  .pagination span[aria-disabled] {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 0.9rem;
+  }
+  .product-gallery__thumbs button {
+    min-height: 44px;
+  }
+}
+
+/* Taps need acknowledging now the blue highlight is gone. Opacity and a small
+   scale only — no colour change, nothing that could read as a state. */
+@media (hover: none) {
+  a:active,
+  button:active,
+  summary:active,
+  [role="button"]:active {
+    opacity: 0.7;
+  }
+  .button:active,
+  .product-card:active,
+  .room-tiles__card:active {
+    transform: scale(0.985);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button:active,
+  .product-card:active,
+  .room-tiles__card:active {
+    transform: none;
+  }
+}
+
+/* Hover-only affordances need a tap equivalent. The room rail's soft expand is
+   already gated behind (hover: hover) so it never applies here, and the
+   Instagram tile lift likewise. The one that mattered is the product card:
+   its hover treatment is now also bound to :focus-within, so a tap or a
+   keyboard focus reveals the same thing a pointer would. */
+.product-card:focus-within figure img {
+  transform: scale(1.02);
+}
