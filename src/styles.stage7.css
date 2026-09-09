@@ -1450,3 +1450,46 @@ main .price s,
   font-weight: inherit;
   text-decoration-thickness: 1px;
 }
+
+/* ——— Mobile pass §1: the only horizontal overflow on the site ———
+   .footer-grid is global, so this reproduced on all seven templates at 320 and
+   360: 17 elements overflowing to right=369 inside a 280px container.
+   styles.css narrows it to `1fr 1fr`, but `fr` will not shrink below the
+   column's min-content, so one column took 228.344px and the other 92.875px —
+   321px of columns in 280px of container. minmax(0, 1fr) lets them shrink, and
+   below 360 a single column removes the squeeze entirely. Nothing was clipped
+   by the viewport before because the page did not scroll horizontally; the
+   content was simply pushed past the edge. */
+.footer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 380px) {
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* Long link labels and product names must wrap rather than establish a wide
+   min-content floor for their column. */
+.footer-grid a,
+.footer-grid h3 {
+  overflow-wrap: anywhere;
+}
+/* §1 cont. At 320 the account row (glyph + handle + shop name + Follow pill)
+   could not fit on one line, so Follow was pushed past the edge. It wraps
+   below the handle at the floor instead of shrinking the tap target. */
+@media (max-width: 360px) {
+  .social__account {
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+  }
+  .social__follow {
+    margin-left: 0;
+  }
+  .social__handle {
+    min-width: 0;
+  }
+  .social__handle strong,
+  .social__handle span {
+    overflow-wrap: anywhere;
+  }
+}
