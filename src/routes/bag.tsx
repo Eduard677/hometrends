@@ -114,6 +114,39 @@ function BagPage() {
               Checkout
             </button>
           )}
+          {/* Sketch sheet 1: expandable delivery / returns / security rows.
+              /delivery and /returns carry no policy terms of their own — both
+              are enquiry pages that point at the official site — so these rows
+              repeat only what is already written there and link on. No terms,
+              windows or charges are stated here, because none exist to state. */}
+          <div className="cart__details">
+            <details className="cart__detail">
+              <summary>Delivery</summary>
+              <p>
+                Charges, availability and timing are confirmed by the showroom before you make
+                arrangements.
+              </p>
+              <Link to="/delivery" className="text-link">
+                Delivery enquiries
+              </Link>
+            </details>
+            <details className="cart__detail">
+              <summary>Returns</summary>
+              <p>Call or email the team with your order details.</p>
+              <Link to="/returns" className="text-link">
+                Returns enquiries
+              </Link>
+            </details>
+            <details className="cart__detail">
+              <summary>Payment security</summary>
+              {/* Same wording as the checkout interstitial above, which is the
+                  only claim about payment this build actually makes. */}
+              <p>
+                Payment is handled by Shopify’s secure checkout. This demo stops before payment and
+                takes no card details.
+              </p>
+            </details>
+          </div>
           <a className="text-link" href={STORE.phoneHref}>
             Or call {STORE.phone} →
           </a>

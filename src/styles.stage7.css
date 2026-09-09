@@ -1222,3 +1222,60 @@ main .product-gallery__track {
   min-width: 0;
   max-width: 100%;
 }
+
+/* §Bag: expandable delivery / returns / security rows, per sketch sheet 1.
+   <details> so it works without JS and keyboard-operates for free. */
+.cart__details {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.cart__detail {
+  border-bottom: 1px solid var(--line);
+}
+.cart__detail > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--tap, 44px);
+  font-size: 0.95rem;
+}
+.cart__detail > summary::-webkit-details-marker {
+  display: none;
+}
+/* A rotating chevron drawn in CSS, so no icon import and no layout shift. */
+.cart__detail > summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  border-right: 1px solid var(--ink-55);
+  border-bottom: 1px solid var(--ink-55);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.18s ease;
+}
+.cart__detail[open] > summary::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+.cart__detail > p {
+  margin: 0 0 0.75rem;
+  padding-right: 1.5rem;
+  color: var(--ink-80);
+  font-size: 0.9rem;
+}
+.cart__detail > .text-link {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cart__detail > summary::after {
+    transition: none;
+  }
+}
+/* The trailing phone link sat flush against the last row's rule. */
+.cart__details + .text-link {
+  display: inline-block;
+  margin-top: 1.1rem;
+}
