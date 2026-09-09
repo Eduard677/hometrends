@@ -4,7 +4,7 @@ Do not invent these. Use stopgaps already in `public/media/` until a shop visit.
 
 | Item | Path / note |
 | --- | --- |
-| Finbar & Eileen together | `story/finbar-eileen.jpg` — empty |
+| ~~Finbar & Eileen together~~ | **Done.** `story/finbar-eileen.jpg` + `.webp`, both 1106×1382, from the supplied 1108×1382 PNG |
 | Finbar’s own quote | OwnersSection placeholder |
 | Showroom walk video + poster | `video/showroom-loop.mp4` — none |
 | Hero with empty left third | Current `hero/*` are stopgaps only |
