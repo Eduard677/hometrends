@@ -1,10 +1,11 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
 import { STORE, HOURS } from "@/lib/store";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
-  head: () => ({ meta: [{ title: "Contact | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "Contact | Home Trends Furniture", description: "We would rather you sat on the sofa than bought it from a photograph. Call or visit Home Trends Furniture in Ennis.", path: "/contact" }),
 });
 
 function ContactPage() {

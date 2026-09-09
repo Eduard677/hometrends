@@ -1,10 +1,11 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageFrame } from "@/components/page-frame";
 
 export const Route = createFileRoute("/cookies")({
   component: CookiesPage,
-  head: () => ({ meta: [{ title: "Cookie preferences | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "Cookie preferences | Home Trends Furniture", description: "The bag stays in the browser. Advertising cookies do not. Cookie preferences for Home Trends Furniture.", path: "/cookies" }),
 });
 
 function CookiesPage() {

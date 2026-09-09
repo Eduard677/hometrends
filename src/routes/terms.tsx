@@ -1,10 +1,11 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
 import { STORE } from "@/lib/store";
 
 export const Route = createFileRoute("/terms")({
   component: TermsPage,
-  head: () => ({ meta: [{ title: "Terms | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "Terms | Home Trends Furniture", description: "A catalogue for the floor. Orders are confirmed with the showroom at Home Trends Furniture, Ennis.", path: "/terms" }),
 });
 
 function TermsPage() {

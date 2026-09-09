@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { RoomTiles } from "@/components/room-tiles";
 import { SocialStrip } from "@/components/social-strip";
@@ -13,7 +14,7 @@ import { SiteImage } from "@/components/site-image";
 
 export const Route = createFileRoute("/")({
   component: Home,
-  head: () => ({ meta: [{ title: "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare" }] }),
+  head: () => pageHead({ title: "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare", description: "Sofas, beds, mattresses, dining, flooring and rugs at Home Trends, 29 Parnell Street, Ennis. Irish family-owned since 2013.", path: "/" }),
 });
 
 

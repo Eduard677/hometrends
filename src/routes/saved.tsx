@@ -1,9 +1,10 @@
+import { pageHead } from "@/lib/seo";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { PageFrame } from "@/components/page-frame";
 import { ProductCard } from "@/components/product-card";
 import { useWishlist, wishlistItems } from "@/lib/wishlist";
-export const Route = createFileRoute("/saved")({ component: SavedPage, head: () => ({ meta: [{ title: "Saved pieces | Home Trends Furniture" }, { name: "description", content: "Keep track of furniture you want to discuss with Home Trends in Ennis. Your saved pieces are stored on this device." }] }) });
+export const Route = createFileRoute("/saved")({ component: SavedPage, head: () => pageHead({ title: "Saved pieces | Home Trends Furniture", description: "Keep track of furniture you want to discuss with Home Trends in Ennis. Your saved pieces are stored on this device.", path: "/saved" }) });
 function SavedPage() {
   const [ready, setReady] = useState(false);
   const slugs = useWishlist(s => s.slugs);

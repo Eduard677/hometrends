@@ -9,7 +9,7 @@ import { editorialFor } from "@/components/editorial-cell";
 import { collectionProducts, getCollection } from "@/lib/catalog";
 import { EMPTY_FACETS, applyFacets, blockingFacet, facetCounts, type Facets } from "@/lib/filters";
 import { STORE } from "@/lib/store";
-import { collectionDescription } from "@/lib/seo";
+import { breadcrumbSchema, pageHead, safeJson, collectionDescription } from "@/lib/seo";
 
 /** Same URL-backed filter and sort state as /shop, so both listings behave alike. */
 type CollectionSearch = { category?: string; colour?: string; price?: string; stock?: boolean; sort?: string };
@@ -27,8 +27,32 @@ export const Route = createFileRoute("/collections/$slug")({
   component: CollectionPage,
   head: ({ params }) => {
     const collection = getCollection(params.slug);
+    if (!collection) {
+      return pageHead({
+        title: "Collection | Home Trends Furniture",
+        description: "Browse the furniture collections at Home Trends Furniture in Ennis.",
+        path: `/collections/${params.slug}`,
+      });
+    }
+    const head = pageHead({
+      title: `${collection.label} | Home Trends Furniture`,
+      description: collectionDescription(collection),
+      path: `/collections/${collection.slug}`,
+    });
     return {
-      meta: [{ title: `${collection?.label ?? "Collection"} | Home Trends Furniture` }, { name: "description", content: collection ? collectionDescription(collection) : "Browse the furniture collections at Home Trends Furniture in Ennis." }],
+      ...head,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: safeJson(
+            breadcrumbSchema([
+              { name: "Home", path: "/" },
+              { name: "Furniture", path: "/shop" },
+              { name: collection.label, path: `/collections/${collection.slug}` },
+            ]),
+          ),
+        },
+      ],
     };
   },
 });

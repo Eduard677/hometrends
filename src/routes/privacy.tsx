@@ -1,10 +1,11 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
 import { STORE } from "@/lib/store";
 
 export const Route = createFileRoute("/privacy")({
   component: PrivacyPage,
-  head: () => ({ meta: [{ title: "Privacy | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "Privacy | Home Trends Furniture", description: "A small shop. A small amount of information. How Home Trends Furniture handles your data.", path: "/privacy" }),
 });
 
 function PrivacyPage() {

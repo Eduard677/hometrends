@@ -9,7 +9,7 @@ import { ReserveModal } from "@/components/reserve-modal";
 import { useChromeActions } from "@/components/chrome-actions";
 import { bagLineFrom } from "@/lib/bag";
 import { euro } from "@/lib/store";
-import { productDescription, productSchema, safeJson } from "@/lib/seo";
+import { breadcrumbSchema, pageHead, productDescription, productSchema, safeJson } from "@/lib/seo";
 
 export const Route = createFileRoute("/products/$slug")({
   beforeLoad: ({ params }) => {
@@ -20,9 +20,41 @@ export const Route = createFileRoute("/products/$slug")({
   component: ProductPage,
   head: ({ params }) => {
     const product = getProduct(params.slug);
+    if (!product) {
+      return pageHead({
+        title: "Product not found | Home Trends Furniture",
+        description:
+          "This piece is not in the current Home Trends catalogue. Browse furniture and plan a visit to Ennis.",
+        path: `/products/${params.slug}`,
+      });
+    }
+    /* Share card is the product's own first photograph, per the brief. These
+       are the catalogue crop, 800x1000 — not 1200x630; see CLAUDE.md. */
+    const photo = product.images?.[0];
+    const head = pageHead({
+      title: `${product.name} | Home Trends Furniture`,
+      description: productDescription(product),
+      path: `/products/${product.slug}`,
+      type: "product",
+      image: photo
+        ? { src: photo.src, width: 800, height: 1000, alt: photo.alt ?? product.name }
+        : undefined,
+    });
     return {
-      meta: [{ title: `${product?.name ?? "Product not found"} | Home Trends Furniture` }, { name: "description", content: product ? productDescription(product) : "This piece is not in the current Home Trends catalogue. Browse furniture and plan a visit to Ennis." }],
-      scripts: product ? [{ type: "application/ld+json", children: safeJson(productSchema(product)) }] : [],
+      ...head,
+      scripts: [
+        { type: "application/ld+json", children: safeJson(productSchema(product)) },
+        {
+          type: "application/ld+json",
+          children: safeJson(
+            breadcrumbSchema([
+              { name: "Home", path: "/" },
+              { name: "Furniture", path: "/shop" },
+              { name: product.name, path: `/products/${product.slug}` },
+            ]),
+          ),
+        },
+      ],
     };
   },
 });

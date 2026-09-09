@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { bagCount, bagItems, bagSubtotal, lineKey, useBag } from "@/lib/bag";
@@ -8,7 +9,7 @@ import { QtyStepper } from "@/components/qty-stepper";
 
 export const Route = createFileRoute("/bag")({
   component: BagPage,
-  head: () => ({ meta: [{ title: "Your bag | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "Your bag | Home Trends Furniture", description: "The pieces you are considering at Home Trends Furniture, Ennis. Confirm your order with the showroom.", path: "/bag" }),
 });
 
 function BagPage() {

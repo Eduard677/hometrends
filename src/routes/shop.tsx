@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { ListingToolbar, sortProducts } from "@/components/chrome";
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/shop")({
     sort: typeof search.sort === "string" && search.sort ? search.sort : undefined,
   }),
   component: ShopPage,
-  head: () => ({ meta: [{ title: "The range | Home Trends Furniture" }] }),
+  head: () => pageHead({ title: "The range | Home Trends Furniture", description: "Browse the full Home Trends range — sofas, beds, mattresses, dining, flooring and rugs. Then plan a visit to the Ennis showroom.", path: "/shop" }),
 });
 
 function ShopPage() {
