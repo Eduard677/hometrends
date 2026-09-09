@@ -12,12 +12,13 @@ import { STORE } from "@/lib/store";
 import { breadcrumbSchema, pageHead, safeJson, collectionDescription } from "@/lib/seo";
 
 /** Same URL-backed filter and sort state as /shop, so both listings behave alike. */
-type CollectionSearch = { category?: string; colour?: string; price?: string; stock?: boolean; sort?: string };
+type CollectionSearch = { page?: number; category?: string; colour?: string; price?: string; stock?: boolean; sort?: string };
 
 const list = (value: unknown) => (typeof value === "string" && value ? value.split(",").filter(Boolean) : []);
 
 export const Route = createFileRoute("/collections/$slug")({
   validateSearch: (search: Record<string, unknown>): CollectionSearch => ({
+    page: Number(search.page) > 1 ? Number(search.page) : undefined,
     category: typeof search.category === "string" && search.category ? search.category : undefined,
     colour: typeof search.colour === "string" && search.colour ? search.colour : undefined,
     price: typeof search.price === "string" && search.price ? search.price : undefined,
@@ -140,6 +141,14 @@ function CollectionPage() {
             <PaginatedProducts
               key={`${slug}:${sort}:${JSON.stringify(facets)}`}
               products={products}
+              page={search.page ?? 1}
+              hrefForPage={(n) => {
+                const next = new URLSearchParams();
+                for (const [k, v] of Object.entries(search)) if (v !== undefined && k !== "page") next.set(k, String(v));
+                if (n > 1) next.set("page", String(n));
+                const qs = next.toString();
+                return qs ? `/collections/${slug}?${qs}` : `/collections/${slug}`;
+              }}
               // The collection's own plate is excluded so a cell never repeats it.
               editorial={editorialFor(slug, collection.image)}
             />

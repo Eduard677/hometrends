@@ -114,7 +114,17 @@ export function productSchema(product: Product) {
     sku: product.id, itemCondition: "https://schema.org/NewCondition",
     description: product.description, image: product.images?.map(image => SITE_ORIGIN + image.src),
     url: `${SITE_ORIGIN}/products/${product.slug}`,
+    /* Crawlability. `inStock === false` is what the PDP already renders as
+       "Not currently available", so the schema reports the same fact. Products
+       without the flag are left without an availability claim rather than
+       left without an availability claim. Note the correction to the Phase 0
+       note: ht-shop.json's `availability` *string* is empty on all 742, but the
+       `inStock` *boolean* is populated — 727 true, 15 false — so this is real
+       data, not an assumption. */
     offers: { "@type": "AggregateOffer", priceCurrency: "EUR", lowPrice: product.fromPrice / 100,
+      ...(typeof product.inStock === "boolean"
+        ? { availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock" }
+        : {}),
       highPrice: Math.max(...(product.variants?.map(v => v.price) ?? [product.fromPrice])) / 100, offerCount: product.variants?.length ?? 1,
       seller: { "@id": `${SITE_ORIGIN}/#showroom` }, url: `${SITE_ORIGIN}/products/${product.slug}`,
     },

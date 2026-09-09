@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -58,10 +58,16 @@ for (const item of shop) {
   push(`/products/${item.slug}`);
 }
 
+/* Crawlability. Every entry now carries <lastmod>. The catalogue is a static
+   file, so the honest signal is when its contents last changed on disk rather
+   than the time the build happened to run — a build-time stamp would tell
+   crawlers the whole site changed on every deploy. */
+const lastmod = statSync(join(root, "src/data/ht-shop.json")).mtime.toISOString().slice(0, 10);
+
 const xml = [
   `<?xml version="1.0" encoding="UTF-8"?>`,
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
-  ...paths.map((path) => `  <url>\n    <loc>${origin}${path}</loc>\n  </url>`),
+  ...paths.map((path) => `  <url>\n    <loc>${origin}${path}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`),
   `</urlset>`,
   ``,
 ].join("\n");

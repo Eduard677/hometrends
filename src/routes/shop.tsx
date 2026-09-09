@@ -14,13 +14,14 @@ import { EMPTY_FACETS, applyFacets, blockingFacet, facetCounts, type Facets } fr
  * BRIEF.md 5.1 and 5.2. Filter and sort state lives in the query string, so a
  * filtered view is linkable and survives a reload.
  */
-type ShopSearch = { q?: string; category?: string; colour?: string; price?: string; stock?: boolean; sort?: string };
+type ShopSearch = { page?: number; q?: string; category?: string; colour?: string; price?: string; stock?: boolean; sort?: string };
 
 const list = (value: unknown) =>
   typeof value === "string" && value ? value.split(",").filter(Boolean) : [];
 
 export const Route = createFileRoute("/shop")({
   validateSearch: (search: Record<string, unknown>): ShopSearch => ({
+    page: Number(search.page) > 1 ? Number(search.page) : undefined,
     q: typeof search.q === "string" && search.q ? search.q : undefined,
     category: typeof search.category === "string" && search.category ? search.category : undefined,
     colour: typeof search.colour === "string" && search.colour ? search.colour : undefined,
@@ -29,7 +30,17 @@ export const Route = createFileRoute("/shop")({
     sort: typeof search.sort === "string" && search.sort ? search.sort : undefined,
   }),
   component: ShopPage,
-  head: () => pageHead({ title: "The range | Home Trends Furniture", description: "Browse the full Home Trends range — sofas, beds, mattresses, dining, flooring and rugs. Then plan a visit to the Ennis showroom.", path: "/shop" }),
+  /* Paginated pages self-canonicalise: page 2 points at page 2, not page 1. */
+  head: ({ match }) => {
+    const page = Number((match.search as { page?: number } | undefined)?.page ?? 1);
+    const suffix = page > 1 ? ` — page ${page}` : "";
+    return pageHead({
+      title: `The range${suffix} | Home Trends Furniture`,
+      description:
+        "Browse the full Home Trends range — sofas, beds, mattresses, dining, flooring and rugs. Then plan a visit to the Ennis showroom.",
+      path: page > 1 ? `/shop?page=${page}` : "/shop",
+    });
+  },
 });
 
 function ShopPage() {
@@ -96,6 +107,16 @@ function ShopPage() {
             <PaginatedProducts
               key={`${sort}:${q}:${JSON.stringify(facets)}`}
               products={products}
+              page={search.page ?? 1}
+              /* Real hrefs: the page survives a reload, is linkable, and the
+                 controls work with JS disabled. */
+              hrefForPage={(n) => {
+                const next = new URLSearchParams();
+                for (const [k, v] of Object.entries(search)) if (v !== undefined && k !== "page") next.set(k, String(v));
+                if (n > 1) next.set("page", String(n));
+                const qs = next.toString();
+                return qs ? `/shop?${qs}` : "/shop";
+              }}
               editorial={editorialFor("shop", "/media/editorial/shop-room-living.webp")}
             />
           ) : (
