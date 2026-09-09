@@ -139,15 +139,19 @@ function BagPage() {
           {checkout ? (
             <div className="cart__interstitial">
               <p>
-                In the live build, payment is handled by Shopify’s secure checkout. This demo stops here and takes no
-                payment details.
+                In the live build, payment is handled by Shopify’s secure checkout. This demo stops
+                here and takes no payment details.
               </p>
               <button type="button" className="text-link" onClick={() => setCheckout(false)}>
                 Back to the bag
               </button>
             </div>
           ) : (
-            <button type="button" className="button button--solid cart__checkout" onClick={() => setCheckout(true)}>
+            <button
+              type="button"
+              className="button button--solid cart__checkout"
+              onClick={() => setCheckout(true)}
+            >
               Checkout
             </button>
           )}
