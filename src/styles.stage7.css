@@ -1865,23 +1865,18 @@ html {
   }
 }
 
-/* ——— Mobile pass: font-swap CLS on collection pages ———
-   Measured, not guessed. The collection page shifted 0.0612 of its 0.124 CLS
-   from one element: .issue__plate moving up 28px, dragging .issue__body with
-   it. The cause was the lead paragraph reflowing 3 lines to 2 (84px to 56px)
-   the moment Cormorant Garamond finished loading — the text is identical in
-   SSR, so this is font swap, not content.
+/* ——— Mobile pass: font-swap CLS on collection pages — ATTEMPTED AND REVERTED ———
+   The shift is real and attributed: 0.0612 of the collection page's CLS comes
+   from .issue__plate moving up 28px, because the lead paragraph reflows 3
+   lines to 2 (84px to 56px) when Cormorant Garamond loads. The SSR text is
+   identical, so it is font swap, not content.
 
-   The stack fell back to Georgia, which is materially wider: the same string
-   renders at 87.91% of Georgia's width in Cormorant Garamond. A metric-matched
-   fallback closes that gap, so the fallback occupies the same space as the web
-   font and the swap no longer changes line counts. */
-@font-face {
-  font-family: "Cormorant Fallback";
-  src: local("Georgia"), local("Times New Roman"), local("Times");
-  size-adjust: 87.91%;
-  font-display: swap;
-}
-:root {
-  --font-display: "Cormorant Garamond", "Cormorant Fallback", Georgia, "Times New Roman", serif;
-}
+   A metric-matched fallback (@font-face with src: local("Georgia") and
+   size-adjust: 87.91%, the measured width ratio) was tried and made it worse:
+   collection CLS went from 0.070 to a median 0.189 across four runs, because
+   the local() face resolves asynchronously and so introduces a *second* swap —
+   unadjusted Georgia, then adjusted fallback, then the web font.
+
+   Reverted. A real fix needs the web font self-hosted and preloaded so there
+   is no swap at all, which is a build change rather than a stylesheet one.
+   Left documented instead of half-applied. */
