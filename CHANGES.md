@@ -359,3 +359,19 @@ The carousel derives its page count from the array, so the dots and
 auto-advance adapt on their own. **No review text was written, edited or
 reordered by me beyond the Phase 2 ordering change** — all five are verbatim
 Google content.
+
+---
+
+# Homepage reviews carousel (main)
+
+The homepage now pages **every** review in `src/lib/reviews.ts` (currently 5).
+Auto-advance is 7 seconds with a 900ms ease-out slide, paused on hover, focus
+and touch. Arrows, dots and keyboard arrows are visible. Layout is 3 / 2 /
+1+peek. Copy truncates at about 45 words with a “Read on Google” link.
+`prefers-reduced-motion: reduce` skips autoplay and leaves a static
+scrollable row.
+
+### TODO — [CLIENT TO SUPPLY] remaining Google reviews (5 of 94)
+
+Do not invent copy. Append the other 89 in `src/lib/reviews.ts` in the
+existing shape. The carousel will pick them up.

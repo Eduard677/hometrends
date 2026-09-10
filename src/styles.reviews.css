@@ -1,0 +1,15 @@
+/* Homepage reviews carousel only. */
+
+.reviews-carousel__track {
+  scroll-behavior: auto !important;
+}
+@media (max-width: 700px) {
+  .reviews-carousel__track {
+    grid-auto-columns: 80% !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviews-carousel__track {
+    scroll-behavior: auto !important;
+  }
+}

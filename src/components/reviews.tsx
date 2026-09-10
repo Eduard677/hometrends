@@ -61,7 +61,23 @@ export function Reviews() {
       const pages = pageCount();
       const next = ((page % pages) + pages) % pages;
       setIndex(next);
-      track.scrollTo({ left: next * track.clientWidth, behavior: "smooth" });
+      const left = next * track.clientWidth;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) {
+        track.scrollLeft = left;
+        return;
+      }
+      const start = track.scrollLeft;
+      const delta = left - start;
+      const duration = 900;
+      const t0 = performance.now();
+      const easeOut = (t: number) => 1 - (1 - t) ** 3;
+      const step = (now: number) => {
+        const t = Math.min(1, (now - t0) / duration);
+        track.scrollLeft = start + delta * easeOut(t);
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
     },
     [pageCount],
   );
@@ -89,7 +105,14 @@ export function Reviews() {
     }
   };
 
-  const pages = Array.from({ length: Math.max(1, Math.ceil(REVIEWS.length / 3)) });
+  const [dotCount, setDotCount] = useState(() => Math.max(1, Math.ceil(REVIEWS.length / 3)));
+  useEffect(() => {
+    const update = () => setDotCount(pageCount());
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [pageCount]);
+  const pages = Array.from({ length: dotCount });
 
   return (
     <section className="reviews-section ed-sec" id="reviews" aria-labelledby="reviews-heading">
@@ -124,7 +147,7 @@ export function Reviews() {
           aria-label="Customer reviews"
         >
           {REVIEWS.map((review) => {
-            const { text, clipped } = truncate(review.text);
+            const { text } = truncate(review.text);
             return (
               <article key={review.name}>
                 <p aria-label={`${review.stars} out of 5 stars`}>{"★".repeat(review.stars)}</p>
@@ -133,7 +156,7 @@ export function Reviews() {
                   <cite>{review.name}</cite>
                 </p>
                 <a href={review.sourceUrl} target="_blank" rel="noreferrer">
-                  {clipped ? "Read the full review on Google" : "Read on Google"}
+                  Read on Google
                 </a>
               </article>
             );
