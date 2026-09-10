@@ -1617,3 +1617,45 @@ html {
 .product-card:focus-within figure img {
   transform: scale(1.02);
 }
+
+/* ——— Mobile pass §7: grid and typography ———
+   Audited at 320 and 390: the product grid rendered 1-up, card heights came in
+   two values (571 and 538 at 320) because titles wrap to different line
+   counts, and prices had font-variant-numeric: normal. No text was under 14px,
+   so the type floor was already met. */
+
+/* 2-up on phone. minmax(0, 1fr) so a long word can never widen a column. */
+@media (max-width: 900px) {
+  main .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.75rem;
+  }
+  main .product-card {
+    height: 100%;
+  }
+  /* Long names truncate on the second line rather than pushing a card taller
+     than its neighbours. The catalogue's longest is 83 characters, which ran
+     past two lines at 2-up and broke row alignment. min-height reserves both
+     lines so a short name does not shorten the card either. */
+  main .product-card__body h3,
+  main .product-card__body h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    min-height: calc(2 * 1.3em);
+  }
+  main .product-grid > * {
+    align-self: stretch;
+  }
+}
+
+/* Tabular figures so a struck prior price and the current price line up digit
+   for digit rather than drifting. */
+.price,
+.price s,
+.cart__price,
+.pdp-lines dd {
+  font-variant-numeric: tabular-nums;
+}
