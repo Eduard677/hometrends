@@ -258,3 +258,31 @@ the clearest example yet of the stylesheet layering problem recorded in Phase 0.
 
 `useChromeActions` and `bagLineFrom` are no longer imported by the card, since
 adding to the bag is now exclusively the PDP's job.
+
+
+## §4 Editorial mosaic break
+
+New `MosaicBreak` component: one large tile at 2/3 width beside two stacked at
+1/3, spanning the full grid width so it interrupts the product flow rather than
+sitting in it as a card. Inserted after every 8 products in the listing grid,
+replacing the two fixed single-cell breaks that sat after rows 3 and 9. The
+homepage featured section uses the **same component**, so the two layouts
+cannot drift.
+
+The large tile alternates left/right on successive blocks. Verified at 1440:
+both blocks measure a 0.67 lead ratio, block 1 lead-left, block 2 lead-right.
+
+**A bug caught in verification:** moving the lead into column 2 for the flipped
+block left the column *widths* unswapped, so the flipped lead rendered at 410px
+instead of 820px — visually a small tile beside two large ones. The flip now
+swaps `grid-template-columns` as well as placement.
+
+**Editorial only.** Images come from the existing editorial pool, all under
+`/media/editorial`, so a mosaic can never repeat a catalogue cutout sitting in
+the same grid. Blocks cycle the pool so consecutive breaks do not repeat, and a
+block is skipped entirely if the pool cannot supply three images.
+
+Captions carry their own dark wash, on the same reasoning as the hero: they sit
+over photography, so legibility cannot depend on the photograph.
+
+Stacked full width at ≤900px — 2/3 beside 1/3 is unreadable at 390.

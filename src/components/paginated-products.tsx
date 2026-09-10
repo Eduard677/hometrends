@@ -1,6 +1,7 @@
 import type { Product } from "@/lib/catalog";
 import { ProductCard } from "./product-card";
-import { EditorialCell, type Editorial } from "./editorial-cell";
+import { type Editorial } from "./editorial-cell";
+import { MosaicBreak } from "./mosaic-break";
 
 const PAGE_SIZE = 24;
 
@@ -8,7 +9,10 @@ const PAGE_SIZE = 24;
    Rows are counted at the widest grid, four across, so the cells land in the
    same reading position as the design intends. Both sit on the first page;
    later pages get none rather than repeating them. */
-const EDITORIAL_AFTER = [12, 36];
+/* Desktop pass §4. A mosaic break every 8 products, replacing the two
+   single-cell breaks that sat after rows 3 and 9. Each break consumes three
+   editorial images and the large tile alternates side by side. */
+const MOSAIC_EVERY = 8;
 
 /**
  * Crawlability. The page used to live in useState and the controls were
@@ -36,10 +40,17 @@ export function PaginatedProducts({
   const cells: React.ReactNode[] = [];
   slice.forEach((product, index) => {
     cells.push(<ProductCard key={product.slug} product={product} />);
-    const absolute = start + index + 1;
-    const slot = EDITORIAL_AFTER.indexOf(absolute);
-    if (slot !== -1 && editorial[slot]) {
-      cells.push(<EditorialCell key={`editorial-${slot}`} item={editorial[slot]} />);
+    const absolute = index + 1;
+    if (absolute % MOSAIC_EVERY === 0 && absolute < slice.length) {
+      const block = absolute / MOSAIC_EVERY - 1;
+      /* Three images per block, cycling the pool so consecutive breaks do not
+         repeat, and skipped entirely when the pool cannot fill one. */
+      const items = editorial.length
+        ? [0, 1, 2].map((offset) => editorial[(block * 3 + offset) % editorial.length])
+        : [];
+      if (items.length === 3) {
+        cells.push(<MosaicBreak key={`mosaic-${block}`} items={items} flip={block % 2 === 1} />);
+      }
     }
   });
   return <>

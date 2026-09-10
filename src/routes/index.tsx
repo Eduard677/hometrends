@@ -3,6 +3,8 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { RoomTiles } from "@/components/room-tiles";
 import { SocialStrip } from "@/components/social-strip";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { MosaicBreak } from "@/components/mosaic-break";
+import { editorialFor } from "@/components/editorial-cell";
 import { ProductGrid } from "@/components/product-card";
 import { OwnersSection } from "@/components/owners-section";
 import { VisitSection } from "@/components/visit-section";
@@ -39,7 +41,12 @@ function Home() {
     <section className="spread"><ScrollReveal><figure><SiteImage src="/media/editorial/room-living-new.jpg" alt="An oatmeal sofa beside a fire in a living room" width={1792} height={1008} loading="lazy" /></figure></ScrollReveal>
       <p className="spread__cap"><span>Living room</span>Sofas made for everyday living<Link to="/collections/$slug" params={{ slug: "living-room" }}>Explore living room</Link></p>
     </section>
-    <section className="ed-sec ed-band from-floor"><div className="from-floor__head"><div><p className="eyebrow">Featured furniture</p><h2>Find your next piece</h2></div><Link to="/shop" className="text-link">View all furniture</Link></div><ProductGrid products={homepageFeatured()} showWas={false} /></section>
+    <section className="ed-sec ed-band from-floor"><div className="from-floor__head"><div><p className="eyebrow">Featured furniture</p><h2>Find your next piece</h2></div><Link to="/shop" className="text-link">View all furniture</Link></div><ProductGrid products={homepageFeatured()} showWas={false} />
+      {/* §4. The same mosaic component the listing grid uses, so the featured
+          section and the shop break share one layout rather than two that
+          drift. */}
+      <MosaicBreak items={editorialFor("home")} />
+    </section>
     {/* One sentence already on the page, moved here rather than written new. It
         is the founders' second line; the living-room line is on the couch photo. */}
     <section className="ed-sec ed-note">

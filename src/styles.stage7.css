@@ -2024,3 +2024,87 @@ main .product-card__body {
   flex-direction: column;
   padding-top: 0.75rem;
 }
+
+/* ——— Desktop pass §4: editorial mosaic break ———
+   One large tile at 2/3 beside two stacked at 1/3. It spans the full grid,
+   so it interrupts the product flow rather than sitting in it as a card. */
+.mosaic {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: clamp(0.75rem, 1.2vw, 1.25rem);
+  margin: clamp(1.5rem, 3vw, 3rem) 0;
+}
+/* Alternate sides. The column *widths* have to swap too, not just the
+   placement — moving the lead into column 2 while that column stays 1fr gave a
+   410px lead instead of 820px. */
+.mosaic--flip {
+  grid-template-columns: 1fr 2fr;
+}
+.mosaic--flip .mosaic__lead {
+  grid-column: 2;
+  grid-row: 1;
+}
+.mosaic--flip .mosaic__stack {
+  grid-column: 1;
+  grid-row: 1;
+}
+.mosaic__stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(0.75rem, 1.2vw, 1.25rem);
+  min-height: 0;
+}
+.mosaic figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+.mosaic__lead figure,
+.mosaic__lead {
+  aspect-ratio: 16 / 11;
+}
+.mosaic__stack figure {
+  aspect-ratio: auto;
+}
+.mosaic .site-image,
+.mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+.mosaic figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 1.1rem 1rem;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  /* Same reasoning as the hero: the caption sits over a photograph, so it
+     carries its own wash rather than trusting the image. */
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, #1c1c1a 82%, transparent) 0%,
+    transparent 100%
+  );
+}
+/* Stacked on phones — 2/3 and 1/3 side by side is unreadable at 390. */
+@media (max-width: 900px) {
+  .mosaic,
+  .mosaic--flip .mosaic__lead,
+  .mosaic--flip .mosaic__stack {
+    grid-template-columns: minmax(0, 1fr);
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .mosaic__stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+  .mosaic__stack figure {
+    aspect-ratio: 1 / 1;
+  }
+}
