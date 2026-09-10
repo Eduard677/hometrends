@@ -19,6 +19,11 @@
     "fallback": "/media/optimized/13546fef53817258.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAgEAABAgUFAAAAAAAAAAAAAAABAAMCBBIhMREiMjOh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBkxTQBFgnTwqa+61DtpIsASBbCqO8EGZ61Jf/Z"
   },
+  "/media/editorial/errigel-corner.jpg": {
+    "src": "/media/optimized/8e9f37796b1bdc70.webp",
+    "fallback": "/media/optimized/8e9f37796b1bdc70.jpg",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAIBBAIDAAAAAAAAAAAAAAECAAMEETETUSJBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDbdXSiqVLKuOzuAuVNBCGTfox6gHI3iM56kyivgsoJ+Qk//9k="
+  },
   "/media/editorial/from-shop-bedroom.jpg": {
     "src": "/media/optimized/519bc41e09ba1b89.webp",
     "fallback": "/media/optimized/519bc41e09ba1b89.jpg",

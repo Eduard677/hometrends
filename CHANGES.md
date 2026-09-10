@@ -392,3 +392,13 @@ to 50% off”; “View all furniture” kept. Selection is Chrissie Dining Set,
 New York Storage Bed, Kenmare Chair & Footstool, Horizontal Wall Beds —
 complete PDP photographs, not stools, dining-chair singles, coffee-table
 crops, Boston fragments, or the rug/wardrobe pair. Shop grid unchanged.
+
+---
+
+# Homepage duplicate living-room photograph
+
+`/media/optimized/745195a03fbf4557.webp` (oatmeal sofa beside a fire) was used
+on the spread and again on the mosaic “Sofas made for everyday living” tile.
+The spread keeps it. The mosaic tile now uses `/media/editorial/errigel-corner.jpg`
+(a corner sofa in a living room), not the fireplace sofa and not the Explore
+by space crop.

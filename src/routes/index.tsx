@@ -19,6 +19,18 @@ export const Route = createFileRoute("/")({
   head: () => pageHead({ title: "Home Trends Furniture | Sofas, Beds, Dining & Flooring — Ennis, Co. Clare", description: "Sofas, beds, mattresses, dining, flooring and rugs at Home Trends, 29 Parnell Street, Ennis. Irish family-owned since 2013.", path: "/" }),
 });
 
+/* The spread already uses room-living-new (oatmeal sofa beside a fire).
+   The mosaic's living-room tile must not repeat it, and must not reuse the
+   Explore-by-space crop. */
+const HOME_MOSAIC_ITEMS = editorialFor("home").map((item) =>
+  item.image === "/media/editorial/room-living-new.jpg"
+    ? {
+        ...item,
+        image: "/media/editorial/errigel-corner.jpg",
+        alt: "A beige corner sofa in a living room",
+      }
+    : item,
+);
 
 function Home() {
   return <main id="main" className="ed-page">
@@ -39,7 +51,7 @@ function Home() {
       {/* §4. The same mosaic component the listing grid uses, so the featured
           section and the shop break share one layout rather than two that
           drift. */}
-      <MosaicBreak items={editorialFor("home")} />
+      <MosaicBreak items={HOME_MOSAIC_ITEMS} />
     </section>
     {/* One sentence already on the page, moved here rather than written new. It
         is the founders' second line; the living-room line is on the couch photo. */}
