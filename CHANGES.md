@@ -315,3 +315,47 @@ tiles rather than three, or a second row; say which and it is a small change.
 **Interim selection:** showroom and product photography only. The meme reel
 still and the customer-review graphic are excluded — at this size, with a
 full-width lead, they read as social filler rather than as the showroom.
+
+
+## §6 Reviews carousel
+
+Every review now, not a fixed three. Built as a **scroll container rather than
+a transform track**, so touch and trackpad gestures, snapping and keyboard
+scrolling come from the browser — and `prefers-reduced-motion` degrades to
+exactly what the brief asks for, a static scrollable row, by simply never
+auto-advancing.
+
+Verified:
+
+| Behaviour | Result |
+| --- | --- |
+| Cards shown | **5** (all of them), 3 desktop / 2 tablet / 1 mobile with peek |
+| Auto-advance 7s | scrollLeft 0 → 851 |
+| Pause on hover | 851 → 851, held across a full cycle |
+| Arrow keys | ArrowRight advances (wraps at the last page) |
+| `prefers-reduced-motion` | scrollLeft 0 → 0, fully stopped |
+| Truncation | max 45 words, cut on a word boundary |
+| Controls | prev/next plus dots, all 44px targets |
+
+Pause is wired to hover, `focusCapture`, and `touchStart`, so it stops for a
+keyboard user tabbing through as well as a pointer.
+
+Truncated cards say "Read the full review on Google"; untruncated ones say
+"Read on Google" — so the link text never implies there is more to read when
+there is not.
+
+### TODO — [CLIENT TO SUPPLY] the remaining reviews
+
+`src/lib/reviews.ts` holds **5 of the 94**. It is already the single data file
+the brief asks for, so populating it needs no code change — append entries in
+the existing shape:
+
+```
+{ name, initials, source: "Google", sourceUrl: GOOGLE_REVIEWS_URL,
+  stars: 5, when: "5 months ago", text: "…" }
+```
+
+The carousel derives its page count from the array, so the dots and
+auto-advance adapt on their own. **No review text was written, edited or
+reordered by me beyond the Phase 2 ordering change** — all five are verbatim
+Google content.

@@ -2162,3 +2162,103 @@ main .product-card__body {
     opacity: 0.88;
   }
 }
+
+/* ——— Desktop pass §6: reviews carousel ———
+   3 cards desktop, 2 tablet, 1 mobile with a peek of the next. A scroll
+   container rather than a transform track, so touch and trackpad gestures work
+   natively and reduced motion degrades to a plain scrollable row. */
+.reviews-carousel {
+  position: relative;
+}
+.reviews-carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * clamp(1rem, 2vw, 2rem)) / 3);
+  gap: clamp(1rem, 2vw, 2rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  /* 900ms handled by scrollTo({behavior:"smooth"}); this keeps the rhythm
+     consistent if a browser animates snapping itself. */
+  scroll-behavior: smooth;
+  padding-bottom: 0.25rem;
+}
+.reviews-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+.reviews-carousel__track:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+.reviews-carousel__track > article {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+.reviews-carousel__track > article > p:has(cite) {
+  margin-top: auto;
+}
+@media (max-width: 1100px) {
+  .reviews-carousel__track {
+    grid-auto-columns: calc((100% - clamp(1rem, 2vw, 2rem)) / 2);
+  }
+}
+@media (max-width: 700px) {
+  /* One card with a peek of the next, so it reads as swipeable. */
+  .reviews-carousel__track {
+    grid-auto-columns: 86%;
+  }
+}
+
+.reviews-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.reviews-carousel__controls > button {
+  min-width: var(--tap, 44px);
+  min-height: var(--tap, 44px);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.reviews-carousel__controls > button:hover {
+  border-color: var(--ink);
+}
+.reviews-carousel__dots {
+  display: flex;
+  gap: 0.35rem;
+}
+.reviews-carousel__dots button {
+  width: 22px;
+  min-height: var(--tap, 44px);
+  padding: 0;
+  border: 0;
+  background: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.reviews-carousel__dots button::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+}
+.reviews-carousel__dots button.is-active::after {
+  background: var(--ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviews-carousel__track {
+    scroll-behavior: auto;
+  }
+}
