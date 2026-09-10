@@ -229,3 +229,32 @@ transition-duration: 500ms !important; transition-timing-function: ease-out
 silently rewritten to 500ms ease-out. The first attempt here measured exactly
 that — 0.5s, ease-out — despite the rule asking for 650ms and a custom curve.
 Anyone tuning motion in this project needs to know that rule exists.
+
+
+## §3 Product grid
+
+- **CTA removed from every card.** The whole card is now a single link to the
+  PDP. Purchase happens there. This also removes a `<button>` nested inside a
+  link, which was never valid markup, and drops the card from three tab stops
+  to one.
+- **Columns: 4 desktop / 3 tablet / 2 mobile.** All `minmax(0, 1fr)`, never
+  `1fr` — bare `1fr` floors at min-content, which is exactly what pushed the
+  footer past the viewport in the mobile pass.
+- **Name and price identical**: 16px, weight 400, body ink, no colour. Verified
+  computed on both.
+- **Hairline between name and price removed.**
+- **One aspect ratio (4:5) across every catalogue image** — verified, all cards
+  report 0.800.
+- **Names clamp to two lines** with both reserved, so rows stay aligned;
+  verified 0 misaligned rows.
+
+**Judgement call — `!important` was unavoidable on the card title.** It carries
+**seven** competing `font-size` declarations across the layers: `styles.css`
+1.45rem, `apple.css` 1.35rem, 1.28rem and `var(--heading-3)` twice, `stage2`
+`var(--heading-3)`, `stage3` 16px — and `showroom.css` closes with
+`main h3, main .product-card h3, main .product-card h3 a { font-size: 24px
+!important }`. Without matching that, the specified 1rem measured 24px. This is
+the clearest example yet of the stylesheet layering problem recorded in Phase 0.
+
+`useChromeActions` and `bagLineFrom` are no longer imported by the card, since
+adding to the bag is now exclusively the PDP's job.
