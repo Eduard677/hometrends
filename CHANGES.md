@@ -412,3 +412,12 @@ Living and dining tiles had baked-in left margins in the photograph files
 enough of a 16:9 file inside a 4:3 cover box. Both assets were recropped
 to the same room, left dead zone removed. Shared 4/3 cover ratio unchanged.
 Carousel, arrows and peek unchanged. Bedroom and flooring untouched.
+
+---
+
+# Reviews carousel start and heading
+
+The track pins to scroll 0 on mount so reviews 1–3 (Gemma Casey, Tomasz
+Kotowski, Lisa McI) are the first page and the first dot is active. Reviews
+section padding-top is 0 so the block starts on “What customers say”. Copy
+and the review list are unchanged.

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { GOOGLE_REVIEWS_URL, REVIEWS } from "@/lib/reviews";
 
 /* Desktop pass §6. Roughly 45 words, cut on a word boundary — never mid-word —
@@ -88,12 +88,32 @@ export function Reviews() {
     return () => window.clearInterval(timer);
   }, [reduced, paused, index, goTo]);
 
+  /* Always open on reviews 1–3 (Gemma, Tomasz, Lisa). Do not restore a
+     scrolled overflow position or snap to the last page on mount. */
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const pin = () => {
+      track.scrollLeft = 0;
+      setIndex(0);
+    };
+    pin();
+    const id = requestAnimationFrame(pin);
+    const t = window.setTimeout(pin, 0);
+    return () => {
+      cancelAnimationFrame(id);
+      window.clearTimeout(t);
+    };
+  }, []);
+
   /* Keep the dots honest when someone swipes or scrolls by hand. */
   const onScroll = useCallback(() => {
     const track = trackRef.current;
     if (!track || !track.clientWidth) return;
-    setIndex(Math.round(track.scrollLeft / track.clientWidth));
-  }, []);
+    const pages = pageCount();
+    const page = Math.round(track.scrollLeft / track.clientWidth);
+    setIndex(Math.max(0, Math.min(pages - 1, page)));
+  }, [pageCount]);
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "ArrowRight") {

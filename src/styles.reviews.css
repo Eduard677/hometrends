@@ -1,7 +1,14 @@
 /* Homepage reviews carousel only. */
 
+main.ed-page .reviews-section,
+main .reviews-section {
+  padding-top: 0;
+}
+
 .reviews-carousel__track {
   scroll-behavior: auto !important;
+  justify-content: start;
+  overflow-anchor: none;
 }
 @media (max-width: 700px) {
   .reviews-carousel__track {
