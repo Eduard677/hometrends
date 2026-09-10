@@ -15,43 +15,55 @@ import { STORE } from "@/lib/store";
 const HANDLE = "@hometrends.ennis";
 
 /**
- * Desktop pass §5. A curated, fixed set — not a live "latest 6" pull, which
- * this build never had anyway (the manifest records "fetched": [], so there
- * are no post permalinks).
+ * Curated set of six showroom and product shots. Not a live Instagram pull —
+ * `public/media/instagram/manifest.json` records `"fetched": []`.
  *
- * `postId` is the field that will carry the real Instagram post IDs once
- * supplied; see the TODO in CHANGES.md. Until then every tile links to the
- * profile, which is honest — a fabricated permalink would 404.
+ * The meme reel still (`2-DQ2IhG3jHAb`) and the customer-review graphic
+ * (`3-DQCoQyJDMLJ`) are excluded. So is the duplicate mattress file
+ * (`c1-65573527`) and the delivery-truck shot.
  *
- * Interim selection is showroom and product photography only. The meme reel
- * still and the customer-review graphic are deliberately excluded: they read
- * as social filler in a layout this size, where the lead image is full width.
+ * Layout is one full-width lead plus three in a row. The page shows the
+ * first four of this six-shot set; the last two stay in the list so post
+ * IDs map 1:1 when supplied. `postId` is empty until then — see CHANGES.md.
+ * Until then every tile links to the profile; a fabricated permalink would 404.
  */
 type Tile = { src: string; alt: string; postId: string | null };
 
-const LEAD: Tile = {
-  src: "/media/instagram/1-DWPTopHDCc2.jpg",
-  alt: "A Natural Sleep Company Sleep Rest 800 mattress on the showroom floor, photographed close along its quilted edge, with slatted wooden bed frames behind.",
-  postId: null,
-};
-
-const ROW: Tile[] = [
+const SHOTS: [Tile, Tile, Tile, Tile, Tile, Tile] = [
   {
-    src: "/media/instagram/bedroom-sage.jpg",
-    alt: "A dark grey channel-stitched headboard against a sage green wall, dressed in cream and sage bedding beneath two framed botanical prints.",
+    src: "/media/gallery/01.jpg",
+    alt: "A sage channel-stitched bed dressed in cream and green bedding on the Home Trends showroom floor.",
     postId: null,
   },
   {
-    src: "/media/instagram/antrim-bed.jpg",
-    alt: "A pale grey upholstered bed on black tapered legs beside a matching two-drawer bedside locker, under a framed print.",
+    src: "/media/instagram/1-DWPTopHDCc2.jpg",
+    alt: "A Natural Sleep Company Sleep Rest 800 mattress on the showroom floor, photographed close along its quilted edge.",
     postId: null,
   },
   {
-    src: "/media/instagram/4-DYz-Vu-Mmn2.jpg",
-    alt: "A mattress on an upholstered divan base on the showroom floor, in a post captioned Shop for less with Home Trends Furniture.",
+    src: "/media/gallery/02.jpg",
+    alt: "A tan buttoned leather wing chair beside nested glass side tables and a black floor lamp.",
+    postId: null,
+  },
+  {
+    src: "/media/gallery/03.jpg",
+    alt: "An oak desk and black chair against a sage wall, with a bookcase and a desk lamp.",
+    postId: null,
+  },
+  {
+    src: "/media/gallery/04.jpg",
+    alt: "A grey channel-stitched sleigh bed with white bedding on a patterned rug.",
+    postId: null,
+  },
+  {
+    src: "/media/editorial/from-shop-mink.jpg",
+    alt: "A mink buttoned velvet sleigh bed dressed in white linen.",
     postId: null,
   },
 ];
+
+const LEAD = SHOTS[0];
+const ROW = SHOTS.slice(1, 4);
 
 const hrefFor = (tile: Tile) =>
   tile.postId ? `https://www.instagram.com/p/${tile.postId}/` : STORE.instagram;
