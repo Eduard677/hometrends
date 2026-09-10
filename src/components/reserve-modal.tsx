@@ -66,15 +66,15 @@ export function ReserveModal({
             <p className="reserve-modal__piece">{piece}</p>
             <label>
               <span>Your name</span>
-              <input name="name" type="text" autoComplete="name" required />
+              <input name="name" type="text" autoComplete="name" autoCapitalize="words" enterKeyHint="next" required />
             </label>
             <label>
               <span>Phone</span>
-              <input name="phone" type="tel" autoComplete="tel" required />
+              <input name="phone" type="tel" inputMode="tel" autoComplete="tel" enterKeyHint="next" required />
             </label>
             <label>
               <span>Email</span>
-              <input name="email" type="email" autoComplete="email" required />
+              <input name="email" type="email" inputMode="email" autoComplete="email" autoCapitalize="none" autoCorrect="off" spellCheck={false} enterKeyHint="done" required />
             </label>
             <label>
               <span>Anything to add (optional)</span>

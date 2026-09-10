@@ -42,8 +42,13 @@ export function NewsletterBand() {
             <input
               id="news-band-email"
               type="email"
+              inputMode="email"
               required
               autoComplete="email"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              enterKeyHint="done"
               placeholder="Email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}

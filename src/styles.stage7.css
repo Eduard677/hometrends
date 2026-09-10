@@ -1825,3 +1825,16 @@ html {
     transition: none;
   }
 }
+
+/* ——— Mobile pass §8: forms ———
+   The reserve sheet was capped in vh, which does not shrink when the on-screen
+   keyboard opens — the submit button ended up behind it. dvh tracks the
+   visible viewport, so the sheet shortens and its own overflow keeps Submit
+   reachable. Applied to the other capped surfaces for the same reason. */
+@supports (height: 100dvh) {
+  .reserve-modal,
+  .filter-sheet,
+  .bag-drawer {
+    max-height: 88dvh;
+  }
+}

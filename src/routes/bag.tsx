@@ -120,6 +120,11 @@ function BagPage() {
                 name="promo-code"
                 type="text"
                 autoComplete="off"
+                /* Promo codes are entered in caps and are not words. */
+                autoCapitalize="characters"
+                autoCorrect="off"
+                spellCheck={false}
+                enterKeyHint="done"
                 value={promo}
                 onChange={(event) => {
                   setPromo(event.target.value);
