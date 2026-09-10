@@ -207,3 +207,25 @@ matters if the wash is ever lightened for aesthetic reasons.
 photograph that does not exist. The previous alt described a dining table,
 sofa and lit fire; leaving it in place would have described the old image to a
 screen reader while a flat placeholder was on screen.
+
+
+## §2 Explore by space hover
+
+Replaced the flex-basis expand introduced in the mobile pass. That grew the
+**tile**, which pushed its neighbours along the rail — the opposite of what is
+wanted. The image now scales inside a fixed frame with `overflow: hidden`, so
+the tile never moves and nothing reflows. Verified: every card's box is
+byte-identical at rest and on hover.
+
+Now 650ms on `cubic-bezier(0.22, 1, 0.36, 1)`, scale 1 → 1.04, label fading on
+the same curve. Disabled under `prefers-reduced-motion` (`transform: none`,
+`0s`).
+
+**Needed `!important` on the timing, and this is worth knowing generally:**
+`styles.apple.css` carries a blanket
+`main *, footer * { transition-property: opacity, transform !important;
+transition-duration: 500ms !important; transition-timing-function: ease-out
+!important }`. Any transition specified anywhere else in this codebase is
+silently rewritten to 500ms ease-out. The first attempt here measured exactly
+that — 0.5s, ease-out — despite the rule asking for 650ms and a custom curve.
+Anyone tuning motion in this project needs to know that rule exists.

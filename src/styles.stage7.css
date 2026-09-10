@@ -1405,35 +1405,56 @@ main .product-gallery__track {
   }
 }
 
-/* D. Explore by space: one card eases open, the others ease back. Desktop
-   pointers only — the mobile snap rail is untouched. Width, not 3D. */
+/* ——— Desktop pass §2: Explore by space ———
+   Replaces the flex-basis expand from the mobile pass. That grew the tile
+   itself, which moved its neighbours — the brief asks for the opposite: the
+   image scales inside a fixed frame so nothing reflows.
+
+   650ms on cubic-bezier(0.22, 1, 0.36, 1), scale 1 to 1.04, with the label
+   fading on the same curve. Desktop pointers only; the mobile snap rail is
+   untouched. */
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {
-  .room-tiles__rail {
-    /* Same track width the grid used, so the rail geometry does not move. */
-    --room-card-w: calc(
-      (min(100vw, var(--page-max)) - (2 * var(--gutter)) - (2 * var(--space-16))) / 3
-    );
-    display: flex;
+  .room-tiles__card figure {
+    overflow: hidden;
   }
-  .room-tiles__card {
-    flex: 0 0 var(--room-card-w);
-    transition:
-      flex-basis 480ms var(--ease-sheet, ease),
-      opacity 480ms var(--ease-sheet, ease);
+  .room-tiles__card figure img,
+  .room-tiles__card figure .site-image {
+    transform: scale(1);
+    /* !important on the timing only: styles.apple.css sets
+       `main *, footer * { transition-duration: 500ms !important;
+       transition-timing-function: ease-out !important }`, which silently
+       overrode the specified 650ms curve — measured 0.5s/ease-out before this. */
+    transition-property: transform !important;
+    transition-duration: 650ms !important;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+    will-change: transform;
   }
-  .room-tiles__rail:hover .room-tiles__card {
-    flex-basis: calc(var(--room-card-w) * 0.94);
-    opacity: 0.72;
+  .room-tiles__card:hover figure img,
+  .room-tiles__card:hover figure .site-image,
+  .room-tiles__card:focus-visible figure img,
+  .room-tiles__card:focus-visible figure .site-image {
+    transform: scale(1.04);
   }
-  .room-tiles__rail .room-tiles__card:hover,
-  .room-tiles__rail .room-tiles__card:focus-within {
-    flex-basis: calc(var(--room-card-w) * 1.16);
-    opacity: 1;
+  .room-tiles__card figcaption,
+  .room-tiles__card__label {
+    transition-property: opacity !important;
+    transition-duration: 650ms !important;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+  }
+  .room-tiles__card:hover figcaption,
+  .room-tiles__card:hover .room-tiles__card__label {
+    opacity: 0.75;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .room-tiles__card {
-    transition: none;
+  .room-tiles__card figure img,
+  .room-tiles__card figure .site-image,
+  .room-tiles__card figcaption {
+    transition: none !important;
+  }
+  .room-tiles__card:hover figure img,
+  .room-tiles__card:hover figure .site-image {
+    transform: none !important;
   }
 }
 
