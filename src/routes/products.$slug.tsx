@@ -1,8 +1,9 @@
 import { Link, createFileRoute, redirect } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { getProduct, isRetiredProductSlug, priceLabel, productDimensions, productRedirect, relatedProducts } from "@/lib/catalog";
 import { ProductGallery } from "@/components/product-gallery";
 import { Price } from "@/components/price";
+import { PdpStickyBar } from "@/components/pdp-sticky-bar";
 import { CompleteTheRoom } from "@/components/complete-the-room";
 import { SavePiece } from "@/components/save-piece";
 import { VariantPicker, useVariantSelection } from "@/components/variant-picker";
@@ -95,6 +96,22 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
     ? "On the floor now — delivery across Clare and the mid-west, usually within a week."
     : "To order, approximately 4–6 weeks. Delivery across Clare and the mid-west.";
   const dimensions = productDimensions(product);
+  /* §6. The sticky bar mirrors this button rather than reimplementing it, so
+     the two can never disagree about what adding to the bag does. */
+  const addRef = useRef<HTMLDivElement>(null);
+  const detailsRef = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    const node = detailsRef.current;
+    if (!node) return;
+    if (window.matchMedia("(max-width: 899px)").matches) node.open = false;
+  }, []);
+  const handleAdd = useCallback(() => {
+    const line = bagLineFrom(product, variant);
+    if (!line) return;
+    addToBag(line);
+    setAdded(true);
+    window.setTimeout(() => setAdded(false), 1600);
+  }, [product, variant, addToBag]);
 
   return <main id="main" className="issue pdp-page">
     <nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/shop">Furniture</Link><span>/</span><span>{product.name}</span></nav>
@@ -110,18 +127,12 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
         <Price label={price} was={was} />
         {soldOut ? <p className="pdp-stock">Not currently available. Call the showroom to ask when it is next in.</p> : null}
         <VariantPicker selection={selection} />
-        <div className="pdp-actions">
+        <div className="pdp-actions" ref={addRef}>
           <button
             type="button"
             className={`button button--solid${added ? " is-added" : ""}`}
             disabled={Boolean(blockedReason)}
-            onClick={() => {
-              const line = bagLineFrom(product, variant);
-              if (!line) return;
-              addToBag(line);
-              setAdded(true);
-              window.setTimeout(() => setAdded(false), 1600);
-            }}
+            onClick={handleAdd}
           >
             {added ? "Added to bag" : "Add to bag"}
           </button>
@@ -139,7 +150,17 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
             Reserve to view in Ennis
           </button>
         </div>
-        <p className="lead">{product.description}</p>
+        {/* §6. The description is what makes this page long on a phone — the
+            spec lines above are two rows. It collapses behind a summary at
+            phone widths only.
+
+            Rendered OPEN and closed after mount rather than the reverse: if the
+            effect never runs, the copy is visible rather than hidden behind a
+            control that cannot open. */}
+        <details className="pdp-accordion" ref={detailsRef} open>
+          <summary>Description</summary>
+          <p className="lead">{product.description}</p>
+        </details>
         {product.material && !/confirm|in the showroom \/ to order/i.test(product.material) ? (
           <dl className="facts">
             <div><dt>Material</dt><dd>{product.material}</dd></div>
@@ -152,6 +173,13 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
           onClose={() => setReserving(false)}
         />
       </div>
+      <PdpStickyBar
+        watch={addRef}
+        price={price}
+        label={added ? "Added to bag" : "Add to bag"}
+        disabled={Boolean(blockedReason)}
+        onAdd={handleAdd}
+      />
     </article>
     <CompleteTheRoom products={relatedProducts(product)} slug={product.slug} category={product.category} />
   </main>;

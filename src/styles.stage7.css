@@ -1738,3 +1738,90 @@ html {
   white-space: nowrap;
   border: 0;
 }
+
+
+/* ——— Mobile pass §6: PDP sticky bar ———
+   Measured at 390: the inline Add button sits 884px down an 844px viewport, so
+   price and CTA are off screen for the whole gallery and description. The bar
+   only appears once that button has scrolled above the fold, and never on
+   desktop, where the inline button is in view anyway. */
+.pdp-sticky {
+  display: none;
+}
+@media (max-width: 899px) {
+  .pdp-sticky {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    transform: translateY(110%);
+    transition: transform 0.28s var(--ease-sheet, ease);
+    /* Inert until shown, so it cannot swallow taps meant for the page. */
+    visibility: hidden;
+  }
+  .pdp-sticky.is-on {
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .pdp-sticky__price {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .pdp-sticky .button--solid {
+    flex: 1 1 auto;
+    min-height: var(--tap, 44px);
+  }
+  /* The bar covers the end of the page, so give the content room to clear it. */
+  .pdp-page {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pdp-sticky {
+    transition: none;
+  }
+}
+
+/* §6 description accordion. Desktop keeps it open and hides the control, so
+   nothing is collapsed on a screen with room for it. */
+.pdp-accordion > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--tap, 44px);
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.pdp-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+.pdp-accordion > summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1px solid var(--ink-55);
+  border-bottom: 1px solid var(--ink-55);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.18s ease;
+}
+.pdp-accordion[open] > summary::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+@media (min-width: 900px) {
+  .pdp-accordion > summary {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pdp-accordion > summary::after {
+    transition: none;
+  }
+}
