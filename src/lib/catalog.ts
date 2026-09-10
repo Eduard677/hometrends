@@ -536,9 +536,8 @@ export function variantSummary(product: Product): string | undefined {
 
   const colours = count("Colour");
   const sizes = count("Size");
-  if (colours && sizes) return `${plural(colours, "colour")} · ${plural(sizes, "size")}`;
   if (colours) return plural(colours, "colour");
-  if (sizes) return `Available in ${plural(sizes, "size")}`;
+  if (sizes) return plural(sizes, "size");
 
   const other = options[0];
   if (!other?.values.length) return undefined;

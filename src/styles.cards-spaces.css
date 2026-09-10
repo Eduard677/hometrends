@@ -4,10 +4,16 @@
 .product-card__cta,
 .product-card a.product-card__cta,
 .product-card button.product-card__cta,
+main .product-card .product-card__cta,
 .product-card--listing .product-card__cta,
 .product-card--listing .product-card__stock,
 .product-card--listing .product-card__availability,
-.product-card--listing .product-availability {
+.product-card--listing .product-availability,
+.listing .product-card button,
+.listing .product-card .product-card__cta {
+  display: none !important;
+}
+.product-card--listing .product-card__body > :not(h3):not(.product-card__variants):not(.price) {
   display: none !important;
 }
 main .product-grid,

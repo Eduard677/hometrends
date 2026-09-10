@@ -47,9 +47,9 @@ export function ProductCard({
           <h3>{product.name}</h3>
           <p className="product-card__variants">{variantSummary(product) ?? "\u00a0"}</p>
           <Price label={priceLabel(product)} was={product.compareAt} showWas={showWas} />
-          {listing ? null : product.availability && product.availability !== "On the floor now" && !soldOut ? (
+          {listing || !(product.availability && product.availability !== "On the floor now" && !soldOut) ? null : (
             <p className="product-availability">{product.availability}</p>
-          ) : null}
+          )}
         </div>
       </Link>
     </article>
