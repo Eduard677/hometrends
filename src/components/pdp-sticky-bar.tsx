@@ -45,7 +45,9 @@ export function PdpStickyBar({
       if (frame) return;
       frame = requestAnimationFrame(measure);
     };
-    measure();
+    /* Deferred: a synchronous getBoundingClientRect on mount forces layout
+       while the gallery image is still painting. */
+    frame = requestAnimationFrame(measure);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {

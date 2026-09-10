@@ -103,7 +103,13 @@ function ProductDetail({ product }: { product: NonNullable<ReturnType<typeof get
   useEffect(() => {
     const node = detailsRef.current;
     if (!node) return;
-    if (window.matchMedia("(max-width: 899px)").matches) node.open = false;
+    /* Deferred past first paint. Collapsing on mount reflowed the page while
+       the gallery image was still rendering, and PDP LCP went from 3.03s to
+       5.4-6.2s on Lighthouse mobile. */
+    const frame = requestAnimationFrame(() => {
+      if (window.matchMedia("(max-width: 899px)").matches) node.open = false;
+    });
+    return () => cancelAnimationFrame(frame);
   }, []);
   const handleAdd = useCallback(() => {
     const line = bagLineFrom(product, variant);
