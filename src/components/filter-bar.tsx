@@ -1,5 +1,5 @@
 import { SlidersHorizontal, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDialogFocus, usePresence } from "@/lib/dialog";
 import { PRICE_BANDS, type Facets } from "@/lib/filters";
 
@@ -131,6 +131,28 @@ export function FilterBar({
   const ref = useDialogFocus(sheet, () => setSheet(false));
   const active = activeCount(facets);
 
+  /* Mobile pass §5. The page behind the sheet scrolled under the finger, which
+     reads as the sheet itself failing to scroll. Locked while open; the sheet
+     body keeps its own overflow so it still scrolls. */
+  useEffect(() => {
+    if (!sheet) return;
+    const body = document.body;
+    const previous = body.style.overflow;
+    body.style.overflow = "hidden";
+    return () => {
+      body.style.overflow = previous;
+    };
+  }, [sheet]);
+
+  /* Every selected value, flattened, so the grid can show them as removable
+     chips. Order follows the facet groups rather than selection order, so the
+     row does not reshuffle as filters are added. */
+  const activeChips = [
+    ...facets.category.map((value) => ({ key: "category" as const, value })),
+    ...facets.colour.map((value) => ({ key: "colour" as const, value })),
+    ...facets.price.map((value) => ({ key: "price" as const, value })),
+  ];
+
   return (
     <>
       {/* Mobile: one bar. Desktop: chips. Which shows is CSS only, so both
@@ -140,6 +162,32 @@ export function FilterBar({
           <SlidersHorizontal size={16} strokeWidth={1.6} aria-hidden="true" />
           Filter{active ? ` (${active})` : ""}
         </button>
+
+        {/* Active filters, removable, above the grid. The desktop chip row
+            below shows every option; this shows only what is on, and is the
+            only filter feedback a phone gets once the sheet is closed. */}
+        {activeChips.length || facets.inStock ? (
+          <ul className="filters__active" aria-label="Active filters">
+            {activeChips.map(({ key, value }) => (
+              <li key={`${key}:${value}`}>
+                <button type="button" onClick={() => onChange(toggle(facets, key, value))}>
+                  {value}
+                  <span aria-hidden="true">×</span>
+                  <span className="sr-only">Remove filter</span>
+                </button>
+              </li>
+            ))}
+            {facets.inStock ? (
+              <li>
+                <button type="button" onClick={() => onChange({ ...facets, inStock: false })}>
+                  On the floor
+                  <span aria-hidden="true">×</span>
+                  <span className="sr-only">Remove filter</span>
+                </button>
+              </li>
+            ) : null}
+          </ul>
+        ) : null}
 
         <div className="filters__chips">
           <Groups counts={counts} facets={facets} onChange={onChange} as="chips" />
