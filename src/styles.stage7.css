@@ -1838,3 +1838,29 @@ html {
     max-height: 88dvh;
   }
 }
+
+/* ——— Mobile pass §10: landscape ———
+   Measured at 844x390: the header took 20% of the viewport — over the 15%
+   threshold the brief sets for a sticky header — and the 4:5 gallery frame
+   computed to 955px in a 390px viewport, so a single photograph was more than
+   two screens tall. Scoped to short landscape only, so portrait phones and
+   desktop are untouched. */
+@media (orientation: landscape) and (max-height: 500px) {
+  :root {
+    --header-h: 48px;
+  }
+  .site-header {
+    height: var(--header-h);
+  }
+  /* The frame follows the viewport rather than the aspect ratio, so a photo
+     fits on screen and the buy column is reachable without a long scroll. */
+  main .product-gallery__track {
+    aspect-ratio: auto;
+    height: 78svh;
+  }
+  main .product-gallery__slide,
+  main .product-gallery__slide .product-media,
+  main .product-gallery__slide img {
+    height: 100%;
+  }
+}
