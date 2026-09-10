@@ -20,10 +20,9 @@ export function RoomTiles({
   items: readonly RoomTile[];
 }) {
   const railRef = useRef<HTMLDivElement>(null);
-  /* BRIEF.md 2.7. Real buttons rather than decorative arrows, disabled at each
-     end so the control reports where the rail actually is. */
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const [active, setActive] = useState(0);
 
   const sync = useCallback(() => {
     const rail = railRef.current;
@@ -55,6 +54,40 @@ export function RoomTiles({
     });
   }
 
+  function goTo(index: number) {
+    const rail = railRef.current;
+    if (!rail) return;
+    const card = rail.querySelectorAll<HTMLElement>(".room-tiles__card")[index];
+    if (!card) return;
+    rail.scrollTo({
+      left: card.offsetLeft - rail.offsetLeft,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+  }
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const onScroll = () => {
+      const cards = [...rail.querySelectorAll<HTMLElement>(".room-tiles__card")];
+      if (!cards.length) return;
+      const mid = rail.scrollLeft + rail.clientWidth / 2;
+      let nearest = 0;
+      let best = Infinity;
+      cards.forEach((card, i) => {
+        const center = card.offsetLeft + card.offsetWidth / 2;
+        const d = Math.abs(center - mid);
+        if (d < best) {
+          best = d;
+          nearest = i;
+        }
+      });
+      setActive(nearest);
+    };
+    rail.addEventListener("scroll", onScroll, { passive: true });
+    return () => rail.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="room-tiles" aria-label={heading}>
       <header className="room-tiles__head">
@@ -62,7 +95,33 @@ export function RoomTiles({
           <h2>{heading}</h2>
           {lead ? <p>{lead}</p> : null}
         </div>
-        <div className="room-tiles__controls">
+      </header>
+      <div className="room-tiles__stage">
+        <div className="room-tiles__scroller">
+          <div ref={railRef} className="room-tiles__rail" role="list">
+            {items.map((item) => (
+              <Link
+                key={item.slug}
+                className="room-tiles__card"
+                role="listitem"
+                to="/collections/$slug"
+                params={{ slug: item.slug }}
+              >
+                <figure>
+                  <SiteImage
+                    src={item.image}
+                    alt=""
+                    width={800}
+                    height={600}
+                    style={{ objectPosition: item.position ?? "50% 50%" }}
+                  />
+                </figure>
+                <span>{item.label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="room-tiles__controls room-tiles__controls--stage">
           <button type="button" onClick={() => scrollBy(-1)} disabled={atStart} aria-label="Previous spaces">
             <ChevronLeft size={16} strokeWidth={1.6} aria-hidden="true" />
           </button>
@@ -70,34 +129,18 @@ export function RoomTiles({
             <ChevronRight size={16} strokeWidth={1.6} aria-hidden="true" />
           </button>
         </div>
-      </header>
-      <div className="room-tiles__scroller">
-        <div ref={railRef} className="room-tiles__rail" role="list">
-          {items.map((item) => (
-            <Link
-              key={item.slug}
-              className="room-tiles__card"
-              role="listitem"
-              to="/collections/$slug"
-              params={{ slug: item.slug }}
-            >
-              <figure>
-                {/* The link already announces the room, so the image is
-                    decorative — otherwise a screen reader reads "Living room
-                    furniture and finishes at Home Trends Furniture, Ennis
-                    Living room". */}
-                <SiteImage
-                  src={item.image}
-                  alt=""
-                  width={800}
-                  height={600}
-                  style={{ objectPosition: item.position ?? "50% 50%" }}
-                />
-              </figure>
-              <span>{item.label}</span>
-            </Link>
-          ))}
-        </div>
+      </div>
+      <div className="room-tiles__dots">
+        {items.map((item, index) => (
+          <button
+            key={item.slug}
+            type="button"
+            aria-label={`Show ${item.label}`}
+            aria-current={active === index}
+            className={active === index ? "is-active" : undefined}
+            onClick={() => goTo(index)}
+          />
+        ))}
       </div>
     </section>
   );

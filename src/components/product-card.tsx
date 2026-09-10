@@ -47,8 +47,7 @@ export function ProductCard({
         </figure>
         <div className="product-card__body">
           <h3>{product.name}</h3>
-          {/* §2 - plain text, never colour dots; the catalogue holds no hex values. */}
-          {variantSummary(product) ? <p className="product-card__variants">{variantSummary(product)}</p> : null}
+          <p className="product-card__variants">{variantSummary(product) ?? "\u00a0"}</p>
           <Price label={priceLabel(product)} was={product.compareAt} showWas={showWas} />
           {product.availability && product.availability !== "On the floor now" && !soldOut ? (
             <p className="product-availability">{product.availability}</p>
