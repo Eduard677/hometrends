@@ -99,3 +99,76 @@ own look.
 to `/screenshots/mobile/`.** Lighthouse was not run and the before/after
 screenshot set was not captured. Inventing either would be worse than their
 absence.
+
+
+---
+
+## Lighthouse mobile — before / after
+
+Run with `lighthouse@12` against **production**, mobile preset, which applies
+Slow 4G and 4× CPU throttling by default. Not the dev server: dev is
+unminified and uncompressed, and its numbers would be meaningless.
+
+| Template | perf before | perf after | LCP before | LCP after | CLS after | Weight | Reqs |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| home | 64 | **91** | 6.25s | **3.18s** | 0.000 | 1.28MB | 64 |
+| shop | 68 | **75** | 8.84s | **6.85s** | 0.003 | 1.36MB | 81 |
+| collection | 60 | **63** | 6.98s | **5.60s** | 0.124 | 1.28MB | 80 |
+| pdp | 92 | 61–74 | 3.03s | 5.3–6.9s | 0.000 | 1.05MB | 44 |
+
+**What drove the gains:** Lighthouse's `lcp-lazy-loaded` audit was *failing* on
+/shop and on collection pages. `PageFrame`'s hero plate is the LCP element on
+both and was inheriting `SiteImage`'s lazy default — the one image guaranteed
+to be above the fold was the one told to wait. Now eager with
+`fetchpriority=high`; the audit passes on all four templates.
+
+**The PDP row is not a clean measurement, and should not be read as a
+regression.** The `92 / 3.03s` baseline is a single run. Every subsequent PDP
+measurement — five on current production, three against the previous
+deployment URL — clusters at 61–74 with LCP 4.1–6.9s. The fast reading has
+never reproduced. I also tried deferring both §6 mount effects past first paint
+on the theory that they blocked LCP; it made no difference, which is evidence
+against that explanation rather than for it. The previous-deployment URL
+returns 302 under deployment protection and Lighthouse follows redirects, so
+those three runs may have measured current production anyway. Net: I cannot
+attribute the delta, and I am not claiming either a regression or a fix.
+
+**No template exceeds the 2MB flag** — 1.05–1.36MB across all four.
+
+**Still failing:** collection CLS at 0.124, over the 0.1 threshold. Lighthouse
+returned no `layout-shift-elements` detail to attribute it to, so it needs its
+own investigation rather than a guess.
+
+## Sections 5, 6, 8, 9, 10
+
+| # | Issue | Fix |
+| --- | --- | --- |
+| 15 | Filter sheet did not lock body scroll — the page scrolled behind it | lock in `filter-bar.tsx`, deliberately not by extending the chrome lock (see §4's stacking bug) |
+| 16 | Apply footer was `position: static` and scrolled away with the options | sticky, safe-area padded; verified still in view after scrolling the body to its end |
+| 17 | Nothing showed which filters were on once the sheet closed | removable active-filter chip row above the grid, 44px targets, `sr-only` "Remove filter" label |
+| 18 | PDP Add button sat 884px down an 844px viewport | sticky price + CTA bar, inert until shown (`visibility:hidden`, `tabIndex -1`), shares the add handler with the inline button |
+| 19 | Description made the PDP a mile long | collapses behind a 44px summary at phone widths, 3232px → 3060px; rendered open and closed after mount so it fails open |
+| 20 | Reserve sheet capped in `vh`, so the on-screen keyboard hid Submit | `88dvh`, which tracks the visible viewport; verified submit in view |
+| 21 | Missing keyboard hints | `inputMode`, `enterKeyHint`, `autoCapitalize`/`autoCorrect`/`spellCheck` per field type |
+| 22 | Landscape 844×390: header 20% of viewport, gallery 955px tall in a 390px viewport | short-landscape only: header 48px (12%), gallery follows viewport height — 955px → 304px; portrait verified unchanged |
+
+**Verified, no change needed:** WCAG 1.4.10 reflow passes on all five templates
+at 200% text (no scroll, no overflow, no clipped content). `prefers-reduced-motion`
+is genuinely honoured — reveal starts open at `inset(0)`, sticky bar and
+accordion marker both report `0s`. PDP variants are already tappable chips, the
+gallery already has dot indicators, and pinch zoom already works (no
+`user-scalable=no`).
+
+**Bug found and fixed inside §6:** the sticky bar first used an
+`IntersectionObserver`, which never fired — the button starts below the viewport
+and ends above it, both "not intersecting", so on a fast scroll the state never
+changes. Verified failing at scrollY 1600 with the button at top −716. Replaced
+with a rAF-throttled scroll measurement.
+
+## Still outstanding
+
+- Custom inline form validation. Native `required` is in use; replacing it is a
+  forms rewrite, not a mobile fix.
+- Collection CLS 0.124.
+- Shop's remaining sub-44px targets, and one clipped element on home@320.
+- No screenshots were written to `/screenshots/mobile/`.
