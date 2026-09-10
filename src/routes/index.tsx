@@ -24,7 +24,10 @@ function Home() {
         product row, one existing sentence, social, second product row, reviews,
         visit. Copy and photography are unchanged; only the sequence moved. */}
     <section className="ed-hero">
-      <HeroMedia poster="/media/editorial/from-shop-hero.jpg" alt="A Home Trends dining table and chairs, with a sofa, rug and lit fire beyond" />
+      {/* Desktop pass §1. Placeholder until the real hero lands — spec in
+          CHANGES.md. Alt describes the placeholder honestly rather than
+          describing a photograph that is not there. */}
+      <HeroMedia poster="/media/hero-placeholder.jpg" alt="" />
       <div className="ed-hero__copy"><h1>Furniture for real rooms</h1><p>Explore sofas, beds, dining, flooring and more at our Ennis showroom.</p>
         {/* Two actions, side by side at every width. The sketch has no third
             control, so the scroll cue that sat here is gone. */}

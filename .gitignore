@@ -23,6 +23,7 @@ public/media/*
 !public/media/optimized/
 !public/media/story/
 !public/media/living.webp
+!public/media/hero-placeholder.jpg
 
 # Catalogue ships webp only; the .jpg fallbacks and .json sidecars are not used.
 !public/media/catalogue/

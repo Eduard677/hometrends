@@ -163,3 +163,47 @@ Stated plainly rather than approximated:
   document, and none should be inferred.**
 - **Regression crawl** for 404s and redirect chains, console-error sweep, and
   per-template page weight.
+
+
+---
+
+# Desktop visual pass (branch `polish-desktop`)
+
+## §1 Hero
+
+The hero image is now a **placeholder** at `/media/hero-placeholder.jpg`
+(2400×1400, warm neutral, generated — not photography).
+
+### Required spec for the real hero — [CLIENT TO CONFIRM / SUPPLY]
+
+| | |
+| --- | --- |
+| Minimum size | **2400 × 1400** |
+| Subject | weighted **right of centre** |
+| Left third | **uncluttered** — the headline and buttons sit there |
+| Palette | warm neutral, matching `#EFEAE1` |
+| Format | JPEG or WebP; it is routed through `SiteImage`, so a manifest entry should be generated for it (single-file pass, never the wholesale optimiser) |
+
+### Legibility does not depend on the image
+
+A dark-to-transparent wash runs from the left edge, strongest behind the copy
+and fully clear by ~72% across, so the subject on the right is never dimmed.
+This means the headline stays legible whatever photograph lands in the slot.
+
+**Contrast measured against the composited pixels**, not estimated — the
+overlay was strengthened once after the first attempt fell short:
+
+| Element | Size | Ratio | Required | Result |
+| --- | --- | --- | --- | --- |
+| `h1` | 64px large | **5.53:1** | 3:1 | PASS |
+| standfirst `p` | 16px normal | **6.24:1** | 4.5:1 | PASS |
+| primary button | 16px normal | **13.16:1** | 4.5:1 | PASS |
+
+First attempt measured 3.54:1 on the headline — passing for large text but
+leaving the normal-size standfirst under 4.5:1. Recorded because the margin
+matters if the wash is ever lightened for aesthetic reasons.
+
+**Judgement call:** the placeholder's `alt` is empty rather than describing a
+photograph that does not exist. The previous alt described a dining table,
+sofa and lit fire; leaving it in place would have described the old image to a
+screen reader while a flat placeholder was on screen.
