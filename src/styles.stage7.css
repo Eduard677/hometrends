@@ -1864,3 +1864,24 @@ html {
     height: 100%;
   }
 }
+
+/* ——— Mobile pass: font-swap CLS on collection pages ———
+   Measured, not guessed. The collection page shifted 0.0612 of its 0.124 CLS
+   from one element: .issue__plate moving up 28px, dragging .issue__body with
+   it. The cause was the lead paragraph reflowing 3 lines to 2 (84px to 56px)
+   the moment Cormorant Garamond finished loading — the text is identical in
+   SSR, so this is font swap, not content.
+
+   The stack fell back to Georgia, which is materially wider: the same string
+   renders at 87.91% of Georgia's width in Cormorant Garamond. A metric-matched
+   fallback closes that gap, so the fallback occupies the same space as the web
+   font and the swap no longer changes line counts. */
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("Times");
+  size-adjust: 87.91%;
+  font-display: swap;
+}
+:root {
+  --font-display: "Cormorant Garamond", "Cormorant Fallback", Georgia, "Times New Roman", serif;
+}
