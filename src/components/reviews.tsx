@@ -8,7 +8,13 @@ const WORD_LIMIT = 45;
 function truncate(text: string) {
   const words = text.trim().split(/\s+/);
   if (words.length <= WORD_LIMIT) return { text, clipped: false };
-  return { text: `${words.slice(0, WORD_LIMIT).join(" ").replace(/[.,;:]$/, "")}…`, clipped: true };
+  return {
+    text: `${words
+      .slice(0, WORD_LIMIT)
+      .join(" ")
+      .replace(/[.,;:]$/, "")}…`,
+    clipped: true,
+  };
 }
 
 /**
