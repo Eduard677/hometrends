@@ -2,6 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppChrome } from "@/components/chrome";
+import fontsCss from "../styles.fonts.css?url";
 import appCss from "../styles.css?url";
 import appleCss from "../styles.apple.css?url";
 import stage2Css from "../styles.stage2.css?url";
@@ -31,6 +32,26 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      /* Self-hosted fonts. Preload only the two faces used above the fold —
+         the body sans and the display regular — so they are fetched in
+         parallel with the CSS rather than discovered after it. The other five
+         resolve normally; preloading all seven would compete for bandwidth
+         with the LCP image. */
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/inter-400.woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/cormorant-garamond-400.woff2",
+        crossOrigin: "anonymous",
+      },
+      { rel: "stylesheet", href: fontsCss },
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: appleCss },
       { rel: "stylesheet", href: stage2Css },
@@ -42,12 +63,6 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: stage7Css },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap",
-      },
     ],
   }),
   component: RootDocument,
