@@ -736,12 +736,15 @@ export function AppChrome({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!menu && !search && !bag && !wish) return;
     const previous = document.body.style.overflow;
+    const previousHtml = document.documentElement.style.overflow;
     const previousPadding = document.body.style.paddingRight;
     const gutter = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     if (gutter > 0) document.body.style.paddingRight = `${gutter}px`;
     return () => {
       document.body.style.overflow = previous;
+      document.documentElement.style.overflow = previousHtml;
       document.body.style.paddingRight = previousPadding;
     };
   }, [menu, search, bag, wish]);

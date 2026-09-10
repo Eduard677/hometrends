@@ -1,0 +1,35 @@
+/* Bag drawer only. Does not change hero, header, or Explore by space. */
+
+.overlay--bag {
+  position: fixed;
+  inset: 0;
+  z-index: 92;
+  background: var(--hero-ink, #151a22);
+}
+.overlay--bag.is-on {
+  opacity: 0.58;
+  pointer-events: auto;
+}
+
+.bag-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  z-index: 95;
+  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  box-sizing: border-box;
+}
+@supports not (height: 100dvh) {
+  .bag-drawer {
+    height: 100vh;
+    max-height: 100vh !important;
+  }
+}
+
+html:has(.bag-drawer.is-on),
+body:has(.bag-drawer.is-on) {
+  overflow: hidden !important;
+}
