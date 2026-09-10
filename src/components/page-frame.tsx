@@ -61,7 +61,19 @@ export function PageFrame({
       </header>
       {plate ? (
         <figure className="issue__plate">
-          <SiteImage src={plate} alt={plateAlt || `${title} at Home Trends Furniture, Ennis`} width={1600} height={700} />
+          {/* Mobile pass §9. This plate is the LCP element on /shop and on every
+              collection page, and it was inheriting SiteImage's lazy default —
+              Lighthouse mobile flagged lcp-lazy-loaded as failing, with LCP at
+              8.84s on /shop and 6.98s on a collection. It is above the fold on
+              every page that renders it, so it loads eagerly at high priority. */}
+          <SiteImage
+            src={plate}
+            alt={plateAlt || `${title} at Home Trends Furniture, Ennis`}
+            width={1600}
+            height={700}
+            loading="eager"
+            priority
+          />
         </figure>
       ) : null}
       <div className="issue__body">{children}</div>
