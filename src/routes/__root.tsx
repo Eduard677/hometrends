@@ -12,6 +12,7 @@ import stage5Css from "../styles.stage5.css?url";
 import stage6Css from "../styles.stage6.css?url";
 import showroomCss from "../styles.showroom.css?url";
 import stage7Css from "../styles.stage7.css?url";
+import firstScreenCss from "../styles.first-screen.css?url";
 import { localBusiness, safeJson } from "@/lib/seo";
 
 const APP_NAME = "Home Trends Furniture";
@@ -61,6 +62,7 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: stage6Css },
       { rel: "stylesheet", href: showroomCss },
       { rel: "stylesheet", href: stage7Css },
+      { rel: "stylesheet", href: firstScreenCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
