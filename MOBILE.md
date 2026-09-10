@@ -22,6 +22,9 @@ form `/contact`) = 35 combinations. 320 treated as the pass/fail floor.
 | 6 | Default translucent blue tap highlight | all | all | `-webkit-tap-highlight-color: transparent`, with `:active` states taking over |
 | 7 | **23 footer anchors under 44px on every template** (footer is sitewide), filter chips at 34px, pagination and gallery thumbnails under 44px | ≤900 | all | 44px minimum + 4px block padding for 8px separation, scoped under 900px |
 | 8 | No tap acknowledgement once the blue highlight was removed | all | all | `:active` opacity + small scale on cards/buttons; scale disabled under `prefers-reduced-motion` |
+| 9 | Product grid rendered **1-up** on phones, not 2-up | 320, 390 | shop, collection | `repeat(2, minmax(0, 1fr))` below 900 |
+| 10 | Card heights came in two values (571 / 538 at 320) because titles wrapped to different line counts, so prices and CTAs sat at different heights across a row | 320, 390 | shop, collection | names clamp to 2 lines with a reserved 2-line min-height; verified with a 77-char title at 320 — all clamp, **0 misaligned rows** |
+| 11 | Prices had `font-variant-numeric: normal`, so struck prior price and current price drifted | all | shop, PDP, cart | `tabular-nums` on prices, cart totals, PDP spec values |
 
 **Overflow result:** `document.documentElement.scrollWidth <= clientWidth` on
 every template at every width in the matrix. The page never scrolls
@@ -55,6 +58,12 @@ could be mistaken for a selected state.
 
 ---
 
+## Verified, no change needed
+
+**Type floor already met.** No text renders below 14px on any audited template,
+so the 14px metadata minimum required no change — recorded rather than
+"fixed".
+
 ## Outstanding
 
 Not done in this pass, stated plainly:
@@ -66,8 +75,6 @@ Not done in this pass, stated plainly:
   the safe area, body scroll lock, removable active-filter chips.
 - **§6 PDP** — sticky bottom price + CTA bar, pinch zoom, variant chips,
   accordions for specs and delivery.
-- **§7 Grid and typography** — 2-up at phone widths, 60+ character product name
-  test, tabular numerals on prices, 14px metadata floor.
 - **§8 Forms** — `type`/`inputmode`/`autocomplete` audit, submit button clear of
   the keyboard, errors tied to inputs.
 - **§9 Performance** — Slow 4G + 4× CPU, LCP, preload, `sizes` accuracy, page
