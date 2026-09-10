@@ -169,6 +169,39 @@ with a rAF-throttled scroll measurement.
 
 - Custom inline form validation. Native `required` is in use; replacing it is a
   forms rewrite, not a mobile fix.
-- Collection CLS 0.124.
-- Shop's remaining sub-44px targets, and one clipped element on home@320.
-- No screenshots were written to `/screenshots/mobile/`.
+- Custom inline form validation (native `required` is in use).
+- Collection CLS — attributed, attempted, reverted. See below.
+
+## Closed since
+
+**Screenshots captured.** 35 shots — 7 templates × 5 widths — in
+`/screenshots/mobile/`, compressed to WebP (17.1MB → 3.3MB). Named
+`template-WxH-after.webp`. They are **after-only**: the work was already
+deployed by the time they were taken, so there is no honest "before" to pair
+them with.
+
+**`document.scrollWidth <= clientWidth` on all 35.** The 320 floor holds on
+every template at every width in the matrix.
+
+**Shop tap targets: 24 → 3.** The remainder are the brand logo in the frozen
+header and two unclassed anchors.
+
+**home@320 clipped element: fixed.** It was a product-card title anchor whose
+inline box ran 5px past its clamped `h3`. The `h3` clipped it and the page never
+scrolled, so it was never visible; long titles now break instead.
+
+**Collection CLS — attributed, fix attempted, reverted.** Lighthouse gave no
+`layout-shift-elements`, so a `PerformanceObserver` was used instead: 0.0612 of
+the total came from `.issue__plate` moving up 28px, because the lead paragraph
+reflows 3 lines → 2 (84px → 56px) when Cormorant Garamond loads. The SSR text
+is byte-identical, so it is font swap, not late content.
+
+A metric-matched fallback was built from a measured ratio — the same string
+renders at 87.91% of Georgia's width in Cormorant Garamond — and it **made
+things worse**: CLS went 0.070 → median 0.189 across four runs, because
+`src: local(...)` resolves asynchronously and so added a *second* swap. It was
+reverted; CLS returned to 0.0652, stable across three runs.
+
+A real fix means self-hosting and preloading the font so there is no swap at
+all. That is a build change, not a stylesheet one, and is left documented
+rather than half-applied.
