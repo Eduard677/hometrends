@@ -1,0 +1,40 @@
+/* Visit block only. Fascia sampled from shopfront-parnell-street.jpg
+   (painted wall around the yellow HT sign): #416088.
+   Cream #F4F1EA on that blue is 5.72:1 — WCAG AA for body. Not darkened;
+   near-black charcoal stays off this section. */
+
+main.ed-page .visit-section,
+main .visit-section {
+  background: #416088;
+  color: #F4F1EA;
+}
+
+main.ed-page .visit-section :is(h2, p, a, address),
+main .visit-section :is(h2, p, a, address) {
+  color: #F4F1EA;
+}
+
+/* Call stays cream. The HT sign in the photograph is the only yellow. */
+main .visit-section a.visit-section__phone {
+  background: #F4F1EA;
+  color: #1C1C1A;
+}
+
+main .visit-section .visit-section__family {
+  border-top-color: rgba(244, 241, 234, 0.28);
+}
+
+/* No extra frame. Figure fill matches the section so the building sits in it. */
+main .visit-section figure,
+main .visit-section .site-image {
+  background-color: #416088;
+  border: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+main .visit-section img {
+  border: 0;
+  box-shadow: none;
+  filter: none;
+}
