@@ -549,60 +549,22 @@ export function featuredProducts() {
 }
 
 /**
- * BRIEF.md 3.3, applied after the proposal in reports/featured-row-proposal.md
- * was accepted. The row previously offered one direct add-to-bag against five
- * "Choose options", which is a poor row to walk a basket through in front of
- * the owners. It now offers four of six.
- *
- * Also satisfies 2.4: the Cedarwood Nore Oak Bed and Erik Round Table shots
- * fight the muted palette and are no longer here. Both still appear in the
- * range listing.
- *
- * An explicit order, not a filter, because this is a merchandising decision:
- * the two additions were chosen from the 114 products that are single-variant,
- * in stock, multi-image and between EUR 200 and EUR 2,500, picking categories
- * the row did not already cover. Both additions are lifestyle shots: a white
- * gloss cutout on the cream ground washes out at card size, which is what the
- * first pick did.
+ * One homepage band, exactly four products. High-ticket pieces with a complete
+ * centred PDP photograph — the same `product.image` the card already uses.
+ * Capri Bar Stool, Vicenza Dining Chair, Chrissie coffee-table crops, Boston
+ * fragment crops, and the rug/wardrobe pair stay in the shop, not here.
  */
 const HOMEPAGE_FEATURED = [
   "chrissie-dining-set",
-  "vicenza-dining-chair-tuape",
-  "chrissie-coffee-table",
-  "lynn-accent-chair",
-  "kilkenny-mink-bed",
-  "capri-bar-stool",
+  "new-york-storage-bed",
+  "kenmare-chair-and-footstool",
+  "horizontal-wall-beds",
 ] as const;
 
 export function homepageFeatured() {
-  return HOMEPAGE_FEATURED.map((slug) => bySlug.get(slug)).filter((item): item is Product => Boolean(item));
-}
-
-/**
- * Layout pass §8. The second homepage row: six more, never a repeat of the first
- * six.
- *
- * Four come from the remaining featured set. The other two featured products —
- * Cedarwood Nore Oak Bed and Erik Round Table — stay off the homepage: their
- * shots (a striped rug with rainbow pencil artwork, and a low-res
- * white-background composite) fight the muted palette, which is why they were
- * pulled earlier. This pass allows a catalogue source as well as featured, so
- * they are topped up from the catalogue rather than reinstated.
- *
- * The two additions are single-variant lifestyle shots, so the row carries some
- * direct add-to-bag: every remaining featured product needs variant selection.
- */
-const HOMEPAGE_FEATURED_SECOND = [
-  "brandon-armchair",
-  "bray-accent-chair",
-  "boston-sofa-bed",
-  "kenmare-chair-and-footstool",
-  "skye-rug-242",
-  "stratford-2-door-wardrobe",
-] as const;
-
-export function homepageFeaturedSecond() {
-  return HOMEPAGE_FEATURED_SECOND.map((slug) => bySlug.get(slug)).filter((item): item is Product => Boolean(item));
+  return HOMEPAGE_FEATURED.map((slug) => bySlug.get(slug))
+    .filter((item): item is Product => Boolean(item))
+    .slice(0, 4);
 }
 
 

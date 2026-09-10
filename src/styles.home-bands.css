@@ -1,0 +1,12 @@
+/* Homepage product band only. Four items: one row at 4-col, two rows at 2-col.
+   Shop listing grid is unchanged. */
+
+main .from-floor .product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 1100px) {
+  main .from-floor .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

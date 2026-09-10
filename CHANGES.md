@@ -381,3 +381,14 @@ scrollable row.
 
 Do not invent copy. Append the other 89 in `src/lib/reviews.ts` in the
 existing shape. The carousel will pick them up.
+
+---
+
+# Homepage product band (main)
+
+One band of **four** products, so a four-column grid does not leave two tiles
+on a second row. Second homepage band removed. Heading is “On the floor · up
+to 50% off”; “View all furniture” kept. Selection is Chrissie Dining Set,
+New York Storage Bed, Kenmare Chair & Footstool, Horizontal Wall Beds —
+complete PDP photographs, not stools, dining-chair singles, coffee-table
+crops, Boston fragments, or the rug/wardrobe pair. Shop grid unchanged.
