@@ -1,0 +1,13 @@
+/* Primary and secondary controls: 4px corners. Rectangular, not pills, not knife-edge. */
+
+.button,
+a.button,
+button.button,
+.filters__open,
+.bag-drawer .icon-btn,
+.wishlist-drawer .icon-btn,
+.filter-sheet .icon-btn,
+.menu-panel .icon-btn,
+.menu-split__close {
+  border-radius: 4px;
+}

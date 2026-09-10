@@ -1,0 +1,97 @@
+/* Wishlist drawer only. Keeps bag-drawer 100dvh, overlay, and scroll lock. */
+
+.wishlist-drawer {
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-drawer .bag-drawer__head h2 {
+  margin: 0;
+}
+
+.wishlist-drawer__list {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0 0 0.75rem;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wishlist-drawer__row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  height: 5.5rem;
+  min-height: 5.5rem;
+  max-height: 5.5rem;
+  padding: 0.5rem 1.35rem;
+  border-bottom: 1px solid var(--line);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.wishlist-drawer__thumb {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--paper-sunk);
+  position: relative;
+}
+
+.wishlist-drawer__thumb img,
+.wishlist-drawer__thumb .product-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wishlist-drawer__name {
+  min-width: 0;
+  overflow: visible;
+  padding-inline-start: 0.18em;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: inherit;
+  text-overflow: unset;
+  white-space: normal;
+}
+
+.wishlist-drawer__remove {
+  margin: 0;
+  padding: 0 0.35rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink-55);
+  font-size: var(--t-micro, 0.68rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.wishlist-drawer__empty {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 2rem 1.35rem;
+}
+
+.wishlist-drawer__foot {
+  flex: none;
+  margin-top: auto;
+  padding: 1.1rem 1.35rem 0.25rem;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.wishlist-drawer__foot .button {
+  width: 100%;
+}

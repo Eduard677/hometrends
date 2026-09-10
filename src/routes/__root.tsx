@@ -19,6 +19,8 @@ import reviewsCss from "../styles.reviews.css?url";
 import instagramCss from "../styles.instagram.css?url";
 import homeBandsCss from "../styles.home-bands.css?url";
 import visitCss from "../styles.visit.css?url";
+import wishlistCss from "../styles.wishlist.css?url";
+import controlsCss from "../styles.controls.css?url";
 import { localBusiness, safeJson } from "@/lib/seo";
 
 const APP_NAME = "Home Trends Furniture";
@@ -75,6 +77,8 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: instagramCss },
       { rel: "stylesheet", href: homeBandsCss },
       { rel: "stylesheet", href: visitCss },
+      { rel: "stylesheet", href: wishlistCss },
+      { rel: "stylesheet", href: controlsCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
