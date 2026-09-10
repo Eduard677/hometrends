@@ -1,6 +1,6 @@
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import { Heart, Menu, Search, ShoppingBag, X } from "lucide-react";
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { searchProducts, type Product } from "@/lib/catalog";
 import { applyDemoReset, bagCount, useBag } from "@/lib/bag";
 import { useDialogFocus, usePresence } from "@/lib/dialog";
@@ -625,6 +625,66 @@ export function AppChrome({ children }: { children: ReactNode }) {
     setQuery("");
   }, [pathname]);
 
+  /* Mobile pass §4. Close-on-route-change, Escape-with-focus-return and the
+     Cmd/Ctrl+K shortcut already existed. These three did not. */
+  const overlayOpen = menu || search || bag || wish;
+  const closeAll = useCallback(() => {
+    setMenu(false);
+    setSearch(false);
+    setBag(false);
+    setWish(false);
+  }, []);
+
+  /* Android back closes the overlay instead of leaving the site. A history
+     entry is pushed on open and consumed on close, so the button that users
+     expect to mean "dismiss this" does not exit to the previous page. */
+  useEffect(() => {
+    if (!overlayOpen) return;
+    window.history.pushState({ htOverlay: true }, "");
+    const onPop = () => closeAll();
+    window.addEventListener("popstate", onPop);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      /* Closed by Escape, a link or the close control rather than by Back:
+         drop the entry we added so Back is not left as a no-op. */
+      if (window.history.state?.htOverlay) window.history.back();
+    };
+  }, [overlayOpen, closeAll]);
+
+  /* Focus trap. Tab used to walk straight out of an open drawer and into the
+     page behind it, which is invisible to a keyboard or switch user. */
+  useEffect(() => {
+    if (!overlayOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+      const panel = document.querySelector<HTMLElement>(
+        ".menu-panel, .search-panel, .bag-drawer, .wishlist-drawer",
+      );
+      if (!panel) return;
+      const focusable = [...panel.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      )].filter((el) => el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      if (!panel.contains(active)) {
+        event.preventDefault();
+        first.focus();
+        return;
+      }
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [overlayOpen]);
+
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -668,12 +728,21 @@ export function AppChrome({ children }: { children: ReactNode }) {
     applyDemoReset();
   }, []);
 
+  /* Body scroll lock. This already existed; §4 only adds the scrollbar-gutter
+     compensation so desktop does not shift horizontally when a drawer opens.
+     Deliberately NOT duplicated in the §4 block above: a second lock captured
+     "hidden" as its restore value and left the page permanently unscrollable
+     after the overlay closed. */
   useEffect(() => {
     if (!menu && !search && !bag && !wish) return;
     const previous = document.body.style.overflow;
+    const previousPadding = document.body.style.paddingRight;
+    const gutter = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    if (gutter > 0) document.body.style.paddingRight = `${gutter}px`;
     return () => {
       document.body.style.overflow = previous;
+      document.body.style.paddingRight = previousPadding;
     };
   }, [menu, search, bag, wish]);
 

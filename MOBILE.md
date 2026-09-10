@@ -24,6 +24,9 @@ form `/contact`) = 35 combinations. 320 treated as the pass/fail floor.
 | 8 | No tap acknowledgement once the blue highlight was removed | all | all | `:active` opacity + small scale on cards/buttons; scale disabled under `prefers-reduced-motion` |
 | 9 | Product grid rendered **1-up** on phones, not 2-up | 320, 390 | shop, collection | `repeat(2, minmax(0, 1fr))` below 900 |
 | 10 | Card heights came in two values (571 / 538 at 320) because titles wrapped to different line counts, so prices and CTAs sat at different heights across a row | 320, 390 | shop, collection | names clamp to 2 lines with a reserved 2-line min-height; verified with a 77-char title at 320 — all clamp, **0 misaligned rows** |
+| 12 | Tab walked straight out of an open drawer into the page behind it | all | all | focus trap on the open panel, verified over 25 tab presses |
+| 13 | Android back left the site instead of dismissing an open drawer | all | all | history entry pushed on open, consumed on close |
+| 14 | Adding a second body scroll lock re-locked the page permanently: it captured `"hidden"` from the existing lock as its restore value | all | all | duplicate removed; scrollbar-gutter compensation folded into the pre-existing lock instead |
 | 11 | Prices had `font-variant-numeric: normal`, so struck prior price and current price drifted | all | shop, PDP, cart | `tabular-nums` on prices, cart totals, PDP spec values |
 
 **Overflow result:** `document.documentElement.scrollWidth <= clientWidth` on
@@ -60,6 +63,13 @@ could be mistaken for a selected state.
 
 ## Verified, no change needed
 
+**Sticky header does not need hide-on-scroll.** Measured at 390: 64px, which
+is **8% of viewport** — comfortably under the 15% threshold in the brief, so
+the behaviour is not warranted.
+
+**Close-on-route-change, Escape-with-focus-return and the Cmd/Ctrl+K shortcut
+already existed** in chrome.tsx and were left alone.
+
 **Type floor already met.** No text renders below 14px on any audited template,
 so the 14px metadata minimum required no change — recorded rather than
 "fixed".
@@ -68,9 +78,8 @@ so the 14px metadata minimum required no change — recorded rather than
 
 Not done in this pass, stated plainly:
 
-- **§4 Navigation** — menu focus trap, body scroll lock, close on route change
-  and Escape, Android back button, one-tap full-screen search, sticky-header
-  hide-on-scroll.
+- **§4 remainder** — one-tap full-screen search is present but was not
+  re-verified at phone widths this pass.
 - **§5 Filters** — bottom sheet with drag-to-dismiss, sticky `Apply (n)` above
   the safe area, body scroll lock, removable active-filter chips.
 - **§6 PDP** — sticky bottom price + CTA bar, pinch zoom, variant chips,
