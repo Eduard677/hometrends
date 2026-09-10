@@ -402,3 +402,13 @@ on the spread and again on the mosaic “Sofas made for everyday living” tile.
 The spread keeps it. The mosaic tile now uses `/media/editorial/errigel-corner.jpg`
 (a corner sofa in a living room), not the fireplace sofa and not the Explore
 by space crop.
+
+---
+
+# Explore by space crops
+
+Living and dining tiles had baked-in left margins in the photograph files
+(pale wall strip; white curtain slab). CSS `object-position` cannot crop
+enough of a 16:9 file inside a 4:3 cover box. Both assets were recropped
+to the same room, left dead zone removed. Shared 4/3 cover ratio unchanged.
+Carousel, arrows and peek unchanged. Bedroom and flooring untouched.
