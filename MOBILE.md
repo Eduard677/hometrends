@@ -205,3 +205,52 @@ reverted; CLS returned to 0.0652, stable across three runs.
 A real fix means self-hosting and preloading the font so there is no swap at
 all. That is a build change, not a stylesheet one, and is left documented
 rather than half-applied.
+
+
+---
+
+## Font self-hosting — the CLS fix, and its trade
+
+Three attempts, measured each time.
+
+| Attempt | collection CLS | shop CLS | First-visit type |
+| --- | --- | --- | --- |
+| Google Fonts + `swap` (original) | 0.070 | — | real font after swap |
+| Metric-matched `local()` fallback | **0.189** ✗ | — | real font after two swaps |
+| Self-hosted + preload + `swap` | 0.061 | **0.148** ✗ | real font after swap |
+| Self-hosted + preload + **`optional`** | **0.000** | **0.000** | **fallback (Georgia)** |
+
+Seven latin-subset woff2 faces now serve from `/fonts` (276KB): Cormorant
+Garamond 400/500/600 + 400 italic, Inter 400/500/600. The
+`fonts.googleapis.com` stylesheet and its two preconnects are gone, removing a
+cross-origin round-trip that had to finish before the font files were even
+discovered. Inter 400 and Cormorant Garamond 400 are preloaded — the two faces
+above the fold. The other five are not, because preloading all seven competes
+for bandwidth with the LCP image.
+
+**Self-hosting alone did not fix it.** With `swap` the browser still paints the
+fallback first by design, so the lead still reflowed 84px → 56px; collection
+came down to 0.061 but **shop was 0.148, over the 0.1 threshold**.
+
+**`font-display: optional` fixed it completely** — 0.000 on collection, shop,
+home and PDP, three runs each.
+
+### The trade, stated plainly
+
+`optional` gives each face a ~100ms block period and then keeps the fallback
+for the rest of that page's life rather than swapping. Measured on the live
+site:
+
+- **First visit:** lead renders 84px in Georgia. The font downloads but is not
+  applied to already-painted text.
+- **Second visit (warm cache):** lead renders 56px in Cormorant Garamond.
+
+So first-time visitors see the fallback serif, and returning visitors see the
+brand serif. CLS is 0.000 for both. There is no invisible-text flash either
+way.
+
+**This is a brand decision as much as a performance one.** For a showroom whose
+identity leans on the serif, showing Georgia to first-time visitors may not be
+worth 0.061 of CLS on one template. Reverting is one word in
+`src/styles.fonts.css` — `optional` back to `swap` — which restores the brand
+font on every visit at the cost of collection 0.061 / shop 0.148.
