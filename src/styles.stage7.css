@@ -1880,3 +1880,13 @@ html {
    Reverted. A real fix needs the web font self-hosted and preloaded so there
    is no swap at all, which is a build change rather than a stylesheet one.
    Left documented instead of half-applied. */
+
+/* Last overflow flag at 320: a product-card title anchor's inline box ran 5px
+   past the clamped h3 ("Stratford 2 Door Wardrobe"). The h3 clips it and the
+   page never scrolled horizontally, so it was never visible — but letting long
+   titles break removes the flag rather than relying on the clip. */
+main .product-card__body h3,
+main .product-card__body h3 a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
