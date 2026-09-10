@@ -1,7 +1,13 @@
 /* Product cards and Explore by space. Loaded after first-screen.css.
    Does not change the hero or header. */
 
-.product-card__cta {
+.product-card__cta,
+.product-card a.product-card__cta,
+.product-card button.product-card__cta,
+.product-card--listing .product-card__cta,
+.product-card--listing .product-card__stock,
+.product-card--listing .product-card__availability,
+.product-card--listing .product-availability {
   display: none !important;
 }
 main .product-grid,

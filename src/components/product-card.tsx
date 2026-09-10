@@ -20,26 +20,24 @@ import { ProductMedia } from "./product-media";
 export function ProductCard({
   product,
   showWas = true,
+  listing = false,
 }: {
   product: Product;
   lookbook?: boolean;
   showWas?: boolean;
+  listing?: boolean;
 }) {
   const soldOut = product.inStock === false;
 
   return (
-    /* Desktop pass §3. The whole card is the link now and the CTA button is
-       gone — purchase happens on the PDP. One <a> wrapping everything means a
-       screen reader announces one target instead of three, and there is no
-       longer a button inside a link, which was never valid.
-
-       useChromeActions / bagLineFrom are no longer needed here; adding to the
-       bag is the PDP's job. */
-    <article className={`product-card${soldOut ? " is-sold-out" : ""}`}>
+    /* The whole card is the PDP link. Purchase happens on the PDP.
+       Listing cards (/shop, collections) are only image, name, optional
+       variant line, and price — no Add to bag / Choose options / View details. */
+    <article className={`product-card${soldOut ? " is-sold-out" : ""}${listing ? " product-card--listing" : ""}`}>
       <Link className="product-card__link" to="/products/$slug" params={{ slug: product.slug }}>
         <figure>
           <ProductMedia product={product} loading="lazy" />
-          {soldOut ? (
+          {listing ? null : soldOut ? (
             <span className="product-card__stock">Not currently available</span>
           ) : product.availability === "On the floor now" ? (
             <span className="product-card__availability">On the floor now</span>
@@ -49,7 +47,7 @@ export function ProductCard({
           <h3>{product.name}</h3>
           <p className="product-card__variants">{variantSummary(product) ?? "\u00a0"}</p>
           <Price label={priceLabel(product)} was={product.compareAt} showWas={showWas} />
-          {product.availability && product.availability !== "On the floor now" && !soldOut ? (
+          {listing ? null : product.availability && product.availability !== "On the floor now" && !soldOut ? (
             <p className="product-availability">{product.availability}</p>
           ) : null}
         </div>

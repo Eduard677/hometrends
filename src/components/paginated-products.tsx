@@ -39,7 +39,7 @@ export function PaginatedProducts({
   const slice = products.slice(start, start + PAGE_SIZE);
   const cells: React.ReactNode[] = [];
   slice.forEach((product, index) => {
-    cells.push(<ProductCard key={product.slug} product={product} />);
+    cells.push(<ProductCard key={product.slug} product={product} listing />);
     const absolute = index + 1;
     if (absolute % MOSAIC_EVERY === 0 && absolute < slice.length) {
       const block = absolute / MOSAIC_EVERY - 1;
