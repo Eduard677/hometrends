@@ -2108,3 +2108,57 @@ main .product-card__body {
     aspect-ratio: 1 / 1;
   }
 }
+
+/* ——— Desktop pass §5: Instagram ———
+   One wide image, three beneath. Replaces the square grid. */
+.social__lead {
+  margin: 0 0 clamp(0.5rem, 1vw, 0.75rem);
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--paper);
+}
+.social__lead a,
+.social__row a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.social__lead img,
+.social__row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.social__row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+.social__row li {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--paper);
+}
+/* The lead is a very wide crop; at phone widths that reduces to a letterbox
+   sliver, so it squares up a little. */
+@media (max-width: 700px) {
+  .social__lead {
+    aspect-ratio: 16 / 10;
+  }
+}
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .social__lead a,
+  .social__row a {
+    transition-property: opacity !important;
+    transition-duration: 650ms !important;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+  }
+  .social__lead a:hover,
+  .social__row a:hover {
+    opacity: 0.88;
+  }
+}

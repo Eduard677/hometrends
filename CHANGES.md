@@ -286,3 +286,32 @@ Captions carry their own dark wash, on the same reasoning as the hero: they sit
 over photography, so legibility cannot depend on the photograph.
 
 Stacked full width at ≤900px — 2/3 beside 1/3 is unreadable at 390.
+
+
+## §5 Instagram section
+
+Rebuilt as one wide image spanning the full width with three beneath it,
+replacing the square grid. Verified at 1440 and 390: lead spans the full
+content width, row is three columns, all four images load, four distinct alt
+strings, no horizontal overflow.
+
+### TODO — [CLIENT TO SUPPLY] Instagram post IDs
+
+Each tile carries a `postId` field, currently `null`. Supply the IDs and the
+tiles will deep-link to the posts; until then every tile links to the profile,
+because **a fabricated permalink would 404**. There was never a live "latest 6"
+pull to replace — `public/media/instagram/manifest.json` records
+`"fetched": []`, so no permalinks have ever existed in this build.
+
+The IDs go in `src/components/social-strip.tsx`, in `LEAD.postId` and each
+entry of `ROW`. The shape is the code after `/p/` in a post URL, e.g.
+`instagram.com/p/**DWPTopHDCc2**/`.
+
+**One discrepancy to flag:** the brief asks for "a curated fixed set of **six**"
+but specifies a layout of one wide plus three — four slots. I built the layout
+as specified and left four slots. If six should be visible, the row wants five
+tiles rather than three, or a second row; say which and it is a small change.
+
+**Interim selection:** showroom and product photography only. The meme reel
+still and the customer-review graphic are excluded — at this size, with a
+full-width lead, they read as social filler rather than as the showroom.
