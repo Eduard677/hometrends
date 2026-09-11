@@ -2,25 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppChrome } from "@/components/chrome";
-import fontsCss from "../styles.fonts.css?url";
-import appCss from "../styles.css?url";
-import appleCss from "../styles.apple.css?url";
-import stage2Css from "../styles.stage2.css?url";
-import stage3Css from "../styles.stage3.css?url";
-import stage4Css from "../styles.stage4.css?url";
-import stage5Css from "../styles.stage5.css?url";
-import stage6Css from "../styles.stage6.css?url";
-import showroomCss from "../styles.showroom.css?url";
-import stage7Css from "../styles.stage7.css?url";
-import firstScreenCss from "../styles.first-screen.css?url";
-import cardsSpacesCss from "../styles.cards-spaces.css?url";
-import bagCss from "../styles.bag.css?url";
-import reviewsCss from "../styles.reviews.css?url";
-import instagramCss from "../styles.instagram.css?url";
-import homeBandsCss from "../styles.home-bands.css?url";
-import visitCss from "../styles.visit.css?url";
-import wishlistCss from "../styles.wishlist.css?url";
-import controlsCss from "../styles.controls.css?url";
+import bundleCss from "../styles.bundle.css?url";
 import { localBusiness, safeJson } from "@/lib/seo";
 
 const APP_NAME = "Home Trends Furniture";
@@ -60,25 +42,10 @@ export const Route = createRootRoute({
         href: "/fonts/cormorant-garamond-400.woff2",
         crossOrigin: "anonymous",
       },
-      { rel: "stylesheet", href: fontsCss },
-      { rel: "stylesheet", href: appCss },
-      { rel: "stylesheet", href: appleCss },
-      { rel: "stylesheet", href: stage2Css },
-      { rel: "stylesheet", href: stage3Css },
-      { rel: "stylesheet", href: stage4Css },
-      { rel: "stylesheet", href: stage5Css },
-      { rel: "stylesheet", href: stage6Css },
-      { rel: "stylesheet", href: showroomCss },
-      { rel: "stylesheet", href: stage7Css },
-      { rel: "stylesheet", href: firstScreenCss },
-      { rel: "stylesheet", href: cardsSpacesCss },
-      { rel: "stylesheet", href: bagCss },
-      { rel: "stylesheet", href: reviewsCss },
-      { rel: "stylesheet", href: instagramCss },
-      { rel: "stylesheet", href: homeBandsCss },
-      { rel: "stylesheet", href: visitCss },
-      { rel: "stylesheet", href: wishlistCss },
-      { rel: "stylesheet", href: controlsCss },
+      // One link, not nineteen. styles.bundle.css @imports them all in the
+      // order they were linked here; Vite inlines it into a single file at
+      // build time. The order lives in that file now — see its header.
+      { rel: "stylesheet", href: bundleCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],

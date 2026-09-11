@@ -1,0 +1,32 @@
+/*
+ * The nineteen stylesheets, in the exact order __root.tsx used to link them.
+ * Vite inlines these at build time into one file, so the page pays one
+ * round trip instead of nineteen. Order is the whole contract here: the same
+ * selector is redefined across several of these sheets, sometimes with
+ * !important, and later `main`-qualified rules beat earlier bare classes.
+ *
+ * Do not reorder. Do not sort. Append new sheets at the end, which is where
+ * a new stage file belongs anyway.
+ *
+ * styles.css carries `@import "tailwindcss"` and must stay second: the
+ * @theme block and preflight have to land before anything overrides them.
+ */
+@import "./styles.fonts.css";
+@import "./styles.css";
+@import "./styles.apple.css";
+@import "./styles.stage2.css";
+@import "./styles.stage3.css";
+@import "./styles.stage4.css";
+@import "./styles.stage5.css";
+@import "./styles.stage6.css";
+@import "./styles.showroom.css";
+@import "./styles.stage7.css";
+@import "./styles.first-screen.css";
+@import "./styles.cards-spaces.css";
+@import "./styles.bag.css";
+@import "./styles.reviews.css";
+@import "./styles.instagram.css";
+@import "./styles.home-bands.css";
+@import "./styles.visit.css";
+@import "./styles.wishlist.css";
+@import "./styles.controls.css";
