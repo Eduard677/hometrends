@@ -2206,9 +2206,15 @@ main .product-card__body {
   }
 }
 @media (max-width: 700px) {
-  /* One card with a peek of the next, so it reads as swipeable. */
+  /* One card with a peek of the next, so it reads as swipeable. The peek is
+     deliberate, but at 86% it left ~47px of the neighbouring card — enough to
+     render three or four clipped characters per line, which reads as a broken
+     layout rather than as more content. Fading the trailing edge keeps the
+     affordance and removes the fragments. */
   .reviews-carousel__track {
     grid-auto-columns: 86%;
+    -webkit-mask-image: linear-gradient(to right, #000 84%, transparent 99%);
+    mask-image: linear-gradient(to right, #000 84%, transparent 99%);
   }
 }
 
@@ -2237,8 +2243,11 @@ main .product-card__body {
   display: flex;
   gap: 0.35rem;
 }
+/* As with the room-tiles dots: the 7px ::after is the visual, the button is
+   hit area. 22px wide failed WCAG 2.2 SC 2.5.8; --tap was already applied to
+   the height and simply never reached the width. */
 .reviews-carousel__dots button {
-  width: 22px;
+  min-width: var(--tap, 44px);
   min-height: var(--tap, 44px);
   padding: 0;
   border: 0;

@@ -131,9 +131,13 @@ main .product-card__body .price {
   gap: 0.35rem;
   margin-top: 0.75rem;
 }
+/* The visual dot is the 7px ::after below, so the button is pure hit area.
+   Height was already 44px; width was 22, which fails WCAG 2.2 SC 2.5.8 (24px
+   minimum) and is an awkward thumb target. Widening moves the dots further
+   apart — that spacing is the point, adjacent targets should not abut. */
 .room-tiles__dots button {
-  width: 22px;
-  min-height: 44px;
+  min-width: var(--tap, 44px);
+  min-height: var(--tap, 44px);
   padding: 0;
   border: 0;
   background: none;
