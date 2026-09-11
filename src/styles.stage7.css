@@ -1340,7 +1340,7 @@ main .product-gallery__track {
    clip-path, so the figure never reflows and the caption below never moves. */
 .scroll-reveal {
   clip-path: inset(0 20% 0 20%);
-  transition: clip-path var(--t-move) var(--ease);
+  transition: clip-path var(--t-enter) var(--ease);
   will-change: clip-path;
 }
 .scroll-reveal.is-open {
@@ -2347,10 +2347,10 @@ main :is(
    stylesheet, actually gets — is the finished, visible page. */
 @media (prefers-reduced-motion: no-preference) {
   .ed-hero__copy h1 {
-    animation: ht-hero-settle 620ms var(--ease) both !important;
+    animation: ht-hero-settle var(--t-enter) var(--ease) both !important;
   }
   .ed-hero__copy p {
-    animation: ht-hero-settle 620ms var(--ease) 90ms both !important;
+    animation: ht-hero-settle var(--t-enter) var(--ease) 90ms both !important;
   }
   .ed-hero__media::after {
     content: "";
