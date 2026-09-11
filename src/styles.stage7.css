@@ -2338,35 +2338,31 @@ main :is(
 }
 
 /* C. The one authored moment. Not a reveal on every section — a single
-   arrival: the display line settles, the lede follows, and one slow warm
-   light crosses the photograph and leaves. It runs once on load and is never
-   retriggered by scroll.
+   arrival: the display line settles and the lede follows it. Once on load,
+   never retriggered by scroll.
 
    Gated on no-preference rather than switched off inside a reduce block, so
    the default state — the one a visitor with reduced motion, or a failed
-   stylesheet, actually gets — is the finished, visible page. */
+   stylesheet, actually gets — is the finished, visible page.
+
+   There was a second half to this: a warm light sweep across the hero
+   photograph. It is gone, and the reason is worth keeping. It was written
+   onto .ed-hero__media::after, which turns out to be contested by six rules
+   across five sheets, and styles.first-screen.css loads after this one. Its
+   background won; the transform and animation did not. So the element being
+   slid 792px across the hero was not a warm light at all — it was the hero's
+   own dark legibility scrim, parked off to the right by animation-fill-mode:
+   both, leaving the headline sitting on bare photograph.
+
+   Two lessons. Do not hang a new effect on a pseudo-element that five other
+   sheets already argue over. And a decorative flourish that has to fight the
+   cascade to exist is not restraint, whatever it looks like when it works. */
 @media (prefers-reduced-motion: no-preference) {
   .ed-hero__copy h1 {
     animation: ht-hero-settle var(--t-enter) var(--ease) both !important;
   }
   .ed-hero__copy p {
     animation: ht-hero-settle var(--t-enter) var(--ease) 90ms both !important;
-  }
-  .ed-hero__media::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: linear-gradient(
-      100deg,
-      #0000 40%,
-      #fff3dc21 49%,
-      #fff3dc0a 55%,
-      #0000 64%
-    );
-    transform: translate3d(-55%, 0, 0);
-    animation: ht-hero-sheen 1500ms var(--ease-melt) 300ms both;
   }
 }
 @keyframes ht-hero-settle {
@@ -2375,11 +2371,6 @@ main :is(
   }
   to {
     transform: none;
-  }
-}
-@keyframes ht-hero-sheen {
-  to {
-    transform: translate3d(55%, 0, 0);
   }
 }
 
