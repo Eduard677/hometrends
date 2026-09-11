@@ -381,11 +381,11 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
                   {group.items.map((item) => (
                     <li key={item.label}>
                       {"to" in item ? (
-                        <Link to={item.to} onClick={onClose}>
+                        <Link to={item.to}>
                           {item.label}
                         </Link>
                       ) : (
-                        <Link to="/collections/$slug" params={{ slug: item.slug }} onClick={onClose}>
+                        <Link to="/collections/$slug" params={{ slug: item.slug }}>
                           {item.label}
                         </Link>
                       )}
@@ -394,7 +394,7 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
                 </ul>
               </div>
             ))}
-            <Link className="menu-cols__all" to="/shop" onClick={onClose}>
+            <Link className="menu-cols__all" to="/shop">
               Shop all
             </Link>
           </nav>
@@ -411,7 +411,7 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
                           {item.label}
                         </a>
                       ) : (
-                        <Link to={item.to!} onClick={onClose}>
+                        <Link to={item.to!}>
                           {item.label}
                         </Link>
                       )}
@@ -524,7 +524,7 @@ function SearchDrawer({
                 <ul>
                   {SEARCH_POPULAR.map((item) => (
                     <li key={item.slug + item.label}>
-                      <Link to="/collections/$slug" params={{ slug: item.slug }} onClick={onClose}>
+                      <Link to="/collections/$slug" params={{ slug: item.slug }}>
                         {item.label}
                       </Link>
                     </li>
@@ -536,7 +536,7 @@ function SearchDrawer({
                 <ul>
                   {SEARCH_HELP.map((item) => (
                     <li key={item.to}>
-                      <Link to={item.to} onClick={onClose}>
+                      <Link to={item.to}>
                         {item.label}
                       </Link>
                     </li>
@@ -552,7 +552,6 @@ function SearchDrawer({
                     key={product.slug}
                     to="/products/$slug"
                     params={{ slug: product.slug }}
-                    onClick={onClose}
                     className="search-panel__hit"
                   >
                     <ProductMedia product={product} width={56} height={70} />
@@ -562,14 +561,14 @@ function SearchDrawer({
                     </span>
                   </Link>
                 ))}
-                <Link className="search-drop__all" to="/find" search={{ q: query }} onClick={onClose}>
+                <Link className="search-drop__all" to="/find" search={{ q: query }}>
                   {results.length > 6 ? `View all ${results.length} results` : "View all results"}
                 </Link>
               </div>
             ) : trimmed ? (
               <div className="search-drop__empty" role="status">
                 <p>No matching pieces. Try a room, a product type or a material.</p>
-                <Link to="/contact" onClick={onClose}>
+                <Link to="/contact">
                   Ask the showroom →
                 </Link>
               </div>
@@ -580,7 +579,6 @@ function SearchDrawer({
                     key={tile.slug}
                     to="/collections/$slug"
                     params={{ slug: tile.slug }}
-                    onClick={onClose}
                     className="search-tile"
                   >
                     <figure>
