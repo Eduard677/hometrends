@@ -1,206 +1,329 @@
 {
   "/media/category/flooring.jpg": {
     "src": "/media/optimized/0a1484dd196680cd.webp",
+    "srcset": "/media/optimized/0a1484dd196680cd-480.webp 480w, /media/optimized/0a1484dd196680cd-720.webp 720w, /media/optimized/0a1484dd196680cd.webp 853w",
+    "width": 853,
+    "height": 1067,
     "fallback": "/media/optimized/0a1484dd196680cd.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgX/xAAgEAACAgIABwAAAAAAAAAAAAABAgADESEEEjEyUmGB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A6F1dQtVipZgO4scyPFotmCwbXuN7OYjY+zFhz4mSqkQViRuJxkdTCEC//9k="
   },
   "/media/editorial/collection-bedroom.webp": {
     "src": "/media/optimized/dd01beb41f51963d.webp",
+    "srcset": "/media/optimized/dd01beb41f51963d-480.webp 480w, /media/optimized/dd01beb41f51963d-720.webp 720w, /media/optimized/dd01beb41f51963d-960.webp 960w, /media/optimized/dd01beb41f51963d-1200.webp 1200w, /media/optimized/dd01beb41f51963d.webp 1280w",
+    "width": 1280,
+    "height": 720,
     "fallback": "/media/optimized/dd01beb41f51963d.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwL/xAAfEAADAAEDBQAAAAAAAAAAAAABAgMABBExITNBYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AaVYpsCwJPvCprYytIs4Kr4Tqed8FeRlantv8wE//2Q=="
   },
   "/media/editorial/collection-dining.webp": {
     "src": "/media/optimized/b4312e10ef5a1d34.webp",
+    "srcset": "/media/optimized/b4312e10ef5a1d34-480.webp 480w, /media/optimized/b4312e10ef5a1d34-720.webp 720w, /media/optimized/b4312e10ef5a1d34.webp 840w",
+    "width": 840,
+    "height": 720,
     "fallback": "/media/optimized/b4312e10ef5a1d34.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAOABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAiEAACAQIFBQAAAAAAAAAAAAABAgMAEQUSISJBBBMUMVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AEz+VtjQ6fTrSYYyw9UTLsAuCTxU2VAGPbuov6vTx4g8eVMisDw2oBoL/2Q=="
   },
   "/media/editorial/collection-living.webp": {
     "src": "/media/optimized/0bdfcbb1a6a9bdd0.webp",
+    "srcset": "/media/optimized/0bdfcbb1a6a9bdd0-480.webp 480w, /media/optimized/0bdfcbb1a6a9bdd0-720.webp 720w, /media/optimized/0bdfcbb1a6a9bdd0.webp 854w",
+    "width": 854,
+    "height": 720,
     "fallback": "/media/optimized/0bdfcbb1a6a9bdd0.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAANABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAP/xAAfEAACAgIBBQAAAAAAAAAAAAABAgADERJRBBMhQYH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKCpN0JUamrn3DNoUADZOIl6B2wm7YHEHd0oHlXYfZJf/9k="
   },
   "/media/editorial/errigel-corner.jpg": {
     "src": "/media/optimized/8e9f37796b1bdc70.webp",
+    "srcset": "/media/optimized/8e9f37796b1bdc70-480.webp 480w, /media/optimized/8e9f37796b1bdc70-720.webp 720w, /media/optimized/8e9f37796b1bdc70-960.webp 960w, /media/optimized/8e9f37796b1bdc70-1200.webp 1200w, /media/optimized/8e9f37796b1bdc70.webp 1600w",
+    "width": 1600,
+    "height": 1067,
     "fallback": "/media/optimized/8e9f37796b1bdc70.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAIBBAIDAAAAAAAAAAAAAAECAAMEETETUSJBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDbdXSiqVLKuOzuAuVNBCGTfox6gHI3iM56kyivgsoJ+Qk//9k="
   },
   "/media/editorial/from-shop-bedroom.jpg": {
     "src": "/media/optimized/519bc41e09ba1b89.webp",
+    "srcset": "/media/optimized/519bc41e09ba1b89-480.webp 480w, /media/optimized/519bc41e09ba1b89-720.webp 720w, /media/optimized/519bc41e09ba1b89-960.webp 960w, /media/optimized/519bc41e09ba1b89-1200.webp 1200w, /media/optimized/519bc41e09ba1b89.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/519bc41e09ba1b89.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAgEAABBAEEAwAAAAAAAAAAAAACAAEDEQQFEhNBITIz/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwBYNQg5DEpWjbqwvwngyA3EcZct9iLtSiN9BVvE9GQpx//Z"
   },
   "/media/editorial/from-shop-dining.jpg": {
     "src": "/media/optimized/df15f3a1227c8362.webp",
+    "srcset": "/media/optimized/df15f3a1227c8362-480.webp 480w, /media/optimized/df15f3a1227c8362-720.webp 720w, /media/optimized/df15f3a1227c8362-960.webp 960w, /media/optimized/df15f3a1227c8362-1200.webp 1200w, /media/optimized/df15f3a1227c8362.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/df15f3a1227c8362.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAeEAACAgEFAQAAAAAAAAAAAAABAgADBBIhIkFCUf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AD4OZVSGV6eR9ExGM7qrCtC+pw+x+dSQnUt4XmThv//Z"
   },
   "/media/editorial/from-shop-garden.jpg": {
     "src": "/media/optimized/05c94960910a3eea.webp",
+    "srcset": "/media/optimized/05c94960910a3eea-480.webp 480w, /media/optimized/05c94960910a3eea-720.webp 720w, /media/optimized/05c94960910a3eea-960.webp 960w, /media/optimized/05c94960910a3eea-1200.webp 1200w, /media/optimized/05c94960910a3eea.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/05c94960910a3eea.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAfEAACAQMFAQAAAAAAAAAAAAABAgADERIEEyEzQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AB6T0lLHG45sIYO4wxRVJ8Ms1HVC+Qk//2Q=="
   },
   "/media/editorial/from-shop-hero.jpg": {
     "src": "/media/optimized/f75069ce0ccf9a72.webp",
+    "srcset": "/media/optimized/f75069ce0ccf9a72-480.webp 480w, /media/optimized/f75069ce0ccf9a72-720.webp 720w, /media/optimized/f75069ce0ccf9a72-960.webp 960w, /media/optimized/f75069ce0ccf9a72-1200.webp 1200w, /media/optimized/f75069ce0ccf9a72.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/f75069ce0ccf9a72.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAdEAEAAQUAAwAAAAAAAAAAAAABAgADBBESITJy/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ABHKxbnIxNeHeqXjDdYNuEuRFXRU0qni+sPooG//2Q=="
   },
   "/media/editorial/from-shop-kids.jpg": {
     "src": "/media/optimized/194c26c44852cd02.webp",
+    "srcset": "/media/optimized/194c26c44852cd02-480.webp 480w, /media/optimized/194c26c44852cd02-720.webp 720w, /media/optimized/194c26c44852cd02-960.webp 960w, /media/optimized/194c26c44852cd02-1200.webp 1200w, /media/optimized/194c26c44852cd02.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/194c26c44852cd02.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAhEAACAgAFBQAAAAAAAAAAAAABAwACBAUhM3ERFDFBgf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBWYy2JoshDKivmx9D5JO6qX0AazQ69THXvDmR5jvnmA3//2Q=="
   },
   "/media/editorial/from-shop-living.jpg": {
     "src": "/media/optimized/128d412f1091a088.webp",
+    "srcset": "/media/optimized/128d412f1091a088-480.webp 480w, /media/optimized/128d412f1091a088-720.webp 720w, /media/optimized/128d412f1091a088-960.webp 960w, /media/optimized/128d412f1091a088-1200.webp 1200w, /media/optimized/128d412f1091a088.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/128d412f1091a088.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQME/8QAHxAAAQQCAgMAAAAAAAAAAAAAAQACAxEEEiExMzRx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIRAxEAPwCMudkZcBZrwOQ4NqlnjbJId9waq2g9JSP0WfUfJ5Xo1kC//9k="
   },
   "/media/editorial/from-shop-mattress.jpg": {
     "src": "/media/optimized/ead089222dca94df.webp",
+    "srcset": "/media/optimized/ead089222dca94df-480.webp 480w, /media/optimized/ead089222dca94df-720.webp 720w, /media/optimized/ead089222dca94df-960.webp 960w, /media/optimized/ead089222dca94df-1200.webp 1200w, /media/optimized/ead089222dca94df.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/ead089222dca94df.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAABP/EAB8QAAEEAQUBAAAAAAAAAAAAAAEAAgMEERMhIjNBNP/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBeuyzAYpnlmccfRhHsSVGRlgABA2Lj6Ag3vqagz9iMj//Z"
   },
   "/media/editorial/from-shop-mink.jpg": {
     "src": "/media/optimized/0283c01ab970f346.webp",
+    "srcset": "/media/optimized/0283c01ab970f346-480.webp 480w, /media/optimized/0283c01ab970f346-720.webp 720w, /media/optimized/0283c01ab970f346-960.webp 960w, /media/optimized/0283c01ab970f346-1200.webp 1200w, /media/optimized/0283c01ab970f346.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/0283c01ab970f346.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAgEAABBAIBBQAAAAAAAAAAAAADAAECEQQhIjEyM0Fx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AExskXJykLCTSfjXVvSYRGLkRlG3qtatTF7W+qzE8SBv/9k="
   },
   "/media/editorial/from-shop-rugs.jpg": {
     "src": "/media/optimized/c2417f248d777e3a.webp",
+    "srcset": "/media/optimized/c2417f248d777e3a-480.webp 480w, /media/optimized/c2417f248d777e3a-720.webp 720w, /media/optimized/c2417f248d777e3a-960.webp 960w, /media/optimized/c2417f248d777e3a-1200.webp 1200w, /media/optimized/c2417f248d777e3a.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/c2417f248d777e3a.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB4QAAEDBQEBAAAAAAAAAAAAAAIAAQMEERIhMQUi/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwB/NEmjyOQmybjMitpyf6gKzjvd1hj4rCiLH//Z"
   },
   "/media/editorial/furniture-gallery-editorial.webp": {
     "src": "/media/optimized/51bb4ea85c352af7.webp",
+    "srcset": "/media/optimized/51bb4ea85c352af7-480.webp 480w, /media/optimized/51bb4ea85c352af7-720.webp 720w, /media/optimized/51bb4ea85c352af7-960.webp 960w, /media/optimized/51bb4ea85c352af7-1200.webp 1200w, /media/optimized/51bb4ea85c352af7.webp 1536w",
+    "width": 1536,
+    "height": 1024,
     "fallback": "/media/optimized/51bb4ea85c352af7.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQQF/8QAHBABAQABBQEAAAAAAAAAAAAAAQIAAxESMUEh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAwDAQACEQMRAD8Ax9eGa3J4L4eYXpkyLVdK46F1VO70ZRMlw8vuFukg3//Z"
   },
   "/media/editorial/garden.webp": {
     "src": "/media/optimized/9ed2c868d2ac11e2.webp",
+    "srcset": "/media/optimized/9ed2c868d2ac11e2-480.webp 480w, /media/optimized/9ed2c868d2ac11e2-720.webp 720w, /media/optimized/9ed2c868d2ac11e2-960.webp 960w, /media/optimized/9ed2c868d2ac11e2-1200.webp 1200w, /media/optimized/9ed2c868d2ac11e2.webp 1600w",
+    "width": 1600,
+    "height": 1067,
     "fallback": "/media/optimized/9ed2c868d2ac11e2.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQMEBf/EACAQAAICAQMFAAAAAAAAAAAAAAEDAAIRBCExEhMiUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIrJJyXHFj9EPReisAi++5ryJqs0yee2M+4hhKVXK/EgSRv/2Q=="
   },
   "/media/editorial/menu-sconce.jpg": {
     "src": "/media/optimized/46de6e357033c9d3.webp",
+    "srcset": "/media/optimized/46de6e357033c9d3-480.webp 480w, /media/optimized/46de6e357033c9d3-720.webp 720w, /media/optimized/46de6e357033c9d3-960.webp 960w, /media/optimized/46de6e357033c9d3.webp 1152w",
+    "width": 1152,
+    "height": 1728,
     "fallback": "/media/optimized/46de6e357033c9d3.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAYABADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAHxABAAICAgIDAAAAAAAAAAAAAQIRACEDEgRhMZGx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAFREBAQAAAAAAAAAAAAAAAAAAAEH/2gAMAwEAAhEDEQA/AOnBiRiLurykmM6Yokl3kcsa4u9XqvZiBe48eoCle8BtM9+NQ18fuLOIjXXVSV+jDDNUf//Z"
   },
   "/media/editorial/room-bedroom-new.jpg": {
     "src": "/media/optimized/3a92642bef96020f.webp",
+    "srcset": "/media/optimized/3a92642bef96020f-480.webp 480w, /media/optimized/3a92642bef96020f-720.webp 720w, /media/optimized/3a92642bef96020f-960.webp 960w, /media/optimized/3a92642bef96020f.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/3a92642bef96020f.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAX/xAAfEAACAgICAwEAAAAAAAAAAAABAgARAwQSEyFRYYH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCePDcNjXACfWAi9LPyxdjstMxrwb/JaenONkLoyX5K2DAbJ4jBkPWKWia9GKbay8qLMb+whMT/2Q=="
   },
   "/media/editorial/room-living-new.jpg": {
     "src": "/media/optimized/745195a03fbf4557.webp",
+    "srcset": "/media/optimized/745195a03fbf4557-480.webp 480w, /media/optimized/745195a03fbf4557-720.webp 720w, /media/optimized/745195a03fbf4557-960.webp 960w, /media/optimized/745195a03fbf4557-1200.webp 1200w, /media/optimized/745195a03fbf4557.webp 1600w",
+    "width": 1600,
+    "height": 900,
     "fallback": "/media/optimized/745195a03fbf4557.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBf/EACIQAAIBAwIHAAAAAAAAAAAAAAECAwAEEQUhEhMyM0Fygf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwB73tusrStsHUYDDB2FZ2oXPNHBFGQAc58H7R6z1r61ND2aMj//2Q=="
   },
   "/media/editorial/rooms-sofa.jpg": {
     "src": "/media/optimized/f7f36b1a9815f045.webp",
+    "srcset": "/media/optimized/f7f36b1a9815f045-480.webp 480w, /media/optimized/f7f36b1a9815f045-720.webp 720w, /media/optimized/f7f36b1a9815f045-960.webp 960w, /media/optimized/f7f36b1a9815f045.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/f7f36b1a9815f045.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAIDAAICAwAAAAAAAAAAAAECAAMEESETIjFxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwB6am69Dz9RtiAZv2U05LNFiP5kQKOgZPYDXmWuyysMT0QeBwJGK1W3T4DwEBma9W1srOwUL8ACEIUx/9k="
   },
   "/media/editorial/rooms-vase.jpg": {
     "src": "/media/optimized/d624822b25d71d3e.webp",
+    "srcset": "/media/optimized/d624822b25d71d3e-480.webp 480w, /media/optimized/d624822b25d71d3e-720.webp 720w, /media/optimized/d624822b25d71d3e-960.webp 960w, /media/optimized/d624822b25d71d3e.webp 1152w",
+    "width": 1152,
+    "height": 1728,
     "fallback": "/media/optimized/d624822b25d71d3e.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAYABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EACAQAAIBAwQDAAAAAAAAAAAAAAECAAMEESEiMYETFFH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC1SrgkcA4kN2N3cdZMwRVCkhjjPyJvDr3M1nWlfw0mqHhRMJbe3vNYADXCjWEIh//Z"
   },
   "/media/editorial/search-lamp.jpg": {
     "src": "/media/optimized/c87c65cd11b9f8a4.webp",
+    "srcset": "/media/optimized/c87c65cd11b9f8a4-480.webp 480w, /media/optimized/c87c65cd11b9f8a4-720.webp 720w, /media/optimized/c87c65cd11b9f8a4-960.webp 960w, /media/optimized/c87c65cd11b9f8a4.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/c87c65cd11b9f8a4.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAgEAABBAEFAQEAAAAAAAAAAAABAAIDBBETITFRgRIU/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwClc+dMNBGSMAdpVeQkgEcLbNmP82WkbO9XPBbi1dyRv0pKJdl8hsPaJHAA8ZSXDtzj6hCJv//Z"
   },
   "/media/editorial/search-seating.jpg": {
     "src": "/media/optimized/b9fd0a07a68aa5ff.webp",
+    "srcset": "/media/optimized/b9fd0a07a68aa5ff-480.webp 480w, /media/optimized/b9fd0a07a68aa5ff-720.webp 720w, /media/optimized/b9fd0a07a68aa5ff-960.webp 960w, /media/optimized/b9fd0a07a68aa5ff.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/b9fd0a07a68aa5ff.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EAB8QAAIBBQEAAwAAAAAAAAAAAAECAwAEESExEgUTQf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwCt9Csl6hdQUwxOeA41mpXENvaIT9YYgb1jZpiIdPIjvrJPAaSeW1aNgwbnPXazJgvZTanxGW1+ls1mHyMxHlgpzRRSkVf/2Q=="
   },
   "/media/editorial/search-sofa.jpg": {
     "src": "/media/optimized/f9ce5e9630454703.webp",
+    "srcset": "/media/optimized/f9ce5e9630454703-480.webp 480w, /media/optimized/f9ce5e9630454703-720.webp 720w, /media/optimized/f9ce5e9630454703-960.webp 960w, /media/optimized/f9ce5e9630454703.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/f9ce5e9630454703.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EACAQAAICAgICAwAAAAAAAAAAAAECAxEABBIhEzEiUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKN4s2vydaHPqz+YiNC8Pwqx94+SXyAeSQCNWtgF9jMzSRlKipOQv0ckpdqtnYLS9uiggjrEwhJoQXU3Z9MRhhgp/9k="
   },
   "/media/editorial/search-tables.jpg": {
     "src": "/media/optimized/6342a803d1801dcd.webp",
+    "srcset": "/media/optimized/6342a803d1801dcd-480.webp 480w, /media/optimized/6342a803d1801dcd-720.webp 720w, /media/optimized/6342a803d1801dcd-960.webp 960w, /media/optimized/6342a803d1801dcd.webp 1200w",
+    "width": 1200,
+    "height": 1600,
     "fallback": "/media/optimized/6342a803d1801dcd.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAIhAAAgEDBAIDAAAAAAAAAAAAAQIRAAMSBAUTITFBI3GB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8AjbcV1UsQBB8137icuYiO1USPul9hLVuIMs3jL3+Vtq7wwwL43XcfGx7xrO4VNEy6t1ePQ7iTFWsO3MjMcjM90UUxCmf/2Q=="
   },
   "/media/editorial/shop-room-bedroom.webp": {
     "src": "/media/optimized/4c02f9b4b39513b4.webp",
+    "srcset": "/media/optimized/4c02f9b4b39513b4-480.webp 480w, /media/optimized/4c02f9b4b39513b4-720.webp 720w, /media/optimized/4c02f9b4b39513b4.webp 864w",
+    "width": 864,
+    "height": 1080,
     "fallback": "/media/optimized/4c02f9b4b39513b4.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAfEAACAwACAgMAAAAAAAAAAAABAgADERIhBBMFMUH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AG669+pVaj0BWLqPZp66ilPkMQp9iro0EsZP5R7H8etiKytY74sdgwiCVrxTNG/gmvWorr5AaQOthCbFX//Z"
   },
   "/media/editorial/shop-room-dining.webp": {
     "src": "/media/optimized/5c2b65d11f25f41f.webp",
+    "srcset": "/media/optimized/5c2b65d11f25f41f-480.webp 480w, /media/optimized/5c2b65d11f25f41f-720.webp 720w, /media/optimized/5c2b65d11f25f41f.webp 864w",
+    "width": 864,
+    "height": 1080,
     "fallback": "/media/optimized/5c2b65d11f25f41f.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACAQAAEEAwACAwAAAAAAAAAAAAEAAgMhBBESMTJBcdH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AYBI30CAPnSzx+X5bNDY6UkZM7akLn/bjSfil4dG6IEyA+oIOv1AipYLN3So4DGkMrwUIVG1//9k="
   },
   "/media/editorial/shop-room-living.webp": {
     "src": "/media/optimized/ba0e2fec3ecd1bc0.webp",
+    "srcset": "/media/optimized/ba0e2fec3ecd1bc0-480.webp 480w, /media/optimized/ba0e2fec3ecd1bc0-720.webp 720w, /media/optimized/ba0e2fec3ecd1bc0.webp 864w",
+    "width": 864,
+    "height": 1080,
     "fallback": "/media/optimized/ba0e2fec3ecd1bc0.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EAB8QAAICAgMAAwAAAAAAAAAAAAECAxEABBIhMXKBof/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AWC3IAOb6cCtLJzF5Im1G01RkIo7tu/zKtaemcoFtvO/chRItKJVoF6Jsjl95SIFL8iWJ+WGGIf/Z"
   },
   "/media/gallery/01.jpg": {
     "src": "/media/optimized/b03ed74b0f609ca8.webp",
+    "srcset": "/media/optimized/b03ed74b0f609ca8-480.webp 480w, /media/optimized/b03ed74b0f609ca8-720.webp 720w, /media/optimized/b03ed74b0f609ca8.webp 797w",
+    "width": 797,
+    "height": 448,
     "fallback": "/media/optimized/b03ed74b0f609ca8.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQMEBf/EAB8QAAICAgEFAAAAAAAAAAAAAAECABEDBCExM0Fzsf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAMAwEAAhEDEQA/AELgViCcg46AVxA+NDshGahRqvMxxLdXtYvafkCZMdv/2Q=="
   },
   "/media/gallery/02.jpg": {
     "src": "/media/optimized/30b53c60a6e5d3dc.webp",
+    "srcset": "/media/optimized/30b53c60a6e5d3dc-480.webp 480w, /media/optimized/30b53c60a6e5d3dc-720.webp 720w, /media/optimized/30b53c60a6e5d3dc-960.webp 960w, /media/optimized/30b53c60a6e5d3dc.webp 1049w",
+    "width": 1049,
+    "height": 1400,
     "fallback": "/media/optimized/30b53c60a6e5d3dc.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAiEAACAQMDBQEAAAAAAAAAAAABAgMAERIEBSETMUFRYTL/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABgRAQADAQAAAAAAAAAAAAAAAAABEUES/9oADAMBAAIRAxEAPwDP1cLMoZbC36Ha32obagOrTqHzfn1T+4tGWzDYNexX39tS8hWJo5oycwpuWNxftUrxXnS2BmYZMSx8nmroUEWJHJYkc0UUiH//2Q=="
   },
   "/media/gallery/03.jpg": {
     "src": "/media/optimized/2e2c8e18df85e642.webp",
+    "srcset": "/media/optimized/2e2c8e18df85e642-480.webp 480w, /media/optimized/2e2c8e18df85e642-720.webp 720w, /media/optimized/2e2c8e18df85e642-960.webp 960w, /media/optimized/2e2c8e18df85e642.webp 1050w",
+    "width": 1050,
+    "height": 1400,
     "fallback": "/media/optimized/2e2c8e18df85e642.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAVABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEFAwT/xAAiEAACAwABAgcAAAAAAAAAAAABAgADESEEEhMiMUFRccH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AIthAuTSe0KCfrJtc9LqxpGrvHEXUFqbSfDUqwwBh7fkZZK+k8leFufXYLTkVLKUsXGUGcltCHBmD4hCA3//2Q=="
   },
   "/media/gallery/04.jpg": {
     "src": "/media/optimized/96212ba8295a8cf1.webp",
+    "srcset": "/media/optimized/96212ba8295a8cf1-480.webp 480w, /media/optimized/96212ba8295a8cf1.webp 630w",
+    "width": 630,
+    "height": 841,
     "fallback": "/media/optimized/96212ba8295a8cf1.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAWABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABBEhEjEiQVFh4f/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8ApKgXDovo9V3IJN8XXvWTUom4zvLwbk3YDflMmu7VRnLDI6+KIWSLbyBpHhBI2SNE0uOO3l8kgVfttmiiil//2Q=="
   },
   "/media/instagram/1-DWPTopHDCc2.jpg": {
     "src": "/media/optimized/07ca500e0a290e44.webp",
+    "srcset": "/media/optimized/07ca500e0a290e44-480.webp 480w, /media/optimized/07ca500e0a290e44-720.webp 720w, /media/optimized/07ca500e0a290e44-960.webp 960w, /media/optimized/07ca500e0a290e44-1200.webp 1200w, /media/optimized/07ca500e0a290e44.webp 1440w",
+    "width": 1440,
+    "height": 1806,
     "fallback": "/media/optimized/07ca500e0a290e44.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFA//EACIQAAIABgICAwAAAAAAAAAAAAECAAMEERIhMUEFcWGBwf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERMTL/2gAMAwEAAhEDEQA/AN5ElU7U3v3r7hWpw1XTkooRQMt/MT/JUqislJT04OUu9kHJvzFKQJVPSpmqBlUZEAc/sFgwd2LvidKBaw79xJ8nOcoRfV8fQggiV0Lw/9k="
   },
   "/media/living.webp": {
     "src": "/media/optimized/8c7de9309d2f1749.webp",
+    "srcset": "/media/optimized/8c7de9309d2f1749-480.webp 480w, /media/optimized/8c7de9309d2f1749-720.webp 720w, /media/optimized/8c7de9309d2f1749-960.webp 960w, /media/optimized/8c7de9309d2f1749-1200.webp 1200w, /media/optimized/8c7de9309d2f1749.webp 1280w",
+    "width": 1280,
+    "height": 720,
     "fallback": "/media/optimized/8c7de9309d2f1749.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAgEAABAwMFAQAAAAAAAAAAAAADAAECBBIxERMhM0Fx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAAMBAAAAAAAAAAAAAAAAAAABIUH/2gAMAwEAAhEDEQA/ABBXDe5mhj10waqQYkfZnbLnVlDQZkrRdRPiNViYf//Z"
   },
   "/media/shopify/accrarug-cream-red.jpg": {
     "src": "/media/optimized/e3db7f009313cf2b.webp",
+    "srcset": "/media/optimized/e3db7f009313cf2b-480.webp 480w, /media/optimized/e3db7f009313cf2b-720.webp 720w, /media/optimized/e3db7f009313cf2b-960.webp 960w, /media/optimized/e3db7f009313cf2b.webp 1200w",
+    "width": 1200,
+    "height": 769,
     "fallback": "/media/optimized/e3db7f009313cf2b.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAKABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHhABAAEEAgMAAAAAAAAAAAAAAQIAAxESISIxUsH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANagoup7FJbWUkmRY566/aC2GqY4z4qWoxjfWMQXPIUFH//Z"
   },
   "/media/shopify/accrarug-grey-gold.jpg": {
     "src": "/media/optimized/85581d122adfdc68.webp",
+    "srcset": "/media/optimized/85581d122adfdc68-480.webp 480w, /media/optimized/85581d122adfdc68-720.webp 720w, /media/optimized/85581d122adfdc68-960.webp 960w, /media/optimized/85581d122adfdc68.webp 1200w",
+    "width": 1200,
+    "height": 769,
     "fallback": "/media/optimized/85581d122adfdc68.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAKABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwIE/8QAHBABAAIBBQAAAAAAAAAAAAAAAQACEhEhMUGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AN1WtXjyWYZA9wKro7xaBkQE/9k="
   },
   "/media/shopify/alisarug-beige-brown.jpg": {
     "src": "/media/optimized/8d9c2efe635ab1bb.webp",
+    "srcset": "/media/optimized/8d9c2efe635ab1bb-480.webp 480w, /media/optimized/8d9c2efe635ab1bb-720.webp 720w, /media/optimized/8d9c2efe635ab1bb-960.webp 960w, /media/optimized/8d9c2efe635ab1bb.webp 1200w",
+    "width": 1200,
+    "height": 769,
     "fallback": "/media/optimized/8d9c2efe635ab1bb.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAKABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAHRABAAICAgMAAAAAAAAAAAAAAQACAxEhMSJRkf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A0sRQfLXuJYx2UA63J6WsHC/YtVe1ZJf/2Q=="
   },
   "/media/shopify/asherrug-grey-beige.jpg": {
     "src": "/media/optimized/ef60d9018e034a79.webp",
+    "srcset": "/media/optimized/ef60d9018e034a79-480.webp 480w, /media/optimized/ef60d9018e034a79-720.webp 720w, /media/optimized/ef60d9018e034a79-960.webp 960w, /media/optimized/ef60d9018e034a79.webp 1200w",
+    "width": 1200,
+    "height": 578,
     "fallback": "/media/optimized/ef60d9018e034a79.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAACAwADAAAAAAAAAAAAAAABAgADEQQhMf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC+FTVVUO1LN7su8VMh3AwzMiIDf//Z"
   },
   "/media/shopify/oak-writing-desk.jpg": {
     "src": "/media/optimized/5b1b922f99cd3b30.webp",
+    "srcset": "/media/optimized/5b1b922f99cd3b30-480.webp 480w, /media/optimized/5b1b922f99cd3b30-720.webp 720w, /media/optimized/5b1b922f99cd3b30-960.webp 960w, /media/optimized/5b1b922f99cd3b30.webp 1024w",
+    "width": 1024,
+    "height": 683,
     "fallback": "/media/optimized/5b1b922f99cd3b30.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAP/xAAeEAACAQQDAQAAAAAAAAAAAAABAgMAETFhBCFBEv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAEQAB/9oADAMBAAIRAxEAPwBPLldGVY0BDFjfQPlRmmMQQ5+s+WpnMAMmB1jVBkJJF2PW6Cowv//Z"
   },
   "/media/story/finbar-eileen.jpg": {
     "src": "/media/optimized/6cc3eee257d8b082.webp",
+    "srcset": "/media/optimized/6cc3eee257d8b082-480.webp 480w, /media/optimized/6cc3eee257d8b082-720.webp 720w, /media/optimized/6cc3eee257d8b082-960.webp 960w, /media/optimized/6cc3eee257d8b082.webp 1106w",
+    "width": 1106,
+    "height": 1382,
     "fallback": "/media/optimized/6cc3eee257d8b082.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgb/xAAiEAEAAQMDBAMAAAAAAAAAAAABAgADEQQSIQUiMUEycfD/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIRITH/2gAMAwEAAhEDEQA/AH2pzYzuEUjnEX21nWrOcYQcYflu81VFzvMIRdp9Vzs9Rcv69hFQZog+T8VHGtNKV4xuuuz3ve5jEw55qa3Es9RCC9suF59UUUXA+n//2Q=="
   },
   "/media/story/shopfront-parnell-street.jpg": {
     "src": "/media/optimized/1c97eb495d3096ed.webp",
+    "srcset": "/media/optimized/1c97eb495d3096ed-480.webp 480w, /media/optimized/1c97eb495d3096ed-720.webp 720w, /media/optimized/1c97eb495d3096ed-960.webp 960w, /media/optimized/1c97eb495d3096ed-1200.webp 1200w, /media/optimized/1c97eb495d3096ed.webp 1600w",
+    "width": 1600,
+    "height": 1200,
     "fallback": "/media/optimized/1c97eb495d3096ed.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAfEAACAgIBBQAAAAAAAAAAAAABEQACAwQxEiEiYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AJQaGvV51+huJTayArgBBgkw6E5EylwgI1dfHVp9/cVF/9k="
   }

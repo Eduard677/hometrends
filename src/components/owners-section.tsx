@@ -30,6 +30,7 @@ export function OwnersSection() {
           alt="Finbar and Eileen Keaveney in their Ennis furniture showroom."
           width={1106}
           height={1382}
+          sizes="(min-width: 900px) 600px, 92vw"
           loading="lazy"
         />
       </div>

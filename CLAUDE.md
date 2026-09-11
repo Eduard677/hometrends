@@ -148,11 +148,17 @@ Related products are also tag-based (`catalog.ts:428`).
 the site is built from Tailwind utilities; the visual language is hand-written
 CSS.
 
-Custom properties are spread across the nine stylesheets, which load in this
+Custom properties are spread across the stylesheets, which load in this
 order from `src/routes/__root.tsx` — **last wins**:
 
-    styles.css, styles.apple.css, stage2, stage3, stage4, stage5, stage6,
-    showroom, stage7
+    styles.fonts, styles.css, styles.apple, stage2, stage3, stage4, stage5,
+    stage6, showroom, stage7, first-screen, cards-spaces, bag, reviews,
+    instagram, home-bands, visit, wishlist, controls
+
+That is **19 sheets**, not the nine this note originally recorded — ten more
+were added after Phase 0. All 19 are render-blocking `<link rel="stylesheet">`
+tags, so the homepage spends 19 serial round trips on 64 KB of CSS. Re-count
+from `__root.tsx` rather than trusting any number written here.
 
 Distinct custom properties declared per sheet: styles.css 45, apple 45,
 stage2 31, stage4 9, showroom 7, stage6 7, stage7 2, stage3 0, stage5 0.
@@ -162,19 +168,37 @@ more layers, several with `!important`, and later `main`-qualified selectors
 (0,1,1) silently beat bare classes (0,1,0) written in stage7. Three fixes in
 one session were lost this way before being re-qualified:
 `main .product-gallery__thumbs`, `main .reviews-section__grid`,
-`main .room-tiles`. **Always grep all nine sheets before concluding a rule does
-not exist, and check specificity, not just load order.**
+`main .room-tiles`. **Always grep all nineteen sheets before concluding a rule
+does not exist, and check specificity, not just load order.**
 
 ## 4. Images — what the media split means
 
 Two different pipelines, and the split is the point:
 
-- **`public/media/optimized/`** (70 files, 9 MB) is *generated*.
+- **`public/media/optimized/`** is *generated*.
   `scripts/optimize-site-media.mjs` scans `src/**/*.{ts,tsx,css}` for
   `/media/...` references, re-encodes each to webp + jpg at a content hash, and
   writes `src/data/site-media.json` mapping the original path to
-  `{src, fallback, blur}`. `SiteImage` reads that manifest. This is the path
-  every editorial/brand/story photograph takes.
+  `{src, srcset, width, height, fallback, blur}`. `SiteImage` reads that
+  manifest. This is the path every editorial/brand/story photograph takes.
+
+  Each entry carries a webp ladder at 480/720/960/1200 plus the primary, and
+  `SiteImage` takes a `sizes` prop. **Anything rendered narrower than the
+  viewport should pass its own `sizes`** — the default is `100vw`, which is
+  safe but saves nothing. Without ladder steps a 404px card was pulling a
+  1280px file.
+
+  **The hash is the sha256 of the source file, so the sources in `public/media`
+  must be the ones the outputs were generated from, or the script is not
+  idempotent.** This was broken once: 25 sources had been replaced with the
+  optimiser's own 1600px output (re-committed to save space), so the hashes no
+  longer matched and a re-run silently regenerated everything from
+  second-generation images — lower resolution, double-compressed — while
+  orphaning the committed files. They were restored from
+  `~/Downloads/hometrends-grok/public/media`, which is the canonical tree.
+  **Never commit a downscaled source to save repo size.** The 200 KB budget
+  does not require it: `prepare-deployment-media.mjs` compresses oversized
+  originals in the build output only and leaves the source assets alone.
 - **`public/media/catalogue/`** (8829 files, 360 MB on disk) is *supplied
   product photography*, referenced directly from `ht-shop.json`, and is
   **explicitly excluded** from the optimiser at

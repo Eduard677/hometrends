@@ -30,7 +30,7 @@ export function CompleteTheRoom({ products, slug, category }: { products: Produc
         ))}
         {room ? (
           <figure className="complete__room">
-            <SiteImage src={room.image} alt={room.alt} width={800} height={1000} loading="lazy" />
+            <SiteImage src={room.image} alt={room.alt} width={800} height={1000} sizes="(min-width: 900px) 310px, 45vw" loading="lazy" />
             <figcaption>{room.label}</figcaption>
           </figure>
         ) : null}

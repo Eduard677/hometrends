@@ -4,6 +4,11 @@
     "originalBytes": 205558,
     "webpBytes": 124542,
     "jpegBytes": 181979,
+    "ladder": [
+      480,
+      720,
+      853
+    ],
     "status": "optimized"
   },
   {
@@ -11,20 +16,51 @@
     "originalBytes": 50950,
     "webpBytes": 47754,
     "jpegBytes": 84030,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1280
+    ],
     "status": "optimized"
   },
   {
     "source": "/media/editorial/collection-dining.webp",
-    "originalBytes": 45594,
-    "webpBytes": 43278,
-    "jpegBytes": 83005,
+    "originalBytes": 50062,
+    "webpBytes": 37668,
+    "jpegBytes": 69816,
+    "ladder": [
+      480,
+      720,
+      840
+    ],
     "status": "optimized"
   },
   {
     "source": "/media/editorial/collection-living.webp",
-    "originalBytes": 36714,
-    "webpBytes": 35000,
-    "jpegBytes": 70617,
+    "originalBytes": 56926,
+    "webpBytes": 39712,
+    "jpegBytes": 65776,
+    "ladder": [
+      480,
+      720,
+      854
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/editorial/errigel-corner.jpg",
+    "originalBytes": 240350,
+    "webpBytes": 159378,
+    "jpegBytes": 150531,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -32,6 +68,13 @@
     "originalBytes": 455470,
     "webpBytes": 84032,
     "jpegBytes": 151338,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -39,6 +82,13 @@
     "originalBytes": 616076,
     "webpBytes": 168892,
     "jpegBytes": 182652,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -46,6 +96,13 @@
     "originalBytes": 808571,
     "webpBytes": 179926,
     "jpegBytes": 180329,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -53,6 +110,13 @@
     "originalBytes": 537945,
     "webpBytes": 131892,
     "jpegBytes": 156686,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -60,6 +124,13 @@
     "originalBytes": 596328,
     "webpBytes": 158922,
     "jpegBytes": 181020,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -67,6 +138,13 @@
     "originalBytes": 461312,
     "webpBytes": 98984,
     "jpegBytes": 164378,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -74,6 +152,13 @@
     "originalBytes": 597060,
     "webpBytes": 173888,
     "jpegBytes": 186735,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -81,6 +166,13 @@
     "originalBytes": 423230,
     "webpBytes": 92520,
     "jpegBytes": 163153,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -88,6 +180,13 @@
     "originalBytes": 716007,
     "webpBytes": 162076,
     "jpegBytes": 163173,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -95,6 +194,13 @@
     "originalBytes": 123320,
     "webpBytes": 119468,
     "jpegBytes": 193245,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1536
+    ],
     "status": "optimized"
   },
   {
@@ -102,6 +208,13 @@
     "originalBytes": 288264,
     "webpBytes": 176362,
     "jpegBytes": 179813,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -109,6 +222,12 @@
     "originalBytes": 388609,
     "webpBytes": 71466,
     "jpegBytes": 156021,
+    "ladder": [
+      480,
+      720,
+      960,
+      1152
+    ],
     "status": "optimized"
   },
   {
@@ -116,6 +235,12 @@
     "originalBytes": 641043,
     "webpBytes": 144638,
     "jpegBytes": 179787,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -123,6 +248,13 @@
     "originalBytes": 588689,
     "webpBytes": 157884,
     "jpegBytes": 170414,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   },
   {
@@ -130,6 +262,12 @@
     "originalBytes": 608192,
     "webpBytes": 195282,
     "jpegBytes": 161383,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -137,6 +275,12 @@
     "originalBytes": 607255,
     "webpBytes": 173864,
     "jpegBytes": 156942,
+    "ladder": [
+      480,
+      720,
+      960,
+      1152
+    ],
     "status": "optimized"
   },
   {
@@ -144,6 +288,12 @@
     "originalBytes": 500837,
     "webpBytes": 141712,
     "jpegBytes": 160251,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -151,6 +301,12 @@
     "originalBytes": 842488,
     "webpBytes": 186304,
     "jpegBytes": 192647,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -158,6 +314,12 @@
     "originalBytes": 677126,
     "webpBytes": 185428,
     "jpegBytes": 181598,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -165,6 +327,12 @@
     "originalBytes": 603627,
     "webpBytes": 193276,
     "jpegBytes": 177240,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -172,6 +340,11 @@
     "originalBytes": 45024,
     "webpBytes": 42624,
     "jpegBytes": 81395,
+    "ladder": [
+      480,
+      720,
+      864
+    ],
     "status": "optimized"
   },
   {
@@ -179,6 +352,11 @@
     "originalBytes": 62644,
     "webpBytes": 60542,
     "jpegBytes": 108632,
+    "ladder": [
+      480,
+      720,
+      864
+    ],
     "status": "optimized"
   },
   {
@@ -186,6 +364,74 @@
     "originalBytes": 59844,
     "webpBytes": 57034,
     "jpegBytes": 100966,
+    "ladder": [
+      480,
+      720,
+      864
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/gallery/01.jpg",
+    "originalBytes": 76869,
+    "webpBytes": 40838,
+    "jpegBytes": 68348,
+    "ladder": [
+      480,
+      720,
+      797
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/gallery/02.jpg",
+    "originalBytes": 346419,
+    "webpBytes": 156760,
+    "jpegBytes": 187253,
+    "ladder": [
+      480,
+      720,
+      960,
+      1049
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/gallery/03.jpg",
+    "originalBytes": 263132,
+    "webpBytes": 155264,
+    "jpegBytes": 148382,
+    "ladder": [
+      480,
+      720,
+      960,
+      1050
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/gallery/04.jpg",
+    "originalBytes": 101645,
+    "webpBytes": 59416,
+    "jpegBytes": 90256,
+    "ladder": [
+      480,
+      630
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/instagram/1-DWPTopHDCc2.jpg",
+    "originalBytes": 238869,
+    "webpBytes": 157970,
+    "jpegBytes": 161881,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1440
+    ],
     "status": "optimized"
   },
   {
@@ -193,6 +439,13 @@
     "originalBytes": 48736,
     "webpBytes": 45776,
     "jpegBytes": 87210,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1280
+    ],
     "status": "optimized"
   },
   {
@@ -200,6 +453,12 @@
     "originalBytes": 325809,
     "webpBytes": 173660,
     "jpegBytes": 165736,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -207,6 +466,12 @@
     "originalBytes": 318239,
     "webpBytes": 178736,
     "jpegBytes": 182226,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -214,6 +479,12 @@
     "originalBytes": 244548,
     "webpBytes": 147310,
     "jpegBytes": 187423,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -221,6 +492,12 @@
     "originalBytes": 196099,
     "webpBytes": 170086,
     "jpegBytes": 185268,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200
+    ],
     "status": "optimized"
   },
   {
@@ -228,6 +505,25 @@
     "originalBytes": 92342,
     "webpBytes": 55466,
     "jpegBytes": 83212,
+    "ladder": [
+      480,
+      720,
+      960,
+      1024
+    ],
+    "status": "optimized"
+  },
+  {
+    "source": "/media/story/finbar-eileen.jpg",
+    "originalBytes": 133246,
+    "webpBytes": 92872,
+    "jpegBytes": 146804,
+    "ladder": [
+      480,
+      720,
+      960,
+      1106
+    ],
     "status": "optimized"
   },
   {
@@ -235,6 +531,13 @@
     "originalBytes": 661939,
     "webpBytes": 176770,
     "jpegBytes": 166810,
+    "ladder": [
+      480,
+      720,
+      960,
+      1200,
+      1600
+    ],
     "status": "optimized"
   }
 ]

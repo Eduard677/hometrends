@@ -36,11 +36,37 @@ for (const source of [...sources].sort()) {
     if (buffer.length >= 200000) throw new Error(`Image exceeds budget: ${source}`);
     const target = `${base}.${format === 'jpeg' ? 'jpg' : 'webp'}`;
     await fs.writeFile(`public${target}`, buffer);
-    outputs[format] = { path: target, bytes: buffer.length };
+    const meta = await sharp(buffer).metadata();
+    outputs[format] = { path: target, bytes: buffer.length, width: meta.width, height: meta.height };
   }
+
+  // Smaller webp steps beneath the primary, so a card stops downloading a
+  // full-width photograph to paint at 404px. Widths at or above the primary
+  // are pointless - withoutEnlargement caps them - and are skipped.
+  const ladder = [{ path: outputs.webp.path, width: outputs.webp.width }];
+  for (const width of [1200, 960, 720, 480]) {
+    if (width >= outputs.webp.width) continue;
+    let buffer;
+    for (const quality of [82, 72, 60, 48, 36]) {
+      buffer = await sharp(input).rotate().resize({ width, withoutEnlargement: true }).flatten({ background: '#EFEAE1' }).webp({ quality }).toBuffer();
+      if (buffer.length < 200000) break;
+    }
+    if (buffer.length >= 200000) continue;
+    const target = `${base}-${width}.webp`;
+    await fs.writeFile(`public${target}`, buffer);
+    ladder.push({ path: target, width });
+  }
+  ladder.sort((a, b) => a.width - b.width);
   const blur = await sharp(input).rotate().resize({ width: 16 }).jpeg({ quality: 30 }).toBuffer();
-  manifest[source] = { src: outputs.webp.path, fallback: outputs.jpeg.path, blur: `data:image/jpeg;base64,${blur.toString('base64')}` };
-  report.push({ source, originalBytes: input.length, webpBytes: outputs.webp.bytes, jpegBytes: outputs.jpeg.bytes, status: 'optimized' });
+  manifest[source] = {
+    src: outputs.webp.path,
+    srcset: ladder.map(step => `${step.path} ${step.width}w`).join(', '),
+    width: outputs.webp.width,
+    height: outputs.webp.height,
+    fallback: outputs.jpeg.path,
+    blur: `data:image/jpeg;base64,${blur.toString('base64')}`,
+  };
+  report.push({ source, originalBytes: input.length, webpBytes: outputs.webp.bytes, jpegBytes: outputs.jpeg.bytes, ladder: ladder.map(s => s.width), status: 'optimized' });
 }
 await fs.writeFile('src/data/site-media.json', JSON.stringify(manifest, null, 2) + '\n');
 await fs.writeFile('reports/site-image-optimization.json', JSON.stringify(report, null, 2) + '\n');

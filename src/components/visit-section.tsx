@@ -24,6 +24,6 @@ export function VisitSection() {
       <p>Public parking on Parnell Street and a short walk from Friary &amp; Cornmarket car parks.</p>
       <p className="visit-section__family">Family-owned since 2013</p>
     </div>
-    <figure><SiteImage src="/media/story/shopfront-parnell-street.jpg" alt="Home Trends Furniture shopfront at 29 Parnell Street, Ennis" width={1200} height={900} loading="lazy" /></figure>
+    <figure><SiteImage src="/media/story/shopfront-parnell-street.jpg" alt="Home Trends Furniture shopfront at 29 Parnell Street, Ennis" width={1200} height={900} sizes="(min-width: 900px) 600px, 92vw" loading="lazy" /></figure>
   </section>;
 }

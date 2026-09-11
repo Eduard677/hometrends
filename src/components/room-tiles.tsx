@@ -113,6 +113,7 @@ export function RoomTiles({
                     alt=""
                     width={800}
                     height={600}
+                    sizes="(min-width: 900px) 420px, 80vw"
                     style={{ objectPosition: item.position ?? "50% 50%" }}
                   />
                 </figure>
