@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { STORE } from "@/lib/store";
+import { SiteImage } from "./site-image";
 
 /**
  * The account header, then one wide image with three beneath it.
@@ -88,14 +89,14 @@ export function SocialStrip() {
       </div>
       <figure className="social__lead">
         <a href={hrefFor(LEAD)} target="_blank" rel="noreferrer">
-          <img src={LEAD.src} alt={LEAD.alt} loading="lazy" decoding="async" />
+          <SiteImage src={LEAD.src} alt={LEAD.alt} loading="lazy" decoding="async" />
         </a>
       </figure>
       <ul className="social__row">
         {ROW.map((tile) => (
           <li key={tile.src}>
             <a href={hrefFor(tile)} target="_blank" rel="noreferrer">
-              <img src={tile.src} alt={tile.alt} loading="lazy" decoding="async" />
+              <SiteImage src={tile.src} alt={tile.alt} loading="lazy" decoding="async" />
             </a>
           </li>
         ))}

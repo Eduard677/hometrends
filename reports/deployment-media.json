@@ -5949,7 +5949,6 @@
     "/media/detail/11-lamp-vase-table.jpg",
     "/media/detail/12-rug-pile-floor.jpg",
     "/media/dining.webp",
-    "/media/editorial/errigel-corner.jpg",
     "/media/editorial/errigel-modular.jpg",
     "/media/editorial/hero-dining-editorial-desktop.jpg",
     "/media/editorial/hero-dining-editorial-desktop.webp",
@@ -5967,10 +5966,6 @@
     "/media/fabric/sofa-base.jpg",
     "/media/fabric/sofa-mask.png",
     "/media/favicon.svg",
-    "/media/gallery/01.jpg",
-    "/media/gallery/02.jpg",
-    "/media/gallery/03.jpg",
-    "/media/gallery/04.jpg",
     "/media/gallery/05.jpg",
     "/media/hero/01-bedroom-stopgap.jpg",
     "/media/hero/02-bedroom-backup.jpg",
@@ -5978,8 +5973,12 @@
     "/media/hero/04-from-shop-hero.jpg",
     "/media/hero/05-living-cdn.jpg",
     "/media/hero/06-dining-cdn.jpg",
+    "/media/hero-placeholder.jpg",
     "/media/instagram/2-DQ2IhG3jHAb.jpg",
     "/media/instagram/3-DQCoQyJDMLJ.jpg",
+    "/media/instagram/4-DYz-Vu-Mmn2.jpg",
+    "/media/instagram/antrim-bed.jpg",
+    "/media/instagram/bedroom-sage.jpg",
     "/media/instagram/c1-65573527.jpg",
     "/media/instagram/desk.jpg",
     "/media/instagram/manifest.json",
@@ -6729,6 +6728,11 @@
   ],
   "compressedInBuildOnly": [
     {
+      "url": "/media/editorial/errigel-corner.jpg",
+      "before": 240350,
+      "after": 157329
+    },
+    {
       "url": "/media/editorial/from-shop-garden.jpg",
       "before": 277739,
       "after": 184992
@@ -6772,6 +6776,16 @@
       "url": "/media/editorial/search-tables.jpg",
       "before": 235977,
       "after": 144252
+    },
+    {
+      "url": "/media/gallery/02.jpg",
+      "before": 346419,
+      "after": 195226
+    },
+    {
+      "url": "/media/gallery/03.jpg",
+      "before": 263132,
+      "after": 136465
     },
     {
       "url": "/media/instagram/1-DWPTopHDCc2.jpg",
