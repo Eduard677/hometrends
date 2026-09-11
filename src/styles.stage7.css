@@ -610,9 +610,17 @@
  *
  * Halved so the band itself is the rhythm unit: 224px at 1440, 128px at 390.
  * Still a showroom's worth of air, but one value everywhere.
+ *
+ * Then the ceiling came down again, 7rem -> 6rem: 192px at 1440, 128px at 390
+ * unchanged. Only the clamp maximum moved, so the floor and the 8vw ramp are
+ * as they were and narrow viewports are untouched; the crossover where 8vw
+ * stops winning shifts from 1400px to 1200px. Measured before the change, for
+ * the record: no gap on the homepage reached half a viewport at either size —
+ * the largest was 336px against 900px tall, and 212px against 812px. This was
+ * a deliberate tightening of a sound rhythm, not a fix for dead space.
  */
 :root {
-  --section-block: clamp(4rem, 8vw, 7rem);
+  --section-block: clamp(4rem, 8vw, 6rem);
 }
 main > section,
 main > .ed-sec,
