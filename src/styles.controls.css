@@ -66,3 +66,29 @@ button.button,
   max-height: none !important;
   aspect-ratio: 241 / 240;
 }
+
+
+/* ——— Brand colour ———
+ *
+ * The site had a blue it could not explain. .visit-section was #416088 and
+ * nothing else on the page was blue, so it read as a stray. It is not: the
+ * comment in styles.visit.css records that it was sampled from the shopfront
+ * photograph, the painted wall around the yellow HT sign. It is the most
+ * brand-true colour in the project, and a literal-tokenising pass wrongly
+ * filed it as "not a palette colour" because it sat far from every warm token.
+ *
+ * So it becomes a token instead of an orphan, and the brand gets stated
+ * properly: the deep navy of the logo, the fascia blue of the shopfront, the
+ * sign yellow. Warm cream and ink still carry the content; navy carries the
+ * brand. Measured on --paper #efeae1:
+ *
+ *   brand        #1f2e45   11.42   cream on it 11.42
+ *   brand-fascia #416088    5.39   cream on it  5.39
+ *   brand-accent #c9a227    ----   on navy      5.66
+ *
+ * brand-accent is for navy grounds only. On cream it is 2.1 and fails. */
+:root {
+  --brand: #1f2e45;
+  --brand-fascia: #416088;
+  --brand-accent: #c9a227;
+}

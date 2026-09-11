@@ -1,11 +1,12 @@
 /* Visit block only. Fascia sampled from shopfront-parnell-street.jpg
-   (painted wall around the yellow HT sign): #416088.
+   (painted wall around the yellow HT sign). Now --brand-fascia, declared
+   with the rest of the brand colour in styles.controls.css.
    Cream #F4F1EA on that blue is 5.72:1 — WCAG AA for body. Not darkened;
    near-black charcoal stays off this section. */
 
 main.ed-page .visit-section,
 main .visit-section {
-  background:#416088;
+  background:var(--brand-fascia);
   color:#F4F1EA;
 }
 
@@ -27,7 +28,7 @@ main .visit-section .visit-section__family {
 /* No extra frame. Figure fill matches the section so the building sits in it. */
 main .visit-section figure,
 main .visit-section .site-image {
-  background-color:#416088;
+  background-color:var(--brand-fascia);
   border:0;
   box-shadow:none;
   filter: none;
