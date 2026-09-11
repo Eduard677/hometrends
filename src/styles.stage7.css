@@ -192,7 +192,7 @@
   border: 1px solid var(--line);
   border-radius: 2px 2px 0 0;
   transform: translateY(100%);
-  transition: transform 0.24s var(--ease, ease);
+  transition: transform var(--t-tap) var(--ease, ease);
 }
 .reserve-modal.is-on {
   transform: translateY(0);
@@ -345,7 +345,7 @@
   background: var(--paper);
   border-top: 1px solid var(--line);
   transform: translateY(100%);
-  transition: transform 0.24s var(--ease, ease);
+  transition: transform var(--t-tap) var(--ease, ease);
 }
 .filter-sheet.is-on {
   transform: translateY(0);
@@ -907,8 +907,8 @@ h1 .count {
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {
   .social__grid a {
     transition:
-      transform 0.28s var(--ease-sheet, ease),
-      box-shadow 0.28s var(--ease-sheet, ease);
+      transform var(--t-state) var(--ease-sheet, ease),
+      box-shadow var(--t-state) var(--ease-sheet, ease);
   }
   .social__grid a:hover {
     transform: translateY(-3px);
@@ -1170,7 +1170,7 @@ main .product-gallery__track {
   background: none;
   color: var(--ink-55);
   cursor: pointer;
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition: color var(--t-tap) ease, transform var(--t-tap) ease;
 }
 .save-heart:hover,
 .save-heart.is-saved {
@@ -1258,7 +1258,7 @@ main .product-gallery__track {
   border-right: 1px solid var(--ink-55);
   border-bottom: 1px solid var(--ink-55);
   transform: rotate(45deg) translate(-2px, -2px);
-  transition: transform 0.18s ease;
+  transition: transform var(--t-tap) ease;
 }
 .cart__detail[open] > summary::after {
   transform: rotate(-135deg) translate(-2px, -2px);
@@ -1340,7 +1340,7 @@ main .product-gallery__track {
    clip-path, so the figure never reflows and the caption below never moves. */
 .scroll-reveal {
   clip-path: inset(0 20% 0 20%);
-  transition: clip-path 560ms var(--ease-sheet, cubic-bezier(0.22, 1, 0.36, 1));
+  transition: clip-path var(--t-move) var(--ease-sheet, cubic-bezier(0.22, 1, 0.36, 1));
   will-change: clip-path;
 }
 .scroll-reveal.is-open {
@@ -1433,7 +1433,7 @@ main .product-gallery__track {
        transition-timing-function: ease-out !important }`, which silently
        overrode the specified 650ms curve — measured 0.5s/ease-out before this. */
     transition-property: transform !important;
-    transition-duration: 650ms !important;
+    transition-duration: var(--t-enter) !important;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
     will-change: transform;
   }
@@ -1446,7 +1446,7 @@ main .product-gallery__track {
   .room-tiles__card figcaption,
   .room-tiles__card__label {
     transition-property: opacity !important;
-    transition-duration: 650ms !important;
+    transition-duration: var(--t-enter) !important;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
   .room-tiles__card:hover figcaption,
@@ -1789,7 +1789,7 @@ html {
     background: var(--paper);
     border-top: 1px solid var(--line);
     transform: translateY(110%);
-    transition: transform 0.28s var(--ease-sheet, ease);
+    transition: transform var(--t-state) var(--ease-sheet, ease);
     /* Inert until shown, so it cannot swallow taps meant for the page. */
     visibility: hidden;
   }
@@ -1839,7 +1839,7 @@ html {
   border-right: 1px solid var(--ink-55);
   border-bottom: 1px solid var(--ink-55);
   transform: rotate(45deg) translate(-2px, -2px);
-  transition: transform 0.18s ease;
+  transition: transform var(--t-tap) ease;
 }
 .pdp-accordion[open] > summary::after {
   transform: rotate(-135deg) translate(-2px, -2px);
@@ -2162,7 +2162,7 @@ main .product-card__body {
   .social__lead a,
   .social__row a {
     transition-property: opacity !important;
-    transition-duration: 650ms !important;
+    transition-duration: var(--t-enter) !important;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
   .social__lead a:hover,
@@ -2310,7 +2310,7 @@ main .product-card__body {
    that was specified. */
 main .product-card {
   transition-property: transform, box-shadow !important;
-  transition-duration: 420ms !important;
+  transition-duration: var(--t-move) !important;
   transition-timing-function: var(--ease-rise) !important;
 }
 main .product-card:hover {
@@ -2319,7 +2319,7 @@ main .product-card:hover {
 }
 main .product-card:hover figure .product-media img {
   transform: scale(1.03) !important;
-  transition-duration: 650ms !important;
+  transition-duration: var(--t-enter) !important;
   transition-timing-function: var(--ease-rise) !important;
 }
 
@@ -2389,4 +2389,35 @@ main :is(
 ::selection {
   background: var(--brass);
   color: var(--paper);
+}
+
+/* ——— 2.13 One timing scale ———
+ *
+ * There were 34 distinct transition durations in this project: .4s and .45s,
+ * .8s and .85s — pairs no eye can tell apart, each representing a separate
+ * decision nobody was tracking. The blanket in showroom.css had been hiding
+ * most of that by flattening everything to .5s; with it gone, the spread is
+ * visible and worth fixing.
+ *
+ * Four steps, keyed to what the motion is doing, mapped from where the old
+ * values actually clustered rather than invented:
+ *
+ *   tap    .18–.24  ->  180ms   press, icon, the smallest acknowledgement
+ *   state  .28–.35  ->  320ms   colour, underline, a quiet change of state
+ *   move   .40–.55  ->  520ms   panels, overlays, things that travel
+ *   enter  .65–.85  ->  780ms   photography and authored arrivals
+ *
+ * move and enter sit at the top of their old clusters, which is where the
+ * slower, more deliberate feel comes from. tap deliberately does not move:
+ * slow feedback reads as latency, not luxury, and the most austere system in
+ * the reference set — Tesla — runs its interactive states at .33s, not .8s.
+ *
+ * Anything above .95s is left alone: the 2.4s colour melt on --ease-melt is a
+ * deliberate ambient effect, not a stray value.
+ */
+:root {
+  --t-tap: 180ms;
+  --t-state: 320ms;
+  --t-move: 520ms;
+  --t-enter: 780ms;
 }

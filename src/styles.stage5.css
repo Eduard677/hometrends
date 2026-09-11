@@ -128,28 +128,28 @@ html {
 }
 
 .overlay {
-  transition: opacity 0.22s ease;
+  transition: opacity var(--t-tap) ease;
 }
 
 .bag-drawer,
 .menu-split,
 .menu-panel,
 .search-panel {
-  transition: transform 0.22s ease, opacity 0.22s ease;
+  transition: transform var(--t-tap) ease, opacity var(--t-tap) ease;
 }
 
 .site-header {
   transition:
-    background-color 0.22s ease,
-    color 0.22s ease,
-    border-color 0.22s ease,
-    height 0.22s ease;
+    background-color var(--t-tap) ease,
+    color var(--t-tap) ease,
+    border-color var(--t-tap) ease,
+    height var(--t-tap) ease;
 }
 
 .product-card__cta,
 .button.is-added,
 .product-card__cta.is-added {
-  transition: color 0.2s ease, background-color 0.2s ease, text-decoration-color 0.2s ease;
+  transition: color var(--t-tap) ease, background-color var(--t-tap) ease, text-decoration-color var(--t-tap) ease;
 }
 
 @media (width <= 768px) {

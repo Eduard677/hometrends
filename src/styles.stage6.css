@@ -612,7 +612,7 @@ section.intro-bar .intro-bar__inner {
   z-index: 90;
   transform: translateY(-8px);
   opacity: 0;
-  transition: transform 0.42s var(--ease), opacity 0.42s var(--ease);
+  transition: transform var(--t-move) var(--ease), opacity var(--t-move) var(--ease);
 }
 
 .search-panel.is-on {
@@ -662,7 +662,7 @@ section.intro-bar .intro-bar__inner {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-1.5rem);
-  transition: transform 0.45s var(--ease), opacity 0.45s var(--ease);
+  transition: transform var(--t-move) var(--ease), opacity var(--t-move) var(--ease);
 }
 
 .menu-panel.is-on {

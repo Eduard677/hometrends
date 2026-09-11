@@ -192,7 +192,7 @@ main .product-card__body .price {
   .room-tiles__card figure .site-image {
     transform: scale(1);
     transition-property: transform, opacity !important;
-    transition-duration: 650ms !important;
+    transition-duration: var(--t-enter) !important;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
   .room-tiles__card:hover figure img,
@@ -202,7 +202,7 @@ main .product-card__body .price {
     transform: scale(1.04);
   }
   .room-tiles__card span {
-    transition: opacity 650ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+    transition: opacity var(--t-enter) cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
   .room-tiles__card:hover span {
     opacity: 0.75;

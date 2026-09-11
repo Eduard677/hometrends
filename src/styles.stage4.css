@@ -25,7 +25,7 @@
   background-image: none;
   transition:
     background-color var(--errigel-duration) ease,
-    color 0.28s ease;
+    color var(--t-state) ease;
 }
 
 .lumina.lumina--errigel.is-dark {
@@ -338,7 +338,7 @@
 }
 
 .ed-review__body {
-  transition: opacity 0.28s ease;
+  transition: opacity var(--t-state) ease;
   transform: none;
 }
 
@@ -422,10 +422,10 @@
   height: 100%;
   background: #1a1815;
   transition:
-    flex 0.3s ease,
-    min-width 0.3s ease,
-    max-width 0.3s ease,
-    border-color 0.3s ease;
+    flex var(--t-state) ease,
+    min-width var(--t-state) ease,
+    max-width var(--t-state) ease,
+    border-color var(--t-state) ease;
 }
 
 .insta-select__card.is-near {
