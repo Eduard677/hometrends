@@ -1467,15 +1467,24 @@ main .product-gallery__track {
 }
 
 /* ——— Pricing presentation (decided) ———
-   The prior price was drawn in a separate grey (--ink-35 / --ink-55 / #6B6660
-   depending on which of three layers won). It is now the body ink at reduced
-   opacity, so a markdown reads as the same text set back rather than as a
-   second colour. No red, and no badge treatment anywhere — there was none to
-   remove. Product data and the prices themselves are untouched. */
+   The prior price was drawn in a separate grey (three layers disagreed about
+   which). It is now the body ink at reduced opacity, so a markdown reads as
+   the same text set back rather than as a second colour. No red, and no badge
+   treatment anywhere — there was none to remove. Product data and the prices
+   themselves are untouched.
+
+   The opacity was 0.45, which composites to rgb(144,141,135) on paper — 2.76
+   against the 4.5 that struck text still has to meet, because a previous price
+   is information, not decoration. 0.65 reaches 4.93 and keeps the idea
+   intact: the same ink, set back, not a second colour. */
 main .price s,
-.price s {
-  color:var(--ink);
-  opacity: 0.45;
+.price s,
+/* .product-card .price s in stage3.css is (0,2,1) and was quietly beating
+   `main .price s` at (0,1,2), so the colour half of this decision never
+   reached a product card — only the opacity did. Qualified to (0,2,2). */
+main .product-card .price s {
+  color: var(--ink) !important;
+  opacity: 0.65;
   font-weight: inherit;
   text-decoration-thickness: 1px;
 }
