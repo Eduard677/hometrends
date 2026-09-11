@@ -132,7 +132,27 @@ main .issue__plate { aspect-ratio: 16 / 7; overflow: hidden; }
 main .saved-remove { margin-top: 12px; padding: 12px 0; text-decoration: underline; }
 main .button--solid, main .button--primary { background: #1C1C1A; color: #F4F1EA; border-color: #1C1C1A; }
 main :is(.insta-select__card, .insta-select__card img, .room-tiles__item img, .product-card img, .button:active, .button:hover) { transform: none !important; }
-main *, footer * { transition-property: opacity, transform !important; transition-duration: 500ms !important; transition-timing-function: ease-out !important; transition-delay: 0ms !important; animation: none !important; }
+/* The transition half of this sweep is gone. It set transition-property,
+   -duration, -timing-function and -delay on every element in main and footer
+   with !important, which meant:
+
+     - 264 of 302 elements on the homepage ran at 0.5s ease-out — measured,
+       87% of the page on one generic curve;
+     - the house curve, cubic-bezier(.22, 1, .36, 1), was overwritten almost
+       everywhere it was specified. 2.9 in stage7 already documents losing a
+       650ms curve to it, and the product-card hover was a second casualty;
+     - transition-property pinned to opacity and transform meant box-shadow,
+       colour and filter could not transition anywhere without an override.
+
+   Authored per-element transitions apply again. Elements that never specified
+   one now have none, which is correct: a div with no state change does not
+   need a half-second transition.
+
+   `animation: none` stays for now. It is a separate blast radius — it is what
+   suppresses hero-cue-in and homes-marquee — and belongs to its own pass, not
+   to this one. Anything animating inside main or footer still needs
+   !important to clear it. */
+main *, footer * { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   main *, footer * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
