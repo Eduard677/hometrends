@@ -68,7 +68,14 @@ export function editorialFor(key: string, exclude?: string): Editorial[] {
 export function EditorialCell({ item }: { item: Editorial }) {
   return (
     <figure className="editorial-cell">
-      <SiteImage src={item.image} alt={item.alt} width={800} height={1000} sizes="(min-width: 900px) 420px, 46vw" loading="lazy" />
+      <SiteImage
+        src={item.image}
+        alt={item.alt}
+        width={800}
+        height={1000}
+        sizes="(min-width: 900px) 420px, 46vw"
+        loading="lazy"
+      />
       <figcaption>{item.label}</figcaption>
     </figure>
   );

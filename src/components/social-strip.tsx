@@ -89,14 +89,26 @@ export function SocialStrip() {
       </div>
       <figure className="social__lead">
         <a href={hrefFor(LEAD)} target="_blank" rel="noreferrer">
-          <SiteImage src={LEAD.src} alt={LEAD.alt} sizes="(min-width: 900px) 1248px, 92vw" loading="lazy" decoding="async" />
+          <SiteImage
+            src={LEAD.src}
+            alt={LEAD.alt}
+            sizes="(min-width: 900px) 1248px, 92vw"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
       </figure>
       <ul className="social__row">
         {ROW.map((tile) => (
           <li key={tile.src}>
             <a href={hrefFor(tile)} target="_blank" rel="noreferrer">
-              <SiteImage src={tile.src} alt={tile.alt} sizes="(min-width: 900px) 410px, 30vw" loading="lazy" decoding="async" />
+              <SiteImage
+                src={tile.src}
+                alt={tile.alt}
+                sizes="(min-width: 900px) 410px, 30vw"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </li>
         ))}

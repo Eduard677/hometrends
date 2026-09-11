@@ -123,10 +123,20 @@ export function RoomTiles({
           </div>
         </div>
         <div className="room-tiles__controls room-tiles__controls--stage">
-          <button type="button" onClick={() => scrollBy(-1)} disabled={atStart} aria-label="Previous spaces">
+          <button
+            type="button"
+            onClick={() => scrollBy(-1)}
+            disabled={atStart}
+            aria-label="Previous spaces"
+          >
             <ChevronLeft size={16} strokeWidth={1.6} aria-hidden="true" />
           </button>
-          <button type="button" onClick={() => scrollBy(1)} disabled={atEnd} aria-label="Next spaces">
+          <button
+            type="button"
+            onClick={() => scrollBy(1)}
+            disabled={atEnd}
+            aria-label="Next spaces"
+          >
             <ChevronRight size={16} strokeWidth={1.6} aria-hidden="true" />
           </button>
         </div>

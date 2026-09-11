@@ -15,7 +15,15 @@ import { SiteImage } from "./site-image";
  * /media/catalogue, so the wide cell can never repeat a cutout in its own row.
  * If the pool yields nothing the cell is skipped rather than left empty.
  */
-export function CompleteTheRoom({ products, slug, category }: { products: Product[]; slug: string; category?: string }) {
+export function CompleteTheRoom({
+  products,
+  slug,
+  category,
+}: {
+  products: Product[];
+  slug: string;
+  category?: string;
+}) {
   if (!products.length) return null;
   const cards = products.slice(0, 3);
   const room = roomPhotoFor(slug, category);
@@ -30,7 +38,14 @@ export function CompleteTheRoom({ products, slug, category }: { products: Produc
         ))}
         {room ? (
           <figure className="complete__room">
-            <SiteImage src={room.image} alt={room.alt} width={800} height={1000} sizes="(min-width: 900px) 310px, 45vw" loading="lazy" />
+            <SiteImage
+              src={room.image}
+              alt={room.alt}
+              width={800}
+              height={1000}
+              sizes="(min-width: 900px) 310px, 45vw"
+              loading="lazy"
+            />
             <figcaption>{room.label}</figcaption>
           </figure>
         ) : null}

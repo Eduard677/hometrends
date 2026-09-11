@@ -22,13 +22,27 @@ export function MosaicBreak({ items, flip = false }: { items: Editorial[]; flip?
   return (
     <section className={`mosaic${flip ? " mosaic--flip" : ""}`} aria-label="Featured">
       <figure className="mosaic__lead">
-        <SiteImage src={lead.image} alt={lead.alt} width={1200} height={900} sizes="(min-width: 900px) 840px, 92vw" loading="lazy" />
+        <SiteImage
+          src={lead.image}
+          alt={lead.alt}
+          width={1200}
+          height={900}
+          sizes="(min-width: 900px) 840px, 92vw"
+          loading="lazy"
+        />
         <figcaption>{lead.label}</figcaption>
       </figure>
       <div className="mosaic__stack">
         {stacked.map((item) => (
           <figure key={item.image}>
-            <SiteImage src={item.image} alt={item.alt} width={800} height={600} sizes="(min-width: 900px) 420px, 46vw" loading="lazy" />
+            <SiteImage
+              src={item.image}
+              alt={item.alt}
+              width={800}
+              height={600}
+              sizes="(min-width: 900px) 420px, 46vw"
+              loading="lazy"
+            />
             <figcaption>{item.label}</figcaption>
           </figure>
         ))}
