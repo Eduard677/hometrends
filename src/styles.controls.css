@@ -11,3 +11,58 @@ button.button,
 .menu-split__close {
   border-radius: 4px;
 }
+
+
+/* ——— The real logo ———
+ *
+ * The header carried ht-logo-test.svg: a hand-drawn horizontal approximation,
+ * 221x64, HOME | HT | TRENDS strung across one line. The real mark was in the
+ * repo all along — ht-logo-ink.png and ht-logo.png, the square lockup with the
+ * rule beneath HT and HOME TRENDS under it, in ink and in white.
+ *
+ * Square is 241x240, not 3.45:1, so every number sized for the old one is
+ * wrong. Twenty-one rules across five sheets size .brand__logo and all of them
+ * derive width from --logo-w, which is declared fourteen times in four sheets
+ * and was set for a wide mark. Rather than add a twenty-second rule to that
+ * argument, this corrects the token the others already read, and lifts the
+ * max-height that was capping the result at 32px.
+ *
+ * This is the nineteenth and last sheet, so matching the winning selectors is
+ * enough; no escalation needed. */
+:root,
+.site-header,
+.theme-dark .site-header,
+.theme-light .site-header {
+  --logo-w: 52px;
+}
+@media (max-width: 899px) {
+  :root,
+  .site-header,
+  .theme-dark .site-header,
+  .theme-light .site-header {
+    --logo-w: 44px;
+  }
+}
+.site-header .brand img.brand__logo,
+.theme-light .site-header .brand img.brand__logo,
+.theme-dark .site-header .brand img.brand__logo,
+.theme-dark .site-header.is-solid .brand img.brand__logo,
+.theme-dark .site-header.is-over-hero .brand img.brand__logo,
+.theme-dark .site-header.is-over-hero:not(.is-solid) .brand img.brand__logo,
+.site-header.is-compact .brand img.brand__logo,
+.theme-dark .site-header.is-compact .brand img.brand__logo {
+  width: var(--logo-w) !important;
+  max-width: var(--logo-w) !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 241 / 240;
+  object-fit: contain !important;
+}
+.site-footer .brand__logo,
+.footer-brand .brand__logo {
+  width: auto !important;
+  max-width: none !important;
+  height: 4.4rem !important;
+  max-height: none !important;
+  aspect-ratio: 241 / 240;
+}

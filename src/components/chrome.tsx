@@ -77,8 +77,8 @@ export function SiteHeader({
           </button>
         </div>
         <Link to="/" className="brand" aria-label="Home Trends Furniture home">
-          <img className="brand__logo brand__logo--ink" src="/media/brand/ht-logo-test-ink.svg" alt="Home Trends Furniture" width={221} height={64} />
-          <img className="brand__logo brand__logo--gold" src="/media/brand/ht-logo-test.svg" alt="" width={221} height={64} />
+          <img className="brand__logo brand__logo--ink" src="/media/brand/ht-logo-ink.png" alt="Home Trends Furniture" width={241} height={240} />
+          <img className="brand__logo brand__logo--gold" src="/media/brand/ht-logo.png" alt="" width={241} height={240} />
         </Link>
         <div className="header-actions">
           {/* Always visible, not a toggle: the field itself is the affordance.
@@ -168,7 +168,7 @@ export function SiteFooter() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand">
-            <img className="brand__logo" src="/media/brand/ht-logo-test.svg" alt="Home Trends Furniture" width={221} height={64} />
+            <img className="brand__logo" src="/media/brand/ht-logo.png" alt="Home Trends Furniture" width={241} height={240} />
             <p className="site-line">Furniture for real rooms, in Ennis.</p>
             <p className="footer-stamp">
               {STORE.owners}
