@@ -907,8 +907,8 @@ h1 .count {
 @media (min-width: 900px) and (hover: hover) and (pointer: fine) {
   .social__grid a {
     transition:
-      transform var(--t-state) var(--ease-sheet, ease),
-      box-shadow var(--t-state) var(--ease-sheet, ease);
+      transform var(--t-state) var(--ease),
+      box-shadow var(--t-state) var(--ease);
   }
   .social__grid a:hover {
     transform: translateY(-3px);
@@ -1340,7 +1340,7 @@ main .product-gallery__track {
    clip-path, so the figure never reflows and the caption below never moves. */
 .scroll-reveal {
   clip-path: inset(0 20% 0 20%);
-  transition: clip-path var(--t-move) var(--ease-sheet, cubic-bezier(0.22, 1, 0.36, 1));
+  transition: clip-path var(--t-move) var(--ease);
   will-change: clip-path;
 }
 .scroll-reveal.is-open {
@@ -1373,7 +1373,7 @@ main .product-gallery__track {
   padding: clamp(1rem, 4vw, 3rem);
   background: color-mix(in srgb, #1c1c1a 88%, transparent);
   cursor: zoom-out;
-  animation: product-zoom-in 320ms var(--ease-sheet, ease) both;
+  animation: product-zoom-in 320ms var(--ease) both;
 }
 .product-zoom .product-media,
 .product-zoom img {
@@ -1789,7 +1789,7 @@ html {
     background: var(--paper);
     border-top: 1px solid var(--line);
     transform: translateY(110%);
-    transition: transform var(--t-state) var(--ease-sheet, ease);
+    transition: transform var(--t-state) var(--ease);
     /* Inert until shown, so it cannot swallow taps meant for the page. */
     visibility: hidden;
   }
@@ -2311,7 +2311,7 @@ main .product-card__body {
 main .product-card {
   transition-property: transform, box-shadow !important;
   transition-duration: var(--t-move) !important;
-  transition-timing-function: var(--ease-rise) !important;
+  transition-timing-function: var(--ease) !important;
 }
 main .product-card:hover {
   transform: translateY(-3px) !important;
@@ -2320,7 +2320,7 @@ main .product-card:hover {
 main .product-card:hover figure .product-media img {
   transform: scale(1.03) !important;
   transition-duration: var(--t-enter) !important;
-  transition-timing-function: var(--ease-rise) !important;
+  transition-timing-function: var(--ease) !important;
 }
 
 /* B. Resting depth on the photography, so the images sit on the cream like
@@ -2347,10 +2347,10 @@ main :is(
    stylesheet, actually gets — is the finished, visible page. */
 @media (prefers-reduced-motion: no-preference) {
   .ed-hero__copy h1 {
-    animation: ht-hero-settle 620ms var(--ease-rise) both !important;
+    animation: ht-hero-settle 620ms var(--ease) both !important;
   }
   .ed-hero__copy p {
-    animation: ht-hero-settle 620ms var(--ease-rise) 90ms both !important;
+    animation: ht-hero-settle 620ms var(--ease) 90ms both !important;
   }
   .ed-hero__media::after {
     content: "";
@@ -2421,3 +2421,28 @@ main :is(
   --t-move: 520ms;
   --t-enter: 780ms;
 }
+
+/* ——— 2.14 One easing set ———
+ *
+ * Three curves, defined once each, in styles.css:
+ *
+ *   --ease        cubic-bezier(.22, 1, .36, 1)   the house curve, 86 uses
+ *   --ease-cover  cubic-bezier(.25, 1, .5,  1)   gentler arrival, 10 uses
+ *   --ease-melt   cubic-bezier(.37, 0, .63, 1)   symmetric, for the slow melts
+ *
+ * There were six tokens across two files. --ease-rise and --ease-sheet were
+ * both cubic-bezier(.22, 1, .36, 1) — the same curve as --ease under two more
+ * names, 29 uses between them — and are gone; their call sites now say --ease.
+ *
+ * --ease itself was worse than duplicated. styles.css declared it
+ * cubic-bezier(.4, 0, .2, 1) and styles.apple.css redeclared it as the house
+ * curve three sheets later, so all 57 of its uses silently resolved to
+ * something other than what the file they were reading said. The Material
+ * value never applied to anything. styles.css now states the value that was
+ * always in effect, and apple.css no longer redeclares it.
+ *
+ * Collapsing identical curves changes nothing that renders: computed
+ * timing-function, duration and property were byte-identical across 299
+ * elements on the homepage and 563 on /shop, compared against the previous
+ * deployment.
+ */
