@@ -1,14 +1,12 @@
 /* Tasks 2–6. Header, search and menu retain their Task 1 styling. */
+/* The palette used to live here as well, scoped to main and warm, while
+   :root held a cool blue-grey set. That split was the whole problem: the
+   content and the chrome were different colour families, which is what read
+   as "all over the place". :root is warm now, so these overrides say nothing
+   and are gone. */
 main {
-  --paper: #EFEAE1;
-  --paper-sunk: #E8E3D9;
-  --ink: #1C1C1A;
-  --ink-80: #6B6660;
-  --ink-55: #6B6660;
-  --line: #DDD5C7;
-  --brass: #1C1C1A;
-  background: #EFEAE1;
-  color: #1C1C1A;
+  background: var(--paper);
+  color: var(--ink);
 }
 
 main .ed-sec, main section.intro-bar, main .room-tiles__head,

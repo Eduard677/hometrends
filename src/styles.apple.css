@@ -61,19 +61,19 @@
 
 
 :root {
-  --paper: #efeae2;
-  --paper-raised: #f5f1ea;
-  --paper-sunk: #e3d9cc;
-  --ink: #1e2530;
-  --ink-80: #4a5360;
-  --ink-55: #7a828c;
-  --ink-35: #a8aeb6;
-  --line: #1e25301f;
-  --line-strong: #1e253033;
-  --navy: #1b2230;
-  --navy-deep: #151a22;
-  --hero-ink: #151a22;
-  --brass: #746548;
+  --paper: #efeae1;
+  --paper-raised: #f4f1ea;
+  --paper-sunk: #e8e3d9;
+  --ink: #1c1c1a;
+  --ink-80: #4a453e;
+  --ink-55: #67625c;
+  --ink-35: #9a938a;
+  --line: #ddd5c7;
+  --line-strong: #c9c0b0;
+  --surface-dark: #23211d;
+  
+  --hero-ink: #161714;
+  --brass: #6e5c2c;
 }
 body,
 .theme-light,
@@ -116,11 +116,11 @@ body,
 .button--solid,
 .theme-light .button--primary,
 .ed-band .button--primary {
-  background: var(--navy);
+  background: var(--surface-dark);
   color: var(--paper);
 }
 .button {
-  background: var(--navy);
+  background: var(--surface-dark);
   color: var(--paper);
 }
 .button:hover {
@@ -154,7 +154,7 @@ body,
 .ed-hero .button--primary,
 .theme-dark .button--primary {
   background: var(--paper);
-  color: var(--navy-deep);
+  color: var(--hero-ink);
 }
 
 .from-ig {
@@ -498,7 +498,7 @@ body,
   height: 16px;
   padding: 0 4px;
   border-radius: 999px;
-  background: var(--navy);
+  background: var(--surface-dark);
   color: var(--paper);
   font-size: 10px;
   line-height: 16px;
@@ -518,7 +518,7 @@ body,
 }
 .theme-dark .site-header.is-over-hero:not(.is-solid) .bag-count {
   background: var(--paper);
-  color: var(--navy-deep);
+  color: var(--hero-ink);
 }
 
 .button,
@@ -609,7 +609,7 @@ a.button,
   cursor: pointer;
 }
 .product-card__wish.is-on {
-  color: var(--navy);
+  color: var(--surface-dark);
 }
 
 @media (width <= 1023px) {
@@ -1358,7 +1358,7 @@ a.button,
 .button.is-added,
 .product-card__cta.is-added {
   background: var(--brass);
-  color: var(--navy-deep);
+  color: var(--hero-ink);
 }
 
 .bag-count.is-bump {
