@@ -10,7 +10,13 @@ async function walk(dir) {
 }
 for (const file of await walk('src')) {
   if (!/\.(tsx?|css)$/.test(file) && !['ht-shop.json', 'site-media.json'].includes(path.basename(file))) continue;
-  for (const match of (await fs.readFile(file, 'utf8')).matchAll(/['"(](\/media\/[^'"\s)]+\.(?:webp|jpe?g|png|svg|ico))/g)) keep.add(match[1]);
+  // Deliberately does not require a leading quote or paren. A srcset holds
+  // several paths in one string and only the first is quoted — anchoring on
+  // the delimiter kept the first ladder step and deleted every wider one,
+  // so the browser 404'd whenever it picked anything but the smallest.
+  // Over-matching here is safe: this is a keep-list, and a stray match only
+  // retains a file. Under-matching deletes one the site is serving.
+  for (const match of (await fs.readFile(file, 'utf8')).matchAll(/\/media\/[^'"\s),]+\.(?:webp|jpe?g|png|svg|ico)/g)) keep.add(match[0]);
 }
 const removed = [], resized = [];
 for (const file of await walk(`${output}/media`)) {
