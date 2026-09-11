@@ -9,10 +9,21 @@ const PAGE_SIZE = 24;
    Rows are counted at the widest grid, four across, so the cells land in the
    same reading position as the design intends. Both sit on the first page;
    later pages get none rather than repeating them. */
-/* Desktop pass §4. A mosaic break every 8 products, replacing the two
+/* Desktop pass §4. A mosaic break every N products, replacing the two
    single-cell breaks that sat after rows 3 and 9. Each break consumes three
-   editorial images and the large tile alternates side by side. */
-const MOSAIC_EVERY = 8;
+   editorial images and the large tile alternates side by side.
+
+   N was 8, chosen by counting rows "at the widest grid, four across". The grid
+   is not always four across: cards-spaces.css drops it to three at 1100px and
+   two at 759px. 8 divides by 4 and by 2 but not by 3, so at every width
+   between 760 and 1100 the row before each break held two cards and an empty
+   cell — a hole in the listing, twice per page.
+
+   12 is the lowest common multiple of the three column counts, so a break
+   always lands on a row boundary and never strands a cell. It costs one break
+   per page instead of two at PAGE_SIZE 24, which is the right trade: an
+   editorial pause is a feature, a gap in the grid is a defect. */
+const MOSAIC_EVERY = 12;
 
 /**
  * Crawlability. The page used to live in useState and the controls were
