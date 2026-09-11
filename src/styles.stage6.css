@@ -66,16 +66,16 @@
 .search-popover__head {
   margin-bottom: 12px;
   padding: 0;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  outline: none;
-  box-shadow: none;
+  border:0;
+  border-bottom:1px solid var(--line);
+  outline:none;
+  box-shadow:none;
 }
 
 .search-popover__head:focus-within {
-  border-color: var(--ink);
-  outline: none;
-  box-shadow: none;
+  border-color:var(--ink);
+  outline:none;
+  box-shadow:none;
 }
 
 .search-popover__head input {
@@ -94,7 +94,7 @@
     right: 0;
     width: 100%;
     padding: 20px var(--gutter) 24px;
-    box-shadow: none;
+    box-shadow:none;
   }
 }
 
@@ -122,7 +122,7 @@
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
-  color: var(--ink-80);
+  color:var(--ink-80);
 }
 
 /* Family */
@@ -199,9 +199,9 @@ section.intro-bar .intro-bar__facts dd {
   gap: 0.2rem;
   min-height: 44px;
   padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
+  border:0;
+  background:transparent;
+  color:var(--ink);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
@@ -210,7 +210,7 @@ section.intro-bar .intro-bar__facts dd {
 }
 
 .room-tiles__next:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 3px;
 }
 
@@ -226,7 +226,7 @@ section.intro-bar .intro-bar__facts dd {
   bottom: 1.6rem;
   width: 3.2rem;
   pointer-events: none;
-  background: linear-gradient(90deg, transparent, var(--paper));
+  background:linear-gradient(90deg, transparent, var(--paper));
 }
 
 .room-tiles__rail {
@@ -269,9 +269,9 @@ section.intro-bar .intro-bar__facts dd {
 
 .product-card,
 .product-card:hover {
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent;
+  border:0 !important;
+  box-shadow:none !important;
+  background:transparent;
   padding: 0;
 }
 
@@ -280,8 +280,8 @@ section.intro-bar .intro-bar__facts dd {
   position: relative;
   aspect-ratio: 4 / 5 !important;
   margin: 0;
-  border: 0 !important;
-  background: #f4f1ea;
+  border:0 !important;
+  background:var(--paper-raised);
   overflow: hidden;
 }
 
@@ -294,7 +294,7 @@ section.intro-bar .intro-bar__facts dd {
   height: 86%;
   object-fit: contain !important;
   object-position: center;
-  background: transparent;
+  background:transparent;
 }
 
 .product-card .product-media.is-lifestyle {
@@ -307,17 +307,17 @@ section.intro-bar .intro-bar__facts dd {
 .product-card h3,
 .product-card .price,
 .product-card__body {
-  border: 0 !important;
-  box-shadow: none;
+  border:0 !important;
+  box-shadow:none;
 }
 
 .product-card__cta {
   width: auto;
   padding: 0 0 2px;
-  border: 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 32%, transparent);
-  background: transparent;
-  color: var(--ink);
+  border:0;
+  border-bottom:1px solid color-mix(in srgb, var(--ink) 32%, transparent);
+  background:transparent;
+  color:var(--ink);
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
@@ -326,18 +326,17 @@ section.intro-bar .intro-bar__facts dd {
 
 .product-card__cta:hover,
 .product-card__cta.is-added {
-  background: transparent;
+  background:transparent;
   text-decoration: none;
-  border-bottom-color: var(--ink);
+  border-bottom-color:var(--ink);
 }
 
 /* Errigel */
 
 .lumina.lumina--errigel .lumina__panel {
   min-height: 19rem;
-  background-color: color-mix(in srgb, var(--errigel-swatch) 48%, #d8d0c4);
-  background-image:
-    linear-gradient(
+  background-color:color-mix(in srgb, var(--errigel-swatch) 48%, #d8d0c4);
+  background-image:linear-gradient(
       148deg,
       rgba(255, 250, 242, 0.3) 0%,
       transparent 42%,
@@ -348,14 +347,14 @@ section.intro-bar .intro-bar__facts dd {
 .lumina.lumina--errigel .lumina__panel::before,
 .lumina.lumina--errigel .lumina__panel::after,
 .lumina.lumina--errigel .lumina__cloth {
-  background-image: none;
+  background-image:none;
   opacity: 0;
 }
 
 .lumina.lumina--errigel .lumina__panel::after {
   opacity: 0.35;
   mix-blend-mode: multiply;
-  background-image: radial-gradient(
+  background-image:radial-gradient(
     120% 90% at 20% 12%,
     rgba(255, 252, 246, 0.18),
     transparent 52%
@@ -411,7 +410,7 @@ section.intro-bar .intro-bar__facts dd {
 /* Image book */
 
 .insta-select {
-  background: #20201e;
+  background:var(--surface-dark);
 }
 
 .insta-select__card,
@@ -442,7 +441,7 @@ section.intro-bar .intro-bar__facts dd {
 
 .visit-grid figure,
 .visit-grid figure:hover {
-  box-shadow: none !important;
+  box-shadow:none !important;
 }
 
 .footer-stamp {
@@ -557,9 +556,9 @@ section.intro-bar .intro-bar__inner {
     min-width: 0;
     max-width: none;
     flex: 0 0 auto;
-    background: none;
-    border: 0;
-    box-shadow: none;
+    background:none;
+    border:0;
+    box-shadow:none;
   }
   .site-header .header-search__input,
   .site-header .header-search__clear {
@@ -584,9 +583,9 @@ section.intro-bar .intro-bar__inner {
   min-width: 34px;
   min-height: 34px;
   padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
+  border:0;
+  background:none;
+  color:inherit;
   cursor: pointer;
   flex: none;
 }
@@ -606,9 +605,9 @@ section.intro-bar .intro-bar__inner {
   max-width: none;
   max-height: calc(100dvh - var(--header-h));
   overflow-y: auto;
-  background: var(--paper);
-  color: var(--ink);
-  border-bottom: 1px solid var(--line);
+  background:var(--paper);
+  color:var(--ink);
+  border-bottom:1px solid var(--line);
   z-index: 90;
   transform: translateY(-8px);
   opacity: 0;
@@ -633,7 +632,7 @@ section.intro-bar .intro-bar__inner {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-transform: none;
-  color: var(--ink);
+  color:var(--ink);
   min-height: 44px;
 }
 
@@ -657,8 +656,8 @@ section.intro-bar .intro-bar__inner {
   height: 100dvh;
   max-height: none;
   overflow: hidden;
-  background: var(--paper);
-  color: var(--ink);
+  background:var(--paper);
+  color:var(--ink);
   opacity: 0;
   pointer-events: none;
   transform: translateY(-1.5rem);
@@ -676,7 +675,7 @@ section.intro-bar .intro-bar__inner {
   min-height: 0;
   height: 100dvh;
   overflow: hidden;
-  background: var(--paper-sunk);
+  background:var(--paper-sunk);
 }
 
 .menu-panel .menu-split__image img {
@@ -704,9 +703,9 @@ section.intro-bar .intro-bar__inner {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 0;
-  background: transparent;
-  color: inherit;
+  border:0;
+  background:transparent;
+  color:inherit;
   cursor: pointer;
 }
 
@@ -714,24 +713,24 @@ section.intro-bar .intro-bar__inner {
   display: flex;
   gap: 1.5rem;
   padding-right: 4rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 .menu-panel .menu-split__tabs button {
   min-height: 50px;
   padding: 0;
-  border: 0;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: var(--ink-55);
+  border:0;
+  border-bottom:2px solid transparent;
+  background:transparent;
+  color:var(--ink-55);
   font-family: var(--font-display);
   font-size: 1.35rem;
   cursor: pointer;
 }
 
 .menu-panel .menu-split__tabs button.is-on {
-  border-bottom-color: var(--brass);
-  color: var(--ink);
+  border-bottom-color:var(--brass);
+  color:var(--ink);
 }
 
 .menu-panel .menu-cols {
@@ -744,7 +743,7 @@ section.intro-bar .intro-bar__inner {
 
 .menu-panel .menu-cols p {
   margin: 0 0 0.75rem;
-  color: var(--brass);
+  color:var(--brass);
   font-size: var(--t-micro);
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -761,12 +760,12 @@ section.intro-bar .intro-bar__inner {
   display: inline-flex;
   align-items: center;
   min-height: 36px;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-size: 0.9rem;
 }
 
 .menu-panel .menu-cols a:hover {
-  color: var(--brass);
+  color:var(--brass);
 }
 
 .menu-panel .menu-split__foot {
@@ -776,8 +775,8 @@ section.intro-bar .intro-bar__inner {
   gap: 0.4rem 1.5rem;
   margin-top: auto;
   padding-top: 1.1rem;
-  border-top: 1px solid var(--line);
-  color: var(--ink-55);
+  border-top:1px solid var(--line);
+  color:var(--ink-55);
   font-size: 0.82rem;
 }
 
@@ -809,13 +808,13 @@ section.intro-bar .intro-bar__inner {
 }
 
 /* Focus on the field has to be visible. The input's own outline is suppressed
-   by an earlier `:focus { outline: none }`, and the only thing left was a 1px
+   by an earlier `:focus { outline:none }`, and the only thing left was a 1px
    18%-opacity shadow that also shows at rest. The wrapper takes the ring. */
 .site-header .header-search:focus-within {
-  outline: 2px solid var(--brass);
+  outline:2px solid var(--brass);
   outline-offset: 2px;
 }
 
 .theme-dark .site-header.is-over-hero:not(.is-solid) .header-search:focus-within {
-  outline-color: var(--paper);
+  outline-color:var(--paper);
 }

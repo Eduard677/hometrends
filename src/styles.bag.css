@@ -4,7 +4,7 @@
   position: fixed;
   inset: 0;
   z-index: 92;
-  background: var(--hero-ink, #151a22);
+  background:var(--hero-ink, var(--ink));
 }
 .overlay--bag.is-on {
   opacity: 0.58;

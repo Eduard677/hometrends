@@ -11,18 +11,17 @@
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background:
-    linear-gradient(
+  background:linear-gradient(
       100deg,
-      color-mix(in srgb, #1c1c1a 88%, transparent) 0%,
-      color-mix(in srgb, #1c1c1a 72%, transparent) 28%,
-      color-mix(in srgb, #1c1c1a 28%, transparent) 54%,
+      color-mix(in srgb, var(--ink) 88%, transparent) 0%,
+      color-mix(in srgb, var(--ink) 72%, transparent) 28%,
+      color-mix(in srgb, var(--ink) 28%, transparent) 54%,
       transparent 74%
     ),
     linear-gradient(
       to top,
-      color-mix(in srgb, #1c1c1a 62%, transparent) 0%,
-      color-mix(in srgb, #1c1c1a 28%, transparent) 28%,
+      color-mix(in srgb, var(--ink) 62%, transparent) 0%,
+      color-mix(in srgb, var(--ink) 28%, transparent) 28%,
       transparent 58%
     );
 }
@@ -143,9 +142,9 @@
   max-width: 44px !important;
   flex: 0 0 44px !important;
   padding: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
 }
 .site-header .header-search__input,
 .site-header .header-search__clear {

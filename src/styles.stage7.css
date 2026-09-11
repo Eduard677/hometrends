@@ -7,7 +7,7 @@
   justify-self: start;
   margin-top: 1.75rem;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--line);
+  border-top:1px solid var(--line);
   width: 100%;
   font-size: 0.95rem;
 }
@@ -15,10 +15,10 @@
 /* ——— 1.3 Price divider rule, unconditional ———
    The hairline above the price appeared on some cards and not others. It is now
    attached to the price block itself so it cannot depend on whether the title
-   wraps. stage6 clears card borders with `border: 0 !important`, so this needs
+   wraps. stage6 clears card borders with `border:0 !important`, so this needs
    !important to land; it is scoped to the price block only. */
 .product-card__body .price {
-  border-top: 1px solid var(--line) !important;
+  border-top:1px solid var(--line) !important;
   padding-top: 0.65rem;
   margin-top: 0.65rem;
 }
@@ -53,17 +53,17 @@
   padding: 0 4px;
   display: grid;
   place-items: center;
-  border-radius: 999px;
+  border-radius:999px;
   /* currentColor tracks the header, which inverts over the hero photograph, so
      the pill stays legible on cream and on the image alike. */
-  background: currentColor;
-  color: var(--paper);
+  background:currentColor;
+  color:var(--paper);
   font-size: 10px;
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 .theme-dark .site-header.is-over-hero:not(.is-solid) .bag-count {
-  color: var(--ink);
+  color:var(--ink);
 }
 .bag-count[hidden] {
   display: none;
@@ -83,14 +83,14 @@
   margin: 1.4rem 0;
 }
 .variant-picker__group {
-  border: 0;
+  border:0;
   margin: 0;
   padding: 0;
 }
 .variant-picker__group legend {
   padding: 0;
   margin-bottom: 0.5rem;
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: var(--t-micro);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -103,22 +103,22 @@
 .variant-picker__value {
   min-height: var(--tap, 44px);
   padding: 0 0.9rem;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:transparent;
+  color:var(--ink);
   font: inherit;
   font-size: 0.9rem;
   cursor: pointer;
 }
 .variant-picker__value.is-on {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  border-color:var(--ink);
+  background:var(--ink);
+  color:var(--paper);
 }
 .variant-picker__value.is-unavailable {
-  color: var(--ink-55);
-  border-style: dashed;
+  color:var(--ink-55);
+  border-style:dashed;
   cursor: not-allowed;
   /* Struck through as well as dimmed, so it does not rely on colour alone. */
   text-decoration: line-through;
@@ -128,7 +128,7 @@
 .pdp-blocked,
 .pdp-stock,
 .product-card__stock {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: 0.9rem;
 }
 .pdp-blocked {
@@ -139,8 +139,8 @@
   left: 8px;
   bottom: 8px;
   padding: 0.25rem 0.5rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background:var(--paper);
+  border:1px solid var(--line);
   font-size: var(--t-micro);
 }
 .product-card.is-sold-out figure {
@@ -148,13 +148,13 @@
 }
 .pdp-delivery {
   margin: 1rem 0 1.25rem;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-size: 0.92rem;
 }
 
 /* ——— 4.4 / 4.5 Drawer detail ——— */
 .bag-drawer__variant {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: 0.88rem;
   margin: 0.1rem 0 0.3rem;
 }
@@ -188,9 +188,9 @@
   max-height: 88vh;
   overflow-y: auto;
   padding: 1.5rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 2px 2px 0 0;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:2px 2px 0 0;
   transform: translateY(100%);
   transition: transform var(--t-tap) var(--ease, ease);
 }
@@ -201,7 +201,7 @@
   .reserve-modal {
     inset: 50% auto auto 50%;
     transform: translate(-50%, -46%);
-    border-radius: 2px;
+    border-radius:2px;
   }
   .reserve-modal.is-on {
     transform: translate(-50%, -50%);
@@ -224,7 +224,7 @@
   font-size: 0.9rem;
 }
 .reserve-modal__piece {
-  color: var(--ink-55);
+  color:var(--ink-55);
 }
 .reserve-modal__demo {
   font-weight: 600;
@@ -253,10 +253,10 @@
   gap: 0.5rem;
   min-height: var(--tap, 44px);
   padding: 0 1rem;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:transparent;
+  color:var(--ink);
   font: inherit;
   font-size: 0.93rem;
   cursor: pointer;
@@ -268,14 +268,14 @@
   gap: 0.5rem 1.25rem;
 }
 .filters__group {
-  border: 0;
+  border:0;
   margin: 0;
   padding: 0;
   min-width: 0;
 }
 .filters__group legend {
   padding: 0;
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: var(--t-micro);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -296,13 +296,13 @@
 .filters__group--chips .filters__opt {
   min-height: 34px;
   padding: 0 0.7rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  border:1px solid var(--line);
+  border-radius:999px;
 }
 .filters__group--chips .filters__opt.is-on {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  border-color:var(--ink);
+  background:var(--ink);
+  color:var(--paper);
 }
 /* The native control still drives it; the chip is its label. */
 .filters__group--chips .filters__opt input {
@@ -313,12 +313,12 @@
 }
 .filters__opt em {
   font-style: normal;
-  color: currentColor;
+  color:currentColor;
   opacity: 0.6;
   font-variant-numeric: tabular-nums;
 }
 .filters__opt:focus-within {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 2px;
 }
 .filters__clear {
@@ -342,8 +342,8 @@
   max-height: 86vh;
   display: flex;
   flex-direction: column;
-  background: var(--paper);
-  border-top: 1px solid var(--line);
+  background:var(--paper);
+  border-top:1px solid var(--line);
   transform: translateY(100%);
   transition: transform var(--t-tap) var(--ease, ease);
 }
@@ -357,11 +357,11 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem var(--gutter);
-  border-bottom: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .filter-sheet footer {
-  border-bottom: 0;
-  border-top: 1px solid var(--line);
+  border-bottom:0;
+  border-top:1px solid var(--line);
 }
 .filter-sheet h2 {
   margin: 0;
@@ -373,7 +373,7 @@
 }
 .filters__group--rows {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .filters__group--rows > div {
   display: grid;
@@ -413,7 +413,7 @@
 .editorial-cell figcaption {
   margin-top: 0.65rem;
   padding-top: 0.65rem;
-  border-top: 1px solid var(--line);
+  border-top:1px solid var(--line);
   font-family: var(--font-display);
   font-size: 1.15rem;
 }
@@ -425,7 +425,7 @@
 .more-rooms h2 {
   font-size: 1.15rem;
   font-family: var(--font-display);
-  color: var(--ink);
+  color:var(--ink);
   margin: 0 0 1rem;
 }
 .more-rooms ul {
@@ -447,7 +447,7 @@
   object-fit: cover;
 }
 .more-rooms a {
-  color: var(--ink);
+  color:var(--ink);
   display: block;
   min-height: var(--tap, 44px);
 }
@@ -458,13 +458,13 @@
   appearance: none;
   padding: 0.5rem 2.25rem 0.5rem 0.75rem;
   min-height: var(--tap, 44px);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231e2530' stroke-width='1.2'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:2px;
+  background-color:transparent;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231e2530' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 0.75rem center;
+  color:var(--ink);
   font: inherit;
   font-size: 0.93rem;
 }
@@ -532,10 +532,10 @@
   height: var(--tap, 44px);
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:transparent;
+  color:var(--ink);
   cursor: pointer;
 }
 .room-tiles__controls button[disabled] {
@@ -665,8 +665,8 @@ main > .spread {
   min-width: 0 !important;
   max-width: none !important;
   flex: 0 0 auto !important;
-  background: transparent !important;
-  border: 0 !important;
+  background:transparent !important;
+  border:0 !important;
   padding: 0 !important;
 }
 .site-header .header-search__input,
@@ -679,9 +679,9 @@ main > .spread {
   justify-content: center;
   min-width: var(--tap, 44px);
   min-height: var(--tap, 44px);
-  border: 0;
-  background: transparent;
-  color: inherit;
+  border:0;
+  background:transparent;
+  color:inherit;
   cursor: pointer;
 }
 
@@ -696,7 +696,7 @@ h1 .count {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.02em;
-  color: var(--ink-55);
+  color:var(--ink-55);
   vertical-align: 0.7em;
   margin-left: 0.15em;
   white-space: nowrap;
@@ -717,7 +717,7 @@ h1 .count {
   gap: 0.1rem;
   padding: 0.85rem 0.9rem;
   text-align: left;
-  color: var(--paper);
+  color:var(--paper);
   text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
 }
 .insta-select__label strong {
@@ -732,7 +732,7 @@ h1 .count {
 /* ——— §2 Variant count under the title ——— */
 .product-card__variants {
   margin: 0.2rem 0 0;
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: 0.85rem;
 }
 
@@ -817,7 +817,7 @@ h1 .count {
   max-width: 46ch;
   margin: 0;
   font-size: 1.05rem;
-  color: var(--ink-80);
+  color:var(--ink-80);
 }
 
 /* §7 Instagram reads as a profile, not a captioned gallery. */
@@ -833,7 +833,7 @@ h1 .count {
   align-items: center;
   gap: 0.7rem;
   min-height: var(--tap, 44px);
-  color: var(--ink);
+  color:var(--ink);
 }
 /* The glyph sits in a ring so the row reads as an account, not a link. */
 .social__badge {
@@ -841,8 +841,8 @@ h1 .count {
   place-items: center;
   width: 2.75rem;
   height: 2.75rem;
-  border: 1px solid var(--line);
-  border-radius: 50%;
+  border:1px solid var(--line);
+  border-radius:50%;
   flex: 0 0 auto;
 }
 .social__handle {
@@ -854,7 +854,7 @@ h1 .count {
   font-size: 1rem;
 }
 .social__handle span {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: 0.85rem;
 }
 /* Follow is an affordance, not a promise: it opens the profile. No follower
@@ -866,14 +866,14 @@ h1 .count {
   min-height: var(--tap, 44px);
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--ink);
+  border:1px solid var(--ink);
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .social__account:hover .social__follow {
-  background: var(--ink);
-  color: var(--paper);
+  background:var(--ink);
+  color:var(--paper);
 }
 
 /* Three columns on mobile, six on desktop; tight gutter. */
@@ -893,7 +893,7 @@ h1 .count {
 .social__grid a {
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: var(--paper);
+  background:var(--paper);
 }
 .social__grid img {
   width: 100%;
@@ -912,7 +912,7 @@ h1 .count {
   }
   .social__grid a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px color-mix(in srgb, var(--ink) 18%, transparent);
+    box-shadow:0 10px 24px color-mix(in srgb, var(--ink) 18%, transparent);
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -951,11 +951,11 @@ h1 .count {
 }
 .pdp-lines dt {
   flex: 0 0 6.5rem;
-  color: var(--ink-55);
+  color:var(--ink-55);
 }
 .pdp-lines dd {
   margin: 0;
-  color: var(--ink-80);
+  color:var(--ink-80);
 }
 /* Secondary actions sit under the lines and never compete with Add. */
 .pdp-secondary {
@@ -1002,7 +1002,7 @@ h1 .count {
 .complete__room figcaption {
   margin-top: 0.65rem;
   padding-top: 0.65rem;
-  border-top: 1px solid var(--line);
+  border-top:1px solid var(--line);
   font-family: var(--font-display);
   font-size: 1.05rem;
 }
@@ -1033,10 +1033,10 @@ h1 .count {
   text-transform: none;
   letter-spacing: normal;
   font-size: 0.92rem;
-  color: var(--ink-55);
+  color:var(--ink-55);
 }
 .pdp-secondary .text-link:hover {
-  color: var(--ink);
+  color:var(--ink);
 }
 
 /* §PDP Gallery, per the two sketches. One track of slides serves both: the
@@ -1113,8 +1113,8 @@ main .product-gallery__track {
     width: 22px;
     min-height: var(--tap, 44px);
     padding: 0;
-    border: 0;
-    background: none;
+    border:0;
+    background:none;
     display: grid;
     place-items: center;
   }
@@ -1122,11 +1122,11 @@ main .product-gallery__track {
     content: "";
     width: 7px;
     height: 7px;
-    border-radius: 50%;
-    border: 1px solid var(--ink);
+    border-radius:50%;
+    border:1px solid var(--ink);
   }
   .product-gallery__dots button.is-active::after {
-    background: var(--ink);
+    background:var(--ink);
   }
 }
 
@@ -1166,15 +1166,15 @@ main .product-gallery__track {
   height: var(--tap, 44px);
   margin: -0.35rem -0.5rem 0 0;
   padding: 0;
-  border: 0;
-  background: none;
-  color: var(--ink-55);
+  border:0;
+  background:none;
+  color:var(--ink-55);
   cursor: pointer;
   transition: color var(--t-tap) ease, transform var(--t-tap) ease;
 }
 .save-heart:hover,
 .save-heart.is-saved {
-  color: var(--ink);
+  color:var(--ink);
 }
 .save-heart:active {
   transform: scale(0.92);
@@ -1231,10 +1231,10 @@ main .product-gallery__track {
    <details> so it works without JS and keyboard-operates for free. */
 .cart__details {
   margin-top: 1.5rem;
-  border-top: 1px solid var(--line);
+  border-top:1px solid var(--line);
 }
 .cart__detail {
-  border-bottom: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .cart__detail > summary {
   cursor: pointer;
@@ -1255,8 +1255,8 @@ main .product-gallery__track {
   width: 0.5rem;
   height: 0.5rem;
   flex: 0 0 auto;
-  border-right: 1px solid var(--ink-55);
-  border-bottom: 1px solid var(--ink-55);
+  border-right:1px solid var(--ink-55);
+  border-bottom:1px solid var(--ink-55);
   transform: rotate(45deg) translate(-2px, -2px);
   transition: transform var(--t-tap) ease;
 }
@@ -1266,7 +1266,7 @@ main .product-gallery__track {
 .cart__detail > p {
   margin: 0 0 0.75rem;
   padding-right: 1.5rem;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-size: 0.9rem;
 }
 .cart__detail > .text-link {
@@ -1293,7 +1293,7 @@ main .product-gallery__track {
   gap: 0.45rem;
 }
 .cart__promo label {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: var(--t-micro);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1307,10 +1307,10 @@ main .product-gallery__track {
   min-width: 0;
   min-height: var(--tap, 44px);
   padding: 0 0.75rem;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: var(--paper);
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:var(--paper);
+  color:var(--ink);
   font: inherit;
   font-size: 0.95rem;
 }
@@ -1318,9 +1318,9 @@ main .product-gallery__track {
   flex: 0 0 auto;
   min-height: var(--tap, 44px);
   padding: 0 1.1rem;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--ink);
+  background:transparent;
+  color:var(--ink);
 }
 .cart__promo .button:disabled {
   opacity: 0.45;
@@ -1328,7 +1328,7 @@ main .product-gallery__track {
 }
 .cart__promo-note {
   margin: 0;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-size: 0.88rem;
 }
 
@@ -1359,10 +1359,10 @@ main .product-gallery__track {
   width: 100%;
   height: 100%;
   padding: 0;
-  border: 0;
-  background: none;
+  border:0;
+  background:none;
   cursor: zoom-in;
-  color: inherit;
+  color:inherit;
 }
 .product-zoom {
   position: fixed;
@@ -1371,7 +1371,7 @@ main .product-gallery__track {
   display: grid;
   place-items: center;
   padding: clamp(1rem, 4vw, 3rem);
-  background: color-mix(in srgb, #1c1c1a 88%, transparent);
+  background:color-mix(in srgb, var(--ink) 88%, transparent);
   cursor: zoom-out;
   animation: product-zoom-in 320ms var(--ease) both;
 }
@@ -1474,7 +1474,7 @@ main .product-gallery__track {
    remove. Product data and the prices themselves are untouched. */
 main .price s,
 .price s {
-  color: var(--ink);
+  color:var(--ink);
   opacity: 0.45;
   font-weight: inherit;
   text-decoration-thickness: 1px;
@@ -1717,8 +1717,8 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: var(--paper);
-  border-top: 1px solid var(--line);
+  background:var(--paper);
+  border-top:1px solid var(--line);
   padding: 1rem 1.25rem calc(1rem + env(safe-area-inset-bottom, 0px));
 }
 .filter-sheet footer .button--solid {
@@ -1741,16 +1741,16 @@ html {
   gap: 0.5rem;
   min-height: var(--tap, 44px);
   padding: 0 0.85rem;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--ink);
+  border-radius:999px;
+  background:transparent;
+  color:var(--ink);
   font: inherit;
   font-size: 0.9rem;
   cursor: pointer;
 }
 .filters__active button span[aria-hidden] {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-size: 1.05rem;
   line-height: 1;
 }
@@ -1765,7 +1765,7 @@ html {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border: 0;
+  border:0;
 }
 
 
@@ -1786,8 +1786,8 @@ html {
     align-items: center;
     gap: 1rem;
     padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom, 0px));
-    background: var(--paper);
-    border-top: 1px solid var(--line);
+    background:var(--paper);
+    border-top:1px solid var(--line);
     transform: translateY(110%);
     transition: transform var(--t-state) var(--ease);
     /* Inert until shown, so it cannot swallow taps meant for the page. */
@@ -1826,7 +1826,7 @@ html {
   align-items: center;
   justify-content: space-between;
   min-height: var(--tap, 44px);
-  border-top: 1px solid var(--line);
+  border-top:1px solid var(--line);
   font-size: 0.95rem;
 }
 .pdp-accordion > summary::-webkit-details-marker {
@@ -1836,8 +1836,8 @@ html {
   content: "";
   width: 0.5rem;
   height: 0.5rem;
-  border-right: 1px solid var(--ink-55);
-  border-bottom: 1px solid var(--ink-55);
+  border-right:1px solid var(--ink-55);
+  border-bottom:1px solid var(--ink-55);
   transform: rotate(45deg) translate(-2px, -2px);
   transition: transform var(--t-tap) ease;
 }
@@ -1939,11 +1939,11 @@ main .product-card__body h3 a {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
+  background:linear-gradient(
     100deg,
-    color-mix(in srgb, #1c1c1a 88%, transparent) 0%,
-    color-mix(in srgb, #1c1c1a 78%, transparent) 26%,
-    color-mix(in srgb, #1c1c1a 34%, transparent) 52%,
+    color-mix(in srgb, var(--ink) 88%, transparent) 0%,
+    color-mix(in srgb, var(--ink) 78%, transparent) 26%,
+    color-mix(in srgb, var(--ink) 34%, transparent) 52%,
     transparent 72%
   );
 }
@@ -1976,7 +1976,7 @@ main .product-grid {
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: inherit;
+  color:inherit;
   text-decoration: none;
 }
 
@@ -2009,11 +2009,11 @@ main .product-card__body .price {
   font-size: 1rem !important;
   font-weight: 400;
   letter-spacing: normal;
-  color: var(--ink);
+  color:var(--ink);
   margin: 0;
 }
 main .product-card__body .price {
-  border-top: 0 !important;
+  border-top:0 !important;
   padding-top: 0;
   margin-top: 0.35rem;
 }
@@ -2088,7 +2088,7 @@ main .product-card__body {
   right: 0;
   bottom: 0;
   padding: 2.5rem 1.1rem 1rem;
-  color: var(--paper);
+  color:var(--paper);
   font-family: var(--font-display);
   font-size: 1.05rem;
   /* Same reasoning as the hero: the caption sits over a photograph, so it
@@ -2123,7 +2123,7 @@ main .product-card__body {
   margin: 0 0 clamp(0.5rem, 1vw, 0.75rem);
   aspect-ratio: 21 / 9;
   overflow: hidden;
-  background: var(--paper);
+  background:var(--paper);
 }
 .social__lead a,
 .social__row a {
@@ -2149,7 +2149,7 @@ main .product-card__body {
 .social__row li {
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: var(--paper);
+  background:var(--paper);
 }
 /* The lead is a very wide crop; at phone widths that reduces to a letterbox
    sliver, so it squares up a little. */
@@ -2195,7 +2195,7 @@ main .product-card__body {
   display: none;
 }
 .reviews-carousel__track:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 4px;
 }
 .reviews-carousel__track > article {
@@ -2236,16 +2236,16 @@ main .product-card__body {
 .reviews-carousel__controls > button {
   min-width: var(--tap, 44px);
   min-height: var(--tap, 44px);
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink);
+  border:1px solid var(--line);
+  border-radius:50%;
+  background:transparent;
+  color:var(--ink);
   font-size: 1.35rem;
   line-height: 1;
   cursor: pointer;
 }
 .reviews-carousel__controls > button:hover {
-  border-color: var(--ink);
+  border-color:var(--ink);
 }
 .reviews-carousel__dots {
   display: flex;
@@ -2258,8 +2258,8 @@ main .product-card__body {
   min-width: var(--tap, 44px);
   min-height: var(--tap, 44px);
   padding: 0;
-  border: 0;
-  background: none;
+  border:0;
+  background:none;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -2268,11 +2268,11 @@ main .product-card__body {
   content: "";
   width: 7px;
   height: 7px;
-  border-radius: 50%;
-  border: 1px solid var(--ink);
+  border-radius:50%;
+  border:1px solid var(--ink);
 }
 .reviews-carousel__dots button.is-active::after {
-  background: var(--ink);
+  background:var(--ink);
 }
 @media (prefers-reduced-motion: reduce) {
   .reviews-carousel__track {
@@ -2315,7 +2315,7 @@ main .product-card {
 }
 main .product-card:hover {
   transform: translateY(-3px) !important;
-  box-shadow: var(--lift-raised) !important;
+  box-shadow:var(--lift-raised) !important;
 }
 main .product-card:hover figure .product-media img {
   transform: scale(1.03) !important;
@@ -2334,7 +2334,7 @@ main :is(
   .visit-section figure,
   .mosaic__lead
 ) {
-  box-shadow: var(--lift-rest) !important;
+  box-shadow:var(--lift-rest) !important;
 }
 
 /* C. The one authored moment. Not a reveal on every section — a single
@@ -2378,8 +2378,8 @@ main :is(
    as browser blue on a warm cream page — the cheapest tell that a page was
    assembled rather than built. Brass ground, paper ink: 4.7:1. */
 ::selection {
-  background: var(--brass);
-  color: var(--paper);
+  background:var(--brass);
+  color:var(--paper);
 }
 
 /* ——— 2.13 One timing scale ———

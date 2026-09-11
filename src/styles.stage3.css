@@ -16,8 +16,7 @@
 }
 
 .ed-hero__media::after {
-  background:
-    linear-gradient(90deg, rgba(22, 23, 20, 0.48) 0%, rgba(22, 23, 20, 0.16) 42%, transparent 62%),
+  background:linear-gradient(90deg, rgba(22, 23, 20, 0.48) 0%, rgba(22, 23, 20, 0.16) 42%, transparent 62%),
     linear-gradient(0deg, rgba(22, 23, 20, 0.42) 0%, transparent 46%);
 }
 
@@ -108,7 +107,7 @@ section.intro-bar .intro-bar__facts {
 
 .room-tiles__head p {
   max-width: 40rem;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-size: var(--t-body);
   line-height: var(--t-body-lh);
 }
@@ -123,14 +122,14 @@ section.intro-bar .intro-bar__facts {
 }
 
 .room-tiles__card:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 3px;
 }
 
 .room-tiles__card figure {
   aspect-ratio: 4 / 3;
-  border: 0;
-  background: var(--paper-sunk);
+  border:0;
+  background:var(--paper-sunk);
 }
 
 .room-tiles__card img {
@@ -143,7 +142,7 @@ section.intro-bar .intro-bar__facts {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0;
-  color: var(--ink);
+  color:var(--ink);
 }
 
 @media (width <= 1024px) {
@@ -227,15 +226,15 @@ section.intro-bar .intro-bar__facts {
 
 .product-card {
   padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
+  border:0;
+  background:transparent;
+  box-shadow:none;
 }
 
 .product-card:hover,
 .product-card:hover img {
   transform: none !important;
-  box-shadow: none !important;
+  box-shadow:none !important;
 }
 
 .product-card figure,
@@ -245,8 +244,8 @@ section.intro-bar .intro-bar__facts {
 .product-grid--look .product-card:nth-child(n + 3) figure {
   aspect-ratio: 4 / 5 !important;
   margin: 0;
-  border: 0;
-  background: #f3eee6;
+  border:0;
+  background:var(--paper-raised);
 }
 
 .product-card figure img,
@@ -254,7 +253,7 @@ section.intro-bar .intro-bar__facts {
 .product-card .product-media {
   object-fit: contain !important;
   object-position: center;
-  background: #f3eee6;
+  background:var(--paper-raised);
 }
 
 .product-card .product-media.is-lifestyle {
@@ -262,9 +261,9 @@ section.intro-bar .intro-bar__facts {
 }
 
 .product-card__wish {
-  border: 0;
-  background: transparent;
-  color: var(--ink);
+  border:0;
+  background:transparent;
+  color:var(--ink);
   width: var(--tap);
   height: var(--tap);
   min-width: var(--tap);
@@ -272,7 +271,7 @@ section.intro-bar .intro-bar__facts {
 }
 
 .product-card__wish.is-on {
-  background: transparent;
+  background:transparent;
 }
 
 .product-card__body {
@@ -300,7 +299,7 @@ section.intro-bar .intro-bar__facts {
 
 .product-card .price {
   margin: 0;
-  color: var(--ink-80);
+  color:var(--ink-80);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 400;
@@ -309,7 +308,7 @@ section.intro-bar .intro-bar__facts {
 }
 
 .product-card .price s {
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-weight: 400;
 }
 
@@ -319,9 +318,9 @@ section.intro-bar .intro-bar__facts {
   min-height: var(--tap);
   margin-top: auto;
   padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
+  border:0;
+  background:transparent;
+  color:var(--ink);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
@@ -337,6 +336,6 @@ section.intro-bar .intro-bar__facts {
 }
 
 .product-card__cta:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 3px;
 }

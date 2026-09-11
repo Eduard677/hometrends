@@ -20,9 +20,9 @@
   overflow-x: clip;
   overflow-y: hidden;
   min-height: 0;
-  color: var(--errigel-charcoal);
-  background-color: var(--errigel-wash);
-  background-image: none;
+  color:var(--errigel-charcoal);
+  background-color:var(--errigel-wash);
+  background-image:none;
   transition:
     background-color var(--errigel-duration) ease,
     color var(--t-state) ease;
@@ -30,7 +30,7 @@
 
 .lumina.lumina--errigel.is-dark {
   --errigel-wash: color-mix(in srgb, var(--errigel-swatch) 8%, #f3eee6);
-  color: var(--errigel-charcoal);
+  color:var(--errigel-charcoal);
 }
 
 .lumina.lumina--errigel::before {
@@ -54,18 +54,18 @@
 }
 
 .lumina.lumina--errigel .lumina__copy {
-  color: var(--errigel-charcoal);
+  color:var(--errigel-charcoal);
 }
 
 .lumina.lumina--errigel .lumina__copy .eyebrow,
 .lumina.lumina--errigel .lumina__copy h2,
 .lumina.lumina--errigel .lumina__copy p,
 .lumina.lumina--errigel .lumina__cta {
-  color: inherit;
+  color:inherit;
 }
 
 .lumina.lumina--errigel .lumina__copy p.lumina__note {
-  color: color-mix(in srgb, var(--errigel-charcoal) 72%, #f3eee6);
+  color:color-mix(in srgb, var(--errigel-charcoal) 72%, #f3eee6);
 }
 
 .lumina.lumina--errigel .lumina__library {
@@ -80,9 +80,8 @@
   flex: 1 1 auto;
   min-height: 22rem;
   overflow: hidden;
-  background-color: color-mix(in srgb, var(--errigel-swatch) 52%, #d8d0c4);
-  background-image:
-    linear-gradient(
+  background-color:color-mix(in srgb, var(--errigel-swatch) 52%, #d8d0c4);
+  background-image:linear-gradient(
       148deg,
       rgba(255, 250, 242, 0.28) 0%,
       transparent 36%,
@@ -98,7 +97,7 @@
       rgba(40, 34, 28, 0.05) 0 1px,
       transparent 1px 4px
     );
-  box-shadow: inset 0 0 72px rgba(22, 18, 14, 0.18);
+  box-shadow:inset 0 0 72px rgba(22, 18, 14, 0.18);
   transition:
     background-color var(--errigel-duration) ease,
     box-shadow var(--errigel-duration) ease;
@@ -109,8 +108,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image:
-    repeating-linear-gradient(
+  background-image:repeating-linear-gradient(
       90deg,
       rgba(255, 252, 246, 0.08) 0 1px,
       transparent 1px 7px
@@ -128,8 +126,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image:
-    radial-gradient(120% 85% at 16% 10%, rgba(255, 250, 242, 0.22), transparent 48%),
+  background-image:radial-gradient(120% 85% at 16% 10%, rgba(255, 250, 242, 0.22), transparent 48%),
     radial-gradient(90% 70% at 88% 92%, rgba(18, 14, 10, 0.22), transparent 52%);
   mix-blend-mode: soft-light;
   opacity: 1;
@@ -138,7 +135,7 @@
 .lumina.lumina--errigel .lumina__panel::after {
   opacity: 0.22;
   mix-blend-mode: overlay;
-  background-image: linear-gradient(
+  background-image:linear-gradient(
     180deg,
     rgba(255, 252, 246, 0.12),
     transparent 30%,
@@ -149,7 +146,7 @@
 .lumina.lumina--errigel .lumina__rail-head,
 .lumina.lumina--errigel .lumina__count,
 .lumina.lumina--errigel .lumina__rail-active {
-  color: var(--errigel-charcoal);
+  color:var(--errigel-charcoal);
 }
 
 .lumina.lumina--errigel .lumina__rail {
@@ -187,18 +184,17 @@
 }
 
 .lumina.lumina--errigel .lumina__chip {
-  background:
-    linear-gradient(160deg, rgba(255, 252, 246, 0.18), transparent 42%, rgba(16, 12, 10, 0.2)),
+  background:linear-gradient(160deg, rgba(255, 252, 246, 0.18), transparent 42%, rgba(16, 12, 10, 0.2)),
     var(--swatch);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--errigel-charcoal) 16%, transparent);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--errigel-charcoal) 16%, transparent);
 }
 
 .lumina.lumina--errigel .lumina__swatch.is-on .lumina__chip {
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--errigel-charcoal) 55%, transparent);
+  box-shadow:inset 0 0 0 1.5px color-mix(in srgb, var(--errigel-charcoal) 55%, transparent);
 }
 
 .lumina.lumina--errigel .lumina__swatch:focus-visible {
-  outline: 2px solid var(--errigel-charcoal);
+  outline:2px solid var(--errigel-charcoal);
   outline-offset: 3px;
 }
 
@@ -257,8 +253,8 @@
 /* ——— Reviews ——— */
 
 .review-sec {
-  background: var(--paper);
-  color: var(--ink);
+  background:var(--paper);
+  color:var(--ink);
 }
 
 .review-sec__title {
@@ -300,14 +296,14 @@
   align-items: center;
   gap: 0.4rem 0.85rem;
   margin: 0.35rem 0 0;
-  color: var(--ink-55);
+  color:var(--ink-55);
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
 }
 
 .ed-review__source {
-  color: var(--ink);
+  color:var(--ink);
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -321,14 +317,14 @@
 }
 
 .ed-review__meta .g-review__stars {
-  color: var(--brass);
+  color:var(--brass);
   letter-spacing: 0.1em;
 }
 
 .ed-review blockquote {
   max-width: 58ch;
   margin: 0;
-  color: var(--ink);
+  color:var(--ink);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-style: normal;
@@ -366,19 +362,19 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid color-mix(in srgb, var(--ink) 55%, transparent);
+  color:var(--ink);
+  background:transparent;
+  border:1px solid color-mix(in srgb, var(--ink) 55%, transparent);
   cursor: pointer;
 }
 
 .ed-review__arrows button:hover {
-  background: var(--ink);
-  color: var(--paper);
+  background:var(--ink);
+  color:var(--paper);
 }
 
 .ed-review__arrows button:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 3px;
 }
 
@@ -386,19 +382,19 @@
   width: 10px;
   height: 10px;
   padding: 0;
-  border: 1px solid color-mix(in srgb, var(--ink) 45%, transparent);
-  background: transparent;
-  border-radius: 50%;
+  border:1px solid color-mix(in srgb, var(--ink) 45%, transparent);
+  background:transparent;
+  border-radius:50%;
   cursor: pointer;
 }
 
 .ed-review__lines button.is-on {
-  background: var(--ink);
-  border-color: var(--ink);
+  background:var(--ink);
+  border-color:var(--ink);
 }
 
 .ed-review__lines button:focus-visible {
-  outline: 2px solid var(--ink);
+  outline:2px solid var(--ink);
   outline-offset: 3px;
 }
 
@@ -420,7 +416,7 @@
   min-width: 11%;
   max-width: 12%;
   height: 100%;
-  background: #1a1815;
+  background:var(--hero-ink);
   transition:
     flex var(--t-state) ease,
     min-width var(--t-state) ease,
@@ -466,14 +462,14 @@
 .insta-select__caption span {
   display: block;
   margin-top: 0.25rem;
-  color: color-mix(in srgb, var(--paper) 72%, transparent);
+  color:color-mix(in srgb, var(--paper) 72%, transparent);
   font-family: var(--font-sans);
   font-size: 0.92rem;
   font-style: normal;
 }
 
 .insta-select__card:focus-visible {
-  outline: 2px solid var(--paper);
+  outline:2px solid var(--paper);
   outline-offset: 3px;
 }
 
@@ -514,13 +510,13 @@
 /* ——— Showroom ——— */
 
 .visit-sec {
-  background: var(--paper);
-  color: var(--ink);
+  background:var(--paper);
+  color:var(--ink);
 }
 
 .visit-sec .ed-body,
 .visit-grid .ed-body {
-  color: var(--ink);
+  color:var(--ink);
   max-width: 38ch;
 }
 
@@ -565,7 +561,7 @@
 }
 
 .site-close {
-  background: #1c1a17;
+  background:var(--ink);
 }
 
 /* ——— Newsletter pre-footer ——— */
@@ -573,8 +569,8 @@
 .news-band {
   position: static;
   z-index: auto;
-  background: #1c1a17;
-  color: #f3eee6;
+  background:var(--ink);
+  color:#f3eee6;
   padding: clamp(2.4rem, 4vw, 3.4rem) var(--gutter);
 }
 
@@ -595,7 +591,7 @@
   letter-spacing: -0.03em;
   line-height: var(--t-h2-lh);
   margin: 0;
-  color: #f3eee6;
+  color:#f3eee6;
 }
 
 .news-band__copy p {
@@ -604,7 +600,7 @@
   font-family: var(--font-sans);
   font-size: var(--t-body);
   line-height: var(--t-body-lh);
-  color: color-mix(in srgb, #f3eee6 78%, #1c1a17);
+  color:color-mix(in srgb, #f3eee6 78%, var(--ink));
 }
 
 .news-band__thanks {
@@ -618,37 +614,37 @@
   grid-template-columns: 1fr auto;
   align-items: end;
   gap: 0.85rem;
-  border-bottom: 1px solid color-mix(in srgb, #f3eee6 32%, transparent);
+  border-bottom:1px solid color-mix(in srgb, #f3eee6 32%, transparent);
 }
 
 .news-band__form input {
   min-height: 44px;
   padding: 0.25rem 0;
-  border: 0;
-  background: transparent;
-  color: #f3eee6;
+  border:0;
+  background:transparent;
+  color:#f3eee6;
   font-size: 1rem;
 }
 
 .news-band__form input::placeholder {
-  color: color-mix(in srgb, #f3eee6 55%, transparent);
+  color:color-mix(in srgb, #f3eee6 55%, transparent);
 }
 
 .news-band__form input:focus {
-  outline: none;
+  outline:none;
 }
 
 .news-band__form input:focus-visible {
-  outline: 2px solid #f3eee6;
+  outline:2px solid #f3eee6;
   outline-offset: 3px;
 }
 
 .news-band__form button {
   min-height: 44px;
   padding: 0 0 0.2rem;
-  border: 0;
-  background: transparent;
-  color: #f3eee6;
+  border:0;
+  background:transparent;
+  color:#f3eee6;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -657,7 +653,7 @@
 }
 
 .news-band__form button:focus-visible {
-  outline: 2px solid #f3eee6;
+  outline:2px solid #f3eee6;
   outline-offset: 3px;
 }
 
@@ -672,8 +668,8 @@
 /* ——— Footer ——— */
 
 .site-footer {
-  background: #1c1a17;
-  color: #f3eee6;
+  background:var(--ink);
+  color:#f3eee6;
   padding: 3.25rem var(--gutter) 2rem;
   padding-bottom: 2rem;
 }
@@ -691,7 +687,7 @@
   font-style: normal;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #f3eee6;
+  color:#f3eee6;
   margin: 0 0 0.85rem;
 }
 
@@ -702,15 +698,15 @@
   letter-spacing: 0;
   text-transform: none;
   margin: 0.7rem 0 0;
-  color: #f3eee6;
+  color:#f3eee6;
 }
 
 .footer-stamp {
-  color: color-mix(in srgb, #f3eee6 72%, #1c1a17);
+  color:color-mix(in srgb, #f3eee6 72%, var(--ink));
 }
 
 .site-footer a {
-  color: #f3eee6;
+  color:#f3eee6;
   padding: 0.28rem 0;
   display: block;
   font-size: 0.9375rem;
@@ -725,7 +721,7 @@
 .footer-legal {
   max-width: var(--page-max);
   margin: 2rem auto 0;
-  color: color-mix(in srgb, #f3eee6 62%, #1c1a17);
+  color:color-mix(in srgb, #f3eee6 62%, var(--ink));
   font-size: 0.8125rem;
 }
 
